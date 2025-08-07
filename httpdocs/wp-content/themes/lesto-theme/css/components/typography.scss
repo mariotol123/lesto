@@ -1,0 +1,11 @@
+// Typography Classes
+// Utilizzo delle variabili CSS custom per dimensioni consistenti
+
+h2, .h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; /* Light */
+  font-size: var(--font-5xl); /* 80px */
+  line-height: 5.053rem; /* 75.8px */
+  letter-spacing: -0.02em; /* -2% */
+  margin: 0; /* Reset margin di default */
+}

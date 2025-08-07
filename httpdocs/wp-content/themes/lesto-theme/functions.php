@@ -138,7 +138,10 @@ add_action( 'widgets_init', 'lesto_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function lesto_theme_scripts() {
-	wp_enqueue_style( 'lesto-theme-main', get_template_directory_uri() . '/css/main.css', array(),'');
+	// Google Fonts
+	wp_enqueue_style( 'google-fonts-roboto', 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap', array(), null );
+	
+	wp_enqueue_style( 'lesto-theme-main', get_template_directory_uri() . '/css/main.css', array(), filemtime(get_template_directory() . '/css/main.css'));
 	wp_enqueue_style( 'lesto-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'lesto-theme-style', 'rtl', 'replace' );
 
