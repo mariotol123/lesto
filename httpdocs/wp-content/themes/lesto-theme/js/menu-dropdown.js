@@ -2,6 +2,8 @@
 // Gestione dropdown menu header personalizzato
 
 document.addEventListener('DOMContentLoaded', function() {
+	var row = document.querySelector('.row.align-items-center');
+	var logoCol = document.querySelector('.col-4.col-md-5.d-flex.align-items-center.justify-content-between');
 	var headerButtons = document.querySelector('.header-buttons');
 	var mainButtonsContainer = headerButtons.querySelector('.main-buttons-container');
 	var buttons = {
@@ -43,6 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			// Aggiungi classe active al bottone cliccato
 			btn.classList.add('active');
 			if (mainButtonsContainer) mainButtonsContainer.classList.add('active');
+			if (row) row.classList.remove('align-items-center');
+			if (logoCol) logoCol.classList.remove('align-items-center');
 
 			// Crea dropdown
 			var dropdownList = document.createElement('ul');
@@ -80,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
 				closeImg.remove();
 				btn.classList.remove('active');
 				if (mainButtonsContainer) mainButtonsContainer.classList.remove('active');
+				if (row) row.classList.add('align-items-center');
+				if (logoCol) logoCol.classList.add('align-items-center');
 			});
 		});
 	});
@@ -96,6 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			});
 			if (closeImg) closeImg.remove();
 			if (mainButtonsContainer) mainButtonsContainer.classList.remove('active');
+			if (row) row.classList.add('align-items-center');
+			if (logoCol) logoCol.classList.add('align-items-center');
 		}
 	});
 });
