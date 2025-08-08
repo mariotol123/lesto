@@ -170,14 +170,18 @@ get_header();
 
 		
 
-		<section class="third-section" style="margin-top: 100px;">
-			<div class="container mt-5">
-				<h2>Another Section</h2>
-				<p>This is another section below the tabs.</p>
+		<section class="third-section d-flex flex-column justify-content-between container vh-100">
+			<div class="mt-10xl cooking">
+				<h2>Cooking Room:</h2>
+				<h5>il nostro showroom dinamico</h5>
 			</div>
-			<hr>
-			<div class="container mt-5">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus, architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?</p>
+			<div class="mb-10xl row button-cooking">
+				<div class="col-md-5 d-flex align-items-center">
+					<h4 class="mt-4 mb-0">Grazie all’esperienza maturata in oltre 30 anni di attività e ad uno staff competente e disponibile, siamo in grado di soddisfare anche le richieste più esigenti, offrendo soluzioni complete e di alto livello.</h4>
+				</div>
+				<div class="col-md-7 d-flex align-items-end justify-content-md-end justify-content-center">
+					<button type="button" class="btn btn-custom mt-3 mt-md-0">Scopri di più</button>
+				</div>
 			</div>
 		</section>
 	</main>

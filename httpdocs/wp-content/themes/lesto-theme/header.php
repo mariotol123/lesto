@@ -34,7 +34,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="container">
-			<div class="row align-items-center">
+			<div class="row align-items-center justify-content-center">
 				<!-- Logo a sinistra -->
 				   <div class="col-4 col-md-5 d-flex align-items-center justify-content-between">
 					   <div class="site-logo">
