@@ -1,8 +1,4 @@
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: rgb(111, 72, 72);
-}
 
 html {
   font-size: 15px;
@@ -35,6 +31,21 @@ html {
     html {
       font-size: 11px;
     }
+  }
+  @media (max-width: 400px) {
+      html {
+        font-size: 10px;
+      }
+  }
+  @media (max-width: 320px) {
+      html {
+        font-size: 9px;
+      }
+  }
+  @media (max-width: 240px) {
+      html {
+        font-size: 8px;
+      }
   }
 }
 

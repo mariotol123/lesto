@@ -13,7 +13,7 @@ get_header();
 	<!-- Main content area -->
 	<main>
 		<section class="section container">
-			<div class="content-section vh-100 d-flex flex-column align-items-center justify-content-center">
+			<div class="content-section vh-100 d-flex flex-column justify-content-center">
 				<div class="row w-100 flex-grow-1 align-items-center">
 					<!-- Colonna testo -->
 					<div id="text-column" class="col-md-10 d-flex flex-column justify-content-center">

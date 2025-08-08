@@ -43,7 +43,7 @@
 						   </a>
 					   </div>
 					   <!-- Hamburger menu visibile solo su mobile, accanto al logo -->
-					   <img src="<?php echo get_template_directory_uri(); ?>/images/Vector (1).png" alt="Menu" class="img-fluid d-block d-md-none" style="width: 40px; height: 40px; cursor: pointer;" id="hamburger-menu">
+					   <img src="<?php echo get_template_directory_uri(); ?>/images/Vector (1).png" alt="Menu" class="" id="hamburger-menu">
 				   </div>
 				   <!-- Container bottoni a destra -->
 				   <div class="col-4 col-md-7 header-buttons">
