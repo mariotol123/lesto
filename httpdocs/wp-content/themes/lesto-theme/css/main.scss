@@ -1,5 +1,23 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(111, 72, 72);
+}
+
+html {
+  font-size: 15px;
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+// Override degli stili dopo Bootstrap per evitare che vengano sovrascritti
+body {
+  font-family: "Roboto", sans-serif !important;
+  background-color: var(--bg-dark-transparent) !important;
+}
+#lesto-help {
+  background-color: var(--bg-dark-transparent);
+}
 
 :root {
   --font-xs: 0.667rem;  /* 10px */
@@ -283,6 +301,17 @@ p {
   text-align: center;
 }
 
+// Header Styles
+.site-header {
+  position: fixed !important;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  z-index: 2030;
+  background-color: transparent;
+  width: 100%;
+}
+
 // Header Custom Buttons
 .header-buttons {
   border: 1px solid #ffffff;
@@ -307,14 +336,14 @@ p {
   box-shadow: none !important;
   min-width: 80px; /* Larghezza minima */
 
-  // Rimuovi tutti gli stili di hover di Bootstrap
+  // Stili per hover e click con background bianco 30% opacità
   &:hover,
   &:focus,
   &:active,
   &.active,
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
-    background-color: transparent !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
     color: #ffffff !important;
     border-color: #ffffff !important;
     box-shadow: none !important;
@@ -349,15 +378,15 @@ p {
       left: 8px;
     }
   }
-}
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--bg-dark-transparent);
-}
-
-html {
-  font-size: 15px;
+  // Quando il bottone è attivo, mantieni l'icona fissa
+  &.active,
+  &:active {
+    &::before {
+      opacity: 1;
+      left: 8px;
+    }
+  }
 }
 
 // Footer Styles
@@ -501,7 +530,7 @@ html {
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .site {
@@ -664,4 +693,78 @@ body.page-template-template-home {
     display: block;
     opacity: 1;
   }
+}
+
+/* Tab Styles */
+section.section {
+  height: 100vh;
+  position: relative;
+}
+
+.tabs-container {
+  position: sticky;
+  bottom: 50px;
+}
+
+.tab {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 18px;
+  transition: 0.3s;
+  margin: 0 5px;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+
+  &.active {
+    background-color: #ffffff;
+  }
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none !important;
+  padding: 6px 12px;
+  border-top: none;
+
+  &.show {
+    display: block !important;
+  }
+}
+
+.section .tabcontent {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+}
+
+/* Fade effect for tab content */
+.fade-content {
+  opacity: 0;
+  transition: opacity 0.4s;
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.page-description {
+  color: #ffffff !important;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.social-icons-container {
+  margin-bottom: 13rem;
 }

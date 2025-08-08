@@ -33,7 +33,7 @@
 	<?php endif; ?>
 
 	<header id="masthead" class="site-header">
-		<div class="container mt-3">
+		<div class="container">
 			<div class="row align-items-center">
 				<!-- Logo a sinistra -->
 				<div class="col-4 col-md-5">

@@ -10,27 +10,30 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<div class="container p-0">
+	<!-- Main content area -->
+	<main>
+		<section class="section container">
 			<div class="content-section vh-100 d-flex flex-column align-items-center justify-content-center">
 				<div class="row w-100 flex-grow-1 align-items-center">
 					<!-- Colonna testo -->
-					<div id="text-column" class="col-md-6 d-flex flex-column justify-content-center">
+					<div id="text-column" class="col-md-10 d-flex flex-column justify-content-center">
 						<!-- Contenuto per "Nuovo locale" -->
-						<div id="content-locale" class="content-box active">
-							<h1 class="mb-4 w-75">Vuoi aprire un locale?</h1>
-							<p class="page-description mb-4">Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar..</p>
+						<div id="content-locale" class="content-box active tabcontent fade-content show" data-tab="Tab2">
+							<h1 class="mb-4 w-75">Vuoi aprire<br>un locale?</h1>
+							<p class="page-description mb-4 w-75">Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.</p>
 						</div>
 						
 						<!-- Contenuto per "Catena" -->
-						<div id="content-franchise" class="content-box">
-							<h1 class="mb-4 w-100">Vuoi aprire un format replicabile?</h1>
-							<p class="page-description mb-4 w-50">Unisciti alla nostra rete di franchise e inizia la tua attività con un marchio consolidato.</p>
+						<div id="content-franchise" class="content-box tabcontent fade-content" data-tab="Tab1">
+							<h1 class="mb-4 w-100">Vuoi aprire<br>un format replicabile?</h1>
+							<p class="page-description mb-4 w-50">Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.
+								</p>
+								<p class="page-description">Entra nel nostro showroom e scopri i nostri servizi.</p>
 						</div>
 					</div>
 					
 					<!-- Colonna icone social -->
-					<div id="social-column" class="col-md-6 d-flex align-items-end justify-content-end position-relative">
+					<div id="social-column" class="col-md-2 d-flex align-items-end justify-content-end position-relative">
 						<div class="social-icons-container">
 							<a href="#" class="social-link">
 								<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,82 +53,169 @@ get_header();
 					</div>
 				</div>
 				
-				<!-- Buttons alla fine del div -->
-				<div class="buttons-container mb-5">
-					<button id="btn-franchise" class="btn btn-custom">
-						<span>Catena</span>
-					</button>
-					<button id="btn-locale" class="btn btn-custom active">
-						<span>Nuovo locale</span>
-					</button>
+			</div>
+		</section>
+
+		<section class="second-section">
+			<div class="container mt-5">
+				<h2>Lesto ti aiuta</h2>
+			</div>
+			<hr>
+			<div class="container mt-5">
+				<div class="row">
+					<div class="col-lg-4">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus, architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?</p>
+					</div>
+					<div class="col-lg-8">
+						<div class="tabcontent fade-content show" data-tab="Tab1">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>        
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>        
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>        
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabcontent fade-content" data-tab="Tab2">
+							<div class="row">
+								<div class="col-lg-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>        
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>        
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>        
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Card title</h5>
+											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+											<a href="#" class="btn btn-primary">Go somewhere</a>        
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
+		</section>
 
-			<div>
-				<!-- Additional content can be added here -->
+		<section class="tabs-container mt-5 button-container">
+			<div class="container buttons-container">
+				<div class="tab">
+					<button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise"><span>Catena</span></button>
+					<button class="tablinks btn btn-custom active" data-tab="Tab2" id="btn-locale"><span>Nuovo locale</span></button>
+				</div>
 			</div>
+		</section>
 
-			<div>
-
+		<section class="third-section" style="margin-top: 100px;">
+			<div class="container mt-5">
+				<h2>Another Section</h2>
+				<p>This is another section below the tabs.</p>
 			</div>
-
-			<div>
-				<!-- Placeholder for future content -->
+			<hr>
+			<div class="container mt-5">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus, architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?</p>
 			</div>
-		</div>
-		
-	</main><!-- #main -->
+		</section>
+	</main>
 
-<!-- Iconify CDN -->
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-	const buttons = document.querySelectorAll('.btn');
-	const contentSection = document.querySelector('.content-section');
-	const textColumn = document.getElementById('text-column');
-	const socialColumn = document.getElementById('social-column');
-	const contentLocale = document.getElementById('content-locale');
-	const contentFranchise = document.getElementById('content-franchise');
-
-	buttons.forEach(button => {
-		button.addEventListener('click', function() {
+	<!-- Custom tab fade transition script -->
+	<script>
+		function openTab(evt, tabName) {
+			console.log('Opening tab:', tabName); // Debug
+			
+			// Hide all tab content
+			var tabcontent = document.querySelectorAll('.tabcontent');
+			tabcontent.forEach(function(content) {
+				content.classList.remove('show');
+			});
+			
 			// Remove active class from all buttons
-			buttons.forEach(btn => btn.classList.remove('active'));
+			var tablinks = document.querySelectorAll('.tablinks');
+			tablinks.forEach(function(btn) {
+				btn.classList.remove('active');
+			});
+			
+			// Show all tabcontent with matching data-tab
+			var matching = document.querySelectorAll('.tabcontent[data-tab="' + tabName + '"]');
+			console.log('Found matching elements:', matching.length); // Debug
+			
+			matching.forEach(function(content) {
+				setTimeout(function() { 
+					content.classList.add('show'); 
+				}, 10);
+			});
 			
 			// Add active class to clicked button
-			this.classList.add('active');
+			evt.currentTarget.classList.add('active');
+		}
+
+		document.addEventListener('DOMContentLoaded', function() {
+			console.log('DOM loaded, setting up tabs'); // Debug
 			
-			// Add fade effect
-			contentSection.classList.add('fade');
+			var tablinks = document.querySelectorAll('.tablinks');
+			console.log('Found tab buttons:', tablinks.length); // Debug
 			
-			setTimeout(() => {
-				// Handle column layout changes and content visibility
-				if (this.id === 'btn-franchise') {
-					// Catena button - widen text column and show franchise content
-					textColumn.className = 'col-md-8 d-flex flex-column justify-content-center';
-					socialColumn.className = 'col-md-4 d-flex align-items-end justify-content-end position-relative';
-					
-					// Show franchise content, hide locale content
-					contentLocale.classList.remove('active');
-					contentFranchise.classList.add('active');
-					
-				} else if (this.id === 'btn-locale') {
-					// Nuovo locale button - default columns and show locale content
-					textColumn.className = 'col-md-6 d-flex flex-column justify-content-center';
-					socialColumn.className = 'col-md-6 d-flex align-items-end justify-content-end position-relative';
-					
-					// Show locale content, hide franchise content
-					contentFranchise.classList.remove('active');
-					contentLocale.classList.add('active');
-				}
-				
-				contentSection.classList.remove('fade');
-			}, 150);
+			tablinks.forEach(function(btn) {
+				btn.addEventListener('click', function(evt) {
+					var tabName = btn.getAttribute('data-tab');
+					openTab(evt, tabName);
+				});
+			});
+			
+			// Show first tab by default
+			if (tablinks.length > 0) {
+				setTimeout(function() {
+					tablinks[0].click();
+				}, 100);
+			}
 		});
-	});
-});
-</script>
+	</script>
 
 <?php
 get_footer();
