@@ -12288,9 +12288,13 @@ p {
 }
 
 .header-buttons {
+  position: relative;
   border: 1px solid #ffffff;
-  border-radius: 25px;
+  border-radius: 18px;
   padding: 0px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .btn-header-custom {
@@ -12308,7 +12312,7 @@ p {
   position: relative;
   overflow: hidden;
   box-shadow: none !important;
-  min-width: 80px; /* Larghezza minima */
+  min-width: 80px;
 }
 .btn-header-custom:hover, .btn-header-custom:focus, .btn-header-custom:active, .btn-header-custom.active, .btn-header-custom:not(:disabled):not(.disabled):active, .btn-header-custom:not(:disabled):not(.disabled).active {
   background-color: rgba(255, 255, 255, 0.3) !important;
@@ -12344,6 +12348,56 @@ p {
 .btn-header-custom.active::before, .btn-header-custom:active::before {
   opacity: 1;
   left: 8px;
+}
+
+.main-buttons-container {
+  position: relative;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 18px;
+  padding: 0px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.dropdown-generale {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 1000;
+  display: none;
+  border-radius: 18px;
+}
+
+.dropdown-link {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  padding: 6px 20px;
+  font-weight: 400;
+  font-size: var(--font-s-14); /* 14px */
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  box-shadow: none !important;
+  min-width: 80px;
+}
+.dropdown-link:hover, .dropdown-link:focus, .dropdown-link:active, .dropdown-link.active, .dropdown-link:not(:disabled):not(.disabled):active, .dropdown-link:not(:disabled):not(.disabled).active {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.dropdown-link:hover::before {
+  opacity: 1;
+}
+.dropdown-link.active::before, .dropdown-link:active::before {
+  opacity: 1;
 }
 
 .footer-container {

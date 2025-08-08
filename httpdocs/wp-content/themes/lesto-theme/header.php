@@ -45,29 +45,51 @@
 				</div>
 				
 				<!-- Container bottoni a destra -->
-				<div class="col-4 col-md-7">
-					<div class="header-buttons d-flex justify-content-between align-items-center">
-						<!-- Container per i primi 3 bottoni -->
-						<div class="main-buttons d-flex">
-							<button type="button" class="btn btn-header-custom">
-								<span>Settori</span>
-							</button>
-							<button type="button" class="btn btn-header-custom">
-								<span>Servizi</span>
-							</button>
-							<button type="button" class="btn btn-header-custom">
-								<span>Realizzazioni</span>
-							</button>
+				<div class="col-4 col-md-7 header-buttons">
+					<div class="d-flex position-relative align-items-center justify-content-between" id="main-buttons-container">
+						<div class="d-flex flex-row justify-content-between align-items-start w-100">
+							<div class="main-buttons d-flex">
+								<button type="button" class="btn btn-header-custom" id="settori-btn">
+									<span>Settori</span>
+								</button>
+								<button type="button" class="btn btn-header-custom" id="servizi-btn">
+									<span>Servizi</span>
+								</button>
+								<button type="button" class="btn btn-header-custom" id="realizzazioni-btn">
+									<span>Realizzazioni</span>
+								</button>
+							</div>
+							<div class="contatti-button ms-3 align-self-end">
+								<button type="button" class="btn btn-header-custom" id="contatti-btn">
+									<span>Contatti</span>
+								</button>
+							</div>
 						</div>
-						
-						<!-- Bottone in fondo alla colonna -->
-						<div class="bottom-button">
-							<button type="button" class="btn btn-header-custom">
-								<span>Contatti</span>
-							</button>
-						</div>
+						<!-- Qui il dropdown verrà generato dinamicamente dal JS -->
 					</div>
 				</div>
 			</div>
 		</div>
 	</header><!-- #masthead -->
+
+		<!-- JS per il dropdown menu header ora incluso da js/menu-dropdown.js -->
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var serviziToggle = document.getElementById('servizi-toggle');
+		var dropdownMenu = document.querySelector('.dropdown-servizi-menu');
+		serviziToggle.addEventListener('click', function(e) {
+			e.preventDefault();
+			if (dropdownMenu.style.display === 'block') {
+				dropdownMenu.style.display = 'none';
+			} else {
+				dropdownMenu.style.display = 'block';
+			}
+		});
+		document.addEventListener('click', function(e) {
+			if (!serviziToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+				dropdownMenu.style.display = 'none';
+			}
+		});
+	});
+	</script>
