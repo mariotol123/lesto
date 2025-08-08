@@ -8,6 +8,31 @@ html {
   font-size: 15px;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) and (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) and (max-width: 575.98px) {
+  html {
+    font-size: 11px;
+  }
+}
 /*!
  * Bootstrap  v5.3.7 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -12089,7 +12114,7 @@ h5, .h5, .site-footer .footer-nav-list li a,
 .site-footer .footer-company-list li,
 .site-footer .footer-contacts-list li {
   font-weight: 400;
-  font-size: var(--font-l-20); /* 20px */
+  font-size: var(--font-base-16); /* 20px */
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
@@ -12615,57 +12640,55 @@ body.page-template-template-home .site-footer {
 }
 
 .btn-custom {
-  background: white;
-  color: black;
-  border: 1px solid #ddd;
-  border-radius: 1.667rem; /* 25px */
-  padding: var(--py-xs) var(--px-l); /* 4px 16px */
-  width: 12rem; /* 180px */
-  cursor: pointer;
-  transition: all 0.3s ease;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  padding: 6px 40px;
+  font-weight: 400;
+  font-size: var(--font-s-14); /* 14px */
   text-decoration: none;
-  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: none !important;
+}
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active, .btn-custom.active, .btn-custom:not(:disabled):not(.disabled):active, .btn-custom:not(:disabled):not(.disabled).active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding-left: 35px; /* Allarga il padding a sinistra per fare spazio all'icona */
 }
 .btn-custom::before {
   content: "";
   position: absolute;
-  left: -2.667rem; /* -40px */
+  left: -42px;
   top: 50%;
   transform: translateY(-50%);
-  width: 2rem; /* 30px */
-  height: 2rem; /* 30px */
-  background-image: url("../images/Group 1.png");
+  width: 1rem;
+  height: 1rem;
+  background-image: url("../images/Icon.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
   transition: all 0.3s ease;
-  filter: brightness(0);
 }
 .btn-custom span {
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   display: block;
-}
-.btn-custom:hover {
-  background: #f8f9fa;
-  color: black;
 }
 .btn-custom:hover::before {
   opacity: 1;
-  left: var(--px-xl); /* 20px */
+  left: 8px;
 }
-.btn-custom:hover span {
-  transform: translateX(var(--px-xl)); /* 20px */
-}
-.btn-custom.active {
-  background: white;
-  color: black;
-  border-color: #666;
+.btn-custom.active::before, .btn-custom:active::before {
+  opacity: 1;
+  left: 8px;
 }
 
 .content-section {
@@ -12753,7 +12776,7 @@ section.section {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 5px 18px;
+  padding: 5px 40px;
   transition: 0.3s;
   margin: 0 5px;
 }
@@ -12818,6 +12841,10 @@ section.section {
   height: 23rem;
   padding: 0px;
   margin-left: 0.8rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-text {
@@ -12836,4 +12863,36 @@ section.section {
 }
 .lesto-help hr {
   border-color: rgb(204, 204, 204);
+}
+
+@media (max-width: 768px) {
+  .lesto-help h5, .lesto-help .h5, .lesto-help .site-footer .footer-nav-list li, .site-footer .footer-nav-list .lesto-help li,
+  .lesto-help .site-footer .footer-social-list li,
+  .site-footer .footer-social-list .lesto-help li,
+  .lesto-help .site-footer .footer-company-list li,
+  .site-footer .footer-company-list .lesto-help li,
+  .lesto-help .site-footer .footer-contacts-list li,
+  .site-footer .footer-contacts-list .lesto-help li, .lesto-help .site-footer .footer-nav-list li a, .site-footer .footer-nav-list li .lesto-help a,
+  .lesto-help .site-footer .footer-social-list li a,
+  .site-footer .footer-social-list li .lesto-help a,
+  .lesto-help .site-footer .footer-company-list li a,
+  .site-footer .footer-company-list li .lesto-help a,
+  .lesto-help .site-footer .footer-contacts-list li a,
+  .site-footer .footer-contacts-list li .lesto-help a {
+    display: none !important;
+  }
+  .lesto-help h2, .lesto-help .h2 {
+    padding-top: 5rem;
+  }
+  .lesto-help p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: var(--font-s);
+  }
+  .lesto-help .card {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    border-radius: 0 !important;
+  }
 }/*# sourceMappingURL=main.css.map */

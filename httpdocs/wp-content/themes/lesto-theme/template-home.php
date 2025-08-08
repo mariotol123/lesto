@@ -56,20 +56,20 @@ get_header();
 			</div>
 		</section>
 
-		<section class="lesto-help no-col-padding vh-100 d-flex flex-column align-items-center justify-content-center">
+		<section class="lesto-help d-flex flex-column align-items-center justify-content-center">
 			<div class="container mt-5">
 				<h2>Lesto ti aiuta</h2>
 			</div>
-			<hr class="footer-divider border-2 opacity-75 d-none d-md-block w-100">
+			<hr class="footer-divider border-2 opacity-75 w-100">
 			<div class="container mt-3 mb-5">
 				<div class="row">
-					<div class="col-lg-4">
+					<div class="col-lg-4 col-md-4">
 						<p class="desktop-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus, architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?</p>
 					</div>
-					<div class="col-lg-8">
+					<div class="col-lg-8 col-md">
 						<div class="tabcontent fade-content show" data-tab="Tab1">
 							<div class="row">
-								<div class="col-lg-4">
+								<div class="col-lg-4 col-md-4 p-0">
 									<div class="card">
 										<div class="card-body">
 											
@@ -81,7 +81,7 @@ get_header();
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 										
-								<div class="col-lg-4">
+								<div class="col-lg-4 col-md-4 p-0">
 									<div class="card">
 										<div class="card-body">
 											
@@ -92,7 +92,7 @@ get_header();
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 										
-								<div class="col-lg-4">
+								<div class="col-lg-4 col-md-4 p-0">
 									<div class="card">
 										<div class="card-body">
 											
@@ -107,7 +107,7 @@ get_header();
 						</div>
 						<div class="tabcontent fade-content" data-tab="Tab2">
 							<div class="row">
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-3 p-0">
 									<div class="card">
 										<div class="card-body">
 											
@@ -118,7 +118,7 @@ get_header();
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 										
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-3 p-0">
 									<div class="card">
 										<div class="card-body">
 											
@@ -129,7 +129,7 @@ get_header();
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 										
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-3 p-0">
 									<div class="card">
 										<div class="card-body">
 											
@@ -140,7 +140,7 @@ get_header();
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
-								<div class="col-lg-3">
+								<div class="col-lg-3 col-md-3 p-0">
 									<div class="card">
 										<div class="card-body">
 											
@@ -158,8 +158,8 @@ get_header();
 				</div>
 			</div>
 			<hr class="footer-divider border-2 opacity-75 d-none d-md-block w-100">
-			<section class="tabs-container mt-5 button-container">
-			<div class="container buttons-container">
+			<section class="tabs-container mt-4 button-container">
+			<div class="container buttons-container mb-5">
 				<div class="tab">
 					<button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise"><span>Catena</span></button>
 					<button class="tablinks btn btn-custom active" data-tab="Tab2" id="btn-locale"><span>Nuovo locale</span></button>

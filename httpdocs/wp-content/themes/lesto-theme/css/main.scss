@@ -8,6 +8,36 @@ html {
   font-size: 15px;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  @media (max-width: 1200px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    html {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    html {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    html {
+      font-size: 11px;
+    }
+  }
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
@@ -106,7 +136,7 @@ h4, .h4 {
 
 h5, .h5 {
   font-weight: 400;
-  font-size: var(--font-l-20); /* 20px */
+  font-size: var(--font-base-16); /* 20px */
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
@@ -709,62 +739,70 @@ body.page-template-template-home {
 }
 
 .btn-custom {
-  background: white;
-  color: black;
-  border: 1px solid #ddd;
-  border-radius: 1.667rem; /* 25px */
-  padding: var(--py-xs) var(--px-l); /* 4px 16px */
-  width: 12rem; /* 180px */
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background-color: #ffffff  !important;
+  color: #000000 !important;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  padding: 6px 40px;
+  font-weight: 400;
+  font-size: var(--font-s-14); /* 14px */
   text-decoration: none;
-  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: none !important;
+
+    &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-color:  #ffffff!important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding-left: 35px; /* Allarga il padding a sinistra per fare spazio all'icona */
+  }
 
   &::before {
     content: '';
     position: absolute;
-    left: -2.667rem; /* -40px */
+    left: -42px;
     top: 50%;
     transform: translateY(-50%);
-    width: 2rem; /* 30px */
-    height: 2rem; /* 30px */
-    background-image: url('../images/Group 1.png');
+    width: 1rem;
+    height: 1rem;
+    background-image: url('../images/Icon.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0;
     transition: all 0.3s ease;
-    filter: brightness(0);
   }
 
   span {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     display: block;
   }
 
   &:hover {
-    background: #f8f9fa;
-    color: black;
-    
     &::before {
       opacity: 1;
-      left: var(--px-xl); /* 20px */
-    }
-    
-    span {
-      transform: translateX(var(--px-xl)); /* 20px */
+      left: 8px;
     }
   }
 
-  &.active {
-    background: white;
-    color: black;
-    border-color: #666;
+  // Quando il bottone è attivo, mantieni l'icona fissa
+  &.active,
+  &:active {
+    &::before {
+      opacity: 1;
+      left: 8px;
+    }
   }
 }
 
@@ -860,7 +898,7 @@ section.section {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 5px 18px;
+  padding: 5px 40px;
   transition: 0.3s;
   margin: 0 5px;
 
@@ -931,6 +969,10 @@ section.section {
   height: 23rem;
   padding: 0px;
   margin-left: 0.8rem;
+  margin-bottom: 2rem; // aggiungi spazio tra le card
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-text {
@@ -944,10 +986,30 @@ section.section {
   padding-right: 0;
 }
 
+
 .lesto-help {
   background-color: var(--bg-dark-transparent);
-
   hr {
     border-color: rgb(204, 204, 204);
+  }
+}
+
+@media (max-width: 768px) {
+  .lesto-help h5 {
+    display: none !important;
+  }
+  .lesto-help h2 {
+    padding-top: 5rem;
+  }
+  .lesto-help p {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: var(--font-s);
+  }
+  .lesto-help .card {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    border-radius: 0 !important;
   }
 }
