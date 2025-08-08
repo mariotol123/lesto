@@ -69,8 +69,11 @@
 					</div>
 				</div>
 			</div>
-			<hr class="footer-divider border-2 opacity-75">
-			
+			<!-- Divider fuori dal container solo su mobile -->
+			<hr class="footer-divider border-2 opacity-75 d-block d-md-none m-0 mt-5">
+			<!-- Divider dentro il container solo su desktop -->
+			<hr class="footer-divider border-2 opacity-75 d-none d-md-block">
+
 			<!-- Copyright e informazioni legali -->
 			<div class="row align-items-center py-2">
 				<div class="col-md-10">
@@ -78,9 +81,16 @@
 						Lesto Group S.A.S di Martino Accongiagioco & C. | Sede legale: Via Volterra,12 – 20146 – Milano (MI) | Pec: lestogroupsas@pro-pec.it | P.IVA: 12986630965
 					</p>
 				</div>
-				<div class="col-md-2 text-end">
+				<!-- Footer credit accanto al copyright su desktop -->
+				<div class="col-md-2 text-end d-none d-md-block">
 					<p class="footer-credit mb-0">@wndr</p>
 				</div>
+			</div>
+			<!-- Divider sotto copyright solo su mobile -->
+			<hr class="footer-divider border-2 opacity-75 d-block d-md-none m-0">
+			<!-- Footer credit sotto solo su mobile -->
+			<div class="w-100 text-center mt-2 d-block d-md-none">
+				<p class="footer-credit mb-0">@wndr</p>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

@@ -36,38 +36,38 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<!-- Logo a sinistra -->
-				<div class="col-4 col-md-5">
-					<div class="site-logo">
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/Livello_1.png" alt="<?php bloginfo('name'); ?>" class="img-fluid">
-						</a>
-					</div>
-				</div>
-				
-				<!-- Container bottoni a destra -->
-				<div class="col-4 col-md-7 header-buttons">
-					<div class="d-flex position-relative align-items-center justify-content-between" id="main-buttons-container">
-						<div class="d-flex flex-row justify-content-between align-items-start w-100">
-							<div class="main-buttons d-flex">
-								<button type="button" class="btn btn-header-custom" id="settori-btn">
-									<span>Settori</span>
-								</button>
-								<button type="button" class="btn btn-header-custom" id="servizi-btn">
-									<span>Servizi</span>
-								</button>
-								<button type="button" class="btn btn-header-custom" id="realizzazioni-btn">
-									<span>Realizzazioni</span>
-								</button>
-							</div>
-							<div class="contatti-button ms-3 align-self-end">
-								<button type="button" class="btn btn-header-custom" id="contatti-btn">
-									<span>Contatti</span>
-								</button>
-							</div>
-						</div>
-						<!-- Qui il dropdown verrà generato dinamicamente dal JS -->
-					</div>
-				</div>
+				   <div class="col-4 col-md-5 d-flex align-items-center justify-content-between">
+					   <div class="site-logo">
+						   <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+							   <img src="<?php echo get_template_directory_uri(); ?>/images/Livello_1.png" alt="<?php bloginfo('name'); ?>" class="img-fluid">
+						   </a>
+					   </div>
+					   <!-- Hamburger menu visibile solo su mobile, accanto al logo -->
+					   <img src="<?php echo get_template_directory_uri(); ?>/images/Vector (1).png" alt="Menu" class="img-fluid d-block d-md-none" style="width: 40px; height: 40px; cursor: pointer;" id="hamburger-menu">
+				   </div>
+				   <!-- Container bottoni a destra -->
+				   <div class="col-4 col-md-7 header-buttons">
+					   <div class="d-flex position-relative align-items-center justify-content-between w-100">
+						   <!-- Bottoni visibili solo su desktop -->
+						   <div class="main-buttons d-none d-md-flex">
+							   <button type="button" class="btn btn-header-custom" id="settori-btn">
+								   <span>Settori</span>
+							   </button>
+							   <button type="button" class="btn btn-header-custom" id="servizi-btn">
+								   <span>Servizi</span>
+							   </button>
+							   <button type="button" class="btn btn-header-custom" id="realizzazioni-btn">
+								   <span>Realizzazioni</span>
+							   </button>
+						   </div>
+						   <div class="contatti-button ms-3 align-self-end d-none d-md-flex">
+							   <button type="button" class="btn btn-header-custom" id="contatti-btn">
+								   <span>Contatti</span>
+							   </button>
+						   </div>
+					   </div>
+				   </div>
+				   
 			</div>
 		</div>
 	</header><!-- #masthead -->
