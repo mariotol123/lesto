@@ -72,24 +72,3 @@
 		</div>
 	</header><!-- #masthead -->
 
-		<!-- JS per il dropdown menu header ora incluso da js/menu-dropdown.js -->
-
-	<script>
-	document.addEventListener('DOMContentLoaded', function() {
-		var serviziToggle = document.getElementById('servizi-toggle');
-		var dropdownMenu = document.querySelector('.dropdown-servizi-menu');
-		serviziToggle.addEventListener('click', function(e) {
-			e.preventDefault();
-			if (dropdownMenu.style.display === 'block') {
-				dropdownMenu.style.display = 'none';
-			} else {
-				dropdownMenu.style.display = 'block';
-			}
-		});
-		document.addEventListener('click', function(e) {
-			if (!serviziToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
-				dropdownMenu.style.display = 'none';
-			}
-		});
-	});
-	</script>

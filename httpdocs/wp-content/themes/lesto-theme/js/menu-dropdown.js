@@ -22,41 +22,26 @@ document.addEventListener('DOMContentLoaded', function() {
 	};
 	Object.keys(buttons).forEach(function(btnId) {
 		var btn = document.getElementById(btnId);
+		if (!btn) return;
 		btn.addEventListener('click', function(e) {
 			e.preventDefault();
+			// Rimuovi active da tutti i bottoni
 			Object.keys(buttons).forEach(function(otherId) {
 				var otherBtn = document.getElementById(otherId);
 				if (otherBtn) {
 					otherBtn.classList.remove('active');
 				}
 			});
-			document.getElementById('main-buttons-container').classList.add('main-buttons-container');
-			var closeImg = document.createElement('img');
-			closeImg.src = lestoTheme.menuCloseImg;
-			closeImg.alt = 'Chiudi';
-			closeImg.id = 'dropdown-close-img';
-			closeImg.style.position = 'absolute';
-			closeImg.style.right = '3px';
-			closeImg.style.bottom = '3px';
-			closeImg.style.width = '32px';
-			closeImg.style.height = '32px';
-			closeImg.style.cursor = 'pointer';
-			headerButtons.appendChild(closeImg);
-			closeImg.addEventListener('click', function() {
-				var oldDropdown = headerButtons.querySelector('.dropdown-list');
-				if (oldDropdown) oldDropdown.remove();
-				closeImg.remove();
-				document.getElementById('main-buttons-container').classList.remove('main-buttons-container');
-				Object.keys(buttons).forEach(function(otherId) {
-					var otherBtn = document.getElementById(otherId);
-					if (otherBtn) otherBtn.classList.remove('active');
-				});
-			});
-			btn.classList.add('active');
+			// Rimuovi dropdown e close precedenti
 			var oldDropdown = headerButtons.querySelector('.dropdown-list');
-			if (oldDropdown) {
-				oldDropdown.remove();
-			}
+			if (oldDropdown) oldDropdown.remove();
+			var oldClose = document.getElementById('dropdown-close-img');
+			if (oldClose) oldClose.remove();
+
+			// Aggiungi classe active al bottone cliccato
+			btn.classList.add('active');
+
+			// Crea dropdown
 			var dropdownList = document.createElement('ul');
 			dropdownList.className = 'dropdown-list';
 			dropdownList.style.margin = '25px 0 0 0';
@@ -73,10 +58,30 @@ document.addEventListener('DOMContentLoaded', function() {
 				dropdownList.appendChild(li);
 			});
 			headerButtons.appendChild(dropdownList);
+
+			// Crea bottone close
+			var closeImg = document.createElement('img');
+			closeImg.src = lestoTheme.menuCloseImg;
+			closeImg.alt = 'Chiudi';
+			closeImg.id = 'dropdown-close-img';
+			closeImg.style.position = 'absolute';
+			closeImg.style.right = '3px';
+			closeImg.style.bottom = '3px';
+			closeImg.style.width = '32px';
+			closeImg.style.height = '32px';
+			closeImg.style.cursor = 'pointer';
+			headerButtons.appendChild(closeImg);
+			closeImg.addEventListener('click', function() {
+				var oldDropdown = headerButtons.querySelector('.dropdown-list');
+				if (oldDropdown) oldDropdown.remove();
+				closeImg.remove();
+				btn.classList.remove('active');
+			});
 		});
 	});
 	document.addEventListener('click', function(e) {
 		var oldDropdown = headerButtons.querySelector('.dropdown-list');
+		var closeImg = document.getElementById('dropdown-close-img');
 		if (oldDropdown && !headerButtons.contains(e.target)) {
 			oldDropdown.remove();
 			Object.keys(buttons).forEach(function(otherId) {
@@ -85,10 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 					otherBtn.classList.remove('active');
 				}
 			});
-			var closeImg = document.getElementById('dropdown-close-img');
 			if (closeImg) closeImg.remove();
-			document.getElementById('main-buttons-container').classList.remove('main-buttons-container');
-			document.getElementById('main-buttons-container').classList.remove('main-buttons-container');
 		}
 	});
 });
