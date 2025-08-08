@@ -47,7 +47,7 @@
 				   </div>
 				   <!-- Container bottoni a destra -->
 				   <div class="col-4 col-md-7 header-buttons">
-					   <div class="d-flex position-relative align-items-center justify-content-between w-100">
+					   <div class="d-flex position-relative align-items-center justify-content-between w-100 main-buttons-container">
 						   <!-- Bottoni visibili solo su desktop -->
 						   <div class="main-buttons d-none d-md-flex">
 							   <button type="button" class="btn btn-header-custom" id="settori-btn">

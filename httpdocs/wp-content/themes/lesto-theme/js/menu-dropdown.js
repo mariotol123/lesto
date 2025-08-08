@@ -3,6 +3,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 	var headerButtons = document.querySelector('.header-buttons');
+	var mainButtonsContainer = headerButtons.querySelector('.main-buttons-container');
 	var buttons = {
 		'settori-btn': [
 			'Settore 1',
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	Object.keys(buttons).forEach(function(btnId) {
 		var btn = document.getElementById(btnId);
 		if (!btn) return;
-		btn.addEventListener('click', function(e) {
+	btn.addEventListener('click', function(e) {
 			e.preventDefault();
 			// Rimuovi active da tutti i bottoni
 			Object.keys(buttons).forEach(function(otherId) {
@@ -37,9 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (oldDropdown) oldDropdown.remove();
 			var oldClose = document.getElementById('dropdown-close-img');
 			if (oldClose) oldClose.remove();
+			if (mainButtonsContainer) mainButtonsContainer.classList.remove('active');
 
 			// Aggiungi classe active al bottone cliccato
 			btn.classList.add('active');
+			if (mainButtonsContainer) mainButtonsContainer.classList.add('active');
 
 			// Crea dropdown
 			var dropdownList = document.createElement('ul');
@@ -76,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				if (oldDropdown) oldDropdown.remove();
 				closeImg.remove();
 				btn.classList.remove('active');
+				if (mainButtonsContainer) mainButtonsContainer.classList.remove('active');
 			});
 		});
 	});
@@ -91,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				}
 			});
 			if (closeImg) closeImg.remove();
+			if (mainButtonsContainer) mainButtonsContainer.classList.remove('active');
 		}
 	});
 });
