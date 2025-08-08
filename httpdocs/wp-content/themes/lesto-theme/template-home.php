@@ -18,17 +18,17 @@ get_header();
 					<!-- Colonna testo -->
 					<div id="text-column" class="col-md-10 d-flex flex-column justify-content-center">
 						<!-- Contenuto per "Nuovo locale" -->
-						<div id="content-locale" class="content-box active tabcontent fade-content show" data-tab="Tab2">
-							<h1 class="mb-4 w-75">Vuoi aprire<br>un locale?</h1>
-							<p class="page-description mb-4 w-75">Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.</p>
+						<div id="content-locale" class="content-box active tabcontent fade-content show text-start" data-tab="Tab2">
+							<h1 class="mb-4 w-100">Vuoi aprire<br>un locale?</h1>
+							<p class="page-description mb-4 w-50">Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.</p>
 						</div>
 						
 						<!-- Contenuto per "Catena" -->
-						<div id="content-franchise" class="content-box tabcontent fade-content" data-tab="Tab1">
+						<div id="content-franchise" class="content-box tabcontent fade-content text-start" data-tab="Tab1">
 							<h1 class="mb-4 w-100">Vuoi aprire<br>un format replicabile?</h1>
 							<p class="page-description mb-4 w-50">Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.
 								</p>
-								<p class="page-description">Entra nel nostro showroom e scopri i nostri servizi.</p>
+								<p class="page-description w-50">Entra nel nostro showroom e scopri i nostri servizi.</p>
 						</div>
 					</div>
 					
@@ -56,15 +56,15 @@ get_header();
 			</div>
 		</section>
 
-		<section class="second-section">
+		<section class="lesto-help no-col-padding vh-100 d-flex flex-column align-items-center justify-content-center">
 			<div class="container mt-5">
 				<h2>Lesto ti aiuta</h2>
 			</div>
-			<hr>
-			<div class="container mt-5">
+			<hr class="footer-divider border-2 opacity-75 d-none d-md-block w-100">
+			<div class="container mt-3 mb-5">
 				<div class="row">
 					<div class="col-lg-4">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus, architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?</p>
+						<p class="desktop-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus, architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?</p>
 					</div>
 					<div class="col-lg-8">
 						<div class="tabcontent fade-content show" data-tab="Tab1">
@@ -72,30 +72,37 @@ get_header();
 								<div class="col-lg-4">
 									<div class="card">
 										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Go somewhere</a>        
+											
+										
+											       
 										</div>
+										
 									</div>
+									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
+										
 								<div class="col-lg-4">
 									<div class="card">
 										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Go somewhere</a>        
+											
+										
+											      
 										</div>
 									</div>
+									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
+										
 								<div class="col-lg-4">
 									<div class="card">
 										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Go somewhere</a>        
+											
+									
+											       
 										</div>
 									</div>
+									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
+										
 							</div>
 						</div>
 						<div class="tabcontent fade-content" data-tab="Tab2">
@@ -103,47 +110,55 @@ get_header();
 								<div class="col-lg-3">
 									<div class="card">
 										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Go somewhere</a>        
+											
+											
+											     
 										</div>
 									</div>
+									<h5 class="card-text">Setup attrezzature</h5>
+								</div>
+										
+								<div class="col-lg-3">
+									<div class="card">
+										<div class="card-body">
+											
+											
+											    
+										</div>
+									</div>
+									<h5 class="card-text">Setup attrezzature</h5>
+								</div>
+										
+								<div class="col-lg-3">
+									<div class="card">
+										<div class="card-body">
+											
+											
+											     
+										</div>
+										
+									</div>
+									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 								<div class="col-lg-3">
 									<div class="card">
 										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Go somewhere</a>        
+											
+											
+											      
 										</div>
 									</div>
+									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
-								<div class="col-lg-3">
-									<div class="card">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Go somewhere</a>        
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3">
-									<div class="card">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Go somewhere</a>        
-										</div>
-									</div>
-								</div>
+									
+								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-
-		<section class="tabs-container mt-5 button-container">
+			<hr class="footer-divider border-2 opacity-75 d-none d-md-block w-100">
+			<section class="tabs-container mt-5 button-container">
 			<div class="container buttons-container">
 				<div class="tab">
 					<button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise"><span>Catena</span></button>
@@ -151,6 +166,9 @@ get_header();
 				</div>
 			</div>
 		</section>
+		</section>
+
+		
 
 		<section class="third-section" style="margin-top: 100px;">
 			<div class="container mt-5">

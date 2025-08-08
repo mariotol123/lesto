@@ -12062,6 +12062,7 @@ h2, .h2 {
   line-height: 5.053rem; /* 75.8px */
   letter-spacing: -0.02em; /* -2% */
   margin: 0; /* Reset margin di default */
+  color: #ffffff;
 }
 
 h3, .h3 {
@@ -12087,11 +12088,12 @@ h5, .h5, .site-footer .footer-nav-list li a,
 .site-footer .footer-social-list li,
 .site-footer .footer-company-list li,
 .site-footer .footer-contacts-list li {
-  font-weight: 300; /* Light */
+  font-weight: 400;
   font-size: var(--font-l-20); /* 20px */
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
+  color: #ffffff;
 }
 
 h6, .h6 {
@@ -12108,6 +12110,15 @@ p {
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
+  color: #ffffff;
+}
+
+.desktop-p {
+  font-weight: 300; /* Light */
+  font-size: var(--font-s-14); /* 14px */
+  line-height: auto; /* Auto */
+  letter-spacing: 0;
+  margin: 0;
   color: #ffffff;
 }
 
@@ -12449,6 +12460,7 @@ p {
 
 .footer-container .footer-divider {
   margin-top: 8rem;
+  border-color: rgb(204, 204, 204);
 }
 @media (max-width: 575.98px) {
   .footer-container {
@@ -12782,8 +12794,46 @@ section.section {
   color: #ffffff !important;
   text-transform: uppercase;
   font-weight: 300;
+  width: 100%;
 }
 
+@media (max-width: 768px) {
+  .page-description {
+    width: 100% !important;
+    text-transform: lowercase !important;
+  }
+  .page-description::first-letter {
+    text-transform: uppercase !important;
+  }
+}
 .social-icons-container {
   margin-bottom: 13rem;
+}
+
+.card {
+  background-image: url("/wp-content/themes/lesto-theme/images/Frame 427319135.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0%;
+  height: 23rem;
+  padding: 0px;
+  margin-left: 0.8rem;
+}
+
+.card-text {
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.no-col-padding .row > [class^=col-] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.lesto-help {
+  background-color: var(--bg-dark-transparent);
+}
+.lesto-help hr {
+  border-color: rgb(204, 204, 204);
 }/*# sourceMappingURL=main.css.map */
