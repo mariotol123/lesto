@@ -174,7 +174,99 @@ get_header();
 				</div>
 			</div>
 		</section>
-	</main>
+
+
+	   <section class="four-section">
+		   <div class="container pt-5xl pb-10xl">
+			   <div class="row align-items-center border-top-four-section">
+				   <div class="col-md-4 d-flex justify-content-center">
+					   <img src="/wp-content/themes/lesto-theme/images/cucine.png" alt="Cucine" class="img-fluid" />
+				   </div>
+				   <div class="col-md-1 d-flex justify-content-start align-items-center">
+					   <h5 class="mb-2 m_h5">CUCINE</h5>
+				   </div>
+				   <div class="col-md-2 d-flex justify-content-center align-items-center">
+					   <h5 class="mb-2 m_h5">01</h5>
+				   </div>
+				   <div class="col-md-5 d-flex justify-content-end mt-1">
+					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png" alt="Section Icon Container" class="img-fluid" />
+				   </div>
+			   </div>
+			   <div class="row align-items-center border-top-four-section">
+				   <div class="col-md-4 d-flex justify-content-center">
+					   <img src="/wp-content/themes/lesto-theme/images/cucine.png" alt="Cucine" class="img-fluid" />
+				   </div>
+				   <div class="col-md-1 d-flex justify-content-start align-items-center">
+					   <h5 class="mb-2 m_h5">IMPIANTI DI ASPIRAZIONE</h5>
+				   </div>
+				   <div class="col-md-2 d-flex justify-content-center align-items-center">
+					   <h5 class="mb-2 m_h5">02</h5>
+				   </div>
+				   <div class="col-md-5 d-flex justify-content-end mt-1">
+					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png" alt="Section Icon Container" class="img-fluid" />
+				   </div>
+			   </div>
+			   <div class="row align-items-center border-top-four-section">
+				   <div class="col-md-4 d-flex justify-content-center">
+					   <img src="/wp-content/themes/lesto-theme/images/cucine.png" alt="Cucine" class="img-fluid" />
+				   </div>
+				   <div class="col-md-1 d-flex justify-content-start align-items-center">
+					   <h5 class="mb-2 m_h5">ARREDO BAR</h5>
+				   </div>
+				   <div class="col-md-2 d-flex justify-content-center align-items-center">
+					   <h5 class="mb-2 m_h5">03</h5>
+				   </div>
+				   <div class="col-md-5 d-flex justify-content-end mt-1">
+					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png" alt="Section Icon Container" class="img-fluid" />
+				   </div>
+			   </div>
+			   <div class="row align-items-center border-top-four-section">
+				   <div class="col-md-4 d-flex justify-content-center">
+					   <img src="/wp-content/themes/lesto-theme/images/cucine.png" alt="Cucine" class="img-fluid" />
+				   </div>
+				   <div class="col-md-1 d-flex justify-content-start align-items-center">
+					   <h5 class="mb-2 m_h5">CUCINE AZIENDALI</h5>
+				   </div>
+				   <div class="col-md-2 d-flex justify-content-center align-items-center">
+					   <h5 class="mb-2 m_h5">04</h5>
+				   </div>
+				   <div class="col-md-5 d-flex justify-content-end mt-1">
+					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png" alt="Section Icon Container" class="img-fluid" />
+				   </div>
+			   </div>
+			   <div class="row align-items-center border-top-four-section">
+				   <div class="col-md-4 d-flex justify-content-center">
+					   <img src="/wp-content/themes/lesto-theme/images/cucine.png" alt="Cucine" class="img-fluid" />
+				   </div>
+				   <div class="col-md-1 d-flex justify-content-start align-items-center">
+					   <h5 class="mb-2 m_h5">LESTOWATT</h5>
+				   </div>
+				   <div class="col-md-2 d-flex justify-content-center align-items-center">
+					   <h5 class="mb-2 m_h5">05</h5>
+				   </div>
+				   <div class="col-md-5 d-flex justify-content-end mt-1">
+					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png" alt="Section Icon Container" class="img-fluid" />
+				   </div>
+			   </div>
+		   </div>
+	   </section>
+
+	   <section class="fifth-section border-top-four-section border-bottom-four-section">
+		 
+		 <div class="slider-multi-row-container container pt-2	pb-2" id="sliderMultiRow">
+	 		 <div class="slider-multi-row" id="sliderMultiRowInner">
+	 			 <?php for($i=0; $i<14; $i++): ?>
+	 				 <img src="<?php echo get_template_directory_uri(); ?>/images/Footer Icon Container.png" alt="Footer Icon" />
+	 			 <?php endfor; ?>
+	 			 <?php for($i=0; $i<14; $i++): ?>
+	 				 <img src="<?php echo get_template_directory_uri(); ?>/images/Footer Icon Container.png" alt="Footer Icon" />
+	 			 <?php endfor; ?>
+	 		 </div>
+		 </div>
+		 
+
+	   </section>
+	   </main>
 
 	<!-- Custom tab fade transition script -->
 	<script>
@@ -228,6 +320,7 @@ get_header();
 			}
 		});
 	</script>
-
+<script src="<?php echo get_template_directory_uri(); ?>/js/slider-multi-row.js"></script>
 <?php
+
 get_footer();
