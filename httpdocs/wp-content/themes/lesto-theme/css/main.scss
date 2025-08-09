@@ -792,72 +792,54 @@ body.page-template-template-home {
   justify-content: center;
 }
 
-.btn-custom {
-    background-color: #ffffff  !important;
-  color: #000000 !important;
-  border: 1px solid #ffffff;
-  border-radius: 25px;
-  padding: 6px 40px;
-  font-weight: 400;
-  font-size: var(--font-s-14); /* 14px */
-  text-decoration: none;
-  display: inline-block;
+ .btn-custom {
+     background-color: #ffffff  !important;
+   color: #000000 !important;
+   border: 1px solid #ffffff;
+   border-radius: 25px;
+   padding: 6px 40px;
+   font-weight: 400;
+   font-size: var(--font-s-14); /* 14px */
+
+ }
+.tablinks {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;                  /* inizialmente niente gap */
+  padding: 10px 20px;
   transition: all 0.3s ease;
-  cursor: pointer;
   position: relative;
   overflow: hidden;
-  box-shadow: none !important;
+}
 
-    &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    background-color:  #ffffff!important;
-    color: #000000 !important;
-    border-color: #ffffff !important;
-    box-shadow: none !important;
-    outline: none !important;
-    padding-left: 35px; /* Allarga il padding a sinistra per fare spazio all'icona */
-  }
+.tablinks .icon {
+  width: 1rem;
+  height: 0.5rem;
+  display: inline-block;
+  opacity: 0;
+  max-width: 0;
+  transition: opacity 1s ease, max-width 1s ease-in-out;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: -42px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1rem;
-    height: 1rem;
-    background-image: url('../images/Icon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
+.tablinks:hover {
+  gap: 8px;
+}
 
-  span {
-    transition: all 0.3s ease;
-    display: block;
-  }
+.tablinks.active,
+.tablinks:active {
+  gap: 8px;
+}
 
-  &:hover {
-    &::before {
-      opacity: 1;
-      left: 8px;
-    }
-  }
+.tablinks:hover .icon {
+  opacity: 1;
+  max-width: 20px;
+}
 
-  // Quando il bottone è attivo, mantieni l'icona fissa
-  &.active,
-  &:active {
-    &::before {
-      opacity: 1;
-      left: 8px;
-    }
-  }
+.tablinks.active .icon,
+.tablinks:active .icon {
+  opacity: 1;
+  max-width: 20px;
 }
 
 .content-section {
