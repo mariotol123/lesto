@@ -51,17 +51,21 @@
 						   <!-- Bottoni visibili solo su desktop -->
 						   <div class="main-buttons d-none d-md-flex">
 							   <button type="button" class="btn btn-header-custom" id="settori-btn">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
 								   <span>Settori</span>
 							   </button>
 							   <button type="button" class="btn btn-header-custom" id="servizi-btn">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
 								   <span>Servizi</span>
 							   </button>
 							   <button type="button" class="btn btn-header-custom" id="realizzazioni-btn">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
 								   <span>Realizzazioni</span>
 							   </button>
 						   </div>
 						   <div class="contatti-button ms-3 align-self-end d-none d-md-flex">
 							   <button type="button" class="btn btn-header-custom" id="contatti-btn">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
 								   <span>Contatti</span>
 							   </button>
 						   </div>

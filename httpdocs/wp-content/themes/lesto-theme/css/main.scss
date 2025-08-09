@@ -471,7 +471,8 @@ p {
   font-weight: 400;
   font-size: var(--font-s-14); /* 14px */
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   transition: all 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -479,57 +480,39 @@ p {
   box-shadow: none !important;
   min-width: 80px;
 
-  // Stili per hover e click con background bianco 30% opacità
-  &:hover,
-  &:focus,
-  &:active,
-  &.active,
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    background-color: rgba(255, 255, 255, 0.3) !important;
-    color: #ffffff !important;
-    border-color: #ffffff !important;
-    box-shadow: none !important;
-    outline: none !important;
-    padding-left: 35px; /* Allarga il padding a sinistra per fare spazio all'icona */
-  }
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-image: url('../images/Group 1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
+.btn-header-custom .icon {
+  display: none;
+  width: 1rem;
+  height: 0.5rem;
+  user-select: none;
+  opacity: 0;
+  max-width: 0;
+  transition: opacity 1s ease, max-width 1s ease-in-out;
+}
 
-  span {
-    transition: all 0.3s ease;
-    display: block;
-  }
+.btn-header-custom:hover {
+  gap: 8px;
+  border: 1px solid #ffffff !important;
+}
 
-  &:hover {
-    &::before {
-      opacity: 1;
-      left: 8px;
-    }
-  }
+.btn-header-custom:hover .icon {
+  display: inline-block;
+  opacity: 1;
+  max-width: 20px;
+}
 
-  // Quando il bottone è attivo, mantieni l'icona fissa
-  &.active,
-  &:active {
-    &::before {
-      opacity: 1;
-      left: 8px;
-    }
-  }
+.btn-header-custom.active,
+.btn-header-custom:active {
+  gap: 8px;
+}
+
+.btn-header-custom.active .icon,
+.btn-header-custom:active .icon {
+  display: inline-block;
+  opacity: 1;
+  max-width: 20px;
 }
 
 .main-buttons-container {
