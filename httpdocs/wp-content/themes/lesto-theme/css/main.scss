@@ -306,7 +306,7 @@ p {
   border-radius: 4px;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   cursor: pointer;
 
   &:hover {
@@ -473,7 +473,8 @@ p {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  transition: all 0.3s ease;
+  gap: 0;
+  transition: all 1s ease;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -483,10 +484,10 @@ p {
 }
 
 .btn-header-custom .icon {
-  display: none;
   width: 1rem;
   height: 0.5rem;
-  user-select: none;
+  max-width: 0; /* così non occupa spazio visibile */ 
+  display: inline-block;
   opacity: 0;
   max-width: 0;
   transition: opacity 1s ease, max-width 1s ease-in-out;
@@ -495,6 +496,7 @@ p {
 .btn-header-custom:hover {
   gap: 8px;
   border: 1px solid #ffffff !important;
+  
 }
 
 .btn-header-custom:hover .icon {
@@ -510,7 +512,6 @@ p {
 
 .btn-header-custom.active .icon,
 .btn-header-custom:active .icon {
-  display: inline-block;
   opacity: 1;
   max-width: 20px;
 }
@@ -789,9 +790,9 @@ body.page-template-template-home {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0;                  /* inizialmente niente gap */
   padding: 10px 20px;
-  transition: all 0.3s ease;
+   gap: 0;
+  transition: gap 2s ease;
   position: relative;
   overflow: hidden;
 }
