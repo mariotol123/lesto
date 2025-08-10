@@ -918,43 +918,39 @@ section.section {
   outline: none;
   cursor: pointer;
   padding: 5px 40px;
-  transition: 0.3s;
+  transition: background-color 0.3s;
   margin: 0 5px;
-
-  &:hover {
-    background-color: #ffffff;
-  }
-
-  &.active {
-    background-color: #ffffff;
-  }
 }
 
-/* Style the tab content */
+.tab button:hover {
+  background-color: #ffffff;
+}
+
+.tab button.active {
+  background-color: #ffffff;
+}
+
 .tabcontent {
-  display: none !important;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
   border-top: none;
-
-  &.show {
-    display: block !important;
-  }
+  position: relative; /* o absolute se vuoi */
 }
 
+.tabcontent.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Centrare verticalmente nella prima sezione */
 .section .tabcontent {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
+  transform: translateY(-50%);
   width: 100%;
-}
-
-/* Fade effect for tab content */
-.fade-content {
-  opacity: 0;
-  transition: opacity 0.4s;
-
-  &.show {
-    opacity: 1;
-  }
 }
 
 .page-description {
@@ -999,8 +995,6 @@ section.section {
   margin-top: 0.5rem;
   text-transform: uppercase;
 }
-
-
 
 #lesto-help {
   background-color: var(--bg-dark-transparent);

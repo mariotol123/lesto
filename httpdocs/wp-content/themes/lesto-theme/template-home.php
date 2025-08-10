@@ -280,58 +280,45 @@ get_header();
 	   </section>
 	   </main>
 
-	<!-- Custom tab fade transition script -->
 	<script>
-		function openTab(evt, tabName) {
-			console.log('Opening tab:', tabName); // Debug
-			
-			// Hide all tab content
-			var tabcontent = document.querySelectorAll('.tabcontent');
-			tabcontent.forEach(function(content) {
-				content.classList.remove('show');
-			});
-			
-			// Remove active class from all buttons
-			var tablinks = document.querySelectorAll('.tablinks');
-			tablinks.forEach(function(btn) {
-				btn.classList.remove('active');
-			});
-			
-			// Show all tabcontent with matching data-tab
-			var matching = document.querySelectorAll('.tabcontent[data-tab="' + tabName + '"]');
-			console.log('Found matching elements:', matching.length); // Debug
-			
-			matching.forEach(function(content) {
-				setTimeout(function() { 
-					content.classList.add('show'); 
-				}, 10);
-			});
-			
-			// Add active class to clicked button
-			evt.currentTarget.classList.add('active');
-		}
-
-		document.addEventListener('DOMContentLoaded', function() {
-			console.log('DOM loaded, setting up tabs'); // Debug
-			
-			var tablinks = document.querySelectorAll('.tablinks');
-			console.log('Found tab buttons:', tablinks.length); // Debug
-			
-			tablinks.forEach(function(btn) {
-				btn.addEventListener('click', function(evt) {
-					var tabName = btn.getAttribute('data-tab');
-					openTab(evt, tabName);
-				});
-			});
-			
-			// Show first tab by default
-			if (tablinks.length > 0) {
-				setTimeout(function() {
-					tablinks[0].click();
-				}, 100);
-			}
+	function openTab(evt, tabName) {
+		// Nascondo tutti i contenuti
+		document.querySelectorAll('.tabcontent').forEach(content => {
+			content.classList.remove('show');
 		});
-	</script>
+
+		// Rimuovo lo stato attivo da tutti i bottoni
+		document.querySelectorAll('.tablinks').forEach(btn => {
+			btn.classList.remove('active');
+		});
+
+		// Mostro i contenuti del tab selezionato
+		document.querySelectorAll(`.tabcontent[data-tab="${tabName}"]`).forEach(content => {
+			content.classList.add('show');
+		});
+
+		// Segno il bottone come attivo
+		evt.currentTarget.classList.add('active');
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const tablinks = document.querySelectorAll('.tablinks');
+
+		// Associo i click ai bottoni
+		tablinks.forEach(btn => {
+			btn.addEventListener('click', evt => {
+				const tabName = btn.getAttribute('data-tab');
+				openTab(evt, tabName);
+			});
+		});
+
+		// Attivo il primo tab di default
+		if (tablinks.length > 0) {
+			tablinks[0].click();
+		}
+	});
+</script>
+
 <script src="<?php echo get_template_directory_uri(); ?>/js/slider-multi-row.js"></script>
 <?php
 
