@@ -12,7 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="container footer-container">
+		<div class="container footer-container mt-4">
 			<div class="row">
 				<!-- Prima colonna: Logo -->
 				<div class="col-lg-3 mb-4">
@@ -24,22 +24,22 @@
 					<div class="footer-navigation mb-3 d-flex flex-column gap-3">
 						<h4 class="footer-title">Navigation</h4>
 						<ul class="footer-nav-list">
-							<li><a href="<?php echo home_url('/'); ?>">Home</a></li>
-							<li><a href="<?php echo home_url('/about/'); ?>">Chi Siamo</a></li>
-							<li><a href="<?php echo home_url('/services/'); ?>">Servizi</a></li>
-							<li><a href="<?php echo home_url('/portfolio/'); ?>">Portfolio</a></li>
-							<li><a href="<?php echo home_url('/blog/'); ?>">Blog</a></li>
-							<li><a href="<?php echo home_url('/contact/'); ?>">Contatti</a></li>
+							<li>Home</a></li>
+							<li>Chi Siamo</li>
+							<li>Servizi</li>
+							<li>Portfolio</li>
+							<li>Blog</li>
+							<li>Contatti</li>
 						</ul>
 					</div>
 					
 					<div class="footer-social d-flex flex-column gap-3">
 						<h4 class="footer-title">Social</h4>
 						<ul class="footer-social-list">
-							<li><a href="#" target="_blank">Facebook</a></li>
-							<li><a href="#" target="_blank">Instagram</a></li>
-							<li><a href="#" target="_blank">LinkedIn</a></li>
-							<li><a href="#" target="_blank">Twitter</a></li>
+							<li>Facebook</a></li>
+							<li>Instagram</a></li>
+							<li>LinkedIn</a></li>
+							<li>Twitter</a></li>
 						</ul>
 					</div>
 				</div>
@@ -50,9 +50,9 @@
 						<h4 class="footer-title">Informazioni aziendali</h4>
 						<ul class="footer-company-list">
 							<li>Lesto Srl</li>
-							<li>P.IVA: 12345678901</li>
-							<li>Cod. Fisc.: 12345678901</li>
-							<li>REA: MI-1234567</li>
+							<li>P.IVA: <a href="https://www.example.com/piva" target="_blank">12345678901</a></li>
+							<li>Cod. Fisc.: <a href="https://www.example.com/codfisc" target="_blank">12345678901</a></li>
+							<li>REA: <a href="https://www.example.com/rea" target="_blank">MI-1234567</a></li>
 							<li><a href="<?php echo home_url('/privacy/'); ?>" class="text-uppercase">Privacy Policy</a></li>
 							<li><a href="<?php echo home_url('/terms/'); ?>" class="text-uppercase">Termini e Condizioni</a></li>
 						</ul>

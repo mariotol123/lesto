@@ -47,7 +47,7 @@ get_header();
 		</section>
 
 		<section class="lesto-help d-flex flex-column align-items-center justify-content-center">
-			<div class="container mt-5">
+			<div class="container pt-10xl">
 				<h2>Lesto ti aiuta</h2>
 			</div>
 			<hr class="footer-divider border-2 opacity-75 w-100">
@@ -184,7 +184,7 @@ get_header();
 
 
 	   <section class="four-section">
-		   <div class="container pt-5xl pb-10xl">
+		   <div class="container pt-8xl pb-10xl">
 			   <div class="row border-top-four-section pt-2">
 				   <div class="col-md-4 d-flex justify-content-center">
 					   <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine" class="img-fluid img-four-section" />
@@ -265,7 +265,7 @@ get_header();
 
 	   <section class="fifth-section border-top-four-section border-bottom-four-section">
 		 
-		 <div class="slider-multi-row-container container pt-2	pb-2" id="sliderMultiRow">
+		 <div class="slider-multi-row-container container pt-5	pb-5" id="sliderMultiRow">
 	 		 <div class="slider-multi-row" id="sliderMultiRowInner">
 	 			 <?php for($i=0; $i<14; $i++): ?>
 	 				 <img src="<?php echo get_template_directory_uri(); ?>/images/Footer Icon Container.png" alt="Footer Icon" />

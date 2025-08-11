@@ -3,6 +3,11 @@ html {
   font-size: 15px;
 }
 
+a {
+  color: #007cba;
+  text-decoration: none;
+}
+
 @media (max-width: 768px) {
   html {
     font-size: 12px;
@@ -646,7 +651,7 @@ p {
     
     li {
       @extend .h5;
-      margin-bottom: var(--py-s); /* 8px */
+      margin-bottom: 0.5rem; /* 8px */
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.8); /* Bianco 80% opacità */
       
@@ -656,6 +661,7 @@ p {
         text-decoration: none;
         text-transform: uppercase;
         transition: color 0.3s ease;
+        font-weight: 300;
         
         &:hover {
           color: #ffffff; /* Bianco 100% al hover */
@@ -720,7 +726,7 @@ p {
           gap: 0.25rem;
           
           li {
-            font-size: var(--font-s-13);
+            
             margin-bottom: 0.55rem;
           }
         }
