@@ -1,4 +1,3 @@
-
 html {
   font-size: 15px;
 }
@@ -1243,7 +1242,19 @@ hr {
 }
 
 @media (max-width: 767.98px) {
-  .servizi-consulenza-row {
+  .servizi-consulenza-container .row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .servizi-consulenza-container .col-md-6 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .servizi-consulenza-container {
     display: flex;
     flex-direction: column;
   }
@@ -1279,6 +1290,9 @@ button {
   }
 }
 
+// Header Custom Buttons
+
+
 // Input trasparenti per il form contatti
 .header-buttons input,
 .header-buttons textarea {
@@ -1299,4 +1313,24 @@ button {
 .header-buttons .form-check-input {
  
   border-radius: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+ 
+  .servizi-consulenza-container .row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    .header-buttons {
+    display: flex !important;
+  }
+  }
+  .servizi-consulenza-container .col-md-6 {
+
+    margin-bottom: 2rem;
+  }
+ .servizi-consulenza-container .header-buttons {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+ 
 }
