@@ -2,60 +2,31 @@ html {
   font-size: 15px;
 }
 
-a {
-  color: #007cba;
-  text-decoration: none;
-}
 
-@media (max-width: 768px) {
-  html {
-    font-size: 12px;
-  }
+// =========================
+// Base Styles
+// =========================
+html { font-size: 15px; }
+a { color: #007cba; text-decoration: none; }
 
-  @media (max-width: 1200px) {
-    html {
-      font-size: 14px;
-    }
-  }
+// Font-size responsive
+@media (max-width: 1200px) { html { font-size: 14px; } }
+@media (max-width: 992px)  { html { font-size: 13px; } }
+@media (max-width: 768px)  { html { font-size: 12px; } }
+@media (max-width: 575.98px) { html { font-size: 11px; } }
+@media (max-width: 400px)  { html { font-size: 10px; } }
+@media (max-width: 320px)  { html { font-size: 9px; } }
+@media (max-width: 240px)  { html { font-size: 8px; } }
 
-  @media (max-width: 992px) {
-    html {
-      font-size: 13px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    html {
-      font-size: 12px;
-    }
-  }
-
-  @media (max-width: 575.98px) {
-    html {
-      font-size: 11px;
-    }
-  }
-  @media (max-width: 400px) {
-      html {
-        font-size: 10px;
-      }
-  }
-  @media (max-width: 320px) {
-      html {
-        font-size: 9px;
-      }
-  }
-  @media (max-width: 240px) {
-      html {
-        font-size: 8px;
-      }
-  }
-}
-
-
+// =========================
+// Bootstrap Import
+// =========================
 @import "../node_modules/bootstrap/scss/bootstrap";
-
 // Override degli stili dopo Bootstrap per evitare che vengano sovrascritti
+
+// =========================
+// Variables
+// =========================
 body {
   font-family: "Roboto", sans-serif !important;
   background-color: var(--bg-dark-transparent) !important;
@@ -445,7 +416,7 @@ p {
   @media (max-width: 767.98px) {
     .col-4.col-md-5.d-flex.align-items-center.justify-content-between {
       width: 100%;
-      padding: 0 16px;
+      padding: 0 9px;
     }
     .site-logo {
       margin-right: 0;

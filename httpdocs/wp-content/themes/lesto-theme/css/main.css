@@ -3,47 +3,46 @@ html {
   font-size: 15px;
 }
 
+html {
+  font-size: 15px;
+}
+
 a {
   color: #007cba;
   text-decoration: none;
 }
 
+@media (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 13px;
+  }
+}
 @media (max-width: 768px) {
   html {
     font-size: 12px;
   }
 }
-@media (max-width: 768px) and (max-width: 1200px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media (max-width: 768px) and (max-width: 992px) {
-  html {
-    font-size: 13px;
-  }
-}
-@media (max-width: 768px) and (max-width: 768px) {
-  html {
-    font-size: 12px;
-  }
-}
-@media (max-width: 768px) and (max-width: 575.98px) {
+@media (max-width: 575.98px) {
   html {
     font-size: 11px;
   }
 }
-@media (max-width: 768px) and (max-width: 400px) {
+@media (max-width: 400px) {
   html {
     font-size: 10px;
   }
 }
-@media (max-width: 768px) and (max-width: 320px) {
+@media (max-width: 320px) {
   html {
     font-size: 9px;
   }
 }
-@media (max-width: 768px) and (max-width: 240px) {
+@media (max-width: 240px) {
   html {
     font-size: 8px;
   }
@@ -12509,7 +12508,7 @@ p {
 @media (max-width: 767.98px) {
   .col-4.col-md-5.d-flex.align-items-center.justify-content-between {
     width: 100%;
-    padding: 0 16px;
+    padding: 0 9px;
   }
   .site-logo {
     margin-right: 0;
