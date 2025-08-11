@@ -1154,3 +1154,26 @@ section.section {
   background-color: var(--bg-dark-transparent);
 
 }
+
+.main-settori {
+  hr {
+    border-color: rgb(204, 204, 204);
+  }
+
+  h5 {
+    font-size: var(--font-l-20) !important;
+    text-transform: uppercase !important;
+  }
+
+  p {
+    font-size: var(--font-s-14) !important;
+  }
+
+  .img-overflow {
+    width: 110%;
+    max-width: none;
+    margin-left: 10%;
+}
+
+
+}

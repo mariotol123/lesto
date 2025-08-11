@@ -13170,4 +13170,32 @@ section.section {
 
 .fifth-section {
   background-color: var(--bg-dark-transparent);
+}
+
+.main-settori hr {
+  border-color: rgb(204, 204, 204);
+}
+.main-settori h5, .main-settori .h5, .main-settori .site-footer .footer-nav-list li, .site-footer .footer-nav-list .main-settori li,
+.main-settori .site-footer .footer-social-list li,
+.site-footer .footer-social-list .main-settori li,
+.main-settori .site-footer .footer-company-list li,
+.site-footer .footer-company-list .main-settori li,
+.main-settori .site-footer .footer-contacts-list li,
+.site-footer .footer-contacts-list .main-settori li, .main-settori .site-footer .footer-nav-list li a, .site-footer .footer-nav-list li .main-settori a,
+.main-settori .site-footer .footer-social-list li a,
+.site-footer .footer-social-list li .main-settori a,
+.main-settori .site-footer .footer-company-list li a,
+.site-footer .footer-company-list li .main-settori a,
+.main-settori .site-footer .footer-contacts-list li a,
+.site-footer .footer-contacts-list li .main-settori a {
+  font-size: var(--font-l-20) !important;
+  text-transform: uppercase !important;
+}
+.main-settori p {
+  font-size: var(--font-s-14) !important;
+}
+.main-settori .img-overflow {
+  width: 110%;
+  max-width: none;
+  margin-left: 10%;
 }/*# sourceMappingURL=main.css.map */

@@ -12,7 +12,8 @@ get_header();
 
 	<!-- Main content area -->
 	<main>
-		<section class="section container">
+		<div>
+			<section class="section container">
 			<div class="row align-items-center vh-100">
 				<div id="text-column" class="col-md-10 d-flex flex-column justify-content-center">
 					<div id="content-locale" class="content-box active tabcontent fade-content show text-start" data-tab="Tab2">
@@ -148,7 +149,10 @@ get_header();
 				</div>
 			</div>
 			<hr class="footer-divider border-2 opacity-75 d-none d-md-block w-100">
-			<section class="tabs-container mt-4 button-container">
+			
+		</section>
+
+		<section class="tabs-container mt-4 button-container">
 			<div class="container buttons-container mb-5">
   <div class="tab">
     <button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise">
@@ -163,8 +167,7 @@ get_header();
 </div>
 
 		</section>
-		</section>
-
+		</div>
 		
 
 		<section class="third-section d-flex flex-column justify-content-between container vh-100">
