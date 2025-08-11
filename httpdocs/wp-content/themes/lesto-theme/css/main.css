@@ -12249,6 +12249,7 @@ h3, .h3 {
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
+  color: #ffffff;
 }
 
 h4, .h4 {
@@ -12281,11 +12282,12 @@ h6, .h6 {
   line-height: auto; /* Auto */
   letter-spacing: 0.02em; /* 2% */
   margin: 0; /* Reset margin di default */
+  color: #ffffff;
 }
 
 p {
   font-weight: 300; /* Light */
-  font-size: var(--font-l-20); /* 14px */
+  font-size: var(--font-l-20);
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
@@ -12301,8 +12303,17 @@ p {
   color: #ffffff;
 }
 
+.desktop-p-16 {
+  font-weight: 300; /* Light */
+  font-size: var(--font-base-16); /* 16px */
+  line-height: auto; /* Auto */
+  letter-spacing: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
 .p_1 {
-  font-weight: 400; /* Regular */
+  font-weight: 200;
   font-size: var(--font-base-16); /* 16px */
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
@@ -13230,4 +13241,88 @@ section.section {
 }
 .main-settori p {
   margin-bottom: 4rem;
+}
+
+.accordion .accordion-item,
+.accordion .accordion-button {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-radius: 18px;
+}
+
+.accordion-container .btn-header-custom:hover {
+  gap: 0px !important;
+}
+.accordion-container .header-buttons {
+  width: 100%;
+}
+.accordion-container .header-buttons .accordion-button {
+  width: auto;
+  display: inline-block;
+}
+
+.servizi-consulenza-container hr {
+  border-color: rgb(204, 204, 204);
+}
+
+@media (max-width: 767.98px) {
+  .servizi-consulenza-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .servizi-consulenza-img,
+  .img-overflow {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    display: block;
+    padding: 0 !important;
+    margin-bottom: 2rem;
+  }
+  button {
+    width: 100% !important;
+  }
+}
+.servizi-consulenza-container h5, .servizi-consulenza-container .h5, .servizi-consulenza-container .site-footer .footer-nav-list li, .site-footer .footer-nav-list .servizi-consulenza-container li,
+.servizi-consulenza-container .site-footer .footer-social-list li,
+.site-footer .footer-social-list .servizi-consulenza-container li,
+.servizi-consulenza-container .site-footer .footer-company-list li,
+.site-footer .footer-company-list .servizi-consulenza-container li,
+.servizi-consulenza-container .site-footer .footer-contacts-list li,
+.site-footer .footer-contacts-list .servizi-consulenza-container li, .servizi-consulenza-container .site-footer .footer-nav-list li a, .site-footer .footer-nav-list li .servizi-consulenza-container a,
+.servizi-consulenza-container .site-footer .footer-social-list li a,
+.site-footer .footer-social-list li .servizi-consulenza-container a,
+.servizi-consulenza-container .site-footer .footer-company-list li a,
+.site-footer .footer-company-list li .servizi-consulenza-container a,
+.servizi-consulenza-container .site-footer .footer-contacts-list li a,
+.site-footer .footer-contacts-list li .servizi-consulenza-container a {
+  text-transform: uppercase !important;
+  margin-bottom: 0.5rem !important;
+}
+.servizi-consulenza-container h6, .servizi-consulenza-container .h6 {
+  text-transform: uppercase !important;
+}
+.servizi-consulenza-container .colonna-1 p {
+  font-weight: 200;
+}
+
+.header-buttons input,
+.header-buttons textarea {
+  background-color: transparent !important;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.8rem;
+  border-radius: 2rem;
+}
+
+.header-buttons input:focus,
+.header-buttons textarea:focus {
+  box-shadow: none;
+  border-color: #fff;
+  outline: none;
+}
+
+.header-buttons .form-check-input {
+  border-radius: 0.5rem;
 }/*# sourceMappingURL=main.css.map */
