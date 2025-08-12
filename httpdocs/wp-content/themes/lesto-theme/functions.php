@@ -185,3 +185,35 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Registrazione Custom Post Type Settore e Servizio
+ */
+function lesto_register_custom_post_types() {
+	// Settore
+	register_post_type('settore', array(
+		'labels' => array(
+			'name' => __('Settori', 'lesto-theme'),
+			'singular_name' => __('Settore', 'lesto-theme'),
+		),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'settori'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+		'show_in_rest' => true,
+	));
+
+	// Servizio
+	register_post_type('servizio', array(
+		'labels' => array(
+			'name' => __('Servizi', 'lesto-theme'),
+			'singular_name' => __('Servizio', 'lesto-theme'),
+		),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'servizi'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+		'show_in_rest' => true,
+	));
+}
+add_action('init', 'lesto_register_custom_post_types');
+
