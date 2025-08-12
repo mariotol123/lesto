@@ -35,9 +35,9 @@ get_header();
     <hr class="footer-divider border-2 opacity-75 w-100">
 
    <div class="pt-8xl pb-8xl container">
-    <div class="accordion-container header-buttons d-flex flex-column align-items-start">
+    <div class="accordion-container buttons d-flex flex-column align-items-start">
 
-        <div class="header-buttons">
+        <div class="buttons">
             <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
                 <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
                 <span>Cucine</span>
@@ -47,7 +47,7 @@ get_header();
             </div>
         </div>
 
-        <div class="header-buttons">
+        <div class="buttons">
             <button class="accordion-button btn btn-header-custom" type="button">
                 Arrebo bar
             </button>
@@ -56,7 +56,7 @@ get_header();
             </div>
         </div>
 
-        <div class="header-buttons">
+        <div class="buttons">
             <button class="accordion-button btn btn-header-custom" type="button">
                 Cucine aziendali
             </button>
@@ -65,7 +65,7 @@ get_header();
             </div>
         </div>
 
-        <div class="header-buttons">
+        <div class="buttons">
             <button class="accordion-button btn btn-header-custom" type="button">
                 Lestowatt
             </button>
