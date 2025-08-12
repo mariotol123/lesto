@@ -77,18 +77,32 @@
 			   </div>
 		   </div>
 	   </div>
+	   <!-- Informazioni aziendali solo mobile -->
+	   <div class="row d-flex d-md-none">
+		   <div class="col-12 mb-4">
+			   <div class="footer-company mb-3 d-flex flex-column gap-3">
+				   <h4 class="footer-title">Informazioni aziendali</h4>
+				   <ul class="footer-company-list">
+					   <li>Lesto Srl</li>
+					   <li>P.IVA: <a href="https://www.example.com/piva" target="_blank">12345678901</a></li>
+					   <li>Cod. Fisc.: <a href="https://www.example.com/codfisc" target="_blank">12345678901</a></li>
+					   <li>REA: <a href="https://www.example.com/rea" target="_blank">MI-1234567</a></li>
+				   </ul>
+			   </div>
+		   </div>
+	   </div>
 		   <!-- Seconda row: social e contatti -->
 		   <div class="row">
 			   <div class="col-lg-3 col-md-6 mb-4 offset-lg-3 d-flex flex-column gap-5">
-				   <div class="footer-social d-flex flex-column gap-3">
-					   <h4 class="footer-title">Social</h4>
-					   <ul class="footer-social-list">
-						   <li>Facebook</li>
-						   <li>Instagram</li>
-						   <li>LinkedIn</li>
-						   <li>Twitter</li>
-					   </ul>
-				   </div>
+							   <div class="footer-social d-flex flex-column gap-3 d-none d-md-flex">
+								   <h4 class="footer-title">Social</h4>
+								   <ul class="footer-social-list">
+									   <li>Facebook</li>
+									   <li>Instagram</li>
+									   <li>LinkedIn</li>
+									   <li>Twitter</li>
+								   </ul>
+							   </div>
 			   </div>
 			   <div class="col-lg-6 col-md-6 mb-4 d-flex flex-column gap-5">
 				   <div class="footer-contacts d-flex flex-column gap-3">
