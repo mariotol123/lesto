@@ -36,6 +36,7 @@ get_header();
                     <div class="mosaico-cards">
                         <div>
                             <img src="/wp-content/themes/lesto-theme/images/clay-banks-ghN8sI7MDpM-unsplash.jpg" class="mosaico-img" alt="img1">
+                            <p>ciao</p>
                         </div>
                         <div>
                             <img src="/wp-content/themes/lesto-theme/images/dwayne-joe-FVNCHQiQCq4-unsplash.jpg" class="mosaico-img" alt="img2">
