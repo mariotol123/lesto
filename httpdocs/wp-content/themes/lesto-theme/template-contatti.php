@@ -86,8 +86,8 @@ get_header();
 				</div>
 			</div>
 			<!-- Colonna 2: Form di contatto -->
-			<div class="col-md-6 header-buttons p-4">
-				<form action="#" method="post">
+			<div class="col-md-6">
+				<form action="#" method="post" class="header-buttons d-flex flex-column p-4">
 					<div>
 						<h3 class="m_h3">Richiedi un preventivo</h3>
 						<p class="desktop-p mb-3">Compila il form, ti risponderemo entro 24h!</p>
@@ -104,9 +104,9 @@ get_header();
 						<p class="form-label mb-1 desktop-p-16 mx-5">E-mail</p>
 						<input type="email" class="form-control header-buttons" id="email" name="email" required>
 					</div>
-					<div class="mb-3">
+					<div class="mb-3 ">
 						<p class="form-label mb-1 desktop-p-16 mx-5">Messaggio</p>
-						<textarea class="form-control header-buttons" id="messaggio" name="messaggio" rows="4"
+						<textarea class="form-control header-buttons inverted-radius" id="messaggio" name="messaggio" rows="4"
 							required></textarea>
 					</div>
 					<button type="submit" class="btn btn-header-custom">Invia</button>
