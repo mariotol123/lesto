@@ -13651,26 +13651,26 @@ section.section {
   display: block;
 }
 
-.mosaico-img:nth-child(1) {
+.mosaico-cards > div:nth-child(1) .mosaico-img {
   height: 200px;
 }
 
-.mosaico-img:nth-child(2) {
+.mosaico-cards > div:nth-child(2) .mosaico-img {
   height: 350px;
 }
 
-.mosaico-img:nth-child(3) {
+.mosaico-cards > div:nth-child(3) .mosaico-img {
   height: 450px;
 }
 
-.mosaico-img:nth-child(4) {
+.mosaico-cards > div:nth-child(4) .mosaico-img {
   height: 450px;
 }
 
-.mosaico-img:nth-child(5) {
+.mosaico-cards > div:nth-child(5) .mosaico-img {
   height: 350px;
 }
 
-.mosaico-img:nth-child(6) {
+.mosaico-cards > div:nth-child(6) .mosaico-img {
   height: 300px;
 }/*# sourceMappingURL=main.css.map */

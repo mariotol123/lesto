@@ -34,12 +34,24 @@ get_header();
                 </div>
                 <div class="col-md-9">
                     <div class="mosaico-cards">
-                        <img src="/wp-content/themes/lesto-theme/images/clay-banks-ghN8sI7MDpM-unsplash.jpg" class="mosaico-img" alt="img1">
-                        <img src="/wp-content/themes/lesto-theme/images/dwayne-joe-FVNCHQiQCq4-unsplash.jpg" class="mosaico-img" alt="img2">
-                        <img src="/wp-content/themes/lesto-theme/images/pesce-huang-RWLTHuxCqYo-unsplash.jpg" class="mosaico-img" alt="img3">
-                        <img src="/wp-content/themes/lesto-theme/images/sindy-sussengut-SVTBVz8mcOY-unsplash.jpg" class="mosaico-img" alt="img4">
-                        <img src="/wp-content/themes/lesto-theme/images/steve-busch-_PLxJoYCUTY-unsplash.jpg" class="mosaico-img" alt="img5">
-                        <img src="/wp-content/themes/lesto-theme/images/willian-justen-de-vasconcellos-HIgLoYYY2qU-unsplash.jpg" class="mosaico-img" alt="img6">
+                        <div>
+                            <img src="/wp-content/themes/lesto-theme/images/clay-banks-ghN8sI7MDpM-unsplash.jpg" class="mosaico-img" alt="img1">
+                        </div>
+                        <div>
+                            <img src="/wp-content/themes/lesto-theme/images/dwayne-joe-FVNCHQiQCq4-unsplash.jpg" class="mosaico-img" alt="img2">
+                        </div>
+                        <div>
+                            <img src="/wp-content/themes/lesto-theme/images/pesce-huang-RWLTHuxCqYo-unsplash.jpg" class="mosaico-img" alt="img3">
+                        </div>
+                        <div>
+                            <img src="/wp-content/themes/lesto-theme/images/sindy-sussengut-SVTBVz8mcOY-unsplash.jpg" class="mosaico-img" alt="img4">
+                        </div>
+                        <div>
+                            <img src="/wp-content/themes/lesto-theme/images/steve-busch-_PLxJoYCUTY-unsplash.jpg" class="mosaico-img" alt="img5">
+                        </div>
+                        <div>
+                            <img src="/wp-content/themes/lesto-theme/images/willian-justen-de-vasconcellos-HIgLoYYY2qU-unsplash.jpg" class="mosaico-img" alt="img6">
+                        </div>
                     </div>
                 </div>
             </div>
