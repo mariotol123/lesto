@@ -32,7 +32,7 @@ get_header();
 					</div>
 				</div>
 				<div id="social-column"
-					class="col-md-2 d-flex align-items-center justify-content-end position-relative p-0">
+					class="col-md-2 d-flex align-items-center justify-content-end position-relative">
 					<div class="social-icons-container">
 						<a href="#" class="social-link">
 							<svg width="35" height="35" viewBox="0 0 35 35" fill="none"
@@ -78,7 +78,7 @@ get_header();
 					<div class="col-lg-8 col-md">
 						<div class="tabcontent fade-content show" data-tab="Tab1">
 							<div class="row">
-								<div class="col-lg-4 col-md-4 p-0">
+								<div class="col-lg-4 col-md-4">
 									<div class="card">
 										<div class="card-body">
 
@@ -90,7 +90,7 @@ get_header();
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 
-								<div class="col-lg-4 col-md-4 p-0">
+								<div class="col-lg-4 col-md-4">
 									<div class="card">
 										<div class="card-body">
 
@@ -101,7 +101,7 @@ get_header();
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 
-								<div class="col-lg-4 col-md-4 p-0">
+								<div class="col-lg-4 col-md-4">
 									<div class="card">
 										<div class="card-body">
 
@@ -116,7 +116,7 @@ get_header();
 						</div>
 						<div class="tabcontent fade-content" data-tab="Tab2">
 							<div class="row">
-								<div class="col-lg-3 col-md-3 p-0">
+								<div class="col-lg-3 col-md-3">
 									<div class="card">
 										<div class="card-body">
 
@@ -127,7 +127,7 @@ get_header();
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 
-								<div class="col-lg-3 col-md-3 p-0">
+								<div class="col-lg-3 col-md-3">
 									<div class="card">
 										<div class="card-body">
 
@@ -138,7 +138,7 @@ get_header();
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
 
-								<div class="col-lg-3 col-md-3 p-0">
+								<div class="col-lg-3 col-md-3">
 									<div class="card">
 										<div class="card-body">
 
@@ -149,7 +149,7 @@ get_header();
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
 								</div>
-								<div class="col-lg-3 col-md-3 p-0">
+								<div class="col-lg-3 col-md-3">
 									<div class="card">
 										<div class="card-body">
 
@@ -199,7 +199,7 @@ get_header();
 					competente e disponibile, siamo in grado di soddisfare anche le richieste più esigenti,
 					offrendo soluzioni complete e di alto livello.</h4>
 			</div>
-			<div class="col-md-7 d-flex align-items-end justify-content-md-end justify-content-center p-0">
+			<div class="col-md-7 d-flex align-items-end justify-content-md-end justify-content-center">
 				<button type="button" class="btn btn-custom mt-3 mt-md-0">Scopri di più</button>
 			</div>
 		</div>

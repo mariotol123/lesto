@@ -13126,7 +13126,6 @@ section.section {
   align-items: flex-start;
   height: 60px;
   transition: height 1s;
-  padding-left: 0px;
 }
 
 .four-section .row:hover .col-md-4 {

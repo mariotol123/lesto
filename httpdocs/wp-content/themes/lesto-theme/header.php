@@ -46,8 +46,9 @@
 					   <img src="<?php echo get_template_directory_uri(); ?>/images/Vector (1).png" alt="Menu" class="" id="hamburger-menu">
 				   </div>
 				   <!-- Container bottoni a destra -->
-				   <div class="col-4 col-md-7 header-buttons">
-					   <div class="d-flex position-relative align-items-center justify-content-between w-100 main-buttons-container">
+				   <div class="col-4 col-md-7">
+					   <div class="header-buttons">
+						<div class="d-flex position-relative align-items-center justify-content-between w-100 main-buttons-container">
 						   <!-- Bottoni visibili solo su desktop -->
 						   <div class="main-buttons d-none d-md-flex">
 							   <button type="button" class="btn btn-header-custom" id="settori-btn">
@@ -69,6 +70,7 @@
 								   <span>Contatti</span>
 							   </button>
 						   </div>
+					   </div>
 					   </div>
 				   </div>
 				   
