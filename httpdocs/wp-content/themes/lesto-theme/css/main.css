@@ -12590,6 +12590,7 @@ p {
 .btn-header-custom.active,
 .btn-header-custom:active {
   gap: 8px;
+  background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .btn-header-custom.active .icon,
@@ -13126,6 +13127,7 @@ section.section {
   align-items: flex-start;
   height: 60px;
   transition: height 1s;
+  padding-left: 0px;
 }
 
 .four-section .row:hover .col-md-4 {
