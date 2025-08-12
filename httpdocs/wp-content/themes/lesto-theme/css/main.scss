@@ -970,15 +970,13 @@ section.section {
   border-radius: 0%;
   height: 23rem;
   padding: 0px;
-  margin-left: 0.8rem;
-  margin-bottom: 2rem; // aggiungi spazio tra le card
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .card-text {
-  margin-left: 1.2rem;
+  margin-left: 0.5rem;
   margin-top: 0.5rem;
   text-transform: uppercase;
 }
@@ -1262,8 +1260,6 @@ button {
   }
 }
 
-// Header Custom Buttons
-
 
 // Input trasparenti per il form contatti
 .header-buttons input,
@@ -1305,4 +1301,21 @@ button {
     padding-right: 1rem !important;
   }
  
+}
+
+//Contatti
+
+
+//Accordion style
+
+
+
+.accordion-item:first-of-type > .accordion-header .accordion-button {
+    border-top-left-radius: 18px !important;
+    border-top-right-radius: 18px !important;
+}
+
+.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
+    border-bottom-right-radius: 18px !important;
+    border-bottom-left-radius: 18px !important;
 }

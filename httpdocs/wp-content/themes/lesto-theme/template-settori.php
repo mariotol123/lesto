@@ -34,22 +34,63 @@ get_header();
 
     <hr class="footer-divider border-2 opacity-75 w-100">
 
-    <div class="pt-8xl pb-8xl">
-        <div class="container accordion-container header-buttons d-flex flex-column align-items-start">
-            <div class="header-buttons">
-                <button class="accordion-button btn btn-header-custom">Cucine</button>
-            </div>
-            <div>
-                <button class="accordion-button btn btn-header-custom">Arrebo bar</button>
-            </div>
-            <div>
-                <button class="accordion-button btn btn-header-custom">Cucine aziendali</button>
-            </div>
-            <div>
-                <button class="accordion-button btn btn-header-custom">Lestowatt</button>
+   <div class="pt-8xl pb-8xl container">
+    <div class="accordion-container header-buttons d-flex flex-column align-items-start">
+
+        <div class="header-buttons">
+            <button class="accordion-button btn btn-header-custom" type="button">
+                Cucine
+            </button>
+            <div class="accordion-content" style="display:none;">
+                <p>Contenuto relativo alle cucine...</p>
             </div>
         </div>
+
+        <div class="header-buttons">
+            <button class="accordion-button btn btn-header-custom" type="button">
+                Arrebo bar
+            </button>
+            <div class="accordion-content" style="display:none;">
+                <p>Contenuto relativo agli Arrebo bar...</p>
+            </div>
+        </div>
+
+        <div class="header-buttons">
+            <button class="accordion-button btn btn-header-custom" type="button">
+                Cucine aziendali
+            </button>
+            <div class="accordion-content" style="display:none;">
+                <p>Contenuto relativo alle cucine aziendali...</p>
+            </div>
+        </div>
+
+        <div class="header-buttons">
+            <button class="accordion-button btn btn-header-custom" type="button">
+                Lestowatt
+            </button>
+            <div class="accordion-content" style="display:none;">
+                <p>Contenuto relativo a Lestowatt...</p>
+            </div>
+        </div>
+
     </div>
+</div>
+
+<script>
+document.querySelectorAll(".accordion-button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const isVisible = content.style.display === "block";
+        // Chiude tutti
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        // Apre solo quello cliccato
+        if (!isVisible) {
+            content.style.display = "block";
+        }
+    });
+});
+</script>
+
 
 </main>
 
