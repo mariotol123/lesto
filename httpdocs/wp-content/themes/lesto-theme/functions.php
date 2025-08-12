@@ -1,3 +1,4 @@
+
 <?php
 /**
  * lesto-theme functions and definitions
@@ -158,6 +159,18 @@ function lesto_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'lesto_theme_scripts' );
 
+// Enqueue main.js con dipendenza da Masonry
+function lesto_enqueue_main_js() {
+	wp_enqueue_script(
+		'lesto-main-js',
+		get_template_directory_uri() . '/js/main.js',
+		array('masonry-cdn'), // dipendenza da Masonry
+		null,
+		true
+	);
+}
+add_action('wp_enqueue_scripts', 'lesto_enqueue_main_js');
+
 /**
  * Implement the Custom Header feature.
  */
@@ -216,4 +229,16 @@ function lesto_register_custom_post_types() {
 	));
 }
 add_action('init', 'lesto_register_custom_post_types');
+
+// Enqueue Masonry via CDN
+function lesto_enqueue_masonry_cdn() {
+	wp_enqueue_script(
+		'masonry-cdn',
+		'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js',
+		array(),
+		null,
+		true
+	);
+}
+add_action('wp_enqueue_scripts', 'lesto_enqueue_masonry_cdn');
 

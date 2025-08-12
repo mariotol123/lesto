@@ -38,8 +38,9 @@ get_header();
     <div class="accordion-container header-buttons d-flex flex-column align-items-start">
 
         <div class="header-buttons">
-            <button class="accordion-button btn btn-header-custom" type="button">
-                Cucine
+            <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
+                <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+                <span>Cucine</span>
             </button>
             <div class="accordion-content" style="display:none;">
                 <p>Contenuto relativo alle cucine...</p>
@@ -83,9 +84,16 @@ document.querySelectorAll(".accordion-button").forEach(btn => {
         const isVisible = content.style.display === "block";
         // Chiude tutti
         document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+        // Rimuove la classe active da tutti i genitori
+        document.querySelectorAll(".accordion-button").forEach(b => {
+            if (b.parentElement) b.parentElement.classList.remove("active");
+        });
         // Apre solo quello cliccato
         if (!isVisible) {
             content.style.display = "block";
+            if (btn.parentElement) btn.parentElement.classList.add("active");
+        } else {
+            if (btn.parentElement) btn.parentElement.classList.remove("active");
         }
     });
 });
