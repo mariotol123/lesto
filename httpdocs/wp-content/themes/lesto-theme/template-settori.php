@@ -39,9 +39,10 @@ get_header();
         <!-- Mobile: tab scrollable h6 -->
         <div class="accordion-mobile-tabs d-flex d-md-none mb-2" style="overflow-x:auto; white-space:nowrap; gap:1rem;">
             <h6 class="accordion-mobile-tab active" data-tab="0">Cucine</h6>
-            <h6 class="accordion-mobile-tab" data-tab="1">Arrebo bar</h6>
-            <h6 class="accordion-mobile-tab" data-tab="2">Cucine aziendali</h6>
-            <h6 class="accordion-mobile-tab" data-tab="3">Lestowatt</h6>
+            <h6 class="accordion-mobile-tab active" data-tab="1">Impianti di aspirazione</h6>
+            <h6 class="accordion-mobile-tab" data-tab="2">Arredo bar</h6>
+            <h6 class="accordion-mobile-tab" data-tab="3">Cucine aziendali</h6>
+            <h6 class="accordion-mobile-tab" data-tab="4">Lestowatt</h6>
         </div>
         <!-- Desktop: accordion originale -->
         <div class="accordion-container buttons d-none d-md-flex flex-column align-items-start">
@@ -51,7 +52,26 @@ get_header();
                     <span>Cucine</span>
                 </button>
                 <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3">Cucine aziendali</h3>
+                    <h3 class="mb-3">Cucine</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
+                        </div>
+                        <div class="col-md-6 d-flex flex-column align-items-start">
+                            <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
+                            <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                            <button class="btn btn-header-custom">Contattaci</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
+                    <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+                    <span>Impianti di aspirazione</span>
+                </button>
+                <div class="accordion-content" style="display:none;">
+                    <h3 class="mb-3">Impianti di aspirazione</h3>
                     <div class="row">
                         <div class="col-md-6">
                             <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
@@ -70,7 +90,7 @@ get_header();
                     <span>Arrebo bar</span>
                 </button>
                 <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3">Cucine aziendali</h3>
+                    <h3 class="mb-3">Arredo bar</h3>
                     <div class="row">
                         <div class="col-md-6">
                             <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
@@ -108,7 +128,7 @@ get_header();
                     <span>Lestowatt</span>
                 </button>
                 <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3">Cucine aziendali</h3>
+                    <h3 class="mb-3">Lestowatt</h3>
                     <div class="row">
                         <div class="col-md-6">
                             <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
@@ -135,8 +155,8 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="accordion-mobile-content d-none" data-tab="1">
-                <!-- Contenuto Arrebo bar -->
+            <div class="accordion-mobile-content" data-tab="1">
+                <!-- Contenuto Cucine -->
                 <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
@@ -147,7 +167,7 @@ get_header();
                 </div>
             </div>
             <div class="accordion-mobile-content d-none" data-tab="2">
-                <!-- Contenuto Cucine aziendali -->
+                <!-- Contenuto Arrebo bar -->
                 <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
@@ -158,6 +178,17 @@ get_header();
                 </div>
             </div>
             <div class="accordion-mobile-content d-none" data-tab="3">
+                <!-- Contenuto Cucine aziendali -->
+                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
+                <div class="row">
+                    <div class="col-12 d-flex flex-column align-items-start mt-3">
+                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
+                        <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-mobile-content d-none" data-tab="4">
                 <!-- Contenuto Lestowatt -->
                 <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">

@@ -13687,6 +13687,81 @@ section.section {
     display: none !important;
   }
 }
+.accordion-mobile-tabs {
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 1rem;
+  border-bottom: none;
+}
+
+.accordion-mobile-tab {
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  margin-right: 0.5rem;
+}
+
+.accordion-mobile-tab {
+  opacity: 0.5;
+  text-transform: none;
+}
+
+.accordion-mobile-tab.active {
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+.accordion-mobile-content {
+  -webkit-animation: fadein 0.3s;
+          animation: fadein 0.3s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .accordion-mobile-tabs, .accordion-mobile-contents {
+    display: none !important;
+  }
+}
+/* Immagine mobile accordion a larghezza piena */
+.accordion-mobile-img {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .accordion-mobile-img {
+    width: auto;
+    max-width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+}
 .servizi-consulenza-container hr {
   border-color: rgb(204, 204, 204);
 }
