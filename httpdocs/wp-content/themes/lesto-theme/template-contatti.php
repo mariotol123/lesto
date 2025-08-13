@@ -86,39 +86,8 @@ get_header();
 				</div>
 			</div>
 			<!-- Colonna 2: Form di contatto -->
-			<div class="col-md-6">
-				<form action="#" method="post" class="header-buttons d-flex flex-column p-4">
-					<div>
-						<h3 class="m_h3">Richiedi un preventivo</h3>
-						<p class="desktop-p mb-3">Compila il form, ti risponderemo entro 24h!</p>
-					</div>
-					<div class="mb-3">
-						<p class="form-label mb-1 desktop-p-16 mx-5">Nome</p>
-						<input type="text" class="form-control header-buttons" id="nome" name="nome" required>
-					</div>
-					<div class="mb-3">
-						<p class="form-label mb-1 desktop-p-16 mx-5">Telefono</p>
-						<input type="tel" class="form-control header-buttons" id="telefono" name="telefono" required>
-					</div>
-					<div class="mb-3">
-						<p class="form-label mb-1 desktop-p-16 mx-5">E-mail</p>
-						<input type="email" class="form-control header-buttons" id="email" name="email" required>
-					</div>
-					<div class="mb-3 ">
-						<p class="form-label mb-1 desktop-p-16 mx-5">Messaggio</p>
-						<textarea class="form-control header-buttons inverted-radius" id="messaggio" name="messaggio" rows="4"
-							required></textarea>
-					</div>
-					<button type="submit" class="btn btn-header-custom">Invia</button>
-					<div class="form-check mt-4 d-flex gap-4">
-						<input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
-						<p class="form-check-label m_p1" for="privacy">
-							Confermo di aver preso visione della privacy policy e acconsento al trattamento dei dati
-							personali ai sensi dell'art. 13 del D.Lgs 196/2003 e dell'art. 13 del Regolamento UE
-							679/2016 per ricevere risposta
-						</p>
-					</div>
-				</form>
+			<div class="col-md-6 mt-3">
+				<?php echo do_shortcode('[contact-form-7 id="fd041d4" title="Modulo form lesto"]'); ?>
 			</div>
 		</div>
 	</div>

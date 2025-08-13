@@ -1704,6 +1704,9 @@ section.section {
 //PAGINA CONTATTI
 
 // Input trasparenti per il form contatti
+.header-buttons {
+  background-color: transparent !important;
+}
 .header-buttons input,
 .header-buttons textarea {
   background-color: transparent !important;
