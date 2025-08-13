@@ -13079,7 +13079,7 @@ body.page-template-template-home .site-footer {
   justify-content: center;
   padding: 10px 20px;
   gap: 0;
-  transition: gap 0.3s;
+  transition: all 1s ease;
   position: relative;
   overflow: hidden;
 }
@@ -13089,7 +13089,7 @@ body.page-template-template-home .site-footer {
   display: inline-block;
   opacity: 0;
   max-width: 0;
-  transition: opacity 0.3s, max-width 0.3s;
+  transition: opacity 1s ease, max-width 1s ease-in-out;
 }
 .tablinks:hover, .tablinks.active, .tablinks:active {
   gap: 8px;
@@ -13177,7 +13177,6 @@ section.section {
   cursor: pointer;
   padding: 5px 40px;
   margin: 0 5px;
-  transition: background 0.2s;
 }
 .tab button:hover, .tab button.active {
   background: #fff;
