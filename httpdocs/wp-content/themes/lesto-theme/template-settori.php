@@ -119,16 +119,21 @@ get_header();
 
     </div>
 </div>
-<div class="container preventivo-container py-5">
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Contattaci per <br>un preventivo gratuito</h3>
-    <h4 class="mt-5">Ti risponderemo entro 24h</h4>
+<div class="preventivo-video-wrapper">
+    <video class="preventivo-bg-video" autoplay loop muted playsinline>
+    <source src="/wp-content/themes/lesto-theme/videos/6613032-hd_1920_1080_25fps (1).mp4" type="video/mp4">
+    Il tuo browser non supporta il video di sfondo.
+    </video>
+    <div class="container preventivo-container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Contattaci per <br>un preventivo gratuito</h3>
+                <h4 class="mt-5">Ti risponderemo entro 24h</h4>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end align-items-end">
+                <button class="btn btn-custom">Scopri di più</button>
+            </div>
         </div>
-        <div class="col-md-6 d-flex justify-content-end align-items-end">
-            <button class="btn btn-custom">Scopri di più</button>
-        </div>
-
     </div>
 </div>
 
