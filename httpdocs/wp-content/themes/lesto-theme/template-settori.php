@@ -43,7 +43,17 @@ get_header();
                 <span>Cucine</span>
             </button>
             <div class="accordion-content" style="display:none;">
-                <p>Contenuto relativo alle cucine...</p>
+                <h3 class="mb-3">Cucine aziendali</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column align-items-start">
+                        <h5 class="mb-2">Soluzioni su misura per la tua azienda</h5>
+                        <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                        <button class="btn btn-primary">Contattaci</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -53,7 +63,17 @@ get_header();
                 <span>Arrebo bar</span>
             </button>
             <div class="accordion-content" style="display:none;">
-                <p>Contenuto relativo agli Arrebo bar...</p>
+                <h3 class="mb-3">Cucine aziendali</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column align-items-start">
+                        <h5 class="mb-2">Soluzioni su misura per la tua azienda</h5>
+                        <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                        <button class="btn btn-primary">Contattaci</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -63,7 +83,17 @@ get_header();
                 <span>Cucine aziendali</span>
             </button>
             <div class="accordion-content" style="display:none;">
-                <p>Contenuto relativo alle cucine aziendali...</p>
+                <h3 class="mb-3">Cucine aziendali</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column align-items-start">
+                        <h5 class="mb-2">Soluzioni su misura per la tua azienda</h5>
+                        <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                        <button class="btn btn-primary">Contattaci</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -73,7 +103,17 @@ get_header();
                 <span>Lestowatt</span>
             </button>
             <div class="accordion-content" style="display:none;">
-                <p>Contenuto relativo a Lestowatt...</p>
+                <h3 class="mb-3">Cucine aziendali</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
+                    </div>
+                    <div class="col-md-6 d-flex flex-column align-items-start">
+                        <h5 class="mb-2">Soluzioni su misura per la tua azienda</h5>
+                        <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                        <button class="btn btn-primary">Contattaci</button>
+                    </div>
+                </div>
             </div>
         </div>
 

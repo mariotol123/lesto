@@ -13428,21 +13428,6 @@ section.section {
     padding: 0 !important;
   }
 }
-.main-settori h5, .main-settori .h5, .main-settori .site-footer .footer-nav-list li, .site-footer .footer-nav-list .main-settori li,
-.main-settori .site-footer .footer-social-list li,
-.site-footer .footer-social-list .main-settori li,
-.main-settori .site-footer .footer-company-list li,
-.site-footer .footer-company-list .main-settori li,
-.main-settori .site-footer .footer-contacts-list li,
-.site-footer .footer-contacts-list .main-settori li, .main-settori .site-footer .footer-nav-list li a, .site-footer .footer-nav-list li .main-settori a,
-.main-settori .site-footer .footer-social-list li a,
-.site-footer .footer-social-list li .main-settori a,
-.main-settori .site-footer .footer-company-list li a,
-.site-footer .footer-company-list li .main-settori a,
-.main-settori .site-footer .footer-contacts-list li a,
-.site-footer .footer-contacts-list li .main-settori a {
-  margin-top: 1rem;
-}
 .main-settori p {
   margin-bottom: 4rem;
 }
@@ -13471,6 +13456,10 @@ section.section {
 .accordion-container .buttons .accordion-button {
   width: auto;
   display: inline-block;
+}
+
+.accordion-content {
+  padding: 2rem 2rem;
 }
 
 .servizi-consulenza-container hr {
