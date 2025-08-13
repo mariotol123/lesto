@@ -48,8 +48,9 @@ get_header();
         </div>
 
         <div class="buttons">
-            <button class="accordion-button btn btn-header-custom" type="button">
-                Arrebo bar
+            <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
+                <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+                <span>Arrebo bar</span>
             </button>
             <div class="accordion-content" style="display:none;">
                 <p>Contenuto relativo agli Arrebo bar...</p>
@@ -57,8 +58,9 @@ get_header();
         </div>
 
         <div class="buttons">
-            <button class="accordion-button btn btn-header-custom" type="button">
-                Cucine aziendali
+            <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
+                <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+                <span>Cucine aziendali</span>
             </button>
             <div class="accordion-content" style="display:none;">
                 <p>Contenuto relativo alle cucine aziendali...</p>
@@ -66,8 +68,9 @@ get_header();
         </div>
 
         <div class="buttons">
-            <button class="accordion-button btn btn-header-custom" type="button">
-                Lestowatt
+            <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
+                <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+                <span>Lestowatt</span>
             </button>
             <div class="accordion-content" style="display:none;">
                 <p>Contenuto relativo a Lestowatt...</p>
@@ -77,6 +80,9 @@ get_header();
     </div>
 </div>
 
+
+</script>
+
 <script>
 document.querySelectorAll(".accordion-button").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -84,16 +90,19 @@ document.querySelectorAll(".accordion-button").forEach(btn => {
         const isVisible = content.style.display === "block";
         // Chiude tutti
         document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
-        // Rimuove la classe active da tutti i genitori
+        // Rimuove la classe active da tutti i genitori e dai button
         document.querySelectorAll(".accordion-button").forEach(b => {
             if (b.parentElement) b.parentElement.classList.remove("active");
+            b.classList.remove("active");
         });
         // Apre solo quello cliccato
         if (!isVisible) {
             content.style.display = "block";
             if (btn.parentElement) btn.parentElement.classList.add("active");
+            btn.classList.add("active");
         } else {
             if (btn.parentElement) btn.parentElement.classList.remove("active");
+            btn.classList.remove("active");
         }
     });
 });

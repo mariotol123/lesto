@@ -1511,7 +1511,8 @@ section.section {
 
 .accordion-container {
   .btn-header-custom:hover {
-    gap: 0px !important;
+    gap: 8px !important;
+    
   }
 
   .buttons {
@@ -1521,14 +1522,20 @@ section.section {
       .accordion-button {
         margin-left: auto;
         display: block;
+        background-color: transparent !important;
       }
     }
     .accordion-button {
       width: auto;
       display: inline-block;
+
+      
     }
   }
 }
+
+
+
 
 
 
