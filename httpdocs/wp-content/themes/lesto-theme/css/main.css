@@ -12301,7 +12301,7 @@ body {
 }
 
 .mb-10xl {
-  margin-bottom: 10rem !important;
+  margin-bottom: 20rem !important;
 }
 
 .pt-5xl {
@@ -12398,6 +12398,12 @@ body {
 
 .pr-10xl {
   padding-right: 10rem !important;
+}
+
+@media (min-width: 768px) {
+  .pt-md-8xl {
+    padding-top: 8rem !important;
+  }
 }
 
 h1,
@@ -13672,6 +13678,15 @@ section.section {
   padding: 0.3rem 6rem !important;
 }
 
+.preventivo-mobile-title {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .preventivo-mobile-title {
+    display: none !important;
+  }
+}
 .servizi-consulenza-container hr {
   border-color: rgb(204, 204, 204);
 }
