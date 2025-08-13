@@ -1533,9 +1533,13 @@ section.section {
       padding: 2rem 2rem;
     }
 
+    .preventivo-container {
+      background-color: transparent !important;
 
-
-
+      .btn-custom {
+        padding: 0.3rem 6rem !important;
+      }
+    }
 
 
 
