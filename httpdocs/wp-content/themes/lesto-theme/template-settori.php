@@ -20,7 +20,7 @@ get_header();
         <div class="row">
             <div class="col-md-4 d-flex flex-column align-items-start">
                 <h5>dalla progettazione alla manutenzione, la tua cucina professionale.</h5>
-                <p class="mt-3">La tua cucina, al livello di performance che si merita. Dal 1984 Lesto Group si occupa
+                <p class="mt-3 desktop-p">La tua cucina, al livello di performance che si merita. Dal 1984 Lesto Group si occupa
                     di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti,
                     hotel, pizzerie, gastronomie e bar.</p>
             </div>
@@ -49,9 +49,9 @@ get_header();
                         <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
                     </div>
                     <div class="col-md-6 d-flex flex-column align-items-start">
-                        <h5 class="mb-2">Soluzioni su misura per la tua azienda</h5>
-                        <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-primary">Contattaci</button>
+                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
+                        <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                        <button class="btn btn-header-custom">Contattaci</button>
                     </div>
                 </div>
             </div>
@@ -69,9 +69,9 @@ get_header();
                         <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
                     </div>
                     <div class="col-md-6 d-flex flex-column align-items-start">
-                        <h5 class="mb-2">Soluzioni su misura per la tua azienda</h5>
-                        <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-primary">Contattaci</button>
+                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
+                        <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                        <button class="btn btn-header-custom">Contattaci</button>
                     </div>
                 </div>
             </div>
@@ -89,9 +89,9 @@ get_header();
                         <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
                     </div>
                     <div class="col-md-6 d-flex flex-column align-items-start">
-                        <h5 class="mb-2">Soluzioni su misura per la tua azienda</h5>
-                        <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-primary">Contattaci</button>
+                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
+                        <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
+                        <button class="btn btn-header-custom">Contattaci</button>
                     </div>
                 </div>
             </div>
@@ -109,9 +109,9 @@ get_header();
                         <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
                     </div>
                     <div class="col-md-6 d-flex flex-column align-items-start">
-                        <h5 class="mb-2">Soluzioni su misura per la tua azienda</h5>
+                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-primary">Contattaci</button>
+                        <button class=" btn btn-header-custom">Contattaci</button>
                     </div>
                 </div>
             </div>
