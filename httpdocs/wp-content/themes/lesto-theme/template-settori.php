@@ -119,6 +119,18 @@ get_header();
 
     </div>
 </div>
+<div class="container preventivo-container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Contattaci per <br>un preventivo gratuito</h3>
+    <h4 class="mt-5">Ti risponderemo entro 24h</h4>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-end">
+            <button class="btn btn-custom">Scopri di più</button>
+        </div>
+
+    </div>
+</div>
 
 
 </script>
