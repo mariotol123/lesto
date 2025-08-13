@@ -37,7 +37,7 @@ get_header();
 
     <div class="pb-8xl pt-md-8xl container">
         <!-- Mobile: tab scrollable h6 -->
-        <div class="accordion-mobile-tabs d-flex d-md-none mb-4" style="overflow-x:auto; white-space:nowrap; gap:1rem;">
+        <div class="accordion-mobile-tabs d-flex d-md-none mb-2" style="overflow-x:auto; white-space:nowrap; gap:1rem;">
             <h6 class="accordion-mobile-tab active" data-tab="0">Cucine</h6>
             <h6 class="accordion-mobile-tab" data-tab="1">Arrebo bar</h6>
             <h6 class="accordion-mobile-tab" data-tab="2">Cucine aziendali</h6>
@@ -78,7 +78,7 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                             <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <button class="btn btn-header-custom">Contattaci</button>
+                            <button class="btn btn-header-custom">Scopri i dettagli</button>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                             <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <button class="btn btn-header-custom">Contattaci</button>
+                            <button class="btn btn-header-custom">Scopri i dettagli</button>
                         </div>
                     </div>
                 </div>
@@ -116,67 +116,55 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                             <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <button class="btn btn-header-custom">Contattaci</button>
+                            <button class="btn btn-header-custom">Scopri i dettagli</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Mobile: contenuti accordion -->
-        <div class="accordion-mobile-contents d-block d-md-none">
+        <div class="accordion-mobile-contents d-block d-md-none mb-5">
             <div class="accordion-mobile-content" data-tab="0">
                 <!-- Contenuto Cucine -->
-                <h3 class="mb-3 d-none d-md-block">Cucine aziendali</h3>
+                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">
-                    <div class="col-12">
-                        <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
-                    </div>
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-header-custom">Contattaci</button>
+                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
                     </div>
                 </div>
             </div>
             <div class="accordion-mobile-content d-none" data-tab="1">
                 <!-- Contenuto Arrebo bar -->
-                <h3 class="mb-3 d-none d-md-block">Cucine aziendali</h3>
+                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">
-                    <div class="col-12">
-                        <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
-                    </div>
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-header-custom">Contattaci</button>
+                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
                     </div>
                 </div>
             </div>
             <div class="accordion-mobile-content d-none" data-tab="2">
                 <!-- Contenuto Cucine aziendali -->
-                <h3 class="mb-3 d-none d-md-block">Cucine aziendali</h3>
+                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">
-                    <div class="col-12">
-                        <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
-                    </div>
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-header-custom">Contattaci</button>
+                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
                     </div>
                 </div>
             </div>
             <div class="accordion-mobile-content d-none" data-tab="3">
                 <!-- Contenuto Lestowatt -->
-                <h3 class="mb-3 d-none d-md-block">Cucine aziendali</h3>
+                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">
-                    <div class="col-12">
-                        <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
-                    </div>
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-header-custom">Contattaci</button>
+                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
                     </div>
                 </div>
             </div>
@@ -245,47 +233,7 @@ get_header();
     });
     </script>
 
-    <style>
-    /* Mobile accordion tab style */
-    .accordion-mobile-tabs {
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 1rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid #fff;
-        margin-bottom: 1.5rem;
-    }
-    .accordion-mobile-tab {
-        display: inline-block;
-        cursor: pointer;
-        color: #fff;
-        font-weight: 600;
-        font-size: 1.1rem;
-        padding: 0.5rem 1.2rem;
-        border-radius: 2rem;
-        background: transparent;
-        border: 1px solid transparent;
-        transition: background 0.2s, color 0.2s, border 0.2s;
-        margin-right: 0.5rem;
-    }
-    .accordion-mobile-tab.active {
-        background: #fff;
-        color: #222;
-        border: 1px solid #fff;
-    }
-    .accordion-mobile-content {
-        animation: fadein 0.3s;
-    }
-    @keyframes fadein {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-    @media (min-width: 768px) {
-        .accordion-mobile-tabs, .accordion-mobile-contents {
-            display: none !important;
-        }
-    }
-    </style>
+    <!-- styles spostati in main.scss -->
 
 
 </main>
