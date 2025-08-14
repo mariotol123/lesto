@@ -11,12 +11,14 @@ get_header();
 <main class="main-settori single-cpt single-settore">
     <div class="settori-container">
         <div class="container pt-7xl d-flex align-items-center justify-content-between gap-3 flex-wrap">
-            <h2 class="m-0"><?php the_title(); ?></h2>
+            <h1 class="m-0"><?php the_title(); ?></h1>
             <a class="btn btn-header-custom" href="<?php echo esc_url( get_post_type_archive_link( 'settore' ) ); ?>">Torna ai Settori</a>
         </div>
     </div>
 
     <hr class="footer-divider border-2 opacity-75 w-100">
+
+
 
     <div class="container py-5">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -33,7 +35,18 @@ get_header();
                         <p class="desktop-p mb-3"><?php echo get_the_excerpt(); ?></p>
                     <?php endif; ?>
                     <div class="entry-content w-100">
-                        <?php the_content(); ?>
+
+                        <?php 
+                        
+                        // Display ACF field nome_settore
+                        $nome_settore = get_field('nome_settore');
+                        if ( $nome_settore ) : ?>
+                            <h3 class="mb-3 alert alert-warning"><?php echo esc_html( $nome_settore ); ?></h3>
+                        <?php endif;
+                        
+                        the_content(); 
+                        
+                        ?>
                     </div>
                 </div>
             </article>
