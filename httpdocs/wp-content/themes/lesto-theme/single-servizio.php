@@ -17,12 +17,12 @@ get_header();
 
     <hr class="footer-divider border-2 opacity-75 w-100">
 
-    <div class="container py-5">
+    <div class="container">
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class('row g-5 align-items-start'); ?>>
+            <article id="post-<?php the_ID(); ?>" <?php post_class('row g-3 align-items-start'); ?>>
                 <div class="col-12 col-lg-6">
                     <?php if ( has_post_thumbnail() ) : ?>
-                        <div class="ratio ratio-16x9">
+                        <div class="">
                             <?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid w-100 h-100 object-fit-cover' ) ); ?>
                         </div>
                     <?php endif; ?>
@@ -33,11 +33,11 @@ get_header();
                     <?php endif; ?>
                     <div class="entry-content w-100">
                         <?php the_content(); ?>
+                        <button class="btn btn-header-custom d-flex justify-content-center">Contattaci per un
+                    preventivo</button>
                     </div>
                 </div>
             </article>
-
-            <hr class="footer-divider border-2 opacity-75 w-100 mt-5">
 
             
 
@@ -49,6 +49,7 @@ get_header();
 
         <?php endwhile; endif; ?>
     </div>
+    <hr class="footer-divider border-2 opacity-75 w-100">
 </main>
 
 <?php get_footer();
