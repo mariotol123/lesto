@@ -33,7 +33,7 @@ get_header();
                     <?php if ( has_excerpt() ) : ?>
                         <p class="desktop-p mb-3"><?php echo get_the_excerpt(); ?></p>
                     <?php endif; ?>
-                    <div class="entry-content w-100">
+                    <div class="entry-content w-100 mb-4">
 
                         <?php 
                         
@@ -49,7 +49,7 @@ get_header();
                     </div>
                     
                     <!-- Button di default -->
-                    <button class="btn btn-header-custom d-flex justify-content-center">Contattaci per un
+                    <button class="btn btn-header-custom d-flex justify-content-center p">Contattaci per un
                     preventivo</button>
                 </div>
             </article>
@@ -62,7 +62,7 @@ get_header();
 
         <?php endwhile; endif; ?>
     </div>
-    <hr class="footer-divider border-2 opacity-75 w-100 ">
+    <hr class="footer-divider border-2 opacity-75 w-100 d-none d-md-block">
 </main>
 
 <?php get_footer();
