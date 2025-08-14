@@ -78,5 +78,5 @@
 		</div>
 	</header><!-- #masthead -->
 </header><!-- #masthead -->
-<script src="<?php echo get_template_directory_uri(); ?>/js/menu-dropdown.js"></script>
+
 

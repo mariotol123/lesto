@@ -148,9 +148,11 @@ function lesto_theme_scripts() {
 
 	wp_enqueue_script( 'lesto-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'lesto-theme-booststrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'lesto-theme-menu-dropdown', get_template_directory_uri() . '/js/menu-dropdown.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'lesto-theme-menu-dropdown', get_template_directory_uri() . '/js/menu-dropdown.js', array(), filemtime(get_template_directory() . '/js/menu-dropdown.js'), true );
 	wp_localize_script( 'lesto-theme-menu-dropdown', 'lestoTheme', array(
-		'menuCloseImg' => get_template_directory_uri() . '/images/Container.png'
+		'menuCloseImg' => get_template_directory_uri() . '/images/Container.png',
+		'ajaxUrl' => admin_url('admin-ajax.php'),
+		'nonce' => wp_create_nonce('lesto_ajax_nonce')
 	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -241,4 +243,44 @@ function lesto_enqueue_masonry_cdn() {
 	);
 }
 add_action('wp_enqueue_scripts', 'lesto_enqueue_masonry_cdn');
+
+/**
+ * AJAX function to get posts from custom post types
+ */
+function lesto_get_cpt_posts() {
+	// Verifica nonce per sicurezza
+	if (!wp_verify_nonce($_POST['nonce'], 'lesto_ajax_nonce')) {
+		wp_die('Security check failed');
+	}
+
+	$post_type = sanitize_text_field($_POST['post_type']);
+	
+	// Verifica che il post type sia uno di quelli permessi
+	if (!in_array($post_type, array('settore', 'servizio'))) {
+		wp_die('Invalid post type');
+	}
+
+	$posts = get_posts(array(
+		'post_type' => $post_type,
+		'numberposts' => -1,
+		'post_status' => 'publish',
+		'orderby' => 'title',
+		'order' => 'ASC'
+	));
+
+	$response = array();
+	foreach ($posts as $post) {
+		$response[] = array(
+			'id' => $post->ID,
+			'title' => $post->post_title,
+			'url' => get_permalink($post->ID)
+		);
+	}
+
+	wp_send_json_success($response);
+}
+
+// Hook per utenti loggati e non loggati
+add_action('wp_ajax_lesto_get_cpt_posts', 'lesto_get_cpt_posts');
+add_action('wp_ajax_nopriv_lesto_get_cpt_posts', 'lesto_get_cpt_posts');
 
