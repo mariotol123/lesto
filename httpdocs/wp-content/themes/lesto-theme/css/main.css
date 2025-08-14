@@ -13819,10 +13819,6 @@ section.section {
   font-weight: 200;
 }
 
-.header-buttons {
-  background-color: transparent !important;
-}
-
 .header-buttons input,
 .header-buttons textarea {
   background-color: transparent !important;
@@ -13843,6 +13839,88 @@ section.section {
   border-radius: 0.5rem;
 }
 
+.field-group {
+  margin-bottom: 1.5rem;
+}
+.field-group label {
+  color: #fff;
+  font-size: var(--font-base-16);
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-left: 2rem;
+}
+
+.textarea-container {
+  position: relative;
+  width: 100%;
+}
+
+.svg-background {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.textarea-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.textarea-field {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem 2rem 3rem 2rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: var(--font-s-14);
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  z-index: 2;
+  -webkit-clip-path: polygon(4% 3%, 96% 3%, 100% 74%, 89% 74%, 89% 95%, 4% 95%, 4% 3%);
+          clip-path: polygon(4% 3%, 96% 3%, 100% 74%, 89% 74%, 89% 95%, 4% 95%, 4% 3%);
+  line-height: 1.4;
+}
+.textarea-field::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.textarea-field::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.textarea-field:focus {
+  outline: none;
+}
+
+.submit-btn {
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+  border: none;
+  border-radius: 25px;
+  padding: 0.3rem 1rem;
+  font-size: var(--font-s-14);
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 3;
+  background-color: transparent !important;
+  border: 1px solid #fff;
+  color: white;
+}
+.submit-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-1px);
+}
+.submit-btn:active {
+  transform: translateY(0);
+}
+
 @media (max-width: 767.98px) {
   .servizi-consulenza-container .row {
     flex-direction: column !important;
@@ -13857,6 +13935,17 @@ section.section {
   .servizi-consulenza-container .header-buttons {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+  }
+  .textarea-field {
+    width: 100%;
+  }
+  .submit-btn {
+    right: 1.5rem;
+    bottom: 0.5rem;
+    padding: 0.4rem 1.5rem;
+  }
+  .field-group label {
+    margin-left: 1.5rem;
   }
 }
 .realizzazioni-container hr {

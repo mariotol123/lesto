@@ -59,7 +59,14 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                             <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <button class="btn btn-header-custom">Contattaci</button>
+                            <?php 
+                            $cooking_room = get_page_by_path('cooking-room', OBJECT, 'servizio');
+                            if ($cooking_room) {
+                                echo '<a href="' . esc_url(get_permalink($cooking_room->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
+                            } else {
+                                echo '<a href="' . esc_url(get_post_type_archive_link('servizio')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -78,7 +85,14 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                             <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <button class="btn btn-header-custom">Scopri i dettagli</button>
+                            <?php 
+                            $consulenza = get_page_by_path('consulenza', OBJECT, 'servizio');
+                            if ($consulenza) {
+                                echo '<a href="' . esc_url(get_permalink($consulenza->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
+                            } else {
+                                echo '<a href="' . esc_url(get_post_type_archive_link('servizio')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -97,7 +111,14 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                             <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <button class="btn btn-header-custom">Scopri i dettagli</button>
+                            <?php 
+                            $progettazione = get_page_by_path('progettazione', OBJECT, 'servizio');
+                            if ($progettazione) {
+                                echo '<a href="' . esc_url(get_permalink($progettazione->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
+                            } else {
+                                echo '<a href="' . esc_url(get_post_type_archive_link('servizio')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -116,7 +137,14 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                             <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <button class="btn btn-header-custom">Scopri i dettagli</button>
+                            <?php 
+                            $assistenza = get_page_by_path('assistenza-tecnica', OBJECT, 'servizio');
+                            if ($assistenza) {
+                                echo '<a href="' . esc_url(get_permalink($assistenza->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
+                            } else {
+                                echo '<a href="' . esc_url(get_post_type_archive_link('servizio')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -131,7 +159,14 @@ get_header();
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
+                        <?php 
+                        $cooking_room_mobile = get_page_by_path('cooking-room', OBJECT, 'servizio');
+                        if ($cooking_room_mobile) {
+                            echo '<a href="' . esc_url(get_permalink($cooking_room_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
+                        } else {
+                            echo '<a href="' . esc_url(get_post_type_archive_link('servizio')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -142,7 +177,14 @@ get_header();
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
+                        <?php 
+                        $consulenza_mobile = get_page_by_path('consulenza', OBJECT, 'servizio');
+                        if ($consulenza_mobile) {
+                            echo '<a href="' . esc_url(get_permalink($consulenza_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
+                        } else {
+                            echo '<a href="' . esc_url(get_post_type_archive_link('servizio')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -153,7 +195,14 @@ get_header();
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
+                        <?php 
+                        $progettazione_mobile = get_page_by_path('progettazione', OBJECT, 'servizio');
+                        if ($progettazione_mobile) {
+                            echo '<a href="' . esc_url(get_permalink($progettazione_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
+                        } else {
+                            echo '<a href="' . esc_url(get_post_type_archive_link('servizio')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -164,7 +213,14 @@ get_header();
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
                         <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <button class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</button>
+                        <?php 
+                        $assistenza_mobile = get_page_by_path('assistenza-tecnica', OBJECT, 'servizio');
+                        if ($assistenza_mobile) {
+                            echo '<a href="' . esc_url(get_permalink($assistenza_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
+                        } else {
+                            echo '<a href="' . esc_url(get_post_type_archive_link('servizio')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

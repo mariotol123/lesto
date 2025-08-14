@@ -86,12 +86,61 @@ get_header();
 				</div>
 			</div>
 			<!-- Colonna 2: Form di contatto -->
-			<div class="col-md-6 mt-3">
-				<?php echo do_shortcode('[contact-form-7 id="fd041d4" title="Modulo form lesto"]'); ?>
+			<div class="col-md-6">
+				<form action="#" method="post" class="header-buttons d-flex flex-column p-4">
+					<div>
+						<h3 class="m_h3">Richiedi un preventivo</h3>
+						<p class="desktop-p mb-3">Compila il form, ti risponderemo entro 24h!</p>
+					</div>
+					<div class="mb-3">
+						<p class="form-label mb-1 desktop-p-16 mx-5">Nome</p>
+						<input type="text" class="form-control header-buttons" id="nome" name="nome" required>
+					</div>
+					<div class="mb-3">
+						<p class="form-label mb-1 desktop-p-16 mx-5">Telefono</p>
+						<input type="tel" class="form-control header-buttons" id="telefono" name="telefono" required>
+					</div>
+					<div class="mb-3">
+						<p class="form-label mb-1 desktop-p-16 mx-5">E-mail</p>
+						<input type="email" class="form-control header-buttons" id="email" name="email" required>
+					</div>
+
+					<!-- Campo Messaggio con SVG e pulsante incassato -->
+					<div class="field-group">
+						<label for="messaggio">Messaggio</label>
+						<div class="textarea-container">
+							<!-- SVG per il profilo curvo usando il file specifico -->
+							<div class="svg-background">
+								<svg class="textarea-svg" viewBox="0 0 745 202" preserveAspectRatio="none">
+									<path
+										d="M30 0.5H715C731.292 0.5 744.5 13.7076 744.5 30V121.5C744.5 137.792 731.292 151 715 151H684.098C669.876 151 658.348 162.529 658.348 176.75C658.348 190.419 647.268 201.5 633.599 201.5H30C13.7076 201.5 0.5 188.292 0.5 172V30C0.500002 13.7076 13.7076 0.500001 30 0.5Z"
+										stroke="rgba(255,255,255)" stroke-width="1" fill="transparent" />
+								</svg>
+							</div>
+
+							<!-- Textarea trasparente -->
+							<textarea id="messaggio" name="messaggio" class="textarea-field" placeholder=""
+								required></textarea>
+
+							<!-- Pulsante Invia incassato nell'area curva -->
+							<button type="submit" class="submit-btn">Invia</button>
+						</div>
+					</div>
+					<div class="form-check mt-4 d-flex gap-4">
+						<input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
+						<p class="form-check-label m_p1" for="privacy">
+							Confermo di aver preso visione della privacy policy e acconsento al trattamento dei dati
+							personali ai sensi dell'art. 13 del D.Lgs 196/2003 e dell'art. 13 del Regolamento UE
+							679/2016 per ricevere risposta
+						</p>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
-	<hr class="footer-divider border-2 opacity-75 w-100">
+	</div>
+	</div>
+
 </main>
 
 <?php
