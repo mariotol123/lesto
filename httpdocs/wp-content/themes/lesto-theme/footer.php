@@ -12,7 +12,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="container footer-container mt-4">
+		<div class="container footer-container mt-5">
 	   <!-- Prima row desktop: logo, navigation, azienda -->
 	   <div class="row d-none d-md-flex">
 		   <div class="col-lg-3 mb-4">
