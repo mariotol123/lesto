@@ -1513,6 +1513,12 @@ section.section {
 
   .buttons {
     width: 100%;
+    
+    // Rimuovi il border-bottom per tutti i pulsanti tranne l'ultimo
+    &:not(:last-child) {
+      border-bottom: none !important;
+    }
+    
     &.active {
       border: none;
       .accordion-button {
