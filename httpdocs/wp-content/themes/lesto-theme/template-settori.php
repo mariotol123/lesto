@@ -36,239 +36,81 @@ get_header();
     <hr class="footer-divider border-2 opacity-75 w-100">
 
     <div class="pb-8xl pt-md-8xl container">
+        <?php
+        // Get all settori
+        $settori = get_posts(array(
+            'post_type' => 'settore',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+        ));
+        ?>
+        
         <!-- Mobile: tab scrollable h6 -->
         <div class="accordion-mobile-tabs d-flex d-md-none mb-2" style="overflow-x:auto; white-space:nowrap; gap:1rem;">
-            <h6 class="accordion-mobile-tab active" data-tab="0">Cucine</h6>
-            <h6 class="accordion-mobile-tab active" data-tab="1">Impianti di aspirazione</h6>
-            <h6 class="accordion-mobile-tab" data-tab="2">Arredo bar</h6>
-            <h6 class="accordion-mobile-tab" data-tab="3">Cucine aziendali</h6>
-            <h6 class="accordion-mobile-tab" data-tab="4">Lestowatt</h6>
+            <?php foreach ($settori as $index => $settore) : ?>
+                <h6 class="accordion-mobile-tab <?php echo $index === 0 ? 'active' : ''; ?>" data-tab="<?php echo $index; ?>">
+                    <?php echo esc_html($settore->post_title); ?>
+                </h6>
+            <?php endforeach; ?>
         </div>
         <!-- Desktop: accordion originale -->
         <div class="accordion-container buttons d-none d-md-flex flex-column align-items-start">
+            <?php foreach ($settori as $index => $settore) : 
+                $sottotitolo = get_field('sottotitolo', $settore->ID);
+                $immagine = get_the_post_thumbnail_url($settore->ID, 'full');
+                if (!$immagine) {
+                    $immagine = '/wp-content/themes/lesto-theme/images/Rectangle 1.png';
+                }
+                $icona = get_field('icona', $settore->ID);
+            ?>
             <div class="buttons">
                 <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
-                    <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
-                    <span>Cucine</span>
+                    <?php if ($icona) : ?>
+                        <img class="icon" src="<?php echo esc_url($icona['url']); ?>" alt="<?php echo esc_attr($icona['alt']); ?>" />
+                    <?php else : ?>
+                        <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+                    <?php endif; ?>
+                    <span><?php echo esc_html($settore->post_title); ?></span>
                 </button>
                 <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3">Cucine</h3>
+                    <h3 class="mb-3"><?php echo esc_html($settore->post_title); ?></h3>
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
+                            <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($settore->post_title); ?>" class="img-fluid" />
                         </div>
                         <div class="col-md-6 d-flex flex-column align-items-start">
-                            <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                            <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <?php 
-                            $cucine = get_page_by_path('cucine', OBJECT, 'settore');
-                            if ($cucine) {
-                                echo '<a href="' . esc_url(get_permalink($cucine->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            } else {
-                                echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            }
-                            ?>
+                            <h5 class="mb-2 m_h5"><?php echo $sottotitolo ? esc_html($sottotitolo) : 'Soluzioni su misura per la tua azienda'; ?></h5>
+                            <p class="mb-3 desktop-p"><?php echo wp_trim_words($settore->post_content, 30, '...'); ?></p>
+                            <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-header-custom">Scopri i dettagli</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="buttons">
-                <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
-                    <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
-                    <span>Impianti di aspirazione</span>
-                </button>
-                <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3">Impianti di aspirazione</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
-                        </div>
-                        <div class="col-md-6 d-flex flex-column align-items-start">
-                            <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                            <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <?php 
-                            $impianti_aspirazione = get_page_by_path('impianti-di-aspirazione', OBJECT, 'settore');
-                            if ($impianti_aspirazione) {
-                                echo '<a href="' . esc_url(get_permalink($impianti_aspirazione->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            } else {
-                                echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="buttons">
-                <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
-                    <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
-                    <span>Arrebo bar</span>
-                </button>
-                <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3">Arredo bar</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
-                        </div>
-                        <div class="col-md-6 d-flex flex-column align-items-start">
-                            <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                            <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <?php 
-                            $arredo_bar = get_page_by_path('arredo-bar', OBJECT, 'settore');
-                            if ($arredo_bar) {
-                                echo '<a href="' . esc_url(get_permalink($arredo_bar->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            } else {
-                                echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="buttons">
-                <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
-                    <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
-                    <span>Cucine aziendali</span>
-                </button>
-                <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3">Cucine aziendali</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
-                        </div>
-                        <div class="col-md-6 d-flex flex-column align-items-start">
-                            <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                            <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <?php 
-                            $cucine_aziendali = get_page_by_path('cucine-aziendali', OBJECT, 'settore');
-                            if ($cucine_aziendali) {
-                                echo '<a href="' . esc_url(get_permalink($cucine_aziendali->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            } else {
-                                echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="buttons">
-                <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
-                    <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
-                    <span>Lestowatt</span>
-                </button>
-                <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3">Lestowatt</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid" />
-                        </div>
-                        <div class="col-md-6 d-flex flex-column align-items-start">
-                            <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                            <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                            <?php 
-                            $lestowatt = get_page_by_path('lestowatt', OBJECT, 'settore');
-                            if ($lestowatt) {
-                                echo '<a href="' . esc_url(get_permalink($lestowatt->ID)) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            } else {
-                                echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom">Scopri i dettagli</a>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
         <!-- Mobile: contenuti accordion -->
         <div class="accordion-mobile-contents d-block d-md-none mb-5">
-            <div class="accordion-mobile-content" data-tab="0">
-                <!-- Contenuto Cucine -->
-                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
+            <?php foreach ($settori as $index => $settore) : 
+                $sottotitolo = get_field('sottotitolo', $settore->ID);
+                $immagine = get_the_post_thumbnail_url($settore->ID, 'full');
+                if (!$immagine) {
+                    $immagine = '/wp-content/themes/lesto-theme/images/Rectangle 1.png';
+                }
+            ?>
+            <div class="accordion-mobile-content <?php echo $index === 0 ? '' : 'd-none'; ?>" data-tab="<?php echo $index; ?>">
+                <!-- Contenuto <?php echo esc_html($settore->post_title); ?> -->
+                <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($settore->post_title); ?>" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
-                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                        <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <?php 
-                        $cucine_mobile = get_page_by_path('cucine', OBJECT, 'settore');
-                        if ($cucine_mobile) {
-                            echo '<a href="' . esc_url(get_permalink($cucine_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        } else {
-                            echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        }
-                        ?>
+                        <h5 class="mb-2 m_h5"><?php echo $sottotitolo ? esc_html($sottotitolo) : 'Soluzioni su misura per la tua azienda'; ?></h5>
+                        <p class="mb-3 desktop-p"><?php echo wp_trim_words($settore->post_content, 30, '...'); ?></p>
+                        <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center w-100">Scopri i dettagli</a>
                     </div>
                 </div>
             </div>
-            <div class="accordion-mobile-content" data-tab="1">
-                <!-- Contenuto Impianti di aspirazione -->
-                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
-                <div class="row">
-                    <div class="col-12 d-flex flex-column align-items-start mt-3">
-                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                        <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <?php 
-                        $impianti_aspirazione_mobile = get_page_by_path('impianti-di-aspirazione', OBJECT, 'settore');
-                        if ($impianti_aspirazione_mobile) {
-                            echo '<a href="' . esc_url(get_permalink($impianti_aspirazione_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        } else {
-                            echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-mobile-content d-none" data-tab="2">
-                <!-- Contenuto Arredo bar -->
-                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
-                <div class="row">
-                    <div class="col-12 d-flex flex-column align-items-start mt-3">
-                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                        <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <?php 
-                        $arredo_bar_mobile = get_page_by_path('arredo-bar', OBJECT, 'settore');
-                        if ($arredo_bar_mobile) {
-                            echo '<a href="' . esc_url(get_permalink($arredo_bar_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        } else {
-                            echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-mobile-content d-none" data-tab="3">
-                <!-- Contenuto Cucine aziendali -->
-                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
-                <div class="row">
-                    <div class="col-12 d-flex flex-column align-items-start mt-3">
-                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                        <p class="mb-3 desktop-p">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <?php 
-                        $cucine_aziendali_mobile = get_page_by_path('cucine-aziendali', OBJECT, 'settore');
-                        if ($cucine_aziendali_mobile) {
-                            echo '<a href="' . esc_url(get_permalink($cucine_aziendali_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        } else {
-                            echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-mobile-content d-none" data-tab="4">
-                <!-- Contenuto Lestowatt -->
-                <img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine aziendali" class="img-fluid accordion-mobile-img mb-3" />
-                <div class="row">
-                    <div class="col-12 d-flex flex-column align-items-start mt-3">
-                        <h5 class="mb-2 m_h5">Soluzioni su misura per la tua azienda</h5>
-                        <p class="mb-3">Progettiamo e realizziamo cucine aziendali efficienti, funzionali e personalizzate per ogni esigenza produttiva. Scopri come possiamo aiutarti a migliorare la ristorazione nella tua azienda.</p>
-                        <?php 
-                        $lestowatt_mobile = get_page_by_path('lestowatt', OBJECT, 'settore');
-                        if ($lestowatt_mobile) {
-                            echo '<a href="' . esc_url(get_permalink($lestowatt_mobile->ID)) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        } else {
-                            echo '<a href="' . esc_url(get_post_type_archive_link('settore')) . '" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>';
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="preventivo-video-wrapper">

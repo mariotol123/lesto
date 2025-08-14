@@ -109,7 +109,7 @@ get_header();
                                 <?php endforeach; ?>
                             </ul>
                         <?php endif; ?>
-                        <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center">Scopri i dettagli</a>
+                        <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center w-100">Scopri i dettagli</a>
                     </div>
                 </div>
             </div>

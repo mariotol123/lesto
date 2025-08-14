@@ -1590,10 +1590,12 @@ section.section {
 }
 .accordion-mobile-tab {
   opacity: 0.5;
+  filter: blur(1px);
   text-transform: none;
 }
 .accordion-mobile-tab.active {
   opacity: 1;
+  filter: blur(0px);
   text-transform: uppercase;
 }
 .accordion-mobile-content {
