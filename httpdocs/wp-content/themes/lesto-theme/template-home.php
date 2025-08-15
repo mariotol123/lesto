@@ -81,35 +81,40 @@ get_header();
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
 										<div class="card-body">
-
-
-
+											<div class="card-hover-content">
+												<h5 class="card-text-hover">Setup attrezzature</h5>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+											</div>
 										</div>
-
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
 										<div class="card-body">
-
-
-
+											<div class="card-hover-content">
+												<h5 class="card-text-hover">Setup attrezzature</h5>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
 										<div class="card-body">
-
-
-
+											<div class="card-hover-content">
+												<h5 class="card-text-hover">Setup attrezzature</h5>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 							</div>
@@ -119,47 +124,54 @@ get_header();
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
 										<div class="card-body">
-
-
-
+											<div class="card-hover-content">
+												<h5 class="card-text-hover">Setup attrezzature</h5>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
 										<div class="card-body">
-
-
-
+											<div class="card-hover-content">
+												<h5 class="card-text-hover">Setup attrezzature</h5>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
 										<div class="card-body">
-
-
-
+											<div class="card-hover-content">
+												<h5 class="card-text-hover">Setup attrezzature</h5>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+											</div>
 										</div>
-
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
+								
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
 										<div class="card-body">
-
-
-
+											<div class="card-hover-content">
+												<h5 class="card-text-hover">Setup attrezzature</h5>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
-
 
 							</div>
 						</div>
