@@ -33,7 +33,7 @@ get_header();
                     <?php endif; ?>
                     <div class="entry-content w-100">
                         <?php the_content(); ?>
-                        <button class="btn btn-header-custom d-flex justify-content-center">Contattaci per un
+                        <button class="btn btn-header-custom d-flex justify-content-center mt-3">Contattaci per un
                     preventivo</button>
                     </div>
                 </div>

@@ -71,7 +71,7 @@ get_header();
 			<div class="container mt-3 mb-5">
 				<div class="row">
 					<div class="col-lg-4 col-md-4">
-						<p class="desktop-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro
+						<p class="desktop-p w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro
 							nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus,
 							architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?</p>
 					</div>
@@ -80,6 +80,7 @@ get_header();
 							<div class="row">
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -93,6 +94,7 @@ get_header();
 
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -106,6 +108,7 @@ get_header();
 
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -123,6 +126,7 @@ get_header();
 							<div class="row">
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -136,6 +140,7 @@ get_header();
 
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -149,6 +154,7 @@ get_header();
 
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -162,6 +168,7 @@ get_header();
 								
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -205,7 +212,7 @@ get_header();
 			<h2>Cooking Room:</h2>
 			<h5>il nostro showroom dinamico</h5>
 		</div>
-		<div class="mb-10xl row button-cooking">
+		<div class="mb-8xl row button-cooking">
 			<div class="col-md-5 d-flex align-items-center">
 				<h4 class="mt-4 mb-0">Grazie all’esperienza maturata in oltre 30 anni di attività e ad uno staff
 					competente e disponibile, siamo in grado di soddisfare anche le richieste più esigenti,
@@ -219,7 +226,7 @@ get_header();
 
 
 	<section class="four-section">
-		<div class="container pt-8xl pb-10xl">
+		<div class="container pt-7xl pb-10xl">
 			<div class="row border-top-four-section pt-2">
 				<div class="col-md-4 d-flex justify-content-center">
 					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"

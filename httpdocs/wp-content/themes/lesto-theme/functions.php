@@ -201,7 +201,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Registrazione Custom Post Type Settore e Servizio
+ * Registrazione Custom Post Type Settore, Servizio e Realizzazione
  */
 function lesto_register_custom_post_types() {
 	// Settore
@@ -229,8 +229,155 @@ function lesto_register_custom_post_types() {
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
 		'show_in_rest' => true,
 	));
+
+	// Realizzazione
+	register_post_type('realizzazione', array(
+		'labels' => array(
+			'name' => __('Realizzazioni', 'lesto-theme'),
+			'singular_name' => __('Realizzazione', 'lesto-theme'),
+			'add_new' => __('Aggiungi Nuova', 'lesto-theme'),
+			'add_new_item' => __('Aggiungi Nuova Realizzazione', 'lesto-theme'),
+			'edit_item' => __('Modifica Realizzazione', 'lesto-theme'),
+			'new_item' => __('Nuova Realizzazione', 'lesto-theme'),
+			'view_item' => __('Visualizza Realizzazione', 'lesto-theme'),
+			'search_items' => __('Cerca Realizzazioni', 'lesto-theme'),
+			'not_found' => __('Nessuna realizzazione trovata', 'lesto-theme'),
+			'not_found_in_trash' => __('Nessuna realizzazione nel cestino', 'lesto-theme'),
+		),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'realizzazioni'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+		'show_in_rest' => true,
+		'menu_icon' => 'dashicons-hammer',
+		'taxonomies' => array('categoria_realizzazione', 'cliente_realizzazione'),
+	));
 }
 add_action('init', 'lesto_register_custom_post_types');
+
+/**
+ * Registrazione tassonomie personalizzate per Realizzazioni
+ */
+function lesto_register_custom_taxonomies() {
+	// Tassonomia Categorie per Realizzazioni
+	register_taxonomy('categoria_realizzazione', 'realizzazione', array(
+		'labels' => array(
+			'name' => __('Categorie', 'lesto-theme'),
+			'singular_name' => __('Categoria', 'lesto-theme'),
+			'add_new_item' => __('Aggiungi Nuova Categoria', 'lesto-theme'),
+			'edit_item' => __('Modifica Categoria', 'lesto-theme'),
+			'update_item' => __('Aggiorna Categoria', 'lesto-theme'),
+			'view_item' => __('Visualizza Categoria', 'lesto-theme'),
+			'search_items' => __('Cerca Categorie', 'lesto-theme'),
+		),
+		'hierarchical' => true,
+		'public' => true,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'show_in_nav_menus' => true,
+		'show_tagcloud' => true,
+		'show_in_rest' => true,
+		'rewrite' => array('slug' => 'categoria-realizzazione'),
+	));
+
+	// Tassonomia Clienti per Realizzazioni
+	register_taxonomy('cliente_realizzazione', 'realizzazione', array(
+		'labels' => array(
+			'name' => __('Clienti', 'lesto-theme'),
+			'singular_name' => __('Cliente', 'lesto-theme'),
+			'add_new_item' => __('Aggiungi Nuovo Cliente', 'lesto-theme'),
+			'edit_item' => __('Modifica Cliente', 'lesto-theme'),
+			'update_item' => __('Aggiorna Cliente', 'lesto-theme'),
+			'view_item' => __('Visualizza Cliente', 'lesto-theme'),
+			'search_items' => __('Cerca Clienti', 'lesto-theme'),
+		),
+		'hierarchical' => false, // Come i tag
+		'public' => true,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'show_in_nav_menus' => true,
+		'show_tagcloud' => true,
+		'show_in_rest' => true,
+		'rewrite' => array('slug' => 'cliente-realizzazione'),
+	));
+}
+add_action('init', 'lesto_register_custom_taxonomies');
+
+/**
+ * Flush rewrite rules on theme activation
+ */
+function lesto_flush_rewrite_rules() {
+	lesto_register_custom_post_types();
+	lesto_register_custom_taxonomies();
+	flush_rewrite_rules();
+}
+register_activation_hook(__FILE__, 'lesto_flush_rewrite_rules');
+
+/**
+ * ACF Fields per Realizzazioni
+ */
+function lesto_add_acf_fields() {
+	if( function_exists('acf_add_local_field_group') ):
+
+		acf_add_local_field_group(array(
+			'key' => 'group_realizzazioni_galleria',
+			'title' => 'Galleria Realizzazioni',
+			'fields' => array(
+				array(
+					'key' => 'field_galleria_realizzazioni',
+					'label' => 'Galleria Immagini',
+					'name' => 'galleria_realizzazioni',
+					'type' => 'repeater',
+					'instructions' => 'Aggiungi le immagini della realizzazione con i loro titoli',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'layout' => 'table',
+					'button_label' => 'Aggiungi Immagine',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_immagine_realizzazione',
+							'label' => 'Immagine',
+							'name' => 'immagine',
+							'type' => 'image',
+							'instructions' => 'Carica l\'immagine della realizzazione',
+							'required' => 1,
+							'return_format' => 'array',
+							'preview_size' => 'medium',
+							'library' => 'all',
+						),
+						array(
+							'key' => 'field_titolo_immagine',
+							'label' => 'Titolo/Descrizione',
+							'name' => 'titolo',
+							'type' => 'text',
+							'instructions' => 'Titolo o breve descrizione per questa immagine',
+							'required' => 1,
+							'placeholder' => 'es. Cucina moderna con isola',
+						),
+					),
+					'min' => 1,
+					'max' => 10,
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'realizzazione',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'normal',
+			'style' => 'default',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+		));
+
+	endif;
+}
+add_action('acf/init', 'lesto_add_acf_fields');
 
 // Enqueue Masonry via CDN
 function lesto_enqueue_masonry_cdn() {
@@ -256,7 +403,7 @@ function lesto_get_cpt_posts() {
 	$post_type = sanitize_text_field($_POST['post_type']);
 	
 	// Verifica che il post type sia uno di quelli permessi
-	if (!in_array($post_type, array('settore', 'servizio'))) {
+	if (!in_array($post_type, array('settore', 'servizio', 'realizzazione'))) {
 		wp_die('Invalid post type');
 	}
 
@@ -283,4 +430,84 @@ function lesto_get_cpt_posts() {
 // Hook per utenti loggati e non loggati
 add_action('wp_ajax_lesto_get_cpt_posts', 'lesto_get_cpt_posts');
 add_action('wp_ajax_nopriv_lesto_get_cpt_posts', 'lesto_get_cpt_posts');
+
+/**
+ * AJAX function to get realizzazioni filtered by taxonomy
+ */
+function lesto_get_realizzazioni_by_taxonomy() {
+	// Verifica nonce per sicurezza
+	if (!wp_verify_nonce($_POST['nonce'], 'lesto_ajax_nonce')) {
+		wp_die('Security check failed');
+	}
+
+	$taxonomy = sanitize_text_field($_POST['taxonomy']);
+	$term_slug = sanitize_text_field($_POST['term_slug']);
+	
+	// Verifica che la tassonomia sia una di quelle permesse
+	if (!in_array($taxonomy, array('categoria_realizzazione', 'cliente_realizzazione'))) {
+		wp_die('Invalid taxonomy');
+	}
+
+	$args = array(
+		'post_type' => 'realizzazione',
+		'posts_per_page' => -1,
+		'post_status' => 'publish',
+		'orderby' => 'date',
+		'order' => 'DESC'
+	);
+
+	// Se non è "all", aggiungi il filtro tassonomia
+	if ($term_slug !== 'all') {
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => $taxonomy,
+				'field' => 'slug',
+				'terms' => $term_slug,
+			),
+		);
+	}
+
+	$query = new WP_Query($args);
+	$response = array();
+
+	if ($query->have_posts()) {
+		while ($query->have_posts()) {
+			$query->the_post();
+			
+			$categories = get_the_terms(get_the_ID(), 'categoria_realizzazione');
+			$clients = get_the_terms(get_the_ID(), 'cliente_realizzazione');
+			
+			$cat_names = array();
+			$client_names = array();
+			
+			if ($categories && !is_wp_error($categories)) {
+				foreach ($categories as $cat) {
+					$cat_names[] = $cat->name;
+				}
+			}
+			
+			if ($clients && !is_wp_error($clients)) {
+				foreach ($clients as $client) {
+					$client_names[] = $client->name;
+				}
+			}
+			
+			$response[] = array(
+				'id' => get_the_ID(),
+				'title' => get_the_title(),
+				'url' => get_permalink(),
+				'thumbnail' => get_the_post_thumbnail_url(get_the_ID(), 'large'),
+				'categories' => $cat_names,
+				'clients' => $client_names
+			);
+		}
+		wp_reset_postdata();
+	}
+
+	wp_send_json_success($response);
+}
+
+// Hook per la funzione AJAX delle realizzazioni
+add_action('wp_ajax_lesto_get_realizzazioni_by_taxonomy', 'lesto_get_realizzazioni_by_taxonomy');
+add_action('wp_ajax_nopriv_lesto_get_realizzazioni_by_taxonomy', 'lesto_get_realizzazioni_by_taxonomy');
 
