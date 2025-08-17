@@ -13939,7 +13939,7 @@ section.section {
 
 .form-container .header-buttons {
   background: transparent !important;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.7rem;
 }
 .form-container .header-buttons input:focus,
 .form-container .header-buttons textarea:focus,
@@ -14110,6 +14110,9 @@ input[type=checkbox] {
   .form-container {
     padding: 30px 25px;
     border-radius: 20px;
+  }
+  .form-container .header-buttons {
+    display: block !important;
   }
   .textarea-container {
     height: 180px;
