@@ -1857,6 +1857,12 @@ section.section {
     background: transparent !important;
     padding: 0.5rem 1.5rem;
   }
+
+  .header-buttons input:focus, 
+  .header-buttons textarea:focus,
+  .header-buttons select:focus {
+    color: white;
+  }
 }
 
 .field-group {
@@ -1871,6 +1877,7 @@ label {
   font-weight: 400;
 }
 
+
 .input-field {
   width: 100%;
   padding: 15px 20px;
@@ -1881,6 +1888,12 @@ label {
   font-size: 16px;
   transition: all 0.3s ease;
   outline: none;
+}
+
+/* Forza il colore bianco su tutti gli input e textarea del form, anche con classi Bootstrap */
+.form-container input,
+.form-container textarea {
+  color: #fff !important;
 }
 
 .input-field:focus {
