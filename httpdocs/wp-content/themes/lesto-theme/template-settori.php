@@ -20,7 +20,7 @@ get_header();
         <div class="row">
             <div class="col-md-4 d-flex flex-column align-items-start">
                 <h5>dalla progettazione alla manutenzione, la tua cucina professionale.</h5>
-                <p class="mt-3 desktop-p">La tua cucina, al livello di performance che si merita. Dal 1984 Lesto Group
+                <p class="mt-3 desktop-p page-description-settori">La tua cucina, al livello di performance che si merita. Dal 1984 Lesto Group
                     si occupa
                     di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti,
                     hotel, pizzerie, gastronomie e bar.</p>
@@ -124,7 +124,7 @@ get_header();
                     <h3>Contattaci per <br>un preventivo gratuito</h3>
                     <h5 class="preventivo-mobile-title d-block d-md-none mt-3 mb-10xl">IL NOSTRO SHOWROOM DINAMICO</h5>
                     <h4 class="mt-5">Ti risponderemo entro 24h</h4>
-                    <button class="btn btn-custom d-block d-md-none mt-4">Scopri di più</button>
+                    <button class="btn btn-custom d-block d-md-none mt-4 w-100">Scopri di più</button>
                 </div>
                 <div class="col-md-6 d-none d-md-flex justify-content-end align-items-end">
                     <button class="btn btn-custom">Scopri di più</button>

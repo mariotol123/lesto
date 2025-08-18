@@ -49,7 +49,7 @@ get_header();
 
         <?php endwhile; endif; ?>
     </div>
-    <hr class="footer-divider border-2 opacity-75 w-100">
+    <hr class="footer-divider border-2 opacity-75 w-100 d-none d-md-block">
 </main>
 
 <?php get_footer();
