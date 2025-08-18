@@ -13219,6 +13219,7 @@ section.section {
 @media (max-width: 768px) {
   .page-description {
     text-transform: lowercase !important;
+    width: 100% !important;
   }
   .page-description::first-letter {
     text-transform: uppercase !important;
@@ -13417,11 +13418,28 @@ section.section {
     font-size: 1.5rem;
     text-transform: uppercase;
   }
-  .cooking {
-    margin-top: 2rem !important;
+  .cooking h2, .cooking .h2 {
+    width: 50%;
+  }
+  .cooking h5, .cooking .h5, .cooking .site-footer .footer-nav-list li, .site-footer .footer-nav-list .cooking li,
+  .cooking .site-footer .footer-social-list li,
+  .site-footer .footer-social-list .cooking li,
+  .cooking .site-footer .footer-company-list li,
+  .site-footer .footer-company-list .cooking li,
+  .cooking .site-footer .footer-contacts-list li,
+  .site-footer .footer-contacts-list .cooking li, .cooking .site-footer .footer-nav-list li a, .site-footer .footer-nav-list li .cooking a,
+  .cooking .site-footer .footer-social-list li a,
+  .site-footer .footer-social-list li .cooking a,
+  .cooking .site-footer .footer-company-list li a,
+  .site-footer .footer-company-list li .cooking a,
+  .cooking .site-footer .footer-contacts-list li a,
+  .site-footer .footer-contacts-list li .cooking a {
+    width: 100%;
+    font-size: 1.8rem;
+    text-transform: uppercase;
   }
   .button-cooking {
-    margin-bottom: 20px !important;
+    margin-bottom: 2rem !important;
   }
 }
 .four-section {

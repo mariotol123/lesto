@@ -1297,6 +1297,7 @@ section.section {
 @media (max-width: 768px) {
   .page-description {
     text-transform: lowercase !important;
+    width: 100% !important;
     &::first-letter {
       text-transform: uppercase !important;
     }
@@ -1503,10 +1504,18 @@ section.section {
     text-transform: uppercase;
   }
   .cooking {
-    margin-top: 2rem !important;
+    h2 {
+      width: 50%;
+    }
+
+    h5 {
+      width: 100%;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
   }
   .button-cooking {
-    margin-bottom: 20px !important;
+    margin-bottom: 2rem !important;
   }
 }
 

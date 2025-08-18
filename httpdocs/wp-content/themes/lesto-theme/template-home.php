@@ -211,7 +211,7 @@ get_header();
 
 	<section class="third-section d-flex flex-column justify-content-between container vh-100">
 		<div class="mt-10xl cooking">
-			<h2>Cooking Room:</h2>
+			<h2>Cooking Room<span class="d-none d-md-inline">:</span></h2>
 			<h5>il nostro showroom dinamico</h5>
 		</div>
 		<div class="mb-8xl row button-cooking">
