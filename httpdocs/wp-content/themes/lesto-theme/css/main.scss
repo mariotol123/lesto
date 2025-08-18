@@ -1,3 +1,4 @@
+
 // =========================
 // Base Styles
 // =========================
@@ -1486,13 +1487,15 @@ section.section {
   content: none !important;
 }
 .third-section .btn.btn-custom {
-  padding: 4px 80px !important;
+  padding: 3px 6rem !important;
   width: auto;
 }
 @media (max-width: 768px) {
   .third-section .btn.btn-custom {
     width: 100% !important;
-    padding: 4px 0.5rem !important;
+    padding: 1rem 0.5rem !important;
+    margin-top: 3rem !important;
+    font-size: 1.5rem;
   }
   h5:not(.card-text-hover) {
     width: 100%;
@@ -1569,6 +1572,29 @@ section.section {
         transition: max-height 2.4s cubic-bezier(0.4,0,0.2,1);
       }
     }
+  }
+}
+
+// Affianca i due h5 nella versione mobile della four-section
+@media (max-width: 767.98px) {
+
+  .four-section h5 {
+    margin-top: 0.5rem;
+  }
+  .four-section .text-mobile-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .four-section .text-mobile-wrap h5 {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  .four-section .text-mobile-wrap p {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 0.5rem;
   }
 }
 
