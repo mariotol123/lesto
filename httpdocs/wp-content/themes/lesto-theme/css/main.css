@@ -14047,7 +14047,7 @@ label {
   position: absolute;
   bottom: 4px;
   right: 1px;
-  background: #1E1E1E;
+  background: transparent;
   color: #ffffff;
   border: 1px solid #FFF;
   padding: 0.4rem 0.8rem;
@@ -14122,10 +14122,13 @@ input[type=checkbox] {
     font-size: 15px;
   }
   .submit-btn {
-    bottom: 20px;
-    right: 45px;
-    padding: 10px 20px;
-    font-size: 14px;
+    bottom: 0;
+    right: 0;
+    padding: 0.6rem 0.6rem;
+    font-size: 1.2rem;
+  }
+  button {
+    width: auto !important;
   }
 }
 @media (max-width: 480px) {
@@ -14144,10 +14147,10 @@ input[type=checkbox] {
     font-size: 14px;
   }
   .submit-btn {
-    bottom: 15px;
-    right: 35px;
-    padding: 8px 18px;
-    font-size: 13px;
+    bottom: 0;
+    right: 0;
+    padding: 0.6rem 0.6rem;
+    font-size: 1rem;
   }
 }
 .realizzazioni-container hr {
