@@ -80,44 +80,53 @@ get_header();
 							<div class="row">
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+											alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+											alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 								<div class="col-lg-4 col-md-4">
 									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+											alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 							</div>
@@ -126,58 +135,70 @@ get_header();
 							<div class="row">
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+											alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+											alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+											alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
-								
+
 								<div class="col-lg-3 col-md-3">
 									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png" alt="Setup attrezzature" class="card-img">
+										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+											alt="Setup attrezzature" class="card-img">
 										<div class="card-body">
 											<div class="card-hover-content">
 												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
 											</div>
 										</div>
 									</div>
 									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+										Omnis porro nesciunt blanditiis voluptas.</p>
 								</div>
 
 							</div>
@@ -185,9 +206,12 @@ get_header();
 					</div>
 				</div>
 			</div>
-			
+
 			<hr class="footer-divider border-2 opacity-75 d-none d-md-block w-100">
-			<section class="tabs-container mt-4 button-container">
+
+
+		</section>
+		<section class="tabs-container mt-4 button-container">
 			<div class="container buttons-container mb-5">
 				<div class="tab">
 					<button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise">
@@ -203,9 +227,7 @@ get_header();
 
 		</section>
 
-		</section>
 
-		
 	</div>
 
 
@@ -234,63 +256,32 @@ get_header();
 					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
 						class="img-fluid img-four-section" />
 				</div>
-				   <div class="col-12 d-block d-md-none text-mobile-wrap">
-					   <div class="row">
-						   <div class="col-6 d-flex flex-column align-items-start position-relative">
-							   <h5 class="m_h5">CUCINE</h5>
-							   <p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-								   sit. Illum veritatis sit omnis quisquam.</p>
-						   </div>
-						   <div class="col-6 d-flex flex-column align-items-end">
-							   <h5 class="mb-2 m_h5">01</h5>
-							   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								   alt="Section Icon Container" class="img-fluid d-block d-md-none"/>
-						   </div>
-					   </div>
-				   </div>
-				   <div class="col-md-2 d-flex flex-column align-items-start d-none d-md-flex">
-					   <h5 class=" m_h5">CUCINE</h5>
-				   </div>
-				   <div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					   <h5 class="mb-2 m_h5">01</h5>
-					   <p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						   sit. Illum veritatis sit omnis quisquam.</p>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						   alt="Section Icon Container" class="img-fluid" />
-				   </div>
-			</div>
-			<div class="row border-top-four-section pt-2">
-				<div class="col-md-4 d-flex justify-content-center">
-					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
-						class="img-fluid img-four-section" />
+				<div class="col-12 d-block d-md-none text-mobile-wrap">
+					<div class="row">
+						<div class="col-6 d-flex flex-column align-items-start position-relative">
+							<h5 class="m_h5">CUCINE</h5>
+							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
+								pariatur qui quos velit
+								sit. Illum veritatis sit omnis quisquam.</p>
+						</div>
+						<div class="col-6 d-flex flex-column align-items-end">
+							<h5 class="mb-2 m_h5">01</h5>
+							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+								alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+						</div>
+					</div>
 				</div>
-				   <div class="col-12 d-block d-md-none text-mobile-wrap">
-					   <div class="row">
-						   <div class="col-6 d-flex flex-column align-items-start position-relative">
-							   <h5 class="m_h5">IMPIANTI DI ASPIRAZIONE</h5>
-							   <p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-								   sit. Illum veritatis sit omnis quisquam.</p>
-						   </div>
-						   <div class="col-6 d-flex flex-column align-items-end">
-							   <h5 class="m_h5">02</h5>
-							   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								   alt="Section Icon Container" class="img-fluid d-block d-md-none"/>
-						   </div>
-					   </div>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
-					   <h5 class=" m_h5">IMPIANTI DI ASPIRAZIONE</h5>
-				   </div>
-				   <div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					   <h5 class="m_h5">02</h5>
-					   <p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						   sit. Illum veritatis sit omnis quisquam.</p>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						   alt="Section Icon Container" class="img-fluid" />
+				<div class="col-md-2 d-flex flex-column align-items-start d-none d-md-flex">
+					<h5 class=" m_h5">CUCINE</h5>
+				</div>
+				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
+					<h5 class="mb-2 m_h5">01</h5>
+					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
+						sit. Illum veritatis sit omnis quisquam.</p>
+				</div>
+				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
+					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+						alt="Section Icon Container" class="img-fluid" />
 				</div>
 			</div>
 			<div class="row border-top-four-section pt-2">
@@ -298,31 +289,32 @@ get_header();
 					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
 						class="img-fluid img-four-section" />
 				</div>
-				   <div class="col-12 d-block d-md-none text-mobile-wrap">
-					   <div class="row">
-						   <div class="col-6 d-flex flex-column align-items-start position-relative">
-							   <h5 class="m_h5">ARREDO BAR</h5>
-							   <p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-								   sit. Illum veritatis sit omnis quisquam.</p>
-						   </div>
-						   <div class="col-6 d-flex flex-column align-items-end">
-							   <h5 class="mb-2 m_h5">03</h5>
-							   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								   alt="Section Icon Container" class="img-fluid d-block d-md-none" />
-						   </div>
-					   </div>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
-					   <h5 class=" m_h5">ARREDO BAR</h5>
-				   </div>
-				   <div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					   <h5 class="mb-2 m_h5">03</h5>
-					   <p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						   sit. Illum veritatis sit omnis quisquam.</p>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						   alt="Section Icon Container" class="img-fluid" />
+				<div class="col-12 d-block d-md-none text-mobile-wrap">
+					<div class="row">
+						<div class="col-6 d-flex flex-column align-items-start position-relative">
+							<h5 class="m_h5">IMPIANTI DI ASPIRAZIONE</h5>
+							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
+								pariatur qui quos velit
+								sit. Illum veritatis sit omnis quisquam.</p>
+						</div>
+						<div class="col-6 d-flex flex-column align-items-end">
+							<h5 class="m_h5">02</h5>
+							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+								alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
+					<h5 class=" m_h5">IMPIANTI DI ASPIRAZIONE</h5>
+				</div>
+				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
+					<h5 class="m_h5">02</h5>
+					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
+						sit. Illum veritatis sit omnis quisquam.</p>
+				</div>
+				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
+					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+						alt="Section Icon Container" class="img-fluid" />
 				</div>
 			</div>
 			<div class="row border-top-four-section pt-2">
@@ -330,31 +322,32 @@ get_header();
 					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
 						class="img-fluid img-four-section" />
 				</div>
-				   <div class="col-12 d-block d-md-none text-mobile-wrap">
-					   <div class="row">
-						   <div class="col-6 d-flex flex-column align-items-start position-relative">
-							   <h5 class="m_h5">CUCINE AZIENDALI</h5>
-							   <p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-								   sit. Illum veritatis sit omnis quisquam.</p>
-						   </div>
-						   <div class="col-6 d-flex flex-column align-items-end">
-							   <h5 class="mb-2 m_h5">04</h5>
-							   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								   alt="Section Icon Container" class="img-fluid d-block d-md-none" />
-						   </div>
-					   </div>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
-					   <h5 class=" m_h5">CUCINE AZIENDALI</h5>
-				   </div>
-				   <div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					   <h5 class="mb-2 m_h5">04</h5>
-					   <p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						   sit. Illum veritatis sit omnis quisquam.</p>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						   alt="Section Icon Container" class="img-fluid" />
+				<div class="col-12 d-block d-md-none text-mobile-wrap">
+					<div class="row">
+						<div class="col-6 d-flex flex-column align-items-start position-relative">
+							<h5 class="m_h5">ARREDO BAR</h5>
+							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
+								pariatur qui quos velit
+								sit. Illum veritatis sit omnis quisquam.</p>
+						</div>
+						<div class="col-6 d-flex flex-column align-items-end">
+							<h5 class="mb-2 m_h5">03</h5>
+							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+								alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
+					<h5 class=" m_h5">ARREDO BAR</h5>
+				</div>
+				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
+					<h5 class="mb-2 m_h5">03</h5>
+					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
+						sit. Illum veritatis sit omnis quisquam.</p>
+				</div>
+				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
+					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+						alt="Section Icon Container" class="img-fluid" />
 				</div>
 			</div>
 			<div class="row border-top-four-section pt-2">
@@ -362,31 +355,66 @@ get_header();
 					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
 						class="img-fluid img-four-section" />
 				</div>
-				   <div class="col-12 d-block d-md-none text-mobile-wrap">
-					   <div class="row">
-						   <div class="col-6 d-flex flex-column align-items-start position-relative">
-							   <h5 class="m_h5">LESTOWATT</h5>
-							   <p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-								   sit. Illum veritatis sit omnis quisquam.</p>
-						   </div>
-						   <div class="col-6 d-flex flex-column align-items-end">
-							   <h5 class="mb-2 m_h5">05</h5>
-							   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								   alt="Section Icon Container" class="img-fluid d-flex align-items-end d-block d-md-none"/>
-						   </div>
-					   </div>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
-					   <h5 class=" m_h5">LESTOWATT</h5>
-				   </div>
-				   <div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					   <h5 class="mb-2 m_h5">05</h5>
-					   <p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						   sit. Illum veritatis sit omnis quisquam.</p>
-				   </div>
-				   <div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					   <img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						   alt="Section Icon Container" class="img-fluid" />
+				<div class="col-12 d-block d-md-none text-mobile-wrap">
+					<div class="row">
+						<div class="col-6 d-flex flex-column align-items-start position-relative">
+							<h5 class="m_h5">CUCINE AZIENDALI</h5>
+							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
+								pariatur qui quos velit
+								sit. Illum veritatis sit omnis quisquam.</p>
+						</div>
+						<div class="col-6 d-flex flex-column align-items-end">
+							<h5 class="mb-2 m_h5">04</h5>
+							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+								alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
+					<h5 class=" m_h5">CUCINE AZIENDALI</h5>
+				</div>
+				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
+					<h5 class="mb-2 m_h5">04</h5>
+					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
+						sit. Illum veritatis sit omnis quisquam.</p>
+				</div>
+				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
+					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+						alt="Section Icon Container" class="img-fluid" />
+				</div>
+			</div>
+			<div class="row border-top-four-section pt-2">
+				<div class="col-md-4 d-flex justify-content-center">
+					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
+						class="img-fluid img-four-section" />
+				</div>
+				<div class="col-12 d-block d-md-none text-mobile-wrap">
+					<div class="row">
+						<div class="col-6 d-flex flex-column align-items-start position-relative">
+							<h5 class="m_h5">LESTOWATT</h5>
+							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
+								pariatur qui quos velit
+								sit. Illum veritatis sit omnis quisquam.</p>
+						</div>
+						<div class="col-6 d-flex flex-column align-items-end">
+							<h5 class="mb-2 m_h5">05</h5>
+							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+								alt="Section Icon Container"
+								class="img-fluid d-flex align-items-end d-block d-md-none" />
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
+					<h5 class=" m_h5">LESTOWATT</h5>
+				</div>
+				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
+					<h5 class="mb-2 m_h5">05</h5>
+					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
+						sit. Illum veritatis sit omnis quisquam.</p>
+				</div>
+				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
+					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+						alt="Section Icon Container" class="img-fluid" />
 				</div>
 			</div>
 		</div>
