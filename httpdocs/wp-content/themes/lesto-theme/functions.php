@@ -173,6 +173,18 @@ function lesto_enqueue_main_js() {
 }
 add_action('wp_enqueue_scripts', 'lesto_enqueue_main_js');
 
+// Enqueue four-section-persist.js
+function lesto_enqueue_four_section_persist() {
+	wp_enqueue_script(
+		'lesto-four-section-persist',
+		get_template_directory_uri() . '/js/four-section-persist.js',
+		array(),
+		filemtime(get_template_directory() . '/js/four-section-persist.js'),
+		true
+	);
+}
+add_action('wp_enqueue_scripts', 'lesto_enqueue_four_section_persist');
+
 /**
  * Implement the Custom Header feature.
  */

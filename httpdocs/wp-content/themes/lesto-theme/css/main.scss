@@ -1508,35 +1508,39 @@ section.section {
 }
 
 .four-section {
-  background: var(--bg-dark-transparent);
-  p {
-    color: #fff;
-    font-size: var(--font-s);
+  .row.aperto {
+    .m_h5 + p {
+      opacity: 1;
+      max-height: 200px;
+      transition: opacity 0.3s 0.8s, max-height 2.2s cubic-bezier(0.4,0,0.2,1);
+    }
+    .img-four-section {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+      max-height: 200px;
+      transition: max-height 2s cubic-bezier(0.4,0,0.2,1), clip-path 1s, opacity 0.3s;
+    }
+    .col-md-4 {
+      max-height: 200px;
+      transition: max-height 2.2s cubic-bezier(0.4,0,0.2,1);
+    }
   }
+  background: var(--bg-dark-transparent);
+  color: #fff;
+  font-size: var(--font-s);
   .row {
     .m_h5 + p {
-      display: none;
-      transition: opacity 0.3s;
-    }
-    &:hover {
-      .m_h5 + p {
-        display: block;
-        opacity: 1;
-      }
-      .img-four-section {
-        clip-path: inset(0 0 0 0);
-        opacity: 1;
-      }
-      .col-md-4 {
-        height: 100%;
-      }
+      display: block;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s 0.8s, max-height 2.2s cubic-bezier(0.4,0,0.2,1);
     }
     .img-four-section {
       display: block;
       width: 100%;
       height: auto;
-      max-height: none;
-      transition: clip-path 1s, opacity 0.3s;
+      transition: max-height 1s cubic-bezier(0.4,0,0.2,1), clip-path 1s, opacity 0.3s;
       clip-path: inset(0 0 60% 0);
       opacity: 0.7;
     }
@@ -1544,9 +1548,26 @@ section.section {
       overflow: hidden;
       display: flex;
       align-items: flex-start;
-      height: 60px;
-      transition: height 1s;
+      max-height: 50px;
+      transition: max-height 1s cubic-bezier(0.4,0,0.2,1);
       padding-left: 0;
+    }
+    &:hover {
+      .m_h5 + p {
+        opacity: 1;
+        max-height: 300px;
+        transition: opacity 0.3s 0.8s, max-height 2.2s cubic-bezier(0.4,0,0.2,1);
+      }
+      .img-four-section {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+        max-height: 200px;
+        transition: max-height 2s cubic-bezier(0.4,0,0.2,1), clip-path 1s, opacity 0.3s;
+      }
+      .col-md-4 {
+        max-height: 200px;
+        transition: max-height 2.4s cubic-bezier(0.4,0,0.2,1);
+      }
     }
   }
 }

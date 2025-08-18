@@ -185,11 +185,9 @@ get_header();
 					</div>
 				</div>
 			</div>
+			
 			<hr class="footer-divider border-2 opacity-75 d-none d-md-block w-100">
-
-		</section>
-
-		<section class="tabs-container mt-4 button-container">
+			<section class="tabs-container mt-4 button-container">
 			<div class="container buttons-container mb-5">
 				<div class="tab">
 					<button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise">
@@ -204,6 +202,10 @@ get_header();
 			</div>
 
 		</section>
+
+		</section>
+
+		
 	</div>
 
 
