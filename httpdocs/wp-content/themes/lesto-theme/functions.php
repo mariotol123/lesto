@@ -51,6 +51,8 @@ function lesto_theme_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'lesto-theme' ),
+			'header-menu' => esc_html__( 'Header Menu', 'lesto-theme' ),
+			'mobile-menu' => esc_html__( 'Mobile Menu', 'lesto-theme' ),
 		)
 	);
 
@@ -148,8 +150,8 @@ function lesto_theme_scripts() {
 
 	wp_enqueue_script( 'lesto-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'lesto-theme-booststrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'lesto-theme-menu-dropdown', get_template_directory_uri() . '/js/menu-dropdown.js', array(), filemtime(get_template_directory() . '/js/menu-dropdown.js'), true );
-	wp_localize_script( 'lesto-theme-menu-dropdown', 'lestoTheme', array(
+	wp_enqueue_script( 'lesto-theme-header-menu-walker', get_template_directory_uri() . '/js/header-menu-walker.js', array(), filemtime(get_template_directory() . '/js/header-menu-walker.js'), true );
+	wp_localize_script( 'lesto-theme-header-menu-walker', 'lestoTheme', array(
 		'menuCloseImg' => get_template_directory_uri() . '/images/Container.png',
 		'ajaxUrl' => admin_url('admin-ajax.php'),
 		'nonce' => wp_create_nonce('lesto_ajax_nonce')
@@ -213,6 +215,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
+ * Custom Header Menu Walker
+ */
+require get_template_directory() . '/inc/class-header-menu-walker.php';
+
+/**
  * Registrazione Custom Post Type Settore, Servizio e Realizzazione
  */
 function lesto_register_custom_post_types() {
@@ -227,6 +234,8 @@ function lesto_register_custom_post_types() {
 		'rewrite' => array('slug' => 'settore'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
 		'show_in_rest' => true,
+		'show_in_nav_menus' => true,
+		'menu_icon' => 'dashicons-portfolio',
 	));
 
 	// Servizio
@@ -240,6 +249,8 @@ function lesto_register_custom_post_types() {
 		'rewrite' => array('slug' => 'servizio'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
 		'show_in_rest' => true,
+		'show_in_nav_menus' => true,
+		'menu_icon' => 'dashicons-admin-tools',
 	));
 
 	// Realizzazione
@@ -261,6 +272,7 @@ function lesto_register_custom_post_types() {
 		'rewrite' => array('slug' => 'realizzazione'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
 		'show_in_rest' => true,
+		'show_in_nav_menus' => true,
 		'menu_icon' => 'dashicons-hammer',
 		'taxonomies' => array('categoria_realizzazione', 'cliente_realizzazione'),
 	));

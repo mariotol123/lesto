@@ -49,37 +49,27 @@
 				   <div class="col-4 col-md-7">
 					   <div class="header-buttons">
 						<div class="d-flex position-relative align-items-center justify-content-between w-100 main-buttons-container">
-						   <?php
-						   wp_nav_menu( array(
-							   'theme_location' => 'header-menu',
-							   'container'      => false,
-							   'items_wrap'     => '<div class="menu-main-group d-flex">%3$s</div>',
-							   'walker'         => new Header_Menu_Walker(),
-							   'fallback_cb'    => function() {
-								   // Fallback se non è stato configurato il menu
-								   echo '<div class="menu-main-group d-flex">';
-								   echo '<button type="button" class="btn btn-header-custom" id="settori-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
-								   echo '<span>Settori</span>';
-								   echo '</button>';
-								   echo '<button type="button" class="btn btn-header-custom" id="servizi-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
-								   echo '<span>Servizi</span>';
-								   echo '</button>';
-								   echo '<button type="button" class="btn btn-header-custom" id="realizzazioni-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
-								   echo '<span>Realizzazioni</span>';
-								   echo '</button>';
-								   echo '</div>';
-								   echo '<div class="menu-contatti-item">';
-								   echo '<button type="button" class="btn btn-header-custom" id="contatti-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
-								   echo '<span>Contatti</span>';
-								   echo '</button>';
-								   echo '</div>';
-							   }
-						   ) );
-						   ?>
+						   <!-- Bottoni visibili solo su desktop -->
+						   <div class="main-buttons d-none d-md-flex">
+							   <button type="button" class="btn btn-header-custom" id="settori-btn">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+								   <span>Settori</span>
+							   </button>
+							   <button type="button" class="btn btn-header-custom" id="servizi-btn">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+								   <span>Servizi</span>
+							   </button>
+							   <button type="button" class="btn btn-header-custom" id="realizzazioni-btn">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+								   <span>Realizzazioni</span>
+							   </button>
+						   </div>
+						   <div class="contatti-button ms-3 align-self-end d-none d-md-flex">
+							   <button type="button" class="btn btn-header-custom" id="contatti-btn">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+								   <span>Contatti</span>
+							   </button>
+						   </div>
 					   </div>
 					   </div>
 				   </div>
