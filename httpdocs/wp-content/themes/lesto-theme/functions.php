@@ -457,3 +457,27 @@ function lesto_get_realizzazioni_by_taxonomy() {
 add_action('wp_ajax_lesto_get_realizzazioni_by_taxonomy', 'lesto_get_realizzazioni_by_taxonomy');
 add_action('wp_ajax_nopriv_lesto_get_realizzazioni_by_taxonomy', 'lesto_get_realizzazioni_by_taxonomy');
 
+/**
+ * Disattiva Gutenberg (Block Editor)
+ */
+function lesto_disable_gutenberg() {
+	// Disattiva completamente Gutenberg
+	add_filter('use_block_editor_for_post', '__return_false', 10);
+	add_filter('use_block_editor_for_post_type', '__return_false', 10);
+}
+add_action('wp_loaded', 'lesto_disable_gutenberg');
+
+// Rimuovi gli stili CSS di Gutenberg dal frontend
+function lesto_remove_gutenberg_styles() {
+	wp_dequeue_style('wp-block-library'); // WordPress core
+	wp_dequeue_style('wp-block-library-theme'); // WordPress core + theme
+	wp_dequeue_style('wc-block-style'); // WooCommerce
+}
+add_action('wp_enqueue_scripts', 'lesto_remove_gutenberg_styles', 100);
+
+// Rimuovi gli stili CSS di Gutenberg dall'admin
+function lesto_remove_gutenberg_admin_styles() {
+	wp_dequeue_style('wp-block-library');
+}
+add_action('admin_enqueue_scripts', 'lesto_remove_gutenberg_admin_styles');
+
