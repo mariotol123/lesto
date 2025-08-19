@@ -1831,6 +1831,73 @@ section.section {
 }
 
 
+// =========================
+// Single Settore Responsive
+// =========================
+
+// Mobile version: immagine fuori dal container, primo elemento, poi content e button
+@media (max-width: 767.98px) {
+  .single-settore {
+    // Titolo con margine inferiore su mobile
+    .settori-container h1 {
+      margin-bottom: 6rem !important;
+    }
+    
+    .container {
+      position: relative;
+    }
+    
+    // Riorganizza l'ordine degli elementi su mobile
+    article.row {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0 !important;
+      
+      // Immagine come primo elemento, fuori dal container
+      .col-12.col-lg-6:first-child {
+        order: 1;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        padding: 0 !important;
+        margin-bottom: 2rem;
+        
+        div {
+          margin: 0 !important;
+          
+          img {
+            width: 100% !important;
+            height: auto !important;
+            border-radius: 0 !important;
+          }
+        }
+      }
+      
+      // Content come secondo elemento
+      .col-12.col-lg-6:last-child {
+        order: 2;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+        
+        .entry-content {
+          margin-bottom: 1rem;
+        }
+        
+        // Button a larghezza piena su mobile
+        .btn-header-custom {
+          width: 100% !important;
+            padding: 0.8rem 1rem !important;
+            text-align: center;
+            justify-content: center !important;
+        }
+      }
+    }
+  }
+}
+
+
 
 
 
@@ -1893,7 +1960,71 @@ section.section {
   }
 }
 
+// =========================
+// Single Servizio Responsive
+// =========================
 
+// Mobile version: immagine fuori dal container, primo elemento, poi content e button
+@media (max-width: 767.98px) {
+  .single-servizio {
+    // Titolo con margine inferiore su mobile
+    .settori-container h2 {
+      margin-bottom: 6rem !important;
+    }
+    
+    .container {
+      position: relative;
+    }
+    
+    // Riorganizza l'ordine degli elementi su mobile
+    article.row {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0 !important;
+      
+      // Immagine come primo elemento, fuori dal container
+      .col-12.col-lg-6:first-child {
+        order: 1;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        padding: 0 !important;
+        margin-bottom: 2rem;
+        
+        div {
+          margin: 0 !important;
+          
+          img {
+            width: 100% !important;
+            height: auto !important;
+            border-radius: 0 !important;
+          }
+        }
+      }
+      
+      // Content come secondo elemento
+      .col-12.col-lg-6:last-child {
+        order: 2;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+        
+        .entry-content {
+          margin-bottom: 1rem;
+          
+          // Button a larghezza piena su mobile (dentro entry-content per single-servizio)
+          .btn-header-custom {
+            width: 100% !important;
+            padding: 0.8rem 1rem !important;
+            text-align: center;
+            justify-content: center !important;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 
@@ -2459,140 +2590,9 @@ input[type="checkbox"] {
 }
 
 
-// =========================
-// Single Settore Responsive
-// =========================
-
-// Mobile version: immagine fuori dal container, primo elemento, poi content e button
-@media (max-width: 767.98px) {
-  .single-settore {
-    // Titolo con margine inferiore su mobile
-    .settori-container h1 {
-      margin-bottom: 6rem !important;
-    }
-    
-    .container {
-      position: relative;
-    }
-    
-    // Riorganizza l'ordine degli elementi su mobile
-    article.row {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 0 !important;
-      
-      // Immagine come primo elemento, fuori dal container
-      .col-12.col-lg-6:first-child {
-        order: 1;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%) !important;
-        margin-right: calc(-50vw + 50%) !important;
-        padding: 0 !important;
-        margin-bottom: 2rem;
-        
-        div {
-          margin: 0 !important;
-          
-          img {
-            width: 100% !important;
-            height: auto !important;
-            border-radius: 0 !important;
-          }
-        }
-      }
-      
-      // Content come secondo elemento
-      .col-12.col-lg-6:last-child {
-        order: 2;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 1rem !important;
-        
-        .entry-content {
-          margin-bottom: 1rem;
-        }
-        
-        // Button a larghezza piena su mobile
-        .btn-header-custom {
-          width: 100% !important;
-          text-align: center;
-          justify-content: center !important;
-          margin-bottom: 2rem;
-          font-size: 15px;
-        }
-      }
-    }
-  }
-}
 
 
-// =========================
-// Single Servizio Responsive
-// =========================
 
-// Mobile version: immagine fuori dal container, primo elemento, poi content e button
-@media (max-width: 767.98px) {
-  .single-servizio {
-    // Titolo con margine inferiore su mobile
-    .settori-container h2 {
-      margin-bottom: 6rem !important;
-    }
-    
-    .container {
-      position: relative;
-    }
-    
-    // Riorganizza l'ordine degli elementi su mobile
-    article.row {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 0 !important;
-      
-      // Immagine come primo elemento, fuori dal container
-      .col-12.col-lg-6:first-child {
-        order: 1;
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%) !important;
-        margin-right: calc(-50vw + 50%) !important;
-        padding: 0 !important;
-        margin-bottom: 2rem;
-        
-        div {
-          margin: 0 !important;
-          
-          img {
-            width: 100% !important;
-            height: auto !important;
-            border-radius: 0 !important;
-          }
-        }
-      }
-      
-      // Content come secondo elemento
-      .col-12.col-lg-6:last-child {
-        order: 2;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 0 1rem !important;
-        
-        .entry-content {
-          margin-bottom: 1rem;
-          
-          // Button a larghezza piena su mobile (dentro entry-content per single-servizio)
-          .btn-header-custom {
-            width: 100% !important;
-            margin-top: 1rem;
-            padding: 0.8rem 1rem !important;
-            text-align: center;
-            justify-content: center !important;
-          }
-        }
-      }
-    }
-  }
-}
 
 // =========================
 // Cards without gaps (attaccate)

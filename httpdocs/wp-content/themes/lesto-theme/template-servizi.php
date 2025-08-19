@@ -49,9 +49,11 @@ get_header();
         
         <!-- Mobile: tab scrollable h6 -->
         <div class="accordion-mobile-tabs d-flex d-md-none mb-2" style="overflow-x:auto; white-space:nowrap; gap:1rem;">
-            <?php foreach ($servizi as $index => $servizio) : ?>
+            <?php foreach ($servizi as $index => $servizio) : 
+                $titolo_accordion = get_field('titolo_accordion', $servizio->ID);
+            ?>
                 <h6 class="accordion-mobile-tab <?php echo $index === 0 ? 'active' : ''; ?>" data-tab="<?php echo $index; ?>">
-                    <?php echo esc_html($servizio->post_title); ?>
+                    <?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($servizio->post_title); ?>
                 </h6>
             <?php endforeach; ?>
         </div>
@@ -59,6 +61,9 @@ get_header();
         <div class="accordion-container buttons d-none d-md-flex flex-column align-items-start">
             <?php foreach ($servizi as $index => $servizio) : 
                 $sottotitolo = get_field('sottotitolo', $servizio->ID);
+                $titolo_accordion = get_field('titolo_accordion', $servizio->ID);
+                $sottotitolo_accordion = get_field('sottotitolo_accordion', $servizio->ID);
+                $riassunto_accordion = get_field('riassunto_accordion', $servizio->ID);
                 $immagine = get_the_post_thumbnail_url($servizio->ID, 'full');
                 if (!$immagine) {
                     $immagine = '/wp-content/themes/lesto-theme/images/Rectangle 1.png';
@@ -67,18 +72,18 @@ get_header();
             <div class="buttons">
                 <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
                     <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
-                    <span><?php echo esc_html($servizio->post_title); ?></span>
+                    <span><?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($servizio->post_title); ?></span>
                 </button>
                 <div class="accordion-content" style="display:none;">
-                    <h3 class="mb-3"><?php echo esc_html($servizio->post_title); ?></h3>
+                    <h3 class="mb-3"><?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($servizio->post_title); ?></h3>
                     <div class="row">
                         <div class="col-md-6">
                             <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($servizio->post_title); ?>" class="img-fluid" />
                         </div>
                         <div class="col-md-6 d-flex flex-column align-items-start">
-                            <h5 class="mb-2 m_h5"><?php echo $sottotitolo ? esc_html($sottotitolo) : 'Soluzioni su misura per la tua azienda'; ?></h5>
-                            <p class="mb-3 desktop-p"><?php echo wp_trim_words($servizio->post_content, 30, '...'); ?></p>
-                            <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-header-custom">Scopri i dettagli</a>
+                            <h5 class="mb-2 m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>
+                            <p class="mb-3 mt-3 desktop-p"><?php echo $riassunto_accordion ? nl2br(esc_html($riassunto_accordion)) : wp_trim_words($servizio->post_content, 30, '...'); ?></p>
+                            <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-header-custom mt-2">Scopri i dettagli</a>
                         </div>
                     </div>
                 </div>
@@ -89,6 +94,9 @@ get_header();
         <div class="accordion-mobile-contents d-block d-md-none mb-5">
             <?php foreach ($servizi as $index => $servizio) : 
                 $sottotitolo = get_field('sottotitolo', $servizio->ID);
+                $titolo_accordion = get_field('titolo_accordion', $servizio->ID);
+                $sottotitolo_accordion = get_field('sottotitolo_accordion', $servizio->ID);
+                $riassunto_accordion = get_field('riassunto_accordion', $servizio->ID);
                 $immagine = get_the_post_thumbnail_url($servizio->ID, 'full');
                 if (!$immagine) {
                     $immagine = '/wp-content/themes/lesto-theme/images/Rectangle 1.png';
@@ -98,8 +106,8 @@ get_header();
                 <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($servizio->post_title); ?>" class="img-fluid accordion-mobile-img mb-3" />
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
-                        <h5 class="mb-2 m_h5"><?php echo $sottotitolo ? esc_html($sottotitolo) : 'Soluzioni su misura per la tua azienda'; ?></h5>
-                        <p class="mb-3 desktop-p"><?php echo wp_trim_words($servizio->post_content, 30, '...'); ?></p>
+                        <h5 class="mb-2 m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>
+                        <p class="mb-3 desktop-p"><?php echo $riassunto_accordion ? nl2br(esc_html($riassunto_accordion)) : wp_trim_words($servizio->post_content, 30, '...'); ?></p>
                         <?php 
                         $soluzioni = get_field('soluzioni', $servizio->ID);
                         if ($soluzioni && is_array($soluzioni) && count($soluzioni) > 0) : ?>

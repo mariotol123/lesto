@@ -11,7 +11,11 @@ get_header();
 <main class="main-settori single-cpt single-servizio">
     <div class="settori-container">
         <div class="container pt-7xl d-flex align-items-center justify-content-between gap-3 flex-wrap">
-            <h2 class="m-0"><?php the_title(); ?></h2>
+            <?php 
+                    $titolo_single_page = get_field('titolo_single_page');
+                    if ( $titolo_single_page ) : ?>
+                        <h1 class="mb-2 h3"><?php echo esc_html( $titolo_single_page ); ?></h1>
+                    <?php endif; ?>
         </div>
     </div>
 
@@ -28,12 +32,14 @@ get_header();
                     <?php endif; ?>
                 </div>
                 <div class="col-12 col-lg-6 d-flex flex-column align-items-start">
-                    <?php if ( has_excerpt() ) : ?>
-                        <p class="desktop-p mb-3"><?php echo get_the_excerpt(); ?></p>
+                    <?php 
+                    $titolo_accordion = get_field('titolo_accordion');
+                    if ( $titolo_accordion ) : ?>
+                        <h3 class="mb-2 m_h5 titolo-accordion-single"><?php echo esc_html( strtoupper( $titolo_accordion ) ); ?></h3>
                     <?php endif; ?>
                     <div class="entry-content w-100">
                         <?php the_content(); ?>
-                        <button class="btn btn-header-custom d-flex justify-content-center mt-3">Contattaci per un
+                        <button class="btn btn-header-custom d-flex justify-content-center mt-4">Contattaci per un
                     preventivo</button>
                     </div>
                 </div>
