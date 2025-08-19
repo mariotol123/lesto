@@ -13,7 +13,7 @@ get_header();
 <!-- Main content area -->
 <main class="main-settori">
     <div class="settori-container">
-        <h2 class="container pt-7xl">Servizi</h2>
+        <h1 class="container pt-7xl h2">Servizi</h1>
     </div>
     <hr class="footer-divider border-2 opacity-75 w-100">
     <div class="container py-3">

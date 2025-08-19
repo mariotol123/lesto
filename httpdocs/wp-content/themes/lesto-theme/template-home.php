@@ -19,16 +19,16 @@ get_header();
 					<div id="content-locale" class="content-box active tabcontent fade-content show text-start"
 						data-tab="Tab2">
 						<h1 class="mb-4 w-100">Vuoi aprire<br>un locale?</h1>
-						<p class="page-description mb-4 w-50">Dal 1984 Lesto Group si occupa di consulenza,
+						<p class="page-description mb-4 w-50 m_h5">Dal 1984 Lesto Group si occupa di consulenza,
 							progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel,
 							pizzerie e bar.</p>
 					</div>
 					<div id="content-franchise" class="content-box tabcontent fade-content text-start" data-tab="Tab1">
 						<h1 class="mb-4 w-100">Vuoi aprire<br>un format replicabile?</h1>
-						<p class="page-description mb-4 w-50">Dal 1984 Lesto Group si occupa di consulenza,
+						<p class="page-description mb-4 w-50 m_h5">Dal 1984 Lesto Group si occupa di consulenza,
 							progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel,
 							pizzerie e bar.</p>
-						<p class="page-description w-50">Entra nel nostro showroom e scopri i nostri servizi.</p>
+						<p class="page-description w-50 m_h5">Entra nel nostro showroom e scopri i nostri servizi.</p>
 					</div>
 				</div>
 				<div id="social-column"

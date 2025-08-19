@@ -14,7 +14,7 @@ get_header();
 <main>
         <div class="realizzazioni-container">
         <div class="container pt-7xl">
-            <h2 class="">Realizzazioni</h2>
+            <h1 class="h2">Realizzazioni</h1>
         </div>
         <hr class="footer-divider border-2 opacity-75 w-100">
         

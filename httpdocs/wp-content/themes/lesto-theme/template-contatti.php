@@ -12,7 +12,7 @@ get_header();
 
 <!-- Main content area -->
 <main class="servizi-consulenza-container">
-	<h2 class="container pt-7xl">Contatti</h2>
+	<h1 class="container pt-7xl h2">Contatti</h1>
 	<hr class="footer-divider border-2 opacity-75 w-100">
 	<div class="container py-3">
 		<div class="row">
