@@ -58,10 +58,10 @@ function lesto_render_footer_items($items, $list_class, $text_field, $link_field
         if (!empty($manual_url)) {
             if ($behavior === 'clickable_text') {
                 // For navigation and social: make text clickable
-                echo '<a href="' . esc_url($manual_url) . '">' . $text . '</a>';
+                echo '<a href="' . esc_url($manual_url) . '" class="m_h5">' . $text . '</a>';
             } else {
                 // For contacts and company: show text + clickable auto_link
-                echo $text . ' ';
+                echo '<span class="m_h5">' . $text . '</span> ';
                 if (!empty($auto_link)) {
                     echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($auto_link) . '</a>';
                 } else {
@@ -71,10 +71,10 @@ function lesto_render_footer_items($items, $list_class, $text_field, $link_field
         } else if (!empty($auto_link)) {
             if ($behavior === 'clickable_text') {
                 // Simple text display for navigation/social without manual URL
-                echo $text;
+                echo '<span class="m_h5">' . $text . '</span>';
             } else {
                 // For contacts: auto-detect link types, for company: plain text
-                echo $text . ' ';
+                echo '<span class="m_h5">' . $text . '</span> ';
                 if ($link_field === 'contatti_link') {
                     echo lesto_render_smart_link($auto_link);
                 } else {
@@ -83,7 +83,7 @@ function lesto_render_footer_items($items, $list_class, $text_field, $link_field
             }
         } else {
             // Only text
-            echo $text;
+            echo '<span class="m_h5">' . $text . '</span>';
         }
         
         echo '</li>';

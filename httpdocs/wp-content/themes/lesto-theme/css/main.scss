@@ -1166,11 +1166,38 @@ p {
   }
 }
 
+// Regole specifiche per i link con classe m_h5 nel footer (priorità alta)
+.site-footer {
+  a.m_h5 {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none !important;
+    font-weight: 400 !important;
+    font-size: var(--font-l-20) !important;
+    line-height: auto !important;
+    letter-spacing: 0 !important;
+    margin: 0 !important;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 
+    &:hover {
+      color: #ffffff !important;
+      text-decoration: underline !important;
+    }
 
+    &:focus,
+    &:active,
+    &:visited {
+      color: rgba(255, 255, 255, 0.8) !important;
+      text-decoration: none !important;
+    }
 
-
-
+    &:focus:hover,
+    &:active:hover {
+      color: #ffffff !important;
+      text-decoration: underline !important;
+    }
+  }
+}
 
 
 // Home Template Styles
