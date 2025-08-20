@@ -69,12 +69,12 @@ get_header();
                     $immagine = '/wp-content/themes/lesto-theme/images/Rectangle 1.png';
                 }
             ?>
-            <div class="buttons">
-                <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
+            <div class="buttons <?php echo $index === 0 ? 'active' : ''; ?>">
+                <button class="accordion-button btn btn-header-custom d-flex align-items-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
                     <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
                     <span><?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($servizio->post_title); ?></span>
                 </button>
-                <div class="accordion-content" style="display:none;">
+                <div class="accordion-content" style="display:<?php echo $index === 0 ? 'block' : 'none'; ?>;">
                     <h3 class="mb-3"><?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($servizio->post_title); ?></h3>
                     <div class="row">
                         <div class="col-md-6">
@@ -83,7 +83,13 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>
                             <p class="mb-3 mt-3 desktop-p"><?php echo $riassunto_accordion ? nl2br(esc_html($riassunto_accordion)) : wp_trim_words($servizio->post_content, 30, '...'); ?></p>
-                            <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-header-custom mt-2">Scopri i dettagli</a>
+                            <?php 
+                            $button_accordion = get_field('button_accordion', $servizio->ID);
+                            if ($button_accordion) : ?>
+                                <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-mine mt-2"><?php echo esc_html($button_accordion); ?></a>
+                            <?php else : ?>
+                                <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-mine mt-2">Scopri i dettagli</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -117,7 +123,13 @@ get_header();
                                 <?php endforeach; ?>
                             </ul>
                         <?php endif; ?>
-                        <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center w-100">Scopri i dettagli</a>
+                        <?php 
+                        $button_accordion = get_field('button_accordion', $servizio->ID);
+                        if ($button_accordion) : ?>
+                            <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center w-100"><?php echo esc_html($button_accordion); ?></a>
+                        <?php else : ?>
+                            <a href="<?php echo esc_url(get_permalink($servizio->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center w-100">Scopri i dettagli</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

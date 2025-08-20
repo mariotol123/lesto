@@ -507,6 +507,25 @@ p {
   -webkit-backdrop-filter: blur(5px);
 }
 
+.btn-mine {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 25px;
+  padding: 6px 20px;
+  font-weight: 400;
+  font-size: var(--font-s-14);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  transition: all 1s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none !important;
+}
+
 // Header Styles
 
 .site-header {
@@ -1763,6 +1782,8 @@ section.section {
 
   .buttons {
     width: 100%;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
     
     // Rimuovi il border-bottom per tutti i pulsanti tranne l'ultimo
     &:not(:last-child) {

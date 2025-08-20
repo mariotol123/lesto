@@ -70,8 +70,8 @@ get_header();
                 }
                 $icona = get_field('icona', $settore->ID);
             ?>
-            <div class="buttons">
-                <button class="accordion-button btn btn-header-custom d-flex align-items-center" type="button">
+            <div class="buttons <?php echo $index === 0 ? 'active' : ''; ?>">
+                <button class="accordion-button btn btn-header-custom d-flex align-items-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
                     <?php if ($icona) : ?>
                         <img class="icon" src="<?php echo esc_url($icona['url']); ?>" alt="<?php echo esc_attr($icona['alt']); ?>" />
                     <?php else : ?>
@@ -79,7 +79,7 @@ get_header();
                     <?php endif; ?>
                     <span><?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($settore->post_title); ?></span>
                 </button>
-                <div class="accordion-content" style="display:none;">
+                <div class="accordion-content" style="display:<?php echo $index === 0 ? 'block' : 'none'; ?>;">
                     <h3 class="mb-3"><?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($settore->post_title); ?></h3>
                     <div class="row">
                         <div class="col-md-6">
