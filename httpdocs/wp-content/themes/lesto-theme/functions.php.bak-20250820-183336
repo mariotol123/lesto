@@ -644,13 +644,8 @@ function lesto_get_footer_contacts() {
 					
 					echo '<li>';
 					if (!empty($manual_url)) {
-						// Use manual URL if provided - show text + clickable auto_link
-						echo $text . ' ';
-						if (!empty($auto_link)) {
-							echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($auto_link) . '</a>';
-						} else {
-							echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($manual_url) . '</a>';
-						}
+						// Use manual URL if provided
+						echo '<a href="' . esc_url($manual_url) . '">' . $text . '</a>';
 					} else if (!empty($auto_link)) {
 						// Fallback to automatic link detection
 						echo $text . ' ';
@@ -696,41 +691,31 @@ function lesto_get_footer_contacts() {
 			foreach ($contatti['contatti_campi'] as $item) {
 				if (isset($item['contatti_text']) && !empty($item['contatti_text'])) {
 					$text = esc_html($item['contatti_text']);
-					// Check for manual link_url first, then fallback to automatic contatti_link
-					$manual_url = isset($item['link_url']) ? $item['link_url'] : '';
-					$auto_link = isset($item['contatti_link']) ? $item['contatti_link'] : '';
+					$link = isset($item['contatti_link']) ? $item['contatti_link'] : '';
 					
 					echo '<li>';
-					if (!empty($manual_url)) {
-						// Use manual URL if provided - show text + clickable auto_link
-						echo $text . ' ';
-						if (!empty($auto_link)) {
-							echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($auto_link) . '</a>';
-						} else {
-							echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($manual_url) . '</a>';
-						}
-					} else if (!empty($auto_link)) {
-						// Fallback to automatic link detection
+					if (!empty($link)) {
+						// Always display text first, then link separately
 						echo $text . ' ';
 						
 						// Check different types of links
-						if (filter_var($auto_link, FILTER_VALIDATE_URL) || 
-							strpos($auto_link, 'http') === 0 || 
-							strpos($auto_link, '/') === 0 || 
-							strpos($auto_link, 'mailto:') === 0 || 
-							strpos($auto_link, 'tel:') === 0) {
+						if (filter_var($link, FILTER_VALIDATE_URL) || 
+							strpos($link, 'http') === 0 || 
+							strpos($link, '/') === 0 || 
+							strpos($link, 'mailto:') === 0 || 
+							strpos($link, 'tel:') === 0) {
 							// It's a link - make only the link clickable
-							echo '<a href="' . esc_url($auto_link) . '" target="_blank" rel="noopener">' . esc_html($auto_link) . '</a>';
-						} else if (filter_var($auto_link, FILTER_VALIDATE_EMAIL)) {
+							echo '<a href="' . esc_url($link) . '" target="_blank" rel="noopener">' . esc_html($link) . '</a>';
+						} else if (filter_var($link, FILTER_VALIDATE_EMAIL)) {
 							// It's an email - add mailto:
-							echo '<a href="mailto:' . esc_attr($auto_link) . '">' . esc_html($auto_link) . '</a>';
-						} else if (preg_match('/^\+?[0-9\s\-\(\)]+$/', $auto_link)) {
+							echo '<a href="mailto:' . esc_attr($link) . '">' . esc_html($link) . '</a>';
+						} else if (preg_match('/^\+?[0-9\s\-\(\)]+$/', $link)) {
 							// It's a phone number - add tel:
-							$clean_phone = preg_replace('/[^\+0-9]/', '', $auto_link);
-							echo '<a href="tel:' . esc_attr($clean_phone) . '">' . esc_html($auto_link) . '</a>';
+							$clean_phone = preg_replace('/[^\+0-9]/', '', $link);
+							echo '<a href="tel:' . esc_attr($clean_phone) . '">' . esc_html($link) . '</a>';
 						} else {
 							// Just display as text
-							echo esc_html($auto_link);
+							echo esc_html($link);
 						}
 					} else {
 						// Only text
@@ -760,23 +745,32 @@ function lesto_get_footer_company_info() {
 			foreach ($informazioni_aziendali['informazioni_aziendali_campi'] as $item) {
 				if (isset($item['informazioni_aziendali_text']) && !empty($item['informazioni_aziendali_text'])) {
 					$text = esc_html($item['informazioni_aziendali_text']);
-					// Check for manual link_url first, then fallback to automatic informazioni_aziendali_link
-					$manual_url = isset($item['link_url']) ? $item['link_url'] : '';
-					$auto_link = isset($item['informazioni_aziendali_link']) ? $item['informazioni_aziendali_link'] : '';
+					$link = isset($item['informazioni_aziendali_link']) ? $item['informazioni_aziendali_link'] : '';
 					
 					echo '<li>';
-					if (!empty($manual_url)) {
-						// Use manual URL if provided - show text + clickable auto_link
+					if (!empty($link)) {
+						// Always display text first, then link separately
 						echo $text . ' ';
-						if (!empty($auto_link)) {
-							echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($auto_link) . '</a>';
+						
+						// Check different types of links
+						if (filter_var($link, FILTER_VALIDATE_URL) || 
+							strpos($link, 'http') === 0 || 
+							strpos($link, '/') === 0 || 
+							strpos($link, 'mailto:') === 0 || 
+							strpos($link, 'tel:') === 0) {
+							// It's a link - make only the link clickable
+							echo '<a href="' . esc_url($link) . '" target="_blank" rel="noopener">' . esc_html($link) . '</a>';
+						} else if (filter_var($link, FILTER_VALIDATE_EMAIL)) {
+							// It's an email - add mailto:
+							echo '<a href="mailto:' . esc_attr($link) . '">' . esc_html($link) . '</a>';
+						} else if (preg_match('/^\+?[0-9\s\-\(\)]+$/', $link)) {
+							// It's a phone number - add tel:
+							$clean_phone = preg_replace('/[^\+0-9]/', '', $link);
+							echo '<a href="tel:' . esc_attr($clean_phone) . '">' . esc_html($link) . '</a>';
 						} else {
-							echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($manual_url) . '</a>';
+							// Just display as text
+							echo esc_html($link);
 						}
-					} else if (!empty($auto_link)) {
-						// Show auto_link as plain text (non-clickable) when no manual_url
-						echo $text . ' ';
-						echo esc_html($auto_link);
 					} else {
 						// Only text
 						echo $text;
@@ -799,41 +793,31 @@ function lesto_get_footer_company_info() {
 			foreach ($informazioni_aziendali['informazioni_aziendali_campi'] as $item) {
 				if (isset($item['informazioni_aziendali_text']) && !empty($item['informazioni_aziendali_text'])) {
 					$text = esc_html($item['informazioni_aziendali_text']);
-					// Check for manual link_url first, then fallback to automatic informazioni_aziendali_link
-					$manual_url = isset($item['link_url']) ? $item['link_url'] : '';
-					$auto_link = isset($item['informazioni_aziendali_link']) ? $item['informazioni_aziendali_link'] : '';
+					$link = isset($item['informazioni_aziendali_link']) ? $item['informazioni_aziendali_link'] : '';
 					
 					echo '<li>';
-					if (!empty($manual_url)) {
-						// Use manual URL if provided - show text + clickable auto_link
-						echo $text . ' ';
-						if (!empty($auto_link)) {
-							echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($auto_link) . '</a>';
-						} else {
-							echo '<a href="' . esc_url($manual_url) . '" target="_blank" rel="noopener">' . esc_html($manual_url) . '</a>';
-						}
-					} else if (!empty($auto_link)) {
-						// Fallback to automatic link detection
+					if (!empty($link)) {
+						// Always display text first, then link separately
 						echo $text . ' ';
 						
 						// Check different types of links
-						if (filter_var($auto_link, FILTER_VALIDATE_URL) || 
-							strpos($auto_link, 'http') === 0 || 
-							strpos($auto_link, '/') === 0 || 
-							strpos($auto_link, 'mailto:') === 0 || 
-							strpos($auto_link, 'tel:') === 0) {
+						if (filter_var($link, FILTER_VALIDATE_URL) || 
+							strpos($link, 'http') === 0 || 
+							strpos($link, '/') === 0 || 
+							strpos($link, 'mailto:') === 0 || 
+							strpos($link, 'tel:') === 0) {
 							// It's a link - make only the link clickable
-							echo '<a href="' . esc_url($auto_link) . '" target="_blank" rel="noopener">' . esc_html($auto_link) . '</a>';
-						} else if (filter_var($auto_link, FILTER_VALIDATE_EMAIL)) {
+							echo '<a href="' . esc_url($link) . '" target="_blank" rel="noopener">' . esc_html($link) . '</a>';
+						} else if (filter_var($link, FILTER_VALIDATE_EMAIL)) {
 							// It's an email - add mailto:
-							echo '<a href="mailto:' . esc_attr($auto_link) . '">' . esc_html($auto_link) . '</a>';
-						} else if (preg_match('/^\+?[0-9\s\-\(\)]+$/', $auto_link)) {
+							echo '<a href="mailto:' . esc_attr($link) . '">' . esc_html($link) . '</a>';
+						} else if (preg_match('/^\+?[0-9\s\-\(\)]+$/', $link)) {
 							// It's a phone number - add tel:
-							$clean_phone = preg_replace('/[^\+0-9]/', '', $auto_link);
-							echo '<a href="tel:' . esc_attr($clean_phone) . '">' . esc_html($auto_link) . '</a>';
+							$clean_phone = preg_replace('/[^\+0-9]/', '', $link);
+							echo '<a href="tel:' . esc_attr($clean_phone) . '">' . esc_html($link) . '</a>';
 						} else {
 							// Just display as text
-							echo esc_html($auto_link);
+							echo esc_html($link);
 						}
 					} else {
 						// Only text
