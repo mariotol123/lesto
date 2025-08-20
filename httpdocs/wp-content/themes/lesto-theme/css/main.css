@@ -12992,7 +12992,7 @@ p {
 }
 .site-footer .footer-logo {
   max-height: 60px;
-  width: auto;
+  width: 15rem;
   margin-bottom: var(--py-l); /* 16px */
 }
 .site-footer .footer-title {
@@ -13461,13 +13461,19 @@ section.section {
     margin-top: 3rem !important;
     font-size: 1.5rem;
   }
-  h5:not(.card-text-hover), .h5:not(.card-text-hover), .site-footer .footer-nav-list li:not(.card-text-hover),
-  .site-footer .footer-social-list li:not(.card-text-hover),
-  .site-footer .footer-company-list li:not(.card-text-hover),
-  .site-footer .footer-contacts-list li:not(.card-text-hover), .site-footer .footer-nav-list li a:not(.card-text-hover),
-  .site-footer .footer-social-list li a:not(.card-text-hover),
-  .site-footer .footer-company-list li a:not(.card-text-hover),
-  .site-footer .footer-contacts-list li a:not(.card-text-hover) {
+  .third-section .btn.btn-custom h5:not(.card-text-hover), .third-section .btn.btn-custom .h5:not(.card-text-hover), .third-section .btn.btn-custom .site-footer .footer-nav-list li:not(.card-text-hover), .site-footer .footer-nav-list .third-section .btn.btn-custom li:not(.card-text-hover),
+  .third-section .btn.btn-custom .site-footer .footer-social-list li:not(.card-text-hover),
+  .site-footer .footer-social-list .third-section .btn.btn-custom li:not(.card-text-hover),
+  .third-section .btn.btn-custom .site-footer .footer-company-list li:not(.card-text-hover),
+  .site-footer .footer-company-list .third-section .btn.btn-custom li:not(.card-text-hover),
+  .third-section .btn.btn-custom .site-footer .footer-contacts-list li:not(.card-text-hover),
+  .site-footer .footer-contacts-list .third-section .btn.btn-custom li:not(.card-text-hover), .third-section .btn.btn-custom .site-footer .footer-nav-list li a:not(.card-text-hover), .site-footer .footer-nav-list li .third-section .btn.btn-custom a:not(.card-text-hover),
+  .third-section .btn.btn-custom .site-footer .footer-social-list li a:not(.card-text-hover),
+  .site-footer .footer-social-list li .third-section .btn.btn-custom a:not(.card-text-hover),
+  .third-section .btn.btn-custom .site-footer .footer-company-list li a:not(.card-text-hover),
+  .site-footer .footer-company-list li .third-section .btn.btn-custom a:not(.card-text-hover),
+  .third-section .btn.btn-custom .site-footer .footer-contacts-list li a:not(.card-text-hover),
+  .site-footer .footer-contacts-list li .third-section .btn.btn-custom a:not(.card-text-hover) {
     width: 100%;
     font-size: 1.5rem;
     text-transform: uppercase;
