@@ -13,22 +13,24 @@ get_header();
 <!-- Main content area -->
 <main>
 	<div>
+		<?php 
+		// Accesso al gruppo hero_tabs_system
+		$hero_tabs = get_field('hero_tabs_system');
+		$tab_1 = $hero_tabs['tab_1'] ?? [];
+		$tab_2 = $hero_tabs['tab_2'] ?? [];
+		?>
+		
 		<section class="section container">
 			<div class="row align-items-center vh-100">
 				<div id="text-column" class="col-md-10 d-flex flex-column justify-content-center">
 					<div id="content-locale" class="content-box active tabcontent fade-content show text-start"
 						data-tab="Tab2">
-						<h1 class="mb-4 w-100">Vuoi aprire<br>un locale?</h1>
-						<p class="page-description mb-4 w-50 m_h5">Dal 1984 Lesto Group si occupa di consulenza,
-							progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel,
-							pizzerie e bar.</p>
+						<h1 class="mb-4 w-100"><?php echo $tab_2['titolo_hero'] ?? 'Vuoi aprire<br>un locale?'; ?></h1>
+						<p class="page-description mb-4 w-50 m_h5"><?php echo nl2br($tab_2['descrizione_hero'] ?? 'Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.'); ?></p>
 					</div>
 					<div id="content-franchise" class="content-box tabcontent fade-content text-start" data-tab="Tab1">
-						<h1 class="mb-4 w-100">Vuoi aprire<br>un format replicabile?</h1>
-						<p class="page-description mb-4 w-50 m_h5">Dal 1984 Lesto Group si occupa di consulenza,
-							progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel,
-							pizzerie e bar.</p>
-						<p class="page-description w-50 m_h5">Entra nel nostro showroom e scopri i nostri servizi.</p>
+						<h1 class="mb-4 w-100"><?php echo $tab_1['titolo_hero'] ?? 'Vuoi aprire<br>un format replicabile?'; ?></h1>
+						<p class="page-description mb-4 w-50 m_h5"><?php echo nl2br($tab_1['descrizione_hero'] ?? 'Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.'); ?></p>
 					</div>
 				</div>
 				<div id="social-column"
@@ -65,142 +67,120 @@ get_header();
 
 		<section class="lesto-help d-flex flex-column align-items-center justify-content-center">
 			<div class="container pt-10xl">
-				<h2>Lesto ti aiuta</h2>
+				<h2><?php echo $hero_tabs['titolo_lesto_help'] ?? 'Lesto ti aiuta'; ?></h2>
 			</div>
 			<hr class="footer-divider border-2 opacity-75 w-100">
 			<div class="container mt-3 mb-5">
 				<div class="row">
 					<div class="col-lg-4 col-md-4">
-						<p class="desktop-p w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro
-							nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus,
-							architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?</p>
+						<p class="desktop-p w-100"><?php echo $hero_tabs['descrizione_intro'] ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus, architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?'; ?></p>
 					</div>
 					<div class="col-lg-8 col-md">
+						<!-- Tab 1 (Catena) Cards -->
 						<div class="tabcontent fade-content show" data-tab="Tab1">
 							<div class="row">
-								<div class="col-lg-4 col-md-4">
-									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-											alt="Setup attrezzature" class="card-img">
-										<div class="card-body">
-											<div class="card-hover-content">
-												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+								<?php 
+								$cards_tab1 = $tab_1['cards'] ?? [];
+								if ($cards_tab1 && is_array($cards_tab1)) {
+									foreach ($cards_tab1 as $card) {
+										$immagine = $card['immagine'] ?? '';
+										$titolo = $card['titolo'] ?? 'Setup attrezzature';
+										$descrizione = $card['descrizione'] ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.';
+										?>
+										<div class="col-lg-4 col-md-4">
+											<div class="card">
+												<img src="<?php echo $immagine ? esc_url($immagine['url']) : '/wp-content/themes/lesto-theme/images/Frame 427319135.png'; ?>"
+													alt="<?php echo esc_attr($titolo); ?>" class="card-img">
+												<div class="card-body">
+													<div class="card-hover-content">
+														<h5 class="card-text-hover"><?php echo esc_html($titolo); ?></h5>
+														<p class="card-hover-description"><?php echo esc_html($descrizione); ?></p>
+													</div>
+												</div>
 											</div>
+											<h5 class="card-text"><?php echo esc_html($titolo); ?></h5>
+											<p class="card-description"><?php echo esc_html($descrizione); ?></p>
 										</div>
-									</div>
-									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Omnis porro nesciunt blanditiis voluptas.</p>
-								</div>
-
-								<div class="col-lg-4 col-md-4">
-									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-											alt="Setup attrezzature" class="card-img">
-										<div class="card-body">
-											<div class="card-hover-content">
-												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+										<?php
+									}
+								} else {
+									// Fallback - 3 card statiche per Tab1
+									for ($i = 0; $i < 3; $i++) {
+										?>
+										<div class="col-lg-4 col-md-4">
+											<div class="card">
+												<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+													alt="Setup attrezzature" class="card-img">
+												<div class="card-body">
+													<div class="card-hover-content">
+														<h5 class="card-text-hover">Setup attrezzature</h5>
+														<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+															adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+													</div>
+												</div>
 											</div>
+											<h5 class="card-text">Setup attrezzature</h5>
+											<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												Omnis porro nesciunt blanditiis voluptas.</p>
 										</div>
-									</div>
-									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Omnis porro nesciunt blanditiis voluptas.</p>
-								</div>
-
-								<div class="col-lg-4 col-md-4">
-									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-											alt="Setup attrezzature" class="card-img">
-										<div class="card-body">
-											<div class="card-hover-content">
-												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
-											</div>
-										</div>
-									</div>
-									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Omnis porro nesciunt blanditiis voluptas.</p>
-								</div>
-
+										<?php
+									}
+								}
+								?>
 							</div>
 						</div>
+						
+						<!-- Tab 2 (Locale) Cards -->
 						<div class="tabcontent fade-content" data-tab="Tab2">
 							<div class="row">
-								<div class="col-lg-3 col-md-3">
-									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-											alt="Setup attrezzature" class="card-img">
-										<div class="card-body">
-											<div class="card-hover-content">
-												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+								<?php 
+								$cards_tab2 = $tab_2['cards'] ?? [];
+								if ($cards_tab2 && is_array($cards_tab2)) {
+									foreach ($cards_tab2 as $card) {
+										$immagine = $card['immagine'] ?? '';
+										$titolo = $card['titolo'] ?? 'Setup attrezzature';
+										$descrizione = $card['descrizione'] ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas.';
+										?>
+										<div class="col-lg-3 col-md-3">
+											<div class="card">
+												<img src="<?php echo $immagine ? esc_url($immagine['url']) : '/wp-content/themes/lesto-theme/images/Frame 427319135.png'; ?>"
+													alt="<?php echo esc_attr($titolo); ?>" class="card-img">
+												<div class="card-body">
+													<div class="card-hover-content">
+														<h5 class="card-text-hover"><?php echo esc_html($titolo); ?></h5>
+														<p class="card-hover-description"><?php echo esc_html($descrizione); ?></p>
+													</div>
+												</div>
 											</div>
+											<h5 class="card-text"><?php echo esc_html($titolo); ?></h5>
+											<p class="card-description"><?php echo esc_html($descrizione); ?></p>
 										</div>
-									</div>
-									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Omnis porro nesciunt blanditiis voluptas.</p>
-								</div>
-
-								<div class="col-lg-3 col-md-3">
-									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-											alt="Setup attrezzature" class="card-img">
-										<div class="card-body">
-											<div class="card-hover-content">
-												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+										<?php
+									}
+								} else {
+									// Fallback - 4 card statiche per Tab2
+									for ($i = 0; $i < 4; $i++) {
+										?>
+										<div class="col-lg-3 col-md-3">
+											<div class="card">
+												<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
+													alt="Setup attrezzature" class="card-img">
+												<div class="card-body">
+													<div class="card-hover-content">
+														<h5 class="card-text-hover">Setup attrezzature</h5>
+														<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
+															adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
+													</div>
+												</div>
 											</div>
+											<h5 class="card-text">Setup attrezzature</h5>
+											<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												Omnis porro nesciunt blanditiis voluptas.</p>
 										</div>
-									</div>
-									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Omnis porro nesciunt blanditiis voluptas.</p>
-								</div>
-
-								<div class="col-lg-3 col-md-3">
-									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-											alt="Setup attrezzature" class="card-img">
-										<div class="card-body">
-											<div class="card-hover-content">
-												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
-											</div>
-										</div>
-									</div>
-									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Omnis porro nesciunt blanditiis voluptas.</p>
-								</div>
-
-								<div class="col-lg-3 col-md-3">
-									<div class="card">
-										<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-											alt="Setup attrezzature" class="card-img">
-										<div class="card-body">
-											<div class="card-hover-content">
-												<h5 class="card-text-hover">Setup attrezzature</h5>
-												<p class="card-hover-description">Lorem ipsum dolor sit amet consectetur
-													adipisicing elit. Omnis porro nesciunt blanditiis voluptas.</p>
-											</div>
-										</div>
-									</div>
-									<h5 class="card-text">Setup attrezzature</h5>
-									<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Omnis porro nesciunt blanditiis voluptas.</p>
-								</div>
-
+										<?php
+									}
+								}
+								?>
 							</div>
 						</div>
 					</div>
@@ -209,24 +189,30 @@ get_header();
 
 			<hr class="footer-divider border-2 opacity-75 d-none d-md-block w-100">
 
-
 		</section>
+		
 		<section class="tabs-container mt-4 button-container">
 			<div class="container buttons-container mb-5">
 				<div class="tab">
 					<button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise">
-						<img class="icon" src="/wp-content/themes/lesto-theme/images/Icon.png" alt="icon" />
-						<span>Catena</span>
+						<?php 
+						$icona_tab1 = $tab_1['icona_bottone'] ?? '';
+						$testo_tab1 = $tab_1['testo_bottone'] ?? 'Catena';
+						?>
+						<img class="icon" src="<?php echo $icona_tab1 ? esc_url($icona_tab1['url']) : '/wp-content/themes/lesto-theme/images/Icon.png'; ?>" alt="icon" />
+						<span><?php echo esc_html($testo_tab1); ?></span>
 					</button>
 					<button class="tablinks btn btn-custom active" data-tab="Tab2" id="btn-locale">
-						<img class="icon" src="/wp-content/themes/lesto-theme/images/Icon.png" alt="icon" />
-						<span>Nuovo locale</span>
+						<?php 
+						$icona_tab2 = $tab_2['icona_bottone'] ?? '';
+						$testo_tab2 = $tab_2['testo_bottone'] ?? 'Nuovo locale';
+						?>
+						<img class="icon" src="<?php echo $icona_tab2 ? esc_url($icona_tab2['url']) : '/wp-content/themes/lesto-theme/images/Icon.png'; ?>" alt="icon" />
+						<span><?php echo esc_html($testo_tab2); ?></span>
 					</button>
 				</div>
 			</div>
-
 		</section>
-
 
 	</div>
 
@@ -257,7 +243,7 @@ get_header();
 
 
 	<section class="four-section">
-		<div class="container pt-7xl pb-10xl">
+		<div class="container pt-7xl pb-10xl pb-mobile-0">
 			<div class="row border-top-four-section pt-2">
 				<div class="col-md-4 d-flex justify-content-center">
 					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
@@ -427,18 +413,26 @@ get_header();
 		</div>
 	</section>
 
-	<section class="fifth-section border-top-four-section border-bottom-four-section">
+	<section class="fifth-section border-top-fifth-section border-bottom-fifth-section">
 
-		<div class="slider-multi-row-container container pt-5	pb-5" id="sliderMultiRow">
+		<div class="slider-multi-row-container container pt-4 pb-4" id="sliderMultiRow">
 			<div class="slider-multi-row" id="sliderMultiRowInner">
-				<?php for ($i = 0; $i < 14; $i++): ?>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/Footer Icon Container.png"
-						alt="Footer Icon" />
-				<?php endfor; ?>
-				<?php for ($i = 0; $i < 14; $i++): ?>
-					<img src="<?php echo get_template_directory_uri(); ?>/images/Footer Icon Container.png"
-						alt="Footer Icon" />
-				<?php endfor; ?>
+				<?php 
+				// Accesso al gruppo loghi_partner
+				$loghi_partner = get_field('loghi_partner');
+				$loghi = $loghi_partner['loghi'] ?? [];
+				
+				if ($loghi && is_array($loghi)) {
+					// Duplico i loghi per creare l'effetto scroll infinito
+					for ($loop = 0; $loop < 2; $loop++) {
+						foreach ($loghi as $logo) {
+							if ($logo) {
+								echo '<img src="' . esc_url($logo['url']) . '" alt="' . esc_attr($logo['alt'] ?: 'Logo Partner') . '" />';
+							}
+						}
+					}
+				} 
+				?>
 			</div>
 		</div>
 
