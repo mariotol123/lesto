@@ -88,7 +88,13 @@ get_header();
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="mb-2 m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>
                             <p class="mb-3 mt-3 desktop-p"><?php echo $riassunto_accordion ? nl2br(esc_html($riassunto_accordion)) : wp_trim_words($settore->post_content, 30, '...'); ?></p>
-                            <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-header-custom mt-2">Scopri i dettagli</a>
+                            <?php 
+                            $button_accordion = get_field('button_accordion', $settore->ID);
+                            if ($button_accordion) : ?>
+                                <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-mine mt-2"><?php echo esc_html($button_accordion); ?></a>
+                            <?php else : ?>
+                                <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-mine mt-2">Scopri i dettagli</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -114,7 +120,13 @@ get_header();
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>
                         <p class="mb-3 desktop-p"><?php echo $riassunto_accordion ? nl2br(esc_html($riassunto_accordion)) : wp_trim_words($settore->post_content, 30, '...'); ?></p>
-                        <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center w-100">Scopri i dettagli</a>
+                        <?php 
+                        $button_accordion = get_field('button_accordion', $settore->ID);
+                        if ($button_accordion) : ?>
+                            <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center w-100"><?php echo esc_html($button_accordion); ?></a>
+                        <?php else : ?>
+                            <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-header-custom d-flex justify-content-center w-100">Scopri i dettagli</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
