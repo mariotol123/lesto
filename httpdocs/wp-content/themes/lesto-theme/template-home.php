@@ -244,172 +244,109 @@ get_header();
 
 	<section class="four-section">
 		<div class="container pt-7xl pb-10xl pb-mobile-0">
-			<div class="row border-top-four-section pt-2">
-				<div class="col-md-4 d-flex justify-content-center">
-					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
-						class="img-fluid img-four-section" />
-				</div>
-				<div class="col-12 d-block d-md-none text-mobile-wrap">
-					<div class="row">
-						<div class="col-6 d-flex flex-column align-items-start position-relative">
-							<h5 class="m_h5">CUCINE</h5>
-							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
-								pariatur qui quos velit
-								sit. Illum veritatis sit omnis quisquam.</p>
+			<?php 
+			// Get all settori from ACF accordion
+			$settori = get_posts(array(
+				'post_type' => 'settore',
+				'posts_per_page' => 5, // Limit to 5 as shown in the original layout
+				'post_status' => 'publish',
+				'orderby' => 'menu_order',
+				'order' => 'ASC'
+			));
+			
+			if ($settori && is_array($settori)) {
+				foreach ($settori as $index => $settore) {
+					$numero = str_pad($index + 1, 2, '0', STR_PAD_LEFT); // Generate numbers 01, 02, 03, etc.
+					$titolo_accordion = get_field('titolo_accordion', $settore->ID);
+					$riassunto_accordion = get_field('riassunto_accordion', $settore->ID);
+					$immagine = get_the_post_thumbnail_url($settore->ID, 'full');
+					
+					// Default values if ACF fields are empty
+					$titolo = $titolo_accordion ? $titolo_accordion : $settore->post_title;
+					$descrizione = $riassunto_accordion ? $riassunto_accordion : 'A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit sit. Illum veritatis sit omnis quisquam.';
+					
+					// Limit description to 220 characters
+					if (strlen($descrizione) > 220) {
+						$descrizione = substr($descrizione, 0, 220) . '...';
+					}
+					
+					$immagine_url = $immagine ? $immagine : '/wp-content/themes/lesto-theme/images/Rectangle 1.png';
+					?>
+					<div class="row border-top-four-section pt-2">
+						<div class="col-md-4 d-flex justify-content-center">
+							<img src="<?php echo esc_url($immagine_url); ?>" alt="<?php echo esc_attr($titolo); ?>"
+								class="img-fluid img-four-section" />
 						</div>
-						<div class="col-6 d-flex flex-column align-items-end">
-							<h5 class="mb-2 m_h5">01</h5>
-							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+						<div class="col-12 d-block d-md-none text-mobile-wrap">
+							<div class="row">
+								<div class="col-6 d-flex flex-column align-items-start position-relative">
+									<h5 class="m_h5"><?php echo esc_html(strtoupper($titolo)); ?></h5>
+									<p class="mb-2"><?php echo esc_html($descrizione); ?></p>
+								</div>
+								<div class="col-6 d-flex flex-column align-items-end">
+									<h5 class="mb-2 m_h5"><?php echo $numero; ?></h5>
+									<a href="<?php echo esc_url(get_permalink($settore->ID)); ?>">
+										<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+											alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+									</a>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-2 d-flex flex-column align-items-start d-none d-md-flex">
-					<h5 class=" m_h5">CUCINE</h5>
-				</div>
-				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					<h5 class="mb-2 m_h5">01</h5>
-					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						sit. Illum veritatis sit omnis quisquam.</p>
-				</div>
-				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						alt="Section Icon Container" class="img-fluid" />
-				</div>
-			</div>
-			<div class="row border-top-four-section pt-2">
-				<div class="col-md-4 d-flex justify-content-center">
-					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
-						class="img-fluid img-four-section" />
-				</div>
-				<div class="col-12 d-block d-md-none text-mobile-wrap">
-					<div class="row">
-						<div class="col-6 d-flex flex-column align-items-start position-relative">
-							<h5 class="m_h5">IMPIANTI DI ASPIRAZIONE</h5>
-							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
-								pariatur qui quos velit
-								sit. Illum veritatis sit omnis quisquam.</p>
+						<div class="col-md-2 d-flex flex-column align-items-start d-none d-md-flex">
+							<h5 class=" m_h5"><?php echo esc_html(strtoupper($titolo)); ?></h5>
 						</div>
-						<div class="col-6 d-flex flex-column align-items-end">
-							<h5 class="m_h5">02</h5>
-							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+						<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
+							<h5 class="mb-2 m_h5"><?php echo $numero; ?></h5>
+							<p><?php echo esc_html($descrizione); ?></p>
 						</div>
-					</div>
-				</div>
-				<div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
-					<h5 class=" m_h5">IMPIANTI DI ASPIRAZIONE</h5>
-				</div>
-				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					<h5 class="m_h5">02</h5>
-					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						sit. Illum veritatis sit omnis quisquam.</p>
-				</div>
-				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						alt="Section Icon Container" class="img-fluid" />
-				</div>
-			</div>
-			<div class="row border-top-four-section pt-2">
-				<div class="col-md-4 d-flex justify-content-center">
-					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
-						class="img-fluid img-four-section" />
-				</div>
-				<div class="col-12 d-block d-md-none text-mobile-wrap">
-					<div class="row">
-						<div class="col-6 d-flex flex-column align-items-start position-relative">
-							<h5 class="m_h5">ARREDO BAR</h5>
-							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
-								pariatur qui quos velit
-								sit. Illum veritatis sit omnis quisquam.</p>
-						</div>
-						<div class="col-6 d-flex flex-column align-items-end">
-							<h5 class="mb-2 m_h5">03</h5>
-							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+						<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
+							<a href="<?php echo esc_url(get_permalink($settore->ID)); ?>">
+								<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+									alt="Section Icon Container" class="img-fluid" />
+							</a>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
-					<h5 class=" m_h5">ARREDO BAR</h5>
-				</div>
-				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					<h5 class="mb-2 m_h5">03</h5>
-					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						sit. Illum veritatis sit omnis quisquam.</p>
-				</div>
-				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						alt="Section Icon Container" class="img-fluid" />
-				</div>
-			</div>
-			<div class="row border-top-four-section pt-2">
-				<div class="col-md-4 d-flex justify-content-center">
-					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
-						class="img-fluid img-four-section" />
-				</div>
-				<div class="col-12 d-block d-md-none text-mobile-wrap">
-					<div class="row">
-						<div class="col-6 d-flex flex-column align-items-start position-relative">
-							<h5 class="m_h5">CUCINE AZIENDALI</h5>
-							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
-								pariatur qui quos velit
-								sit. Illum veritatis sit omnis quisquam.</p>
-						</div>
-						<div class="col-6 d-flex flex-column align-items-end">
-							<h5 class="mb-2 m_h5">04</h5>
-							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+					<?php
+				}
+			} else {
+				// Fallback - original static content if no settori found
+				?>
+				<div class="row border-top-four-section pt-2">
+					<div class="col-md-4 d-flex justify-content-center">
+						<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
+							class="img-fluid img-four-section" />
+					</div>
+					<div class="col-12 d-block d-md-none text-mobile-wrap">
+						<div class="row">
+							<div class="col-6 d-flex flex-column align-items-start position-relative">
+								<h5 class="m_h5">CUCINE</h5>
+								<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
+									pariatur qui quos velit
+									sit. Illum veritatis sit omnis quisquam.</p>
+							</div>
+							<div class="col-6 d-flex flex-column align-items-end">
+								<h5 class="mb-2 m_h5">01</h5>
+								<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+									alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
-					<h5 class=" m_h5">CUCINE AZIENDALI</h5>
-				</div>
-				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					<h5 class="mb-2 m_h5">04</h5>
-					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						sit. Illum veritatis sit omnis quisquam.</p>
-				</div>
-				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						alt="Section Icon Container" class="img-fluid" />
-				</div>
-			</div>
-			<div class="row border-top-four-section pt-2">
-				<div class="col-md-4 d-flex justify-content-center">
-					<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
-						class="img-fluid img-four-section" />
-				</div>
-				<div class="col-12 d-block d-md-none text-mobile-wrap">
-					<div class="row">
-						<div class="col-6 d-flex flex-column align-items-start position-relative">
-							<h5 class="m_h5">LESTOWATT</h5>
-							<p class="mb-2">A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic
-								pariatur qui quos velit
-								sit. Illum veritatis sit omnis quisquam.</p>
-						</div>
-						<div class="col-6 d-flex flex-column align-items-end">
-							<h5 class="mb-2 m_h5">05</h5>
-							<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-								alt="Section Icon Container"
-								class="img-fluid d-flex align-items-end d-block d-md-none" />
-						</div>
+					<div class="col-md-2 d-flex flex-column align-items-start d-none d-md-flex">
+						<h5 class=" m_h5">CUCINE</h5>
+					</div>
+					<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
+						<h5 class="mb-2 m_h5">01</h5>
+						<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
+							sit. Illum veritatis sit omnis quisquam.</p>
+					</div>
+					<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
+						<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+							alt="Section Icon Container" class="img-fluid" />
 					</div>
 				</div>
-				<div class="col-md-2 d-flex justify-content-start d-none d-md-flex">
-					<h5 class=" m_h5">LESTOWATT</h5>
-				</div>
-				<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
-					<h5 class="mb-2 m_h5">05</h5>
-					<p>A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit
-						sit. Illum veritatis sit omnis quisquam.</p>
-				</div>
-				<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-					<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-						alt="Section Icon Container" class="img-fluid" />
-				</div>
-			</div>
+				<?php
+			}
+			?>
 		</div>
 	</section>
 
