@@ -233,17 +233,24 @@ get_header();
 
 	<section class="third-section d-flex flex-column justify-content-between container vh-100">
 		<div class="mt-10xl cooking">
-			<h2>Cooking Room<span class="d-none d-md-inline">:</span></h2>
-			<h5>il nostro showroom dinamico</h5>
+			<?php 
+			// Accesso al gruppo cooking_room
+			$cooking_room = get_field('cooking_room');
+			
+			?>
+			<h2><?php echo $cooking_room['titolo_principale'] ?? 'Cooking Room'; ?><span class="d-none d-md-inline">:</span></h2>
+			<h5><?php echo $cooking_room['sottotitolo'] ?? 'il nostro showroom dinamico'; ?></h5>
 		</div>
 		<div class="mb-8xl row button-cooking">
-			<div class="col-md-5 d-flex align-items-center">
-				<h4 class="mt-4 mb-0">Grazie all’esperienza maturata in oltre 30 anni di attività e ad uno staff
-					competente e disponibile, siamo in grado di soddisfare anche le richieste più esigenti,
-					offrendo soluzioni complete e di alto livello.</h4>
+			<div class="col-md-6 d-flex align-items-center">
+				<h4 class="mt-4 mb-0"><?php echo $cooking_room['descrizione'] ?? 'Grazie all\'esperienza maturata in oltre 30 anni di attività e ad uno staff competente e disponibile, siamo in grado di soddisfare anche le richieste più esigenti, offrendo soluzioni complete e di alto livello.'; ?></h4>
 			</div>
-			<div class="col-md-7 d-flex align-items-end justify-content-md-end justify-content-center">
-				<button type="button" class="btn btn-custom mt-3 mt-md-0">Scopri di più</button>
+			<div class="col-md-6 d-flex align-items-end justify-content-md-end justify-content-center">
+				<?php 
+				$testo_bottone = $cooking_room['testo_bottone'] ?? 'Scopri di più';
+				$link_bottone = $cooking_room['link_bottone'] ?? '#';
+				?>
+				<a href="<?php echo $link_bottone; ?>" class="btn btn-custom mt-3 mt-md-0"><?php echo $testo_bottone; ?></a>
 			</div>
 		</div>
 	</section>
