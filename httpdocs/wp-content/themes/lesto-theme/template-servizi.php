@@ -53,7 +53,7 @@ get_header();
                 $titolo_accordion = get_field('titolo_accordion', $servizio->ID);
             ?>
                 <h6 class="accordion-mobile-tab <?php echo $index === 0 ? 'active' : ''; ?>" data-tab="<?php echo $index; ?>">
-                    <?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($servizio->post_title); ?>
+                    <?php echo esc_html($servizio->post_title); ?>
                 </h6>
             <?php endforeach; ?>
         </div>
@@ -75,7 +75,7 @@ get_header();
                     <span><?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($servizio->post_title); ?></span>
                 </button>
                 <div class="accordion-content" style="display:<?php echo $index === 0 ? 'block' : 'none'; ?>;">
-                    <h3 class="mb-3"><?php echo $titolo_accordion ? esc_html($titolo_accordion) : esc_html($servizio->post_title); ?></h3>
+                    <h3 class="mb-3"><?php echo esc_html($servizio->post_title); ?></h3>
                     <div class="row">
                         <div class="col-md-6">
                             <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($servizio->post_title); ?>" class="img-fluid" />

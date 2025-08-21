@@ -32,11 +32,7 @@ get_header();
                     <?php endif; ?>
                 </div>
                 <div class="col-12 col-lg-6 d-flex flex-column align-items-start">
-                    <?php 
-                    $titolo_accordion = get_field('titolo_accordion');
-                    if ( $titolo_accordion ) : ?>
-                        <h3 class="mb-2 m_h5 titolo-accordion-single"><?php echo esc_html( strtoupper( $titolo_accordion ) ); ?></h3>
-                    <?php endif; ?>
+                    <h3 class="mb-2 m_h5 titolo-accordion-single"><?php echo esc_html( strtoupper( get_the_title() ) ); ?></h3>
                     <div class="entry-content w-100">
                         <?php the_content(); ?>
                         <button class="btn btn-header-custom d-flex justify-content-center mt-4">Contattaci per un
