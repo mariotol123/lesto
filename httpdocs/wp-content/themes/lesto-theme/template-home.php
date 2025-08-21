@@ -72,10 +72,10 @@ get_header();
 			<hr class="footer-divider border-2 opacity-75 w-100">
 			<div class="container mt-3 mb-5">
 				<div class="row">
-					<div class="col-lg-4 col-md-4">
+					<div class="col-lg-3 col-md-4">
 						<p class="desktop-p w-100"><?php echo $hero_tabs['descrizione_intro'] ?? 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis porro nesciunt blanditiis voluptas atque provident nobis unde nostrum impedit? Temporibus, architecto ab. Culpa enim saepe consectetur, dolorum rerum odit omnis?'; ?></p>
 					</div>
-					<div class="col-lg-8 col-md">
+					<div class="col-lg-9 col-md">
 						<!-- Tab 1 (Catena) Cards -->
 						<div class="tabcontent fade-content show" data-tab="Tab1">
 							<div class="row">
