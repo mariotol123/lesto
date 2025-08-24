@@ -262,7 +262,7 @@ get_header();
 					$immagine = get_the_post_thumbnail_url($settore->ID, 'full');
 					
 					// Default values if ACF fields are empty
-					$titolo = $titolo_accordion ? $titolo_accordion : $settore->post_title;
+					$titolo =  $settore->post_title;
 					$descrizione = $riassunto_accordion ? $riassunto_accordion : 'A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit sit. Illum veritatis sit omnis quisquam.';
 					
 					// Limit description to 220 characters
