@@ -192,7 +192,7 @@ get_header();
 		</section>
 		
 		<section class="tabs-container mt-4 button-container">
-			<div class="container buttons-container mb-5">
+			<div class="container buttons-container">
 				<div class="tab">
 					<button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise">
 						<?php 
@@ -217,8 +217,8 @@ get_header();
 	</div>
 
 
-	<section class="third-section d-flex flex-column justify-content-between container vh-100">
-		<div class="mt-10xl cooking">
+	<section class="third-section d-flex flex-column justify-content-between container vh-100 pt-10xl">
+		<div class="cooking">
 			<?php 
 			// Accesso al gruppo cooking_room
 			$cooking_room = get_field('cooking_room');
@@ -242,8 +242,8 @@ get_header();
 	</section>
 
 
-	<section class="four-section">
-		<div class="container pt-7xl pb-10xl pb-mobile-0">
+	<section class="four-section pt-7xl pb-10xl pb-mobile-0">
+		<div class="container">
 			<?php 
 			// Get all settori from ACF accordion
 			$settori = get_posts(array(
