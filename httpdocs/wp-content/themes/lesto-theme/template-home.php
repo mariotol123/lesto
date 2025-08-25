@@ -194,7 +194,7 @@ get_header();
 		<section class="tabs-container mt-4 button-container">
 			<div class="container buttons-container">
 				<div class="tab">
-					<button class="tablinks btn btn-custom" data-tab="Tab1" id="btn-franchise">
+					<button class="tablinks btn btn-custom btn-medium" data-tab="Tab1" id="btn-franchise">
 						<?php 
 						$icona_tab1 = $tab_1['icona_bottone'] ?? '';
 						$testo_tab1 = $tab_1['testo_bottone'] ?? 'Catena';
@@ -202,7 +202,7 @@ get_header();
 						<img class="icon" src="<?php echo $icona_tab1 ? esc_url($icona_tab1['url']) : '/wp-content/themes/lesto-theme/images/Icon.png'; ?>" alt="icon" />
 						<span><?php echo esc_html($testo_tab1); ?></span>
 					</button>
-					<button class="tablinks btn btn-custom active" data-tab="Tab2" id="btn-locale">
+					<button class="tablinks btn btn-custom active btn-medium" data-tab="Tab2" id="btn-locale">
 						<?php 
 						$icona_tab2 = $tab_2['icona_bottone'] ?? '';
 						$testo_tab2 = $tab_2['testo_bottone'] ?? 'Nuovo locale';
@@ -236,7 +236,7 @@ get_header();
 				$testo_bottone = $cooking_room['testo_bottone'] ?? 'Scopri di più';
 				$link_bottone = $cooking_room['link_bottone'] ?? '#';
 				?>
-				<a href="<?php echo $link_bottone; ?>" class="btn btn-custom mt-3 mt-md-0"><?php echo $testo_bottone; ?></a>
+				<a href="<?php echo $link_bottone; ?>" class="btn btn-custom btn-large mt-3 mt-md-0"><?php echo $testo_bottone; ?></a>
 			</div>
 		</div>
 	</section>

@@ -70,7 +70,6 @@ This document describes how to implement a tab system in your WordPress theme us
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
   gap: 0;
   transition: gap 2s ease;
   position: relative;

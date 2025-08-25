@@ -441,13 +441,15 @@ p {
 }
 
 .btn-small {
-  padding: var(--size-8) var(--px-l);
-  font-size: var(--font-s-14);
+  padding: var(--size-4) var(--size-15);
+}
+
+.btn-medium {
+  padding: var(--size-4) var(--size-40);
 }
 
 .btn-large {
-  padding: var(--px-l) var(--px-3xl);
-  font-size: var(--font-l-20);
+  padding: var(--size-4) var(--size-8rem);
 }
 
 .btn-full-width {
@@ -475,7 +477,6 @@ p {
   color: #ffffff !important;
   border: var(--size-1) solid #ffffff !important;
   border-radius: var(--size-25);
-  padding: var(--size-6) var(--size-20);
   font-weight: 400;
   font-size: var(--font-s-14);
   text-decoration: none;
@@ -560,7 +561,6 @@ p {
   color: #ffffff !important;
   border: var(--size-1) solid #ffffff;
   border-radius: var(--size-25);
-  padding: var(--size-6) var(--size-20);
   font-weight: 400;
   font-size: var(--font-s-14);
   text-decoration: none;
@@ -771,25 +771,6 @@ p {
   -webkit-backdrop-filter: blur(var(--size-5));
   height: 50vh;
   margin: 0 auto;
-}
-
-.btn-header-custom {
-  background-color: transparent !important;
-  color: #ffffff !important;
-  border: var(--size-1) solid #ffffff;
-  border-radius: var(--size-25);
-  padding: var(--size-6) var(--size-20);
-  font-weight: 400;
-  font-size: var(--font-s-14); /* 14px */
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0;
-  transition: all 1s ease;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  box-shadow: none !important;
 }
 
 .btn-header-custom .icon {
@@ -1209,7 +1190,6 @@ body.page-template-template-home .site-footer {
   color: #000 !important;
   border: var(--size-1) solid #fff;
   border-radius: var(--size-25);
-  padding: var(--size-6) var(--size-40);
   font-weight: 400;
   font-size: var(--font-s-14);
   transition: box-shadow 0.2s, background 0.2s;
@@ -1224,7 +1204,6 @@ body.page-template-template-home .site-footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--size-10) var(--size-20);
   gap: 0;
   transition: all 1s ease;
   position: relative;
@@ -1321,7 +1300,6 @@ section.section {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: var(--size-5) var(--size-40);
   margin: 0 var(--size-5);
   &:hover,
   &.active {
@@ -1543,16 +1521,11 @@ section.section {
   display: none !important;
   content: none !important;
 }
-.third-section .btn.btn-custom {
-  padding: var(--size-3px) var(--size-6xl) !important;
-  width: auto;
-}
+
 @media (max-width: 768px) {
   .third-section .btn.btn-custom {
     width: 100% !important;
-    padding: var(--px-l) var(--px-s) !important;
     margin-top: var(--py-5xl) !important;
-    font-size: var(--font-3xl);
 
      h5:not(.card-text-hover) {
     width: 100%;

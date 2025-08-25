@@ -1,5 +1,4 @@
 // header-menu-walker.js
-console.log('DEBUG: header-menu-walker.js caricato');
 
 document.addEventListener('DOMContentLoaded', function() {
     var row = document.querySelector('.row.align-items-center');
@@ -238,9 +237,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function generateMobileMenu() {
         // Cerca di ottenere i menu items dal DOM del menu desktop
-        var mainButtons = document.querySelector('.main-buttons');
+        var mainButtons = document.querySelector('.menu-main-group');
+        var contattiButton = document.querySelector('.menu-contatti-item .btn-header-custom');
         var menuItems = [];
+        var contattiItem = null;
         
+        // Ottieni i bottoni principali
         if (mainButtons) {
             var buttons = mainButtons.querySelectorAll('.btn-header-custom');
             buttons.forEach(function(button) {
@@ -254,6 +256,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
+        // Ottieni il bottone contatti dal menu desktop
+        if (contattiButton) {
+            var contattiSpan = contattiButton.querySelector('span');
+            if (contattiSpan) {
+                contattiItem = {
+                    text: contattiSpan.textContent,
+                    id: contattiButton.id + '-mobile'
+                };
+            }
+        }
+        
         // Se non ci sono menu items, usa fallback
         if (menuItems.length === 0) {
             menuItems = [
@@ -263,9 +276,14 @@ document.addEventListener('DOMContentLoaded', function() {
             ];
         }
         
+        // Se non c'è il bottone contatti, usa fallback
+        if (!contattiItem) {
+            contattiItem = { text: 'Contatti', id: 'contatti-btn-mobile' };
+        }
+        
         var menuButtonsHTML = '';
         menuItems.forEach(function(item) {
-            menuButtonsHTML += `<button type="button" class="btn btn-header-custom" id="${item.id}" style="width:auto!important;min-width:0!important;max-width:fit-content!important;padding:10px 20px;margin:0 0 0;text-align:left;flex-shrink:0;"><span>${item.text}</span></button>`;
+            menuButtonsHTML += `<button type="button" class="btn btn-header-custom btn-small" id="${item.id}" style="width:auto!important;min-width:0!important;max-width:fit-content!important;margin:0 0 0;text-align:left;flex-shrink:0;"><span>${item.text}</span></button>`;
         });
         
         return `
@@ -273,11 +291,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div id="menu-main-buttons" style="display:flex;flex-direction:column;align-items:flex-start;">
                     ${menuButtonsHTML}
                 </div>
-                <div id="menu-contatti-button" style="display:flex;justify-content:space-between;gap:10px; width:100%;">
-                    <button type="button" class="btn btn-header-custom" id="contatti-btn-mobile" style="width:auto!important;min-width:0!important;max-width:fit-content!important;padding:10px 20px;margin:0 0 0;text-align:left;flex-shrink:0;">
-                        <span>Contatti</span>
+                <div id="menu-contatti-button" style="position:relative; width:100%;">
+                    <button type="button" class="btn btn-header-custom btn-small" id="${contattiItem.id}" style="width:auto!important;min-width:0!important;max-width:fit-content!important;margin:0;text-align:left;flex-shrink:0;">
+                        <span>${contattiItem.text}</span>
                     </button>
-                    <div class="" style="display:flex;align-items:center;gap:10px; margin-right: 10px; margin-bottom: 10px;">
+                    <div class="" style="position:absolute;bottom: 5px;right:5px;display:flex;align-items:center;gap:10px;">
                         <a href="#" class="social-link">
                             <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="35" height="35" rx="17.5" fill="white" fill-opacity="0.01"/>

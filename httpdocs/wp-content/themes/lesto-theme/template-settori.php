@@ -71,7 +71,7 @@ get_header();
                 $icona = get_field('icona', $settore->ID);
             ?>
             <div class="buttons <?php echo $index === 0 ? 'active' : ''; ?>">
-                <button class="accordion-button btn btn-header-custom d-flex align-items-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
+                <button class="accordion-button btn btn-header-custom btn-small d-flex justify-content-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
                     <?php if ($icona) : ?>
                         <img class="icon" src="<?php echo esc_url($icona['url']); ?>" alt="<?php echo esc_attr($icona['alt']); ?>" />
                     <?php else : ?>
@@ -91,9 +91,9 @@ get_header();
                             <?php 
                             $button_accordion = get_field('button_accordion', $settore->ID);
                             if ($button_accordion) : ?>
-                                <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-mine mt-2"><?php echo esc_html($button_accordion); ?></a>
+                                <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-mine mt-2 btn-small"><?php echo esc_html($button_accordion); ?></a>
                             <?php else : ?>
-                                <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-mine mt-2">Scopri i dettagli</a>
+                                <a href="<?php echo esc_url(get_permalink($settore->ID)); ?>" class="btn btn-mine mt-2 btn-small">Scopri i dettagli</a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -144,10 +144,10 @@ get_header();
                     <h3>Contattaci per <br>un preventivo gratuito</h3>
                     <h5 class="preventivo-mobile-title d-block d-md-none mt-3 mb-10xl">IL NOSTRO SHOWROOM DINAMICO</h5>
                     <h4 class="mt-5">Ti risponderemo entro 24h</h4>
-                    <button class="btn btn-custom d-block d-md-none mt-4 w-100">Scopri di più</button>
+                    <button class="btn btn-custom d-block d-md-none mt-4 w-100 btn-large">Scopri di più</button>
                 </div>
                 <div class="col-md-6 d-none d-md-flex justify-content-end align-items-end">
-                    <button class="btn btn-custom">Scopri di più</button>
+                    <button class="btn btn-custom btn-large">Scopri di più</button>
                 </div>
             </div>
         </div>

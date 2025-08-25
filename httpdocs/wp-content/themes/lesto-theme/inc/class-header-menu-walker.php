@@ -52,7 +52,7 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
             if ($is_contatti) {
                 // Close main group and create separate contatti element
                 $output .= '</div><div class="menu-contatti-item">';
-                $output .= '<button type="button" class="btn btn-header-custom" id="' . $button_id . '">';
+                $output .= '<button type="button" class="btn btn-header-custom btn-small" id="' . $button_id . '">';
                 $output .= $icon_img;
                 $output .= '<span>' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
                 $output .= '</button>';
@@ -63,7 +63,7 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
                 if ($has_children) {
                     // Button with dropdown functionality and double-click link
                     $item_url = ! empty( $item->url ) ? esc_attr( $item->url ) : '';
-                    $output .= '<button type="button" class="btn btn-header-custom" id="' . $button_id . '" data-url="' . $item_url . '">';
+                    $output .= '<button type="button" class="btn btn-header-custom btn-small" id="' . $button_id . '" data-url="' . $item_url . '">';
                     $output .= $icon_img;
                     $output .= '<span>' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
                     $output .= '</button>';
@@ -74,7 +74,7 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
                     $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
                     $attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
 
-                    $output .= '<a class="btn btn-header-custom"' . $attributes . '>';
+                    $output .= '<a class="btn btn-header-custom btn-small"' . $attributes . '>';
                     $output .= $icon_img;
                     $output .= '<span>' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
                     $output .= '</a>';
