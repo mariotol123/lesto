@@ -1478,12 +1478,10 @@ section.section {
 @media (max-width: 768px) {
   .lesto-help {
     padding-bottom: 8rem !important;
+    padding-top: 10rem !important;
   }
   .lesto-help h5:not(.card-text-hover) {
     display: none !important;
-  }
-  .lesto-help h2 {
-    padding-top: 5rem;
   }
   .lesto-help p {
     font-size: var(--font-s);

@@ -13544,6 +13544,7 @@ section.section {
 @media (max-width: 768px) {
   .lesto-help {
     padding-bottom: 8rem !important;
+    padding-top: 10rem !important;
   }
   .lesto-help h5:not(.card-text-hover), .lesto-help .h5:not(.card-text-hover), .lesto-help .site-footer .footer-nav-list li:not(.card-text-hover), .site-footer .footer-nav-list .lesto-help li:not(.card-text-hover),
 .lesto-help .site-footer .footer-social-list li:not(.card-text-hover),
@@ -13559,9 +13560,6 @@ section.section {
 .lesto-help .site-footer .footer-contacts-list li a:not(.card-text-hover),
 .site-footer .footer-contacts-list li .lesto-help a:not(.card-text-hover) {
     display: none !important;
-  }
-  .lesto-help h2, .lesto-help .h2 {
-    padding-top: 5rem;
   }
   .lesto-help p {
     font-size: var(--font-s);
