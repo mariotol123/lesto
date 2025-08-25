@@ -1,68 +1,11 @@
-
-// =========================
-// Base Styles
-// =========================
-html {
-  font-size: 15px;
-}
-a {
-  color: #007cba;
-  text-decoration: none;
-}
-
-// Font-size responsive
-@media (max-width: 1200px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media (max-width: 992px) {
-  html {
-    font-size: 13px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 12px;
-  }
-}
-@media (max-width: 575.98px) {
-  html {
-    font-size: 11px;
-  }
-}
-@media (max-width: 400px) {
-  html {
-    font-size: 10px;
-  }
-}
-@media (max-width: 320px) {
-  html {
-    font-size: 9px;
-  }
-}
-@media (max-width: 240px) {
-  html {
-    font-size: 8px;
-  }
-}
-
-// =========================
-// Bootstrap Import
-// =========================
-@import "../node_modules/bootstrap/scss/bootstrap";
-// Override degli stili dopo Bootstrap per evitare che vengano sovrascritti
-
-// =========================
-// Variables
-// =========================
-body {
-  font-family: "Roboto", sans-serif !important;
-  background-color: var(--bg-dark-transparent) !important;
-}
-
 :root {
+  --font-xxxs: 0.333rem; /* 5px */
+  --font-xxs: 0.4rem;   /* 6px */
+  --font-xxs-7: 0.467rem; /* 7px */
+  --font-xxs-8: 0.533rem; /* 8px */
+  --font-xxs-9: 0.6rem; /* 9px */
   --font-xs: 0.667rem; /* 10px */
+  --font-xs-11: 0.733rem; /* 11px */
   --font-s: 0.8rem; /* 12px */
   --font-s-13: 0.867rem; /* 13px */
   --font-s-14: 0.933rem; /* 14px */
@@ -108,6 +51,68 @@ body {
   --breakpoint-xs: 575.98px; /* Added px unit */
   --breakpoint-sm: 767.98px; /* Added px unit */
   --breakpoint-md: 768px; /* Added px unit */
+}
+
+// =========================
+// Base Styles
+// =========================
+html {
+  font-size: var(--font-base);
+}
+a {
+  color: #007cba;
+  text-decoration: none;
+}
+
+// Font-size responsive
+@media (max-width: 1200px) {
+  html {
+    font-size: var(--font-s-14);
+  }
+}
+@media (max-width: 992px) {
+  html {
+    font-size: var( --font-s-13);
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: var(--font-s);
+  }
+}
+@media (max-width: 575.98px) {
+  html {
+    font-size: var(--font-xs-11);
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: var(--font-xs);
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: var(--font-xxs-9);
+  }
+}
+@media (max-width: 240px) {
+  html {
+    font-size: var(--font-xxs-8);
+  }
+}
+
+// =========================
+// Bootstrap Import
+// =========================
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Override degli stili dopo Bootstrap per evitare che vengano sovrascritti
+
+// =========================
+// Variables
+// =========================
+body {
+  font-family: "Roboto", sans-serif !important;
+  background-color: var(--bg-dark-transparent) !important;
 }
 
 // Typography Classes
@@ -2226,7 +2231,7 @@ input[type="checkbox"] {
 
 .checkbox-label {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
+  font-size: var(--font-s-14);
   line-height: 1.5;
   margin-bottom: 0;
 }
@@ -2282,7 +2287,7 @@ input[type="checkbox"] {
   }
   .textarea-field {
     padding: 18px 20px 18px 20px;
-    font-size: 14px;
+    font-size: var(--font-s-14);
   }
   .submit-btn {
     bottom: 0;
