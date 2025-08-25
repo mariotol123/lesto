@@ -9,8 +9,8 @@ get_header();
 ?>
 
 <main class="main-settori single-cpt single-servizio">
-    <div class="settori-container">
-        <div class="container pt-7xl d-flex align-items-center justify-content-between gap-3 flex-wrap">
+    <div class="settori-container pt-7xl">
+        <div class="container d-flex align-items-center justify-content-between gap-3 flex-wrap">
             <?php 
                     $titolo_single_page = get_field('titolo_single_page');
                     if ( $titolo_single_page ) : ?>
