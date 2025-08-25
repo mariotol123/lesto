@@ -496,3 +496,20 @@ add_action('admin_enqueue_scripts', 'lesto_remove_gutenberg_admin_styles');
 
 // Include Footer Functions
 require_once get_template_directory() . '/inc/footer-functions.php';
+
+/**
+ * ACF Options Page per le impostazioni del sito
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Opzioni Sito',
+		'menu_title'	=> 'Opzioni Sito',
+		'menu_slug' 	=> 'site-options',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-admin-generic',
+		'position'		=> 30
+	));
+	
+}

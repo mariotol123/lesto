@@ -137,10 +137,16 @@ get_header();
         </div>
     </div>
     <div class="preventivo-video-wrapper">
+        <?php 
+        // Ottieni il video background dalle opzioni del sito (ACF)
+        $background_video = get_field('background_video', 'option');
+        if ($background_video): 
+        ?>
         <video class="preventivo-bg-video" autoplay loop muted playsinline>
-            <source src="/wp-content/themes/lesto-theme/videos/6613032-hd_1920_1080_25fps (1).mp4" type="video/mp4">
+            <source src="<?php echo esc_url($background_video['url']); ?>" type="<?php echo esc_attr($background_video['mime_type']); ?>">
             Il tuo browser non supporta il video di sfondo.
         </video>
+        <?php endif; ?>
         <div class="container preventivo-container py-5">
             <div class="row">
                 <div class="col-md-6">

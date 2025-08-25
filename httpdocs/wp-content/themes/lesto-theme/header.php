@@ -24,10 +24,15 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
-	<?php if (is_page_template('template-home.php')): ?>
-	<!-- Video Background solo per la home page -->
+	<?php 
+	// Ottieni il video background dalle opzioni del sito (ACF)
+	$background_video = get_field('background_video', 'option');
+	
+	if ($background_video && (is_page_template('template-home.php') || is_front_page())): 
+	?>
+	<!-- Video Background dalle opzioni del sito -->
 	<video autoplay muted loop id="background-video">
-		<source src="<?php echo get_template_directory_uri(); ?>/videos/6613032-hd_1920_1080_25fps (1).mp4" type="video/mp4">
+		<source src="<?php echo esc_url($background_video['url']); ?>" type="<?php echo esc_attr($background_video['mime_type']); ?>">
 		Your browser does not support the video tag.
 	</video>
 	<?php endif; ?>

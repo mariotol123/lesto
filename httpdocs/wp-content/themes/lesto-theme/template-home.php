@@ -20,7 +20,7 @@ get_header();
 		$tab_2 = $hero_tabs['tab_2'] ?? [];
 		?>
 		
-		<section class="section container">
+		<section class="section container position-relative">
 			<div class="row align-items-center vh-100">
 				<div id="text-column" class="col-md-10 d-flex flex-column justify-content-center">
 					<div id="content-locale" class="content-box active tabcontent fade-content show text-start"
