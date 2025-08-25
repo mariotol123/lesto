@@ -65,8 +65,8 @@ get_header();
 			</div>
 		</section>
 
-		<section class="lesto-help d-flex flex-column align-items-center justify-content-center">
-			<div class="container pt-10xl">
+		<section class="lesto-help d-flex flex-column align-items-center justify-content-center pt-8xl pb-8xl">
+			<div class="container">
 				<h2><?php echo $hero_tabs['titolo_lesto_help'] ?? 'Lesto ti aiuta'; ?></h2>
 			</div>
 			<hr class="footer-divider border-2 opacity-75 w-100">
@@ -256,7 +256,7 @@ get_header();
 			
 			if ($settori && is_array($settori)) {
 				foreach ($settori as $index => $settore) {
-					$numero = str_pad($index + 1, 2, '0', STR_PAD_LEFT); // Generate numbers 01, 02, 03, etc.
+					$numero = str_pad($index + 1, 2, '0', STR_PAD_LEFT);
 					$titolo_accordion = get_field('titolo_accordion', $settore->ID);
 					$riassunto_accordion = get_field('riassunto_accordion', $settore->ID);
 					$immagine = get_the_post_thumbnail_url($settore->ID, 'full');

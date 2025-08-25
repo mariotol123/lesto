@@ -12571,88 +12571,6 @@ p {
   margin: 0; /* Reset margin di default */
 }
 
-.btn-primary-custom {
-  background-color: #007cba;
-  border: 1px solid #007cba;
-  color: white;
-  padding: 12px 24px;
-  font-size: var(--font-base-16);
-  font-weight: 400;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.1s ease;
-  cursor: pointer;
-}
-.btn-primary-custom:hover {
-  background-color: #005a87;
-  border-color: #005a87;
-  color: white;
-  text-decoration: none;
-}
-.btn-primary-custom:focus {
-  outline: 2px solid #007cba;
-  outline-offset: 2px;
-}
-.btn-primary-custom:disabled {
-  background-color: #cccccc;
-  border-color: #cccccc;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.btn-secondary-custom {
-  background-color: transparent;
-  border: 1px solid #007cba;
-  color: #007cba;
-  padding: 12px 24px;
-  font-size: var(--font-base-16);
-  font-weight: 400;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.btn-secondary-custom:hover {
-  background-color: #007cba;
-  color: white;
-  text-decoration: none;
-}
-.btn-secondary-custom:focus {
-  outline: 2px solid #007cba;
-  outline-offset: 2px;
-}
-.btn-secondary-custom:disabled {
-  border-color: #cccccc;
-  color: #cccccc;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.btn-outline-custom {
-  background-color: transparent;
-  border: 2px solid #333333;
-  color: #333333;
-  padding: 10px 22px;
-  font-size: var(--font-base-16);
-  font-weight: 400;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.btn-outline-custom:hover {
-  background-color: #333333;
-  color: white;
-  text-decoration: none;
-}
-.btn-outline-custom:focus {
-  outline: 2px solid #333333;
-  outline-offset: 2px;
-}
-
 .btn-small {
   padding: 8px 16px;
   font-size: var(--font-s-14);
@@ -12676,6 +12594,10 @@ p {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+.buttons.buttons-p-m {
+  padding-left: var(--px-m);
+  padding-right: var(--px-m);
 }
 
 .btn-mine {
