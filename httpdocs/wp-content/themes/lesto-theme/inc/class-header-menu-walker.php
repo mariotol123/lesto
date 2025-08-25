@@ -61,8 +61,9 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
                 $output .= $indent . '<div class="menu-item menu-item-' . $item->ID . ($has_children ? ' menu-item-has-children' : '') . '">';
                 
                 if ($has_children) {
-                    // Button without link for dropdown items
-                    $output .= '<button type="button" class="btn btn-header-custom" id="' . $button_id . '">';
+                    // Button with dropdown functionality and double-click link
+                    $item_url = ! empty( $item->url ) ? esc_attr( $item->url ) : '';
+                    $output .= '<button type="button" class="btn btn-header-custom" id="' . $button_id . '" data-url="' . $item_url . '">';
                     $output .= $icon_img;
                     $output .= '<span>' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
                     $output .= '</button>';

@@ -13820,9 +13820,9 @@ section.section {
   font-size: var(--font-s-14) !important;
 }
 .main-settori .img-overflow {
-  width: 110%;
+  width: 100%;
   max-width: none;
-  margin-left: 10%;
+  margin-left: 17%;
 }
 @media (max-width: 767.98px) {
   .main-settori .page-description-settori {

@@ -8,11 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var mainButtonsContainer = headerButtons ? headerButtons.querySelector('.main-buttons-container') : null;
 
     // Gestione click sui bottoni del menu
+    var buttonStates = {}; // Tiene traccia dello stato di ogni bottone
+    
     document.addEventListener('click', function(e) {
         var clickedButton = e.target.closest('.btn-header-custom');
         if (!clickedButton) {
-            // Se si clicca fuori dai bottoni, chiudi eventuali dropdown aperti
+            // Se si clicca fuori dai bottoni, chiudi eventuali dropdown aperti e resetta stati
             closeAllDropdowns();
+            resetAllButtonStates();
             return;
         }
 
@@ -25,21 +28,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
         e.preventDefault();
         
-        // Trova il dropdown associato a questo bottone
+        // Inizializza lo stato del bottone se non esiste
+        if (!buttonStates[buttonId]) {
+            buttonStates[buttonId] = { dropdownOpen: false, clickCount: 0 };
+        }
+        
+        var state = buttonStates[buttonId];
         var dropdown = findDropdownForButton(clickedButton);
         
-        if (dropdown) {
-            var isCurrentlyOpen = dropdown.style.display === 'block';
-            
-            // Chiudi tutti i dropdown
+        if (!dropdown) return;
+        
+        if (!state.dropdownOpen) {
+            // Primo click: apri dropdown
             closeAllDropdowns();
-            
-            if (!isCurrentlyOpen) {
-                // Apri questo dropdown
-                openDropdown(clickedButton, dropdown);
+            resetAllButtonStates();
+            openDropdown(clickedButton, dropdown);
+            buttonStates[buttonId] = { dropdownOpen: true, clickCount: 1 };
+        } else {
+            // Secondo click: naviga al link
+            var url = clickedButton.getAttribute('data-url');
+            if (url && url !== '') {
+                closeAllDropdowns();
+                resetAllButtonStates();
+                window.location.href = url;
             }
         }
     });
+
+    function resetAllButtonStates() {
+        buttonStates = {};
+    }
 
     function findDropdownForButton(button) {
         // Il dropdown dovrebbe essere nel wrapper del menu item
@@ -128,6 +146,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Rimuovi il bottone di chiusura
         removeCloseButton();
+        
+        // Resetta gli stati dei bottoni
+        resetAllButtonStates();
     }
 
     function addCloseButton(button, dropdown) {
