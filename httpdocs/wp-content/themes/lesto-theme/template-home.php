@@ -267,7 +267,7 @@ get_header();
 					
 					// Limit description to 220 characters
 					if (strlen($descrizione) > 220) {
-						$descrizione = substr($descrizione, 0, 220) . '...';
+						$descrizione = substr($descrizione, 0, 200) . '...';
 					}
 					
 					$immagine_url = $immagine ? $immagine : '/wp-content/themes/lesto-theme/images/Rectangle 1.png';
