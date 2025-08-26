@@ -1765,9 +1765,11 @@ section.section {
     box-shadow: none !important;
     backdrop-filter: none !important;
     
-    // Rimuovi il border-bottom per tutti i pulsanti tranne l'ultimo
+    // Rimuovi il border per tutti i pulsanti tranne l'ultimo
     &:not(:last-child) {
       border-bottom: none !important;
+      border-left: none;
+      border-right: none;
     }
     
     &.active {
