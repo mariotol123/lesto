@@ -490,6 +490,7 @@ p {
   box-shadow: none !important;
 }
 
+
 // Header Styles
 
 .site-header {
@@ -601,6 +602,12 @@ p {
       max-width: var(--size-20);
     }
   }
+}
+
+.btn-accordion {
+  @extend .btn-header-custom;
+  // border-top: none;
+  // border-bottom: none;
 }
 
 .main-buttons-container {
@@ -1765,12 +1772,10 @@ section.section {
     box-shadow: none !important;
     backdrop-filter: none !important;
     
-    // Rimuovi il border per tutti i pulsanti tranne l'ultimo
-    &:not(:last-child) {
       border-bottom: none !important;
       border-left: none;
       border-right: none;
-    }
+    
     
     &.active {
       border: none;
@@ -1778,6 +1783,10 @@ section.section {
         margin-left: auto;
         display: block;
         background-color: transparent !important;
+      }
+
+      .accordion-button::after {
+        content: none !important;
       }
     }
     .accordion-button {

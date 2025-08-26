@@ -71,7 +71,7 @@ get_header();
                 $icona = get_field('icona', $settore->ID);
             ?>
             <div class="buttons <?php echo $index === 0 ? 'active' : ''; ?>">
-                <button class="accordion-button btn btn-header-custom btn-small d-flex justify-content-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
+                <button class="accordion-button btn btn-accordion btn-small d-flex justify-content-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
                     <?php if ($icona) : ?>
                         <img class="icon" src="<?php echo esc_url($icona['url']); ?>" alt="<?php echo esc_attr($icona['alt']); ?>" />
                     <?php else : ?>
@@ -169,12 +169,12 @@ get_header();
             const isVisible = content.style.display === "block";
             document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
             document.querySelectorAll(".accordion-button").forEach(b => {
-                if (b.parentElement) b.parentElement.classList.remove("active");
+                if (b.parentElement) b.parentElement.classList.remove(" active");
                 b.classList.remove("active");
             });
             if (!isVisible) {
                 content.style.display = "block";
-                if (btn.parentElement) btn.parentElement.classList.add("active");
+                if (btn.parentElement) btn.parentElement.classList.add(" active");
                 btn.classList.add("active");
             } else {
                 if (btn.parentElement) btn.parentElement.classList.remove("active");
