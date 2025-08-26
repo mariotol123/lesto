@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const splide = new Splide('#sliderMultiRow', {
       type: 'loop',           // Carousel infinito
-      perPage: 5,             // 5 loghi visibili su desktop
+      perPage: 6,             // 6 loghi visibili su desktop
       perMove: 1,             // Sposta 1 elemento alla volta
       autoplay: true,         // Autoplay attivo
-      interval: 3000,         // Cambia ogni 3 secondi
+      interval: 50000,         // Cambia ogni 3 secondi
       pauseOnHover: true,     // Pausa quando si passa sopra col mouse
       arrows: false,          // Nascondo le frecce
       pagination: false,      // Nascondo i pallini
-      gap: '10rem',            // Spazio tra gli elementi
+      gap: '1rem',            // Spazio tra gli elementi
       breakpoints: {
         991: {
           perPage: 3,         // 3 loghi su tablet

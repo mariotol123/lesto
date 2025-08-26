@@ -52,10 +52,17 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
             if ($is_contatti) {
                 // Close main group and create separate contatti element
                 $output .= '</div><div class="menu-contatti-item">';
-                $output .= '<button type="button" class="btn btn-header-custom btn-small" id="' . $button_id . '">';
+                
+                // Create contatti as a link, not a button
+                $attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr( $item->attr_title ) . '"' : '';
+                $attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
+                $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
+                $attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
+                
+                $output .= '<a class="btn btn-header-custom btn-small" id="' . $button_id . '"' . $attributes . '>';
                 $output .= $icon_img;
                 $output .= '<span>' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
-                $output .= '</button>';
+                $output .= '</a>';
             } else {
                 // Create a wrapper div for button and its dropdown
                 $output .= $indent . '<div class="menu-item menu-item-' . $item->ID . ($has_children ? ' menu-item-has-children' : '') . '">';

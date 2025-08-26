@@ -18,10 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        // Se è un link (tag <a>), lascia che funzioni normalmente
+        if (clickedButton.tagName.toLowerCase() === 'a') {
+            return;
+        }
+
         var buttonId = clickedButton.id;
+
+        // Verifica se il bottone ha un dropdown
+        var dropdown = findDropdownForButton(clickedButton);
         
-        // Se è il bottone contatti, non fare nulla (gestione normale del link)
-        if (buttonId === 'contatti-btn') {
+        // Se il bottone non ha dropdown (come Realizzazioni), comportati come un link normale
+        if (!dropdown || dropdown.children.length === 0) {
+            var url = clickedButton.getAttribute('data-url');
+            if (url && url !== '') {
+                window.location.href = url;
+            }
             return;
         }
 
@@ -33,9 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         var state = buttonStates[buttonId];
-        var dropdown = findDropdownForButton(clickedButton);
-        
-        if (!dropdown) return;
         
         if (!state.dropdownOpen) {
             // Primo click: apri dropdown
