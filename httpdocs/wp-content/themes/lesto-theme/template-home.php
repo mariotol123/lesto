@@ -26,11 +26,11 @@ get_header();
 					<div id="content-locale" class="content-box active tabcontent fade-content show text-start"
 						data-tab="Tab2">
 						<h1 class="mb-4 w-100"><?php echo $tab_2['titolo_hero'] ?? 'Vuoi aprire<br>un locale?'; ?></h1>
-						<p class="page-description mb-4 w-50 m_h5"><?php echo nl2br($tab_2['descrizione_hero'] ?? 'Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.'); ?></p>
+						<p class="page-description mb-4 w-100 m_h5"><?php echo nl2br($tab_2['descrizione_hero'] ?? 'Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.'); ?></p>
 					</div>
 					<div id="content-franchise" class="content-box tabcontent fade-content text-start" data-tab="Tab1">
 						<h1 class="mb-4 w-100"><?php echo $tab_1['titolo_hero'] ?? 'Vuoi aprire<br>un format replicabile?'; ?></h1>
-						<p class="page-description mb-4 w-50 m_h5"><?php echo nl2br($tab_1['descrizione_hero'] ?? 'Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.'); ?></p>
+						<p class="page-description mb-4 w-100 m_h5"><?php echo nl2br($tab_1['descrizione_hero'] ?? 'Dal 1984 Lesto Group si occupa di consulenza, progettazione, vendita e assistenza di attrezzature professionali per ristoranti, hotel, pizzerie e bar.'); ?></p>
 					</div>
 				</div>
 				<div id="social-column"
@@ -199,7 +199,7 @@ get_header();
 						$icona_tab1 = $tab_1['icona_bottone'] ?? '';
 						$testo_tab1 = $tab_1['testo_bottone'] ?? 'Catena';
 						?>
-						<img class="icon" src="<?php echo $icona_tab1 ? esc_url($icona_tab1['url']) : '/wp-content/themes/lesto-theme/images/Icon.png'; ?>" alt="icon" />
+						<img class="icon" src="<?php echo $icona_tab1 ? esc_url($icona_tab1['url']) : '/wp-content/themes/lesto-theme/images/onde-nere.svg'; ?>" alt="icon" />
 						<span><?php echo esc_html($testo_tab1); ?></span>
 					</button>
 					<button class="tablinks btn btn-custom active btn-medium" data-tab="Tab2" id="btn-locale">
@@ -207,7 +207,7 @@ get_header();
 						$icona_tab2 = $tab_2['icona_bottone'] ?? '';
 						$testo_tab2 = $tab_2['testo_bottone'] ?? 'Nuovo locale';
 						?>
-						<img class="icon" src="<?php echo $icona_tab2 ? esc_url($icona_tab2['url']) : '/wp-content/themes/lesto-theme/images/Icon.png'; ?>" alt="icon" />
+						<img class="icon" src="<?php echo $icona_tab2 ? esc_url($icona_tab2['url']) : '/wp-content/themes/lesto-theme/images/onde-nere.svg'; ?>" alt="icon" />
 						<span><?php echo esc_html($testo_tab2); ?></span>
 					</button>
 				</div>

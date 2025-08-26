@@ -85,12 +85,15 @@
   --size-4rem: 4rem; /* 64px */
   --size-6rem: 6rem; /* 96px */
   --size-8rem: 8rem; /* 128px */
+  --size-9rem: 9.6rem; /* 144px */
   --size-10rem: 10rem; /* 160px */
+  --size-11rem: 12.333rem; /* 185px */
   --size-200: 13.333rem; /* 200px */
   --size-300: 20rem; /* 300px */
   --size-350: 23.333rem; /* 350px */
   --size-400: 26.667rem; /* 400px */
   --size-450: 30rem; /* 450px */
+
 
   --breakpoint-xs: 575.98px; /* Added px unit */
   --breakpoint-sm: 767.98px; /* Added px unit */
@@ -504,6 +507,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.site-logo {
+  width: var(  --size-10rem);
 }
 
 @media (max-width: 767.98px) {

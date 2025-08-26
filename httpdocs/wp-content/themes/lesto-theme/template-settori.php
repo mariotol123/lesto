@@ -75,7 +75,7 @@ get_header();
                     <?php if ($icona) : ?>
                         <img class="icon" src="<?php echo esc_url($icona['url']); ?>" alt="<?php echo esc_attr($icona['alt']); ?>" />
                     <?php else : ?>
-                        <img class="icon" src="/wp-content/themes/lesto-theme/images/Group 1.png" alt="icon" />
+                        <img class="icon" src="/wp-content/themes/lesto-theme/images/onde.svg" alt="icon" />
                     <?php endif; ?>
                     <span><?php echo esc_html($settore->post_title); ?></span>
                 </button>

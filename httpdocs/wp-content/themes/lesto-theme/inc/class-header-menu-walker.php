@@ -47,7 +47,7 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
             }
             
             // Add the icon image
-            $icon_img = '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
+            $icon_img = '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
             
             if ($is_contatti) {
                 // Close main group and create separate contatti element

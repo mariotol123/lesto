@@ -44,7 +44,7 @@
 				   <div class="col-4 col-md-5 d-flex align-items-center justify-content-between">
 					   <div class="site-logo">
 						   <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							   <img src="<?php echo get_template_directory_uri(); ?>/images/Livello_1.png" alt="<?php bloginfo('name'); ?>" class="img-fluid">
+							   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" class="img-fluid">
 						   </a>
 					   </div>
 					   <!-- Hamburger menu visibile solo su mobile, accanto al logo -->
@@ -64,21 +64,21 @@
 								   // Fallback se non è stato configurato il menu
 								   echo '<div class="menu-main-group d-flex">';
 								   echo '<button type="button" class="btn btn-header-custom" id="settori-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
+								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
 								   echo '<span>Settori</span>';
 								   echo '</button>';
 								   echo '<button type="button" class="btn btn-header-custom" id="servizi-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
+								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
 								   echo '<span>Servizi</span>';
 								   echo '</button>';
 								   echo '<button type="button" class="btn btn-header-custom" id="realizzazioni-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
+								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
 								   echo '<span>Realizzazioni</span>';
 								   echo '</button>';
 								   echo '</div>';
 								   echo '<div class="menu-contatti-item">';
 								   echo '<button type="button" class="btn btn-header-custom" id="contatti-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/Group 1.png" alt="icon" />';
+								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
 								   echo '<span>Contatti</span>';
 								   echo '</button>';
 								   echo '</div>';
