@@ -217,6 +217,20 @@ function lesto_enqueue_splide_assets() {
 }
 add_action('wp_enqueue_scripts', 'lesto_enqueue_splide_assets');
 
+// Enqueue lestoform.js solo nella pagina contatti
+function lesto_enqueue_contact_form_script() {
+	if (is_page_template('template-contatti.php')) {
+		wp_enqueue_script(
+			'lesto-form-animation',
+			get_template_directory_uri() . '/js/contatti.js',
+			array(),
+			filemtime(get_template_directory() . '/js/contatti.js'),
+			true
+		);
+	}
+}
+add_action('wp_enqueue_scripts', 'lesto_enqueue_contact_form_script');
+
 /**
  * Implement the Custom Header feature.
  */

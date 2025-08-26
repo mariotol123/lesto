@@ -116,12 +116,12 @@ get_header();
 						<label for="messaggio" class="form-label mb-1 desktop-p-16 mx-5">Messaggio</label>
 						<div class="textarea-container">
 							<div class="svg-background">
-								<svg class="textarea-svg" viewBox="0 0 745 202" preserveAspectRatio="none">
+								<svg id="curvedbg" class="textarea-svg" viewBox="0 0 745 202" preserveAspectRatio="none">
 									<path d="M30 0.5H715C731.292 0.5 744.5 13.7076 744.5 30V121.5C744.5 137.792 731.292 151 715 151H684.098C669.876 151 658.348 162.529 658.348 176.75C658.348 190.419 647.268 201.5 633.599 201.5H30C13.7076 201.5 0.5 188.292 0.5 172V30C0.500002 13.7076 13.7076 0.500001 30 0.5Z" stroke="rgba(255,255,255)" stroke-width="1" fill="transparent"/>
 								</svg>
 							</div>
 							<textarea id="messaggio" name="messaggio" class="textarea-field form-control header-buttons" required></textarea>
-							<button type="submit" class="submit-btn">Invia</button>
+							<button type="submit" id="submit" class="submit-btn">Invia</button>
 						</div>
 					</div>
 
