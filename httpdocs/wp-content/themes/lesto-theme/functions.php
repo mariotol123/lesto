@@ -187,6 +187,36 @@ function lesto_enqueue_four_section_persist() {
 }
 add_action('wp_enqueue_scripts', 'lesto_enqueue_four_section_persist');
 
+// Enqueue Splide CSS e JS + slider-multi-row.js
+function lesto_enqueue_splide_assets() {
+	// Splide CSS da CDN
+	wp_enqueue_style(
+		'splide-css',
+		'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css',
+		array(),
+		null
+	);
+	
+	// Splide JS da CDN
+	wp_enqueue_script(
+		'splide-js',
+		'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js',
+		array(),
+		null,
+		true
+	);
+	
+	// Il nostro script personalizzato (dipende da Splide)
+	wp_enqueue_script(
+		'lesto-slider-multi-row',
+		get_template_directory_uri() . '/js/slider-multi-row.js',
+		array('splide-js'), // dipendenza da Splide
+		filemtime(get_template_directory() . '/js/slider-multi-row.js'),
+		true
+	);
+}
+add_action('wp_enqueue_scripts', 'lesto_enqueue_splide_assets');
+
 /**
  * Implement the Custom Header feature.
  */

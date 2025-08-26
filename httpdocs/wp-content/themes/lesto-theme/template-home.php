@@ -352,24 +352,27 @@ get_header();
 
 	<section class="fifth-section border-top-fifth-section border-bottom-fifth-section">
 
-		<div class="slider-multi-row-container container pt-4 pb-4" id="sliderMultiRow">
-			<div class="slider-multi-row" id="sliderMultiRowInner">
-				<?php 
-				// Accesso al gruppo loghi_partner
-				$loghi_partner = get_field('loghi_partner');
-				$loghi = $loghi_partner['loghi'] ?? [];
-				
-				if ($loghi && is_array($loghi)) {
-					// Duplico i loghi per creare l'effetto scroll infinito
-					for ($loop = 0; $loop < 2; $loop++) {
-						foreach ($loghi as $logo) {
-							if ($logo) {
-								echo '<img src="' . esc_url($logo['url']) . '" alt="' . esc_attr($logo['alt'] ?: 'Logo Partner') . '" />';
+
+		<div class="splide slider-multi-row-container container pt-4 pb-4" id="sliderMultiRow">
+			<div class="splide__track">
+				<ul class="splide__list d-flex align-items-center">
+					<?php 
+					// Accesso al gruppo loghi_partner
+					$loghi_partner = get_field('loghi_partner');
+					$loghi = $loghi_partner['loghi'] ?? [];
+					
+					if ($loghi && is_array($loghi)) {
+						// Duplico i loghi per creare l'effetto scroll infinito
+						for ($loop = 0; $loop < 2; $loop++) {
+							foreach ($loghi as $logo) {
+								if ($logo) {
+									echo '<li class="splide__slide d-flex justify-content-center"><img src="' . esc_url($logo['url']) . '" alt="' . esc_attr($logo['alt'] ?: 'Logo Partner') . '" /></li>';
+								}
 							}
 						}
 					}
-				} 
-				?>
+					?>
+				</ul>
 			</div>
 		</div>
 
@@ -416,7 +419,6 @@ get_header();
 	});
 </script>
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/slider-multi-row.js"></script>
 <?php
 
 get_footer();
