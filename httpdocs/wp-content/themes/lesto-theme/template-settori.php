@@ -86,7 +86,7 @@ get_header();
                             <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($settore->post_title); ?>" class="img-fluid" />
                         </div>
                         <div class="col-md-6 d-flex flex-column align-items-start">
-                            <h5 class="mb-2 m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>
+                            <h5 class="m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>
                             <p class="mb-3 mt-3 desktop-p"><?php echo $riassunto_accordion ? nl2br(esc_html($riassunto_accordion)) : wp_trim_words($settore->post_content, 30, '...'); ?></p>
                             <?php 
                             $button_accordion = get_field('button_accordion', $settore->ID);
@@ -169,12 +169,12 @@ get_header();
             const isVisible = content.style.display === "block";
             document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
             document.querySelectorAll(".accordion-button").forEach(b => {
-                if (b.parentElement) b.parentElement.classList.remove(" active");
+                if (b.parentElement) b.parentElement.classList.remove("active");
                 b.classList.remove("active");
             });
             if (!isVisible) {
                 content.style.display = "block";
-                if (btn.parentElement) btn.parentElement.classList.add(" active");
+                if (btn.parentElement) btn.parentElement.classList.add("active");
                 btn.classList.add("active");
             } else {
                 if (btn.parentElement) btn.parentElement.classList.remove("active");

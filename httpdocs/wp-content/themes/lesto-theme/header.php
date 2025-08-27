@@ -39,9 +39,9 @@
 
 	<header id="masthead" class="site-header">
 		<div class="container">
-			<div class="row align-items-center justify-content-center">
+			<div class="row justify-content-center">
 				<!-- Logo a sinistra -->
-				   <div class="col-4 col-md-5 d-flex align-items-center justify-content-between">
+				   <div class="col-4 col-md-5 d-flex justify-content-between">
 					   <div class="site-logo">
 						   <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 							   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" class="img-fluid">

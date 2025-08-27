@@ -18,6 +18,7 @@
   --font-xl: 1.933rem; /* 29px */
   --font-2xl: 2.467rem; /* 37px */
   --font-3xl: 3.067rem; /* 46px */
+  --font-3xl-custom: 3.5rem; /* 44px */
   --font-4xl: 3.8rem; /* 57px */
   --font-4xl-custom: 3.733rem; /* 56px */
   --font-5xl: 5.333rem; /* 80px */
@@ -240,6 +241,12 @@ body {
 .pb-10xl {
   padding-bottom: 10rem !important;
 }
+.pb-11xl {
+  padding-bottom: 11rem !important;
+}
+.pb-12xl {
+  padding-bottom: 12rem !important;
+}
 
 .pl-5xl {
   padding-left: 5rem !important;
@@ -307,7 +314,7 @@ h2,
 h3,
 .h3 {
   font-weight: 300; /* Light */
-  font-size: var(--font-4xl-custom); /* 56px */
+  font-size: var(--font-3xl-custom);
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
@@ -1719,12 +1726,12 @@ section.section {
   }
 
   h5 {
-    font-size: var(--font-l-20) !important;
+    font-size: var(--font-m) !important;
     text-transform: uppercase !important;
   }
 
   p {
-    font-size: var(--font-s-14) !important;
+    font-size: var(--font-xs) !important;
   }
 
   .img-overflow {
@@ -1803,7 +1810,7 @@ section.section {
 }
 
 .accordion-content {
-      padding: var(--px-3xl) var(--px-3xl);
+      padding: var(--px-2xl) var(--px-3xl);
     }
 
     .preventivo-video-wrapper {

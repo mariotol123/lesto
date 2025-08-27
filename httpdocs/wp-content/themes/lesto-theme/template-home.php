@@ -199,7 +199,7 @@ get_header();
 	</div>
 
 
-	<section class="third-section d-flex flex-column justify-content-between container vh-100 pt-10xl">
+	<section class="third-section d-flex flex-column justify-content-between container vh-100 pt-8xl pb-12xl">
 		<div class="cooking">
 			<?php 
 			// Accesso al gruppo cooking_room
@@ -209,7 +209,7 @@ get_header();
 			<h2><?php echo $cooking_room['titolo_principale'] ?? 'Cooking Room'; ?><span class="d-none d-md-inline">:</span></h2>
 			<h5><?php echo $cooking_room['sottotitolo'] ?? 'il nostro showroom dinamico'; ?></h5>
 		</div>
-		<div class="mb-8xl row button-cooking">
+		<div class="row button-cooking">
 			<div class="col-md-6 d-flex align-items-center">
 				<h4 class="mt-4 mb-0"><?php echo $cooking_room['descrizione'] ?? 'Grazie all\'esperienza maturata in oltre 30 anni di attività e ad uno staff competente e disponibile, siamo in grado di soddisfare anche le richieste più esigenti, offrendo soluzioni complete e di alto livello.'; ?></h4>
 			</div>
