@@ -36,10 +36,10 @@ get_header();
 				<div id="social-column"
 					class="col-md-2 d-flex align-items-center justify-content-end position-relative">
 					<div class="social-icons-container">
-						<a href="#" class="social-link">
+						<a href="https://www.facebook.com/Lestogroup/</a>" class="social-link">
 							<img src="/wp-content/themes/lesto-theme/images/svg-fb.svg" alt="Facebook">
 						</a>
-						<a href="#" class="social-link">
+						<a href="https://www.instagram.com/lestogroup/" class="social-link">
 							<img src="/wp-content/themes/lesto-theme/images/svg-ig.svg" alt="Instagram">
 						</a>
 					</div>

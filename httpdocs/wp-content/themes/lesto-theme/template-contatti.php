@@ -57,13 +57,13 @@ get_header();
 					</div>
 					<h6 class="mt-5">Seguici anche sui nostri canali social</h6>
 					<div class=" d-flex align-items-center gap-4 mt-3">
-						<a href="#" class="social-link">
+						<a href="https://www.facebook.com/Lestogroup/" class="social-link">
 							<img src="/wp-content/themes/lesto-theme/images/svg-fb.svg" alt="Facebook">
 						</a>
-						<a href="#" class="social-link">
+						<a href="https://www.instagram.com/lestogroup/" class="social-link">
 							<img src="/wp-content/themes/lesto-theme/images/svg-ig.svg" alt="Instagram">
 						</a>
-						<a href="#" class="social-link">
+						<a href="https://twitter.com/lestogroup" class="social-link">
 							<img src="/wp-content/themes/lesto-theme/images/svg-twitter.svg" alt="Twitter">
 						</a>
 

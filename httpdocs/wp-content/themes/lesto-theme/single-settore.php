@@ -27,12 +27,12 @@ get_header();
                 <div class="col-12 col-lg-6">
                     <?php if ( has_post_thumbnail() ) : ?>
                         <div class="">
-                            <?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid w-100 h-100 object-fit-cover' ) ); ?>
+                            <?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid img-overflow-single' ) ); ?>
                         </div>
                     <?php endif; ?>
                 </div>
                 <div class="col-12 col-lg-6 d-flex flex-column align-items-start">
-                    <h3 class="mb-2 m_h5 titolo-accordion-single"><?php echo esc_html( strtoupper( get_the_title() ) ); ?></h3>
+                    <h3 class="mb-3 m_h5 titolo-accordion-single"><?php echo esc_html( strtoupper( get_the_title() ) ); ?></h3>
                     <div class="entry-content w-100">
                         <?php the_content(); ?>
                         <button class="btn btn-header-custom d-flex justify-content-center mt-4">Contattaci per un

@@ -30,8 +30,8 @@ get_header();
         <div class="container mt-4 pb-10xl">
             <div class="row">
                 <!-- Sidebar filtri -->
-                <div class="col-md-3 d-flex flex-column gap-3">
-                    <div id="filter-categorie" class="filter-section active">
+                <div class="col-md-3">
+                    <div id="filter-categorie" class="filter-section active  d-flex flex-column gap-2 mt-2">
                         <p class="desktop-p-16 filter-item active" data-term="all">Tutte le realizzazioni</p>
                         <?php
                         $categories = get_terms(array(

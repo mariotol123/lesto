@@ -19,11 +19,12 @@
   --font-xl: 1.933rem; /* 29px */
   --font-2xl: 2.467rem; /* 37px */
   --font-3xl: 3.067rem; /* 46px */
-  --font-3xl-custom: 3.5rem; /* 44px */
+  --font-3xl-2: 3.133rem;
+  --font-3xl-custom: 3.5rem; /* 53px */
   --font-4xl: 3.8rem; /* 57px */
   --font-4xl-custom: 3.733rem; /* 56px */
-  --font-5xl: 5.333rem; /* 85px */
-  --font-5xl-custom: 4.5rem; /* 86px */
+  --font-5xl: 5rem; /* 80px */
+  --font-5xl-custom: 4.5rem; /* 68px */
   --font-6xl: 6.667rem; /* 100px */
   --bg-dark: #1d1d1d;
   --bg-dark-transparent: rgba(29, 29, 29, 0.95); /* #1d1d1d con 80% opacità */
@@ -93,7 +94,7 @@
 }
 
 html {
-  font-size: var(--font-base);
+  font-size: var(--font-base); /* 15px */
 }
 
 a {
@@ -103,37 +104,37 @@ a {
 
 @media (max-width: 1200px) {
   html {
-    font-size: var(--font-s-14);
+    font-size: var(--font-s-14); /* 14px */
   }
 }
 @media (max-width: 992px) {
   html {
-    font-size: var(--font-s-13);
+    font-size: var(--font-s-13); /* 13px */
   }
 }
 @media (max-width: 768px) {
   html {
-    font-size: var(--font-s);
+    font-size: var(--font-s); /* 12px */
   }
 }
 @media (max-width: 575.98px) {
   html {
-    font-size: var(--font-xs-11);
+    font-size: var(--font-xs-11); /* 11px */
   }
 }
 @media (max-width: 400px) {
   html {
-    font-size: var(--font-xs);
+    font-size: var(--font-xs); /* 10px */
   }
 }
 @media (max-width: 320px) {
   html {
-    font-size: var(--font-xxs-9);
+    font-size: var(--font-xxs-9); /* 9px */
   }
 }
 @media (max-width: 240px) {
   html {
-    font-size: var(--font-xxs-8);
+    font-size: var(--font-xxs-8); /* 8px */
   }
 }
 /*!
@@ -12128,6 +12129,42 @@ body {
   background-color: var(--bg-dark-transparent) !important;
 }
 
+.font-thin {
+  font-weight: 100 !important;
+}
+
+.font-extra-light {
+  font-weight: 200 !important;
+}
+
+.font-light {
+  font-weight: 300 !important;
+}
+
+.font-normal, .font-regular {
+  font-weight: 400 !important;
+}
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+.font-semi-bold {
+  font-weight: 600 !important;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.font-extra-bold {
+  font-weight: 800 !important;
+}
+
+.font-black {
+  font-weight: 900 !important;
+}
+
 .mt-5xl {
   margin-top: 5rem !important;
 }
@@ -12307,7 +12344,7 @@ h2,
 h3,
 .h3 {
   font-weight: 300; /* Light */
-  font-size: var(--font-3xl-custom);
+  font-size: var(--font-3xl-2); /* 53px */
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
@@ -12335,7 +12372,7 @@ h5,
 .site-footer .footer-company-list li,
 .site-footer .footer-contacts-list li {
   font-weight: 400;
-  font-size: var(--font-base-16);
+  font-size: var(--font-base-16); /* 16px */
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
@@ -12354,7 +12391,7 @@ h6,
 
 p {
   font-weight: 300; /* Light */
-  font-size: var(--font-l-20);
+  font-size: var(--font-l-20); /* 20px */
   line-height: auto; /* Auto */
   letter-spacing: 0; /* 0% */
   margin: 0; /* Reset margin di default */
@@ -13418,10 +13455,10 @@ section.section {
 .lesto-help hr {
   border-color: rgb(204, 204, 204);
 }
-#lesto-help h2, #lesto-help .h2,
-.lesto-help h2,
-.lesto-help .h2 {
-  font-size: var(--font-5xl-custom);
+#lesto-help #lesto-help h2, #lesto-help #lesto-help .h2,
+.lesto-help #lesto-help h2,
+.lesto-help #lesto-help .h2 {
+  font-size: var(--font-5xl-custom); /* 68px */
 }
 #lesto-help p,
 .lesto-help p {
@@ -13483,7 +13520,7 @@ section.section {
   .third-section .btn.btn-custom .site-footer .footer-contacts-list li a:not(.card-text-hover),
   .site-footer .footer-contacts-list li .third-section .btn.btn-custom a:not(.card-text-hover) {
     width: 100%;
-    font-size: var(--font-3xl);
+    font-size: var(--font-3xl); /* 46px */
     text-transform: uppercase;
   }
   .cooking h2, .cooking .h2 {
@@ -13503,7 +13540,7 @@ section.section {
   .cooking .site-footer .footer-contacts-list li a,
   .site-footer .footer-contacts-list li .cooking a {
     width: 100%;
-    font-size: var(--font-4xl-custom);
+    font-size: var(--font-4xl-custom); /* 56px */
     text-transform: uppercase;
   }
   .button-cooking {
@@ -13697,6 +13734,9 @@ section.section {
 .main-settori hr {
   border-color: rgb(204, 204, 204);
 }
+.main-settori .titolo-accordion-single {
+  font-size: 17px;
+}
 .main-settori h5, .main-settori .h5, .main-settori .site-footer .footer-nav-list li, .site-footer .footer-nav-list .main-settori li,
 .main-settori .site-footer .footer-social-list li,
 .site-footer .footer-social-list .main-settori li,
@@ -13714,12 +13754,18 @@ section.section {
   text-transform: uppercase !important;
 }
 .main-settori p {
-  font-size: var(--font-xs) !important;
+  font-size: var(--font-s-14) !important;
+  font-weight: 200 !important;
 }
 .main-settori .img-overflow {
-  width: 100%;
+  width: 112%;
   max-width: none;
-  margin-left: 17%;
+  margin-left: 8%;
+}
+.main-settori .img-overflow-single {
+  width: 110%;
+  max-width: none;
+  margin-left: -10%;
 }
 @media (max-width: 767.98px) {
   .main-settori .page-description-settori {
@@ -13729,7 +13775,8 @@ section.section {
     flex-direction: column-reverse !important;
     align-items: stretch !important;
   }
-  .main-settori .img-overflow {
+  .main-settori .img-overflow,
+  .main-settori .img-overflow-single {
     width: 100vw !important;
     max-width: 100vw !important;
     margin-left: calc(-50vw + 50%) !important;
