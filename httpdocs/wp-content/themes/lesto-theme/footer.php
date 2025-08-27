@@ -11,10 +11,8 @@
 
 ?>
 
-	<?php echo (is_front_page() ? 'ciao' : ''); ?>
-
-	<footer id="colophon" class="site-footer">
-		<div class="container footer-container pt-7xl">
+	<footer id="colophon" class="site-footer <?php echo (is_front_page() ? 'pt-2xl' : 'pt-7xl'); ?>">
+		<div class="container footer-container">
 	   <!-- Prima row desktop: logo, navigation, azienda -->
 	   <div class="row d-none d-md-flex">
 		   <div class="col-lg-3 mb-4">
