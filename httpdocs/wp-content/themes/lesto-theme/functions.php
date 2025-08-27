@@ -189,12 +189,12 @@ add_action('wp_enqueue_scripts', 'lesto_enqueue_four_section_persist');
 
 // Enqueue Splide CSS e JS + slider-multi-row.js
 function lesto_enqueue_splide_assets() {
-	// Splide CSS da CDN
+	// CSS personalizzato per Splide (solo nostro file locale)
 	wp_enqueue_style(
-		'splide-css',
-		'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css',
+		'splide-custom-css',
+		get_template_directory_uri() . '/css/splide.min.css',
 		array(),
-		null
+		filemtime(get_template_directory() . '/css/splide.min.css')
 	);
 	
 	// Splide JS da CDN

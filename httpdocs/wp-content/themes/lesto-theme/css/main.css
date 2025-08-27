@@ -13635,6 +13635,17 @@ section.section {
 .slider-multi-row-container::-webkit-scrollbar {
   display: none;
 }
+.slider-multi-row-container.splide {
+  overflow: hidden;
+}
+.slider-multi-row-container.splide .splide__track {
+  overflow: visible;
+}
+.slider-multi-row-container.splide .splide__list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
 .slider-multi-row {
   display: flex;
@@ -13649,6 +13660,18 @@ section.section {
   max-width: 11rem;
   height: var(--py-5xl);
   border-radius: var(--size-8);
+}
+
+.splide__slide .slide-container {
+  max-width: 170px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.splide__slide img {
+  max-width: 170px;
 }
 
 .fifth-section {

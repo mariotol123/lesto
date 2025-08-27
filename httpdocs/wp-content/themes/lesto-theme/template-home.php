@@ -348,7 +348,7 @@ get_header();
 						for ($loop = 0; $loop < 2; $loop++) {
 							foreach ($loghi as $logo) {
 								if ($logo) {
-									echo '<li class="splide__slide d-flex justify-content-center"><img src="' . esc_url($logo['url']) . '" alt="' . esc_attr($logo['alt'] ?: 'Logo Partner') . '" /></li>';
+									echo '<li class="splide__slide"><div class="slide-container"><img src="' . esc_url($logo['url']) . '" alt="' . esc_attr($logo['alt'] ?: 'Logo Partner') . '" /></div></li>';
 								}
 							}
 						}

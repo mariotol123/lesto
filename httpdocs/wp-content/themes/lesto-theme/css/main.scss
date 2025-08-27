@@ -1700,7 +1700,23 @@ section.section {
   &::-webkit-scrollbar {
     display: none;
   }
+
+  // Splide container styling
+  &.splide {
+    overflow: hidden;
+
+    .splide__track {
+      overflow: visible;
+    }
+
+    .splide__list {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
 }
+
 .slider-multi-row {
   display: flex;
   gap: var(--size-60px);
@@ -1711,6 +1727,23 @@ section.section {
     max-width: 11rem;
     height: var(--py-5xl);
     border-radius: var(--size-8);
+  }
+}
+
+// Splide slider styling per contenitori uniformi e max-width 170px
+.splide__slide {
+
+  .slide-container {
+    max-width: 170px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+  }
+
+  img {
+    max-width: 170px;
   }
 }
 

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
       pauseOnHover: true,     // Pausa quando si passa sopra col mouse
       arrows: false,          // Nascondo le frecce
       pagination: false,      // Nascondo i pallini
-      gap: '1rem',            // Spazio tra gli elementi
+      gap: '3rem',            // Spazio tra gli elementi
       breakpoints: {
         991: {
           perPage: 3,         // 3 loghi su tablet
