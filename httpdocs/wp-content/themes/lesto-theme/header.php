@@ -41,7 +41,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<!-- Logo a sinistra -->
-				   <div class="col-4 col-md-5 d-flex justify-content-between">
+				   <div class="col-4 col-md-5 d-flex justify-content-between align-items-center align-items-md-start">
 					   <div class="site-logo">
 						   <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 							   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" class="img-fluid">
