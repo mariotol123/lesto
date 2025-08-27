@@ -22,7 +22,8 @@
   --font-3xl-custom: 3.5rem; /* 44px */
   --font-4xl: 3.8rem; /* 57px */
   --font-4xl-custom: 3.733rem; /* 56px */
-  --font-5xl: 5.333rem; /* 80px */
+  --font-5xl: 5.333rem; /* 85px */
+  --font-5xl-custom: 4.5rem; /* 86px */
   --font-6xl: 6.667rem; /* 100px */
   --bg-dark: #1d1d1d;
   --bg-dark-transparent: rgba(29, 29, 29, 0.95); /* #1d1d1d con 80% opacità */
@@ -51,6 +52,7 @@
   --size-8: 0.533rem; /* 8px */
   --size-9: 0.6rem; /* 9px */
   --size-10: 0.667rem; /* 10px */
+  --size-11: 0.6875rem; /* 11px */
   --size-15: 1rem; /* 15px */
   --size-18: 1.2rem; /* 18px */
   --size-20: 1.333rem; /* 20px */
@@ -83,6 +85,7 @@
   --size-300: 20rem; /* 300px */
   --size-350: 23.333rem; /* 350px */
   --size-400: 26.667rem; /* 400px */
+  --size-404: 27.333rem; /* 404px */
   --size-450: 30rem; /* 450px */
   --breakpoint-xs: 575.98px; /* Added px unit */
   --breakpoint-sm: 767.98px; /* Added px unit */
@@ -13269,14 +13272,15 @@ section.section {
   margin-right: 0;
 }
 
-.col-lg-4 .card-container, .col-lg-3 .card-container {
+.col-lg-4 .card-container,
+.col-lg-3 .card-container {
   position: relative;
 }
 
 .card {
   border-radius: 0;
   border: none !important;
-  height: 23rem;
+  height: var(--size-404);
   padding: 0;
   display: flex;
   align-items: center;
@@ -13284,6 +13288,7 @@ section.section {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  background-color: transparent;
 }
 .card .card-img {
   position: absolute;
@@ -13297,6 +13302,10 @@ section.section {
      object-position: center;
   transition: transform 0.4s ease, filter 0.4s ease;
   z-index: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .card::before {
   content: "";
@@ -13357,29 +13366,47 @@ section.section {
   display: none;
 }
 
-.col-lg-4:hover .card .card-img, .col-lg-3:hover .card .card-img, .col-md-4:hover .card .card-img, .col-md-3:hover .card .card-img {
+.col-lg-4:hover .card .card-img,
+.col-lg-3:hover .card .card-img,
+.col-md-4:hover .card .card-img,
+.col-md-3:hover .card .card-img {
   transform: scale(1.1);
   filter: blur(8px);
 }
-.col-lg-4:hover .card::before, .col-lg-3:hover .card::before, .col-md-4:hover .card::before, .col-md-3:hover .card::before {
+.col-lg-4:hover .card::before,
+.col-lg-3:hover .card::before,
+.col-md-4:hover .card::before,
+.col-md-3:hover .card::before {
   opacity: 1;
 }
-.col-lg-4:hover .card .card-body .card-hover-content, .col-lg-3:hover .card .card-body .card-hover-content, .col-md-4:hover .card .card-body .card-hover-content, .col-md-3:hover .card .card-body .card-hover-content {
+.col-lg-4:hover .card .card-body .card-hover-content,
+.col-lg-3:hover .card .card-body .card-hover-content,
+.col-md-4:hover .card .card-body .card-hover-content,
+.col-md-3:hover .card .card-body .card-hover-content {
   opacity: 1;
   transform: translateY(0);
 }
-.col-lg-4:hover .card-body, .col-lg-3:hover .card-body, .col-md-4:hover .card-body, .col-md-3:hover .card-body {
+.col-lg-4:hover .card-body,
+.col-lg-3:hover .card-body,
+.col-md-4:hover .card-body,
+.col-md-3:hover .card-body {
   flex: 1 1 auto;
   padding: 1rem 0.6rem !important;
   color: var(--bs-card-color);
 }
-.col-lg-4:hover .card-text, .col-lg-3:hover .card-text, .col-md-4:hover .card-text, .col-md-3:hover .card-text {
+.col-lg-4:hover .card-text,
+.col-lg-3:hover .card-text,
+.col-md-4:hover .card-text,
+.col-md-3:hover .card-text {
   opacity: 0;
   max-height: 0;
   margin: 0;
   overflow: hidden;
 }
-.col-lg-4:hover .card-description, .col-lg-3:hover .card-description, .col-md-4:hover .card-description, .col-md-3:hover .card-description {
+.col-lg-4:hover .card-description,
+.col-lg-3:hover .card-description,
+.col-md-4:hover .card-description,
+.col-md-3:hover .card-description {
   display: none !important;
 }
 
@@ -13390,6 +13417,15 @@ section.section {
 #lesto-help hr,
 .lesto-help hr {
   border-color: rgb(204, 204, 204);
+}
+#lesto-help h2, #lesto-help .h2,
+.lesto-help h2,
+.lesto-help .h2 {
+  font-size: var(--font-5xl-custom);
+}
+#lesto-help p,
+.lesto-help p {
+  font-size: var(--size-11);
 }
 
 @media (max-width: 768px) {
@@ -13801,7 +13837,8 @@ section.section {
   }
 }
 @media (min-width: 768px) {
-  .accordion-mobile-tabs, .accordion-mobile-contents {
+  .accordion-mobile-tabs,
+  .accordion-mobile-contents {
     display: none !important;
   }
 }
@@ -14087,7 +14124,7 @@ label {
   right: var(--size-1);
   background: transparent;
   color: #ffffff;
-  border: var(--size-1) solid #FFF;
+  border: var(--size-1) solid #fff;
   padding: 0.3rem 0.7rem;
   border-radius: var(--size-20);
   font-weight: 500;

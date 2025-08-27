@@ -1,6 +1,6 @@
 :root {
   --font-xxxs: 0.333rem; /* 5px */
-  --font-xxs: 0.4rem;   /* 6px */
+  --font-xxs: 0.4rem; /* 6px */
   --font-xxs-7: 0.467rem; /* 7px */
   --font-xxs-8: 0.533rem; /* 8px */
   --font-xxs-9: 0.6rem; /* 9px */
@@ -21,7 +21,8 @@
   --font-3xl-custom: 3.5rem; /* 44px */
   --font-4xl: 3.8rem; /* 57px */
   --font-4xl-custom: 3.733rem; /* 56px */
-  --font-5xl: 5.333rem; /* 80px */
+  --font-5xl: 5.333rem; /* 85px */
+  --font-5xl-custom: 4.5rem; /* 86px */
   --font-6xl: 6.667rem; /* 100px */
 
   // Color Variables
@@ -57,6 +58,7 @@
   --size-8: 0.533rem; /* 8px */
   --size-9: 0.6rem; /* 9px */
   --size-10: 0.667rem; /* 10px */
+  --size-11: 0.6875rem; /* 11px */
   --size-15: 1rem; /* 15px */
   --size-18: 1.2rem; /* 18px */
   --size-20: 1.333rem; /* 20px */
@@ -68,7 +70,7 @@
   --size-60: 4rem; /* 60px */
   --size-80: 5.333rem; /* 80px */
 
-  // Box-shadow Variables  
+  // Box-shadow Variables
   --shadow-2: 0.133rem; /* 2px */
   --shadow-3: 0.2rem; /* 3px */
   --shadow-4: 0.267rem; /* 4px */
@@ -93,12 +95,14 @@
   --size-300: 20rem; /* 300px */
   --size-350: 23.333rem; /* 350px */
   --size-400: 26.667rem; /* 400px */
+  --size-404: 27.333rem; /* 404px */
   --size-450: 30rem; /* 450px */
-
 
   --breakpoint-xs: 575.98px; /* Added px unit */
   --breakpoint-sm: 767.98px; /* Added px unit */
   --breakpoint-md: 768px; /* Added px unit */
+
+ 
 }
 
 // =========================
@@ -120,7 +124,7 @@ a {
 }
 @media (max-width: 992px) {
   html {
-    font-size: var( --font-s-13);
+    font-size: var(--font-s-13);
   }
 }
 @media (max-width: 768px) {
@@ -500,7 +504,6 @@ p {
   box-shadow: none !important;
 }
 
-
 // Header Styles
 
 .site-header {
@@ -517,7 +520,7 @@ p {
 }
 
 .site-logo {
-  width: var(  --size-10rem);
+  width: var(--size-10rem);
 }
 
 @media (max-width: 767.98px) {
@@ -690,29 +693,29 @@ p {
   // Ensure buttons are displayed in a row with proper spacing
   display: flex;
   align-items: center;
-  
+
   // Style for menu items without sub-menus
   .menu-item {
     position: relative;
-    
+
     // For buttons that act as links (no dropdown)
     a.btn-header-custom {
       text-decoration: none;
-      
+
       &:hover,
       &:focus {
         text-decoration: none;
       }
     }
   }
-  
+
   // Hide default list styling
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
+
   // Position dropdown menus
   .dropdown-generale {
     position: absolute;
@@ -721,14 +724,14 @@ p {
     width: 100%;
     z-index: 1000;
     border-radius: var(--size-18);
-    
+
     li {
       margin: 0.25rem 0;
-      
+
       &:first-child {
         margin-top: 0;
       }
-      
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -903,7 +906,6 @@ p {
 }
 
 // Footer Styles
-
 
 .footer-container {
   .footer-divider {
@@ -1164,7 +1166,6 @@ p {
   }
 }
 
-
 // Home Template Styles
 .buttons-container {
   display: flex;
@@ -1214,10 +1215,10 @@ body.page-template-template-home .site-footer {
   font-weight: 400;
   font-size: var(--font-s-14);
   transition: box-shadow 0.2s, background 0.2s;
-  box-shadow: 0 var(--shadow-2) var(--shadow-8) rgba(0,0,0,0.08);
+  box-shadow: 0 var(--shadow-2) var(--shadow-8) rgba(0, 0, 0, 0.08);
   &:hover {
     background: #f1f1f1 !important;
-    box-shadow: 0 var(--shadow-4) var(--shadow-16) rgba(0,0,0,0.12);
+    box-shadow: 0 var(--shadow-4) var(--shadow-16) rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -1262,7 +1263,7 @@ body.page-template-template-home .site-footer {
     width: 100%;
     height: auto;
     border-radius: 1rem;
-    box-shadow: 0 var(--shadow-10) var(--size-30) rgba(0,0,0,0.1);
+    box-shadow: 0 var(--shadow-10) var(--size-30) rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -1367,10 +1368,9 @@ section.section {
   margin-right: 0;
 }
 
-
-
 // Card container per gestire l'hover su tutto il gruppo card + testi
-.col-lg-4, .col-lg-3 {
+.col-lg-4,
+.col-lg-3 {
   .card-container {
     position: relative;
   }
@@ -1379,7 +1379,7 @@ section.section {
 .card {
   border-radius: 0;
   border: none !important;
-  height: 23rem;
+  height: var(--size-404);
   padding: 0;
   display: flex;
   align-items: center;
@@ -1387,7 +1387,8 @@ section.section {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  
+  background-color: transparent;
+
   // Styling per l'immagine
   .card-img {
     position: absolute;
@@ -1399,22 +1400,32 @@ section.section {
     object-position: center;
     transition: transform 0.4s ease, filter 0.4s ease;
     z-index: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
-  
+
   // Overlay con blur e gradiente scuro
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.7) 40%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 1;
   }
-  
+
   .card-body {
     position: relative;
     z-index: 2;
@@ -1423,20 +1434,20 @@ section.section {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
+
     // Contenuto che appare al hover
     .card-hover-content {
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.4s ease;
-      
+
       .card-text-hover {
         color: #ffffff;
         text-transform: uppercase;
         margin-bottom: 0.2rem;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
       }
-      
+
       .card-hover-description {
         color: #ffffff;
         font-size: var(--font-s-14);
@@ -1468,31 +1479,33 @@ section.section {
 }
 
 // Hover effects sul contenitore della colonna
-.col-lg-4:hover, .col-lg-3:hover, .col-md-4:hover, .col-md-3:hover {
+.col-lg-4:hover,
+.col-lg-3:hover,
+.col-md-4:hover,
+.col-md-3:hover {
   .card {
     // Zoom e blur sull'immagine
     .card-img {
       transform: scale(1.1);
       filter: blur(8px);
     }
-    
+
     &::before {
       opacity: 1;
     }
-    
+
     .card-body .card-hover-content {
       opacity: 1;
       transform: translateY(0);
     }
   }
 
-
   .card-body {
     flex: 1 1 auto;
     padding: 1rem 0.6rem !important;
     color: var(--bs-card-color);
-}
-  
+  }
+
   // Nascondi solo l'h5 esterno al hover
   .card-text {
     opacity: 0;
@@ -1500,7 +1513,7 @@ section.section {
     margin: 0;
     overflow: hidden;
   }
-  
+
   // Il paragrafo esterno rimane sempre nascosto
   .card-description {
     display: none !important;
@@ -1511,7 +1524,13 @@ section.section {
 .lesto-help {
   background: var(--bg-dark-transparent);
   hr {
-    border-color: rgb(204,204,204);
+    border-color: rgb(204, 204, 204);
+  }
+  h2 {
+    font-size: var(--font-5xl-custom);
+  }
+  p {
+    font-size: var(--size-11);
   }
 }
 
@@ -1545,13 +1564,13 @@ section.section {
     width: 100% !important;
     margin-top: var(--py-5xl) !important;
 
-     h5:not(.card-text-hover) {
-    width: 100%;
-    font-size: var(--font-3xl);
-    text-transform: uppercase;
+    h5:not(.card-text-hover) {
+      width: 100%;
+      font-size: var(--font-3xl);
+      text-transform: uppercase;
+    }
   }
-  }
- 
+
   .cooking {
     h2 {
       width: 50%;
@@ -1573,17 +1592,19 @@ section.section {
     .m_h5 + p {
       opacity: 1;
       max-height: var(--size-200);
-      transition: opacity 0.3s 0.8s, max-height 2.2s cubic-bezier(0.4,0,0.2,1);
+      transition: opacity 0.3s 0.8s,
+        max-height 2.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .img-four-section {
       clip-path: inset(0 0 0 0);
       opacity: 1;
       max-height: var(--size-200);
-      transition: max-height 2s cubic-bezier(0.4,0,0.2,1), clip-path 1s, opacity 0.3s;
+      transition: max-height 2s cubic-bezier(0.4, 0, 0.2, 1), clip-path 1s,
+        opacity 0.3s;
     }
     .col-md-4 {
       max-height: var(--size-200);
-      transition: max-height 2.2s cubic-bezier(0.4,0,0.2,1);
+      transition: max-height 2.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
   background: var(--bg-dark-transparent);
@@ -1595,13 +1616,15 @@ section.section {
       opacity: 0;
       max-height: 0;
       overflow: hidden;
-      transition: opacity 0.3s 0.8s, max-height 2.2s cubic-bezier(0.4,0,0.2,1);
+      transition: opacity 0.3s 0.8s,
+        max-height 2.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .img-four-section {
       display: block;
       width: 100%;
       height: auto;
-      transition: max-height 1s cubic-bezier(0.4,0,0.2,1), clip-path 1s, opacity 0.3s;
+      transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1), clip-path 1s,
+        opacity 0.3s;
       clip-path: inset(0 0 60% 0);
       opacity: 0.7;
     }
@@ -1610,24 +1633,26 @@ section.section {
       display: flex;
       align-items: flex-start;
       max-height: var(--size-50);
-      transition: max-height 1s cubic-bezier(0.4,0,0.2,1);
+      transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1);
       padding-left: 0;
     }
     &:hover {
       .m_h5 + p {
         opacity: 1;
         max-height: var(--size-300);
-        transition: opacity 0.3s 0.8s, max-height 2.2s cubic-bezier(0.4,0,0.2,1);
+        transition: opacity 0.3s 0.8s,
+          max-height 2.2s cubic-bezier(0.4, 0, 0.2, 1);
       }
       .img-four-section {
         clip-path: inset(0 0 0 0);
         opacity: 1;
         max-height: var(--size-200);
-        transition: max-height 2s cubic-bezier(0.4,0,0.2,1), clip-path 1s, opacity 0.3s;
+        transition: max-height 2s cubic-bezier(0.4, 0, 0.2, 1), clip-path 1s,
+          opacity 0.3s;
       }
       .col-md-4 {
         max-height: var(--size-200);
-        transition: max-height 2.4s cubic-bezier(0.4,0,0.2,1);
+        transition: max-height 2.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
     }
   }
@@ -1635,7 +1660,6 @@ section.section {
 
 // Affianca i due h5 nella versione mobile della four-section
 @media (max-width: 767.98px) {
-
   .four-section h5 {
     margin-top: 0.5rem;
   }
@@ -1654,18 +1678,17 @@ section.section {
     width: 100%;
     margin-top: 0.5rem;
   }
-   .pb-mobile-0 {
+  .pb-mobile-0 {
     padding-bottom: 0 !important;
   }
 }
 
 .border-top-four-section {
-  border-top: var(--size-1) solid rgb(204,204,204);
+  border-top: var(--size-1) solid rgb(204, 204, 204);
 }
 .border-bottom-four-section {
-  border-bottom: var(--size-1) solid rgb(204,204,204);
+  border-bottom: var(--size-1) solid rgb(204, 204, 204);
 }
-
 
 .slider-multi-row-container {
   width: 100%;
@@ -1696,27 +1719,20 @@ section.section {
 }
 
 .border-top-fifth-section {
-  border-top: var(--size-1) solid rgb(204,204,204);
+  border-top: var(--size-1) solid rgb(204, 204, 204);
 }
 .border-bottom-fifth-section {
-  border-bottom: var(--size-1) solid rgb(204,204,204);
+  border-bottom: var(--size-1) solid rgb(204, 204, 204);
 }
 
 @media (max-width: 767.98px) {
   .border-top-fifth-section {
-  border-top: none !important;
+    border-top: none !important;
+  }
+  .border-bottom-fifth-section {
+    border-bottom: none;
+  }
 }
-.border-bottom-fifth-section {
-  border-bottom: none ;
-}
-}
-
-
-
-
-
-
-
 
 //PAGINA SETTORI
 
@@ -1775,19 +1791,17 @@ section.section {
 .accordion-container {
   .btn-header-custom:hover {
     gap: var(--size-8) !important;
-    
   }
 
   .buttons {
     width: 100%;
     box-shadow: none !important;
     backdrop-filter: none !important;
-    
-      border-bottom: none !important;
-      border-left: none;
-      border-right: none;
-    
-    
+
+    border-bottom: none !important;
+    border-left: none;
+    border-right: none;
+
     &.active {
       border: none;
       .accordion-button {
@@ -1803,45 +1817,42 @@ section.section {
     .accordion-button {
       width: auto;
       display: inline-block;
-
-      
     }
   }
 }
 
 .accordion-content {
-      padding: var(--px-2xl) var(--px-3xl);
-    }
+  padding: var(--px-2xl) var(--px-3xl);
+}
 
-    .preventivo-video-wrapper {
-      position: relative;
-      overflow: hidden;
-    }
+.preventivo-video-wrapper {
+  position: relative;
+  overflow: hidden;
+}
 
-    .preventivo-bg-video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-      opacity: 0.5;
-      pointer-events: none;
-    }
+.preventivo-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none;
+}
 
-    .preventivo-container {
-      background-color: transparent !important;
-      position: relative;
-      z-index: 1;
-    }
+.preventivo-container {
+  background-color: transparent !important;
+  position: relative;
+  z-index: 1;
+}
 
-    .preventivo-mobile-title {
+.preventivo-mobile-title {
   display: block;
 }
 @media (min-width: 768px) {
   .preventivo-mobile-title {
     display: none !important;
-
   }
 }
 .accordion-mobile-tabs {
@@ -1877,11 +1888,16 @@ section.section {
   animation: fadein 0.3s;
 }
 @keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media (min-width: 768px) {
-  .accordion-mobile-tabs, .accordion-mobile-contents {
+  .accordion-mobile-tabs,
+  .accordion-mobile-contents {
     display: none !important;
   }
 }
@@ -1903,7 +1919,6 @@ section.section {
   }
 }
 
-
 // =========================
 // Single Settore Responsive
 // =========================
@@ -1915,17 +1930,17 @@ section.section {
     .settori-container h1 {
       margin-bottom: var(--size-6rem) !important;
     }
-    
+
     .container {
       position: relative;
     }
-    
+
     // Riorganizza l'ordine degli elementi su mobile
     article.row {
       display: flex !important;
       flex-direction: column !important;
       gap: 0 !important;
-      
+
       // Immagine come primo elemento, fuori dal container
       .col-12.col-lg-6:first-child {
         order: 1;
@@ -1935,10 +1950,10 @@ section.section {
         margin-right: calc(-50vw + 50%) !important;
         padding: 0 !important;
         margin-bottom: 2rem;
-        
+
         div {
           margin: 0 !important;
-          
+
           img {
             width: 100% !important;
             height: auto !important;
@@ -1946,37 +1961,31 @@ section.section {
           }
         }
       }
-      
+
       // Content come secondo elemento
       .col-12.col-lg-6:last-child {
         order: 2;
         width: 100% !important;
         max-width: 100% !important;
         padding: 0 1rem !important;
-        
+
         .entry-content {
           margin-bottom: 1rem;
         }
-        
+
         // Button a larghezza piena su mobile
         .btn-header-custom {
           width: 100% !important;
-            padding: 0.8rem 1rem !important;
-            text-align: center;
-            justify-content: center !important;
+          padding: 0.8rem 1rem !important;
+          text-align: center;
+          justify-content: center !important;
         }
       }
     }
   }
 }
 
-
-
-
-
-
 //PAGINA SERVIZI
-
 
 .servizi-consulenza-container {
   hr {
@@ -2044,17 +2053,17 @@ section.section {
     .settori-container h2 {
       margin-bottom: 6rem !important;
     }
-    
+
     .container {
       position: relative;
     }
-    
+
     // Riorganizza l'ordine degli elementi su mobile
     article.row {
       display: flex !important;
       flex-direction: column !important;
       gap: 0 !important;
-      
+
       // Immagine come primo elemento, fuori dal container
       .col-12.col-lg-6:first-child {
         order: 1;
@@ -2064,10 +2073,10 @@ section.section {
         margin-right: calc(-50vw + 50%) !important;
         padding: 0 !important;
         margin-bottom: 2rem;
-        
+
         div {
           margin: 0 !important;
-          
+
           img {
             width: 100% !important;
             height: auto !important;
@@ -2075,17 +2084,17 @@ section.section {
           }
         }
       }
-      
+
       // Content come secondo elemento
       .col-12.col-lg-6:last-child {
         order: 2;
         width: 100% !important;
         max-width: 100% !important;
         padding: 0 1rem !important;
-        
+
         .entry-content {
           margin-bottom: 1rem;
-          
+
           // Button a larghezza piena su mobile (dentro entry-content per single-servizio)
           .btn-header-custom {
             width: 100% !important;
@@ -2099,15 +2108,7 @@ section.section {
   }
 }
 
-
-
-
-
-
-
-
 // --- Nuovo stile form contatti ---
-
 
 .header-buttons input:focus,
 .header-buttons textarea:focus,
@@ -2122,7 +2123,7 @@ section.section {
     padding: 0.5rem 1.7rem;
   }
 
-  .header-buttons input:focus, 
+  .header-buttons input:focus,
   .header-buttons textarea:focus,
   .header-buttons select:focus {
     color: white;
@@ -2140,7 +2141,6 @@ label {
   margin-bottom: var(--size-8);
   font-weight: 400;
 }
-
 
 .input-field {
   width: 100%;
@@ -2210,10 +2210,7 @@ label {
   resize: none;
   outline: none;
   z-index: 2;
-  clip-path: polygon(
-    4% 2%, 96% 2%, 96% 70%, 
-    82% 70%, 82% 85%, 4% 85%, 4% 2%
-  );
+  clip-path: polygon(4% 2%, 96% 2%, 96% 70%, 82% 70%, 82% 85%, 4% 85%, 4% 2%);
 }
 
 .textarea-field::placeholder {
@@ -2226,7 +2223,7 @@ label {
   right: var(--size-1);
   background: transparent;
   color: #ffffff;
-  border: var(--size-1) solid #FFF;
+  border: var(--size-1) solid #fff;
   padding: 0.3rem 0.7rem;
   border-radius: var(--size-20);
   font-weight: 500;
@@ -2333,12 +2330,6 @@ input[type="checkbox"] {
   }
 }
 
-
-
-
-
-
-
 // Realizzazioni style
 .realizzazioni-container {
   hr {
@@ -2372,35 +2363,35 @@ input[type="checkbox"] {
 @media (max-width: 767.98px) {
   .realizzazioni-container {
     padding-bottom: 3rem !important; // Aggiunge spazio prima del footer
-    
+
     // Button categorie/clienti su mobile
     .mobile-buttons-container {
       justify-content: center !important;
       margin-bottom: 1rem;
-      
+
       h5 {
         padding: 0.5rem 1rem;
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 4px;
         margin: 0;
         font-size: 0.9rem;
-        
+
         &.active {
           border-color: #fff;
           background: rgba(255, 255, 255, 0.1);
         }
       }
     }
-    
+
     // Layout mobile: colonna singola
     .row {
       flex-direction: column;
     }
-    
+
     .col-md-3 {
       width: 100% !important;
       margin-bottom: 1rem;
-      
+
       // Contenitore categorie scorrevole orizzontalmente
       .filter-items-container {
         display: flex;
@@ -2408,11 +2399,11 @@ input[type="checkbox"] {
         gap: 1rem;
         padding: 0.5rem 0;
         scrollbar-width: none;
-        
+
         &::-webkit-scrollbar {
           display: none;
         }
-        
+
         p.desktop-p-16 {
           flex-shrink: 0;
           white-space: nowrap;
@@ -2423,11 +2414,11 @@ input[type="checkbox"] {
           font-size: 0.85rem;
           background: rgba(29, 29, 29, 0.8);
           text-transform: lowercase;
-          
+
           &::first-letter {
             text-transform: uppercase;
           }
-          
+
           &.active {
             border: none;
             background: transparent;
@@ -2435,7 +2426,7 @@ input[type="checkbox"] {
         }
       }
     }
-    
+
     .col-md-9 {
       width: 100% !important;
       position: relative;
@@ -2446,21 +2437,20 @@ input[type="checkbox"] {
       width: 100% !important;
       margin-bottom: 0 !important;
     }
-
   }
-  
+
   // Cards realizzazioni in colonna singola su mobile
   .mosaico-cards {
     height: auto !important;
     flex-direction: column !important;
     position: static !important; // Rimuove il position relative per evitare sovrapposizione
     z-index: 1 !important; // Assicura che sia sotto il footer
-    
+
     &__item {
       width: 100% !important;
       margin-bottom: 1rem;
       position: static !important; // Rimuove position relative anche dalle singole card
-      
+
       .mosaico-img {
         height: 200px !important;
       }
@@ -2488,7 +2478,7 @@ input[type="checkbox"] {
     margin-bottom: 16px;
     border: 1px solid #fff;
     position: relative;
-    background: rgba(29,29,29,0.85);
+    background: rgba(29, 29, 29, 0.85);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -2505,7 +2495,7 @@ input[type="checkbox"] {
       padding: 0.5rem 1rem;
       margin: 0;
       color: #fff;
-      background: rgba(29,29,29,0.95);
+      background: rgba(29, 29, 29, 0.95);
       font-size: var(--font-base-16);
       line-height: 1.4;
       letter-spacing: 0.01em;
@@ -2516,12 +2506,24 @@ input[type="checkbox"] {
   }
 }
 // Altezza immagini dinamica per effetto masonry
-.mosaico-cards__item:nth-child(1) .mosaico-img { height: 200px; }
-.mosaico-cards__item:nth-child(2) .mosaico-img { height: 350px; }
-.mosaico-cards__item:nth-child(3) .mosaico-img { height: 450px; }
-.mosaico-cards__item:nth-child(4) .mosaico-img { height: 450px; }
-.mosaico-cards__item:nth-child(5) .mosaico-img { height: 350px; }
-.mosaico-cards__item:nth-child(6) .mosaico-img { height: 300px; }
+.mosaico-cards__item:nth-child(1) .mosaico-img {
+  height: 200px;
+}
+.mosaico-cards__item:nth-child(2) .mosaico-img {
+  height: 350px;
+}
+.mosaico-cards__item:nth-child(3) .mosaico-img {
+  height: 450px;
+}
+.mosaico-cards__item:nth-child(4) .mosaico-img {
+  height: 450px;
+}
+.mosaico-cards__item:nth-child(5) .mosaico-img {
+  height: 350px;
+}
+.mosaico-cards__item:nth-child(6) .mosaico-img {
+  height: 300px;
+}
 
 // =========================
 // Realizzazioni Mobile Responsive
@@ -2556,29 +2558,27 @@ input[type="checkbox"] {
       &::first-letter {
         text-transform: uppercase !important;
       }
-    
-      
+
       &.active {
-        
         border: 1px solid #ffffff;
       }
-      
+
       &:not(.active) {
         background-color: transparent !important;
       }
     }
-    
+
     // Layout principale su mobile
     .row {
       flex-direction: column !important;
     }
-    
+
     // Sidebar filtri diventa orizzontale scorrevole
     .col-md-3 {
       width: 100% !important;
       max-width: 100% !important;
       margin-bottom: 1.5rem;
-      
+
       .filter-section {
         flex-direction: row !important;
         gap: 0 !important;
@@ -2586,15 +2586,15 @@ input[type="checkbox"] {
         scrollbar-width: none;
         -ms-overflow-style: none;
         padding-bottom: 0.5rem;
-        
+
         &.active {
           display: flex !important;
         }
-        
+
         &::-webkit-scrollbar {
           display: none;
         }
-        
+
         p.desktop-p-16 {
           white-space: nowrap;
           flex-shrink: 0;
@@ -2604,28 +2604,28 @@ input[type="checkbox"] {
           border-radius: 20px;
           font-size: var(--font-s) !important;
           text-transform: lowercase;
-          
+
           &::first-letter {
             text-transform: uppercase;
           }
-          
+
           &.active {
             background: transparent;
             border: none;
           }
-          
+
           &:last-child {
             margin-right: 0;
           }
         }
       }
     }
-    
+
     // Grid delle realizzazioni in colonna singola
     .col-md-9 {
       width: 100% !important;
       max-width: 100% !important;
-      
+
       .mosaico-cards {
         height: auto !important;
         overflow-y: visible !important;
@@ -2633,17 +2633,17 @@ input[type="checkbox"] {
         gap: 1rem !important;
         position: static !important;
         z-index: 1 !important;
-        
+
         &__item {
           width: 100% !important;
           margin-bottom: 0 !important;
           position: static !important;
           z-index: 1 !important;
-          
+
           .mosaico-img {
             height: 250px !important;
           }
-          
+
           p.desktop-p-16 {
             padding: 1rem !important;
             font-size: var(--font-base) !important;
@@ -2652,7 +2652,7 @@ input[type="checkbox"] {
       }
     }
   }
-  
+
   // Assicuriamo che il container principale abbia il giusto spacing dal footer
   .realizzazioni-container {
     margin-bottom: 3rem;
@@ -2661,11 +2661,6 @@ input[type="checkbox"] {
   }
 }
 
-
-
-
-
-
 // =========================
 // Cards without gaps (attaccate)
 // =========================
@@ -2673,7 +2668,7 @@ input[type="checkbox"] {
   .row {
     --bs-gutter-x: 0;
   }
-  
+
   .col-lg-4,
   .col-lg-3,
   .col-md-4,
@@ -2681,13 +2676,13 @@ input[type="checkbox"] {
     padding-left: 1rem;
     padding-right: 0;
   }
-  
+
   // Add small borders between cards to separate them visually
   .card {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0;
   }
-  
+
   // Remove right border from last card in each row
   .col-lg-4:last-child .card,
   .col-lg-3:last-child .card,
