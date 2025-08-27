@@ -40,6 +40,14 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
             // Check if this item has children for dropdown functionality
             $has_children = in_array( 'menu-item-has-children', $classes );
             
+            // Check if this is the current page or ancestor
+            $is_current = in_array( 'current-menu-item', $classes ) || 
+                         in_array( 'current_page_item', $classes ) ||
+                         in_array( 'current-menu-ancestor', $classes ) ||
+                         in_array( 'current-page-ancestor', $classes ) ||
+                         in_array( 'current-menu-parent', $classes ) ||
+                         in_array( 'current_page_parent', $classes );
+            
             // Create unique button ID based on menu item
             $button_id = 'menu-item-' . $item->ID . '-btn';
             if ($is_contatti) {
@@ -48,6 +56,12 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
             
             // Add the icon image
             $icon_img = '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
+            
+            // Build CSS classes for button
+            $button_classes = 'btn btn-header-custom btn-small';
+            if ($is_current) {
+                $button_classes .= ' current-item';
+            }
             
             if ($is_contatti) {
                 // Close main group and create separate contatti element
@@ -59,18 +73,31 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
                 $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
                 $attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
                 
-                $output .= '<a class="btn btn-header-custom btn-small" id="' . $button_id . '"' . $attributes . '>';
+                $output .= '<a class="' . $button_classes . '" id="' . $button_id . '"' . $attributes . '>';
                 $output .= $icon_img;
                 $output .= '<span>' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
                 $output .= '</a>';
             } else {
                 // Create a wrapper div for button and its dropdown
-                $output .= $indent . '<div class="menu-item menu-item-' . $item->ID . ($has_children ? ' menu-item-has-children' : '') . '">';
+                $wrapper_classes = 'menu-item menu-item-' . $item->ID;
+                if ($has_children) {
+                    $wrapper_classes .= ' menu-item-has-children';
+                }
+                // Add WordPress current page classes to wrapper
+                if ($is_current) {
+                    $current_classes = array_intersect($classes, array(
+                        'current-menu-item', 'current_page_item', 'current-menu-ancestor',
+                        'current-page-ancestor', 'current-menu-parent', 'current_page_parent'
+                    ));
+                    $wrapper_classes .= ' ' . implode(' ', $current_classes);
+                }
+                
+                $output .= $indent . '<div class="' . $wrapper_classes . '">';
                 
                 if ($has_children) {
                     // Button with dropdown functionality and double-click link
                     $item_url = ! empty( $item->url ) ? esc_attr( $item->url ) : '';
-                    $output .= '<button type="button" class="btn btn-header-custom btn-small" id="' . $button_id . '" data-url="' . $item_url . '">';
+                    $output .= '<button type="button" class="' . $button_classes . '" id="' . $button_id . '" data-url="' . $item_url . '">';
                     $output .= $icon_img;
                     $output .= '<span>' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
                     $output .= '</button>';
@@ -81,7 +108,7 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
                     $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
                     $attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
 
-                    $output .= '<a class="btn btn-header-custom btn-small"' . $attributes . '>';
+                    $output .= '<a class="' . $button_classes . '"' . $attributes . '>';
                     $output .= $icon_img;
                     $output .= '<span>' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
                     $output .= '</a>';
@@ -98,8 +125,17 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
             $attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr( $item->xfn ) . '"' : '';
             $attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
 
+            // Check if this submenu item is current
+            $is_current_sub = in_array( 'current-menu-item', $classes ) || 
+                             in_array( 'current_page_item', $classes );
+            
+            $link_classes = 'dropdown-link';
+            if ($is_current_sub) {
+                $link_classes .= ' current-item';
+            }
+
             $output .= $indent . '<li>';
-            $output .= '<a class="dropdown-link"' . $attributes . '>';
+            $output .= '<a class="' . $link_classes . '"' . $attributes . '>';
             $output .= apply_filters( 'the_title', $item->title, $item->ID );
             $output .= '</a>';
         }

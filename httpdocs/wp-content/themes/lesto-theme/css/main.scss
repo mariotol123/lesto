@@ -594,11 +594,12 @@ p {
   position: relative;
   border: var(--size-1) solid #ffffff;
   border-radius: var(--size-18);
-  padding: 0;
-  box-shadow: 0 var(--size-4) var(--size-30) rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(var(--size-5));
-  -webkit-backdrop-filter: blur(var(--size-5));
-  background-color: var(--bg-dark-transparent) !important;
+ background: rgba(0, 0, 0, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12.4px);
+    -webkit-backdrop-filter: blur(12.4px);
+    border: 1px solid white;
 }
 
 .header-buttons-mobile {
@@ -638,7 +639,8 @@ p {
     transition: opacity 1s ease, max-width 1s ease-in-out;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     gap: var(--size-8);
     border: var(--size-1) solid #ffffff !important;
     .icon {
@@ -655,6 +657,41 @@ p {
     .icon {
       opacity: 1;
       max-width: var(--size-20);
+    }
+  }
+
+  // Styles for current page items (WordPress classes)
+  .current-menu-item &,
+  .current_page_item &,
+  .current-page-ancestor &,
+  .current-menu-ancestor &,
+  .current-menu-parent &,
+  .current_page_parent &,
+  &.current-item {
+    gap: var(--size-8);
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    .icon {
+      opacity: 1;
+      max-width: var(--size-20);
+    }
+  }
+}
+
+// Specific styles for menu items with current page classes
+.menu-item {
+  &.current-menu-item,
+  &.current_page_item,
+  &.current-page-ancestor,
+  &.current-menu-ancestor,
+  &.current-menu-parent,
+  &.current_page_parent {
+    .btn-header-custom {
+      gap: var(--size-8);
+      background-color: rgba(255, 255, 255, 0.3) !important;
+      .icon {
+        opacity: 1;
+        max-width: var(--size-20);
+      }
     }
   }
 }
@@ -715,6 +752,24 @@ p {
   &.active,
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    box-shadow: none !important;
+    outline: none !important;
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  // Styles for current page dropdown links
+  .current-menu-item &,
+  .current_page_item &,
+  .current-page-ancestor &,
+  .current-menu-ancestor &,
+  .current-menu-parent &,
+  .current_page_parent &,
+  &.current-item {
     background-color: rgba(255, 255, 255, 0.3) !important;
     color: #ffffff !important;
     border-color: #ffffff !important;
