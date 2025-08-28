@@ -1759,6 +1759,10 @@ section.section {
       }
     }
   }
+
+  .titolo-container-four-section {
+    padding-right: 2rem;
+  }
 }
 
 // Affianca i due h5 nella versione mobile della four-section
@@ -2850,10 +2854,10 @@ input[type="checkbox"] {
 
 }
 
+.realizzazione-content {
 .h5 {
   opacity: 0.5;
 }
-
 h4 {
   font-size: var(--size-20);
 }
@@ -2864,5 +2868,13 @@ h4 {
 
 .desktop-p {
   font-size: var(--size-12);
+}
+}
+
+.realizzazione-image {
+  .freccie-img-realizzazioni {
+    width: auto;
+    height: auto;
+  }
 }
 }

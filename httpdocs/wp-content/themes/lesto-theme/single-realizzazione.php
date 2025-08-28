@@ -44,10 +44,11 @@ get_header();
             
             <!-- Colonna destra con immagine -->
             <div class="col-lg-4 col-md-12">
-                <div class="realizzazione-image d-flex flex-column h-100">
+                <div class="realizzazione-image d-flex flex-column">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/professional kitchen.png" alt="Professional Kitchen" class="img-fluid">
-                    <div class="d-flex justify-content-end mt-auto">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/freccie-img-realizzazioni.svg" alt="Freccie immagine realizzazioni" class="freccie-img-realizzazioni">
+                    <div class="d-flex justify-content-end mt-auto w-auto">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-sinistra.svg" alt="Freccie immagine realizzazioni" class="freccie-img-realizzazioni">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-destra.svg" alt="Freccie immagine realizzazioni" class="freccie-img-realizzazioni">
                     </div>
                 </div>
             </div>

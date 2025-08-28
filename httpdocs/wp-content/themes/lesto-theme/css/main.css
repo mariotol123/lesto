@@ -13643,6 +13643,9 @@ section.section {
   max-height: var(--size-200);
   transition: max-height 2.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.four-section .titolo-container-four-section {
+  padding-right: 2rem;
+}
 
 @media (max-width: 767.98px) {
   .four-section h5, .four-section .h5, .four-section .site-footer .footer-nav-list li, .site-footer .footer-nav-list .four-section li,
@@ -14688,27 +14691,31 @@ input[type=checkbox] {
 .single-realizzazione .titolo-realizzazione {
   font-size: var(--size-52);
 }
-.single-realizzazione .h5, .single-realizzazione .site-footer .footer-nav-list li, .site-footer .footer-nav-list .single-realizzazione li,
-.single-realizzazione .site-footer .footer-social-list li,
-.site-footer .footer-social-list .single-realizzazione li,
-.single-realizzazione .site-footer .footer-company-list li,
-.site-footer .footer-company-list .single-realizzazione li,
-.single-realizzazione .site-footer .footer-contacts-list li,
-.site-footer .footer-contacts-list .single-realizzazione li, .single-realizzazione .site-footer .footer-nav-list li a, .site-footer .footer-nav-list li .single-realizzazione a,
-.single-realizzazione .site-footer .footer-social-list li a,
-.site-footer .footer-social-list li .single-realizzazione a,
-.single-realizzazione .site-footer .footer-company-list li a,
-.site-footer .footer-company-list li .single-realizzazione a,
-.single-realizzazione .site-footer .footer-contacts-list li a,
-.site-footer .footer-contacts-list li .single-realizzazione a {
+.single-realizzazione .realizzazione-content .h5, .single-realizzazione .realizzazione-content .site-footer .footer-nav-list li, .site-footer .footer-nav-list .single-realizzazione .realizzazione-content li,
+.single-realizzazione .realizzazione-content .site-footer .footer-social-list li,
+.site-footer .footer-social-list .single-realizzazione .realizzazione-content li,
+.single-realizzazione .realizzazione-content .site-footer .footer-company-list li,
+.site-footer .footer-company-list .single-realizzazione .realizzazione-content li,
+.single-realizzazione .realizzazione-content .site-footer .footer-contacts-list li,
+.site-footer .footer-contacts-list .single-realizzazione .realizzazione-content li, .single-realizzazione .realizzazione-content .site-footer .footer-nav-list li a, .site-footer .footer-nav-list li .single-realizzazione .realizzazione-content a,
+.single-realizzazione .realizzazione-content .site-footer .footer-social-list li a,
+.site-footer .footer-social-list li .single-realizzazione .realizzazione-content a,
+.single-realizzazione .realizzazione-content .site-footer .footer-company-list li a,
+.site-footer .footer-company-list li .single-realizzazione .realizzazione-content a,
+.single-realizzazione .realizzazione-content .site-footer .footer-contacts-list li a,
+.site-footer .footer-contacts-list li .single-realizzazione .realizzazione-content a {
   opacity: 0.5;
 }
-.single-realizzazione h4, .single-realizzazione .h4 {
+.single-realizzazione .realizzazione-content h4, .single-realizzazione .realizzazione-content .h4 {
   font-size: var(--size-20);
 }
-.single-realizzazione .desktop-p-16 {
+.single-realizzazione .realizzazione-content .desktop-p-16 {
   opacity: 0.5;
 }
-.single-realizzazione .desktop-p {
+.single-realizzazione .realizzazione-content .desktop-p {
   font-size: var(--size-12);
+}
+.single-realizzazione .realizzazione-image .freccie-img-realizzazioni {
+  width: auto;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

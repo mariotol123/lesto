@@ -274,7 +274,7 @@ get_header();
 								</div>
 							</div>
 						</div>
-						<div class="col-md-2 d-flex flex-column align-items-start d-none d-md-flex">
+						<div class="col-md-2 d-flex flex-column align-items-start d-none d-md-flex titolo-container-four-section">
 							<h5 class=" m_h5"><?php echo esc_html(strtoupper($titolo)); ?></h5>
 						</div>
 						<div class="col-md-4 d-flex flex-column align-items-start d-none d-md-flex">
