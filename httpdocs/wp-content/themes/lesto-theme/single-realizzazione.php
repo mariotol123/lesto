@@ -46,7 +46,7 @@ get_header();
             <div class="col-lg-4 col-md-12">
                 <div class="realizzazione-image d-flex flex-column">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/professional kitchen.png" alt="Professional Kitchen" class="img-fluid">
-                    <div class="d-flex justify-content-end mt-auto w-auto">
+                    <div class="d-flex justify-content-end w-auto gap-2 mt-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-sinistra.svg" alt="Freccie immagine realizzazioni" class="freccie-img-realizzazioni">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-destra.svg" alt="Freccie immagine realizzazioni" class="freccie-img-realizzazioni">
                     </div>
