@@ -207,7 +207,7 @@ get_header();
 			
 			?>
 			<h2><?php echo $cooking_room['titolo_principale'] ?? 'Cooking Room'; ?><span class="d-none d-md-inline">:</span></h2>
-			<h5><?php echo $cooking_room['sottotitolo'] ?? 'il nostro showroom dinamico'; ?></h5>
+			<h5 class="sottotitolo-cooking"><?php echo $cooking_room['sottotitolo'] ?? 'il nostro showroom dinamico'; ?></h5>
 		</div>
 		<div class="row button-cooking">
 			<div class="col-md-6 d-flex align-items-center">

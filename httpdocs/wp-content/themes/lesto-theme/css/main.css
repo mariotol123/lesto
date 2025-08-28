@@ -9,9 +9,9 @@
   --font-xs-11: 0.733rem; /* 11px */
   --font-s: 0.8rem; /* 12px */
   --font-s-13: 0.867rem; /* 13px */
-  --font-s-14: 0.933rem; /* 14px */
+  --font-s-14: 0.880rem; /* 14px */
   --font-base: 1rem; /* 15px */
-  --font-base-16: 1.067rem; /* 16px */
+  --font-base-16: 1.000rem; /* 16px */
   --font-m: 1.267rem; /* 19px */
   --font-l: 1.533rem; /* 23px */
   --font-l-20: 1.333rem; /* 20px */
@@ -54,14 +54,19 @@
   --size-9: 0.6rem; /* 9px */
   --size-10: 0.667rem; /* 10px */
   --size-11: 0.6875rem; /* 11px */
+  --size-12: 0.8rem; /* 12px */
+  --size-13: 0.867rem; /* 13px */
+  --size-14: 0.933rem; /* 14px */
   --size-15: 1rem; /* 15px */
   --size-18: 1.2rem; /* 18px */
   --size-20: 1.333rem; /* 20px */
-  --size-24: 1.6rem; /* 24px */
+  --size-24: 1.5rem; /* 24px */
   --size-25: 1.667rem; /* 25px */
   --size-30: 2rem; /* 30px */
   --size-32: 2.133rem; /* 32px */
   --size-40: 2.667rem; /* 40px */
+  --size-52: 3.2rem; /* 52px */
+  --size-56: 3.500rem; /* 56px */
   --size-60: 4rem; /* 60px */
   --size-80: 5.333rem; /* 80px */
   --shadow-2: 0.133rem; /* 2px */
@@ -13490,7 +13495,7 @@ section.section {
 }
 #lesto-help p,
 .lesto-help p {
-  font-size: var(--size-11);
+  font-size: var(--size-12);
 }
 
 @media (max-width: 768px) {
@@ -13527,6 +13532,11 @@ section.section {
 .third-section .btn.btn-custom::before {
   display: none !important;
   content: none !important;
+}
+
+.sottotitolo-cooking {
+  font-size: var(--size-24) !important;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -14673,4 +14683,32 @@ input[type=checkbox] {
 .lesto-help .col-md-4:last-child .card,
 .lesto-help .col-md-3:last-child .card {
   border-right: none;
+}
+
+.single-realizzazione .titolo-realizzazione {
+  font-size: var(--size-52);
+}
+.single-realizzazione .h5, .single-realizzazione .site-footer .footer-nav-list li, .site-footer .footer-nav-list .single-realizzazione li,
+.single-realizzazione .site-footer .footer-social-list li,
+.site-footer .footer-social-list .single-realizzazione li,
+.single-realizzazione .site-footer .footer-company-list li,
+.site-footer .footer-company-list .single-realizzazione li,
+.single-realizzazione .site-footer .footer-contacts-list li,
+.site-footer .footer-contacts-list .single-realizzazione li, .single-realizzazione .site-footer .footer-nav-list li a, .site-footer .footer-nav-list li .single-realizzazione a,
+.single-realizzazione .site-footer .footer-social-list li a,
+.site-footer .footer-social-list li .single-realizzazione a,
+.single-realizzazione .site-footer .footer-company-list li a,
+.site-footer .footer-company-list li .single-realizzazione a,
+.single-realizzazione .site-footer .footer-contacts-list li a,
+.site-footer .footer-contacts-list li .single-realizzazione a {
+  opacity: 0.5;
+}
+.single-realizzazione h4, .single-realizzazione .h4 {
+  font-size: var(--size-20);
+}
+.single-realizzazione .desktop-p-16 {
+  opacity: 0.5;
+}
+.single-realizzazione .desktop-p {
+  font-size: var(--size-12);
 }/*# sourceMappingURL=main.css.map */
