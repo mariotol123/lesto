@@ -40,7 +40,7 @@ $term = get_queried_object();
                             <?php if (has_post_thumbnail()) : ?>
                                 <?php the_post_thumbnail('large', array('class' => 'mosaico-img', 'alt' => get_the_title())); ?>
                             <?php else : ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.jpg" class="mosaico-img" alt="<?php the_title(); ?>">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.jpg" class="mosaico-img" alt="<?php the_title(); ?>" loading="lazy">
                             <?php endif; ?>
                             <p class="desktop-p-16"><?php the_title(); ?></p>
                         </a>

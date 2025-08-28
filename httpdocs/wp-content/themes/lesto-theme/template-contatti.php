@@ -20,21 +20,21 @@ get_header();
 			<div class="col-md-6 d-flex align-items-start gap-4 colonna-1 mt-5">
 				<div class="d-flex flex-column gap-4">
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti">
+						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
 						<div>
 							<h5>Ufficio progettazione e Showroom</h5>
 							<p class="desktop-p">Paragrafo 2 di esempio per i contatti.</p>
 						</div>
 					</div>
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti">
+						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
 						<div>
 							<h5>ufficio amministrativo e ricezione merci</h5>
 							<p class="desktop-p">Paragrafo tecnico di esempio.</p>
 						</div>
 					</div>
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti">
+						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
 						<div>
 							<h5>contatti</h5>
 							<p class="desktop-p">Telefono: +39 0382.935884</p>
@@ -42,14 +42,14 @@ get_header();
 						</div>
 					</div>
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti">
+						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
 						<div>
 							<h5>assistenza tecnica</h5>
 							<p class="desktop-p">Telefono: +39 335.1296432</p>
 						</div>
 					</div>
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti">
+						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
 						<div>
 							<h5>ufficio Commerciale</h5>
 							<p class="desktop-p">Telefono: +39 335.1296433</p>
@@ -58,13 +58,13 @@ get_header();
 					<h6 class="mt-5">Seguici anche sui nostri canali social</h6>
 					<div class=" d-flex align-items-center gap-4 mt-3">
 						<a href="https://www.facebook.com/Lestogroup/" class="social-link">
-							<img src="/wp-content/themes/lesto-theme/images/svg-fb.svg" alt="Facebook">
+							<img src="/wp-content/themes/lesto-theme/images/svg-fb.svg" alt="Facebook" loading="lazy">
 						</a>
 						<a href="https://www.instagram.com/lestogroup/" class="social-link">
-							<img src="/wp-content/themes/lesto-theme/images/svg-ig.svg" alt="Instagram">
+							<img src="/wp-content/themes/lesto-theme/images/svg-ig.svg" alt="Instagram" loading="lazy">
 						</a>
 						<a href="https://twitter.com/lestogroup" class="social-link">
-							<img src="/wp-content/themes/lesto-theme/images/svg-twitter.svg" alt="Twitter">
+							<img src="/wp-content/themes/lesto-theme/images/svg-twitter.svg" alt="Twitter" loading="lazy">
 						</a>
 
 					</div>

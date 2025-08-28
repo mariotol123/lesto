@@ -61,11 +61,11 @@
 				   <div class="col-4 col-md-5 d-flex justify-content-between align-items-center align-items-md-start">
 					   <div class="site-logo">
 						   <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" class="img-fluid">
+							   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>" class="img-fluid" loading="lazy">
 						   </a>
 					   </div>
 					   <!-- Hamburger menu visibile solo su mobile, accanto al logo -->
-					   <img src="<?php echo get_template_directory_uri(); ?>/images/Vector (1).png" alt="Menu" class="" id="hamburger-menu">
+					   <img src="<?php echo get_template_directory_uri(); ?>/images/Vector (1).png" alt="Menu" class="" id="hamburger-menu" loading="lazy">
 				   </div>
 				   <!-- Container bottoni a destra -->
 				   <div class="col-4 col-md-7">
@@ -81,21 +81,21 @@
 								   // Fallback se non è stato configurato il menu
 								   echo '<div class="menu-main-group d-flex">';
 								   echo '<button type="button" class="btn btn-header-custom" id="settori-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
+								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" loading="lazy" />';
 								   echo '<span>Settori</span>';
 								   echo '</button>';
 								   echo '<button type="button" class="btn btn-header-custom" id="servizi-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
+								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" loading="lazy" />';
 								   echo '<span>Servizi</span>';
 								   echo '</button>';
 								   echo '<button type="button" class="btn btn-header-custom" id="realizzazioni-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
+								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" loading="lazy" />';
 								   echo '<span>Realizzazioni</span>';
 								   echo '</button>';
 								   echo '</div>';
 								   echo '<div class="menu-contatti-item">';
 								   echo '<button type="button" class="btn btn-header-custom" id="contatti-btn">';
-								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
+								   echo '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" loading="lazy" />';
 								   echo '<span>Contatti</span>';
 								   echo '</button>';
 								   echo '</div>';

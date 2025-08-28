@@ -33,7 +33,7 @@ get_header();
                                 <div class="galleria-item <?php echo $index === 0 ? 'active' : ''; ?>" style="<?php echo $index === 0 ? '' : 'display: none;'; ?>">
                                     <img src="<?php echo esc_url($item['immagine']['sizes']['large']); ?>" 
                                          class="img-fluid w-100 h-100 object-fit-cover" 
-                                         alt="<?php echo esc_attr($item['titolo']); ?>">
+                                         alt="<?php echo esc_attr($item['titolo']); ?>" loading="lazy">
                                     <p class="mt-2 text-center"><strong><?php echo esc_html($item['titolo']); ?></strong></p>
                                 </div>
                             <?php endforeach; ?>

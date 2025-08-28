@@ -37,10 +37,10 @@ get_header();
 					class="col-md-2 d-flex align-items-center justify-content-end position-relative">
 					<div class="social-icons-container">
 						<a href="https://www.facebook.com/Lestogroup/</a>" class="social-link">
-							<img src="/wp-content/themes/lesto-theme/images/svg-fb.svg" alt="Facebook">
+							<img src="/wp-content/themes/lesto-theme/images/svg-fb.svg" alt="Facebook" loading="lazy">
 						</a>
 						<a href="https://www.instagram.com/lestogroup/" class="social-link">
-							<img src="/wp-content/themes/lesto-theme/images/svg-ig.svg" alt="Instagram">
+							<img src="/wp-content/themes/lesto-theme/images/svg-ig.svg" alt="Instagram" loading="lazy">
 						</a>
 					</div>
 				</div>
@@ -72,7 +72,7 @@ get_header();
 										<div class="col-lg-4 col-md-4">
 											<div class="card">
 												<img src="<?php echo $immagine ? esc_url($immagine['url']) : '/wp-content/themes/lesto-theme/images/Frame 427319135.png'; ?>"
-													alt="<?php echo esc_attr($titolo); ?>" class="card-img">
+													alt="<?php echo esc_attr($titolo); ?>" class="card-img" loading="lazy">
 												<div class="card-body">
 													<div class="card-hover-content">
 														<h5 class="card-text-hover"><?php echo esc_html($titolo); ?></h5>
@@ -92,7 +92,7 @@ get_header();
 										<div class="col-lg-4 col-md-4">
 											<div class="card">
 												<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-													alt="Setup attrezzature" class="card-img">
+													alt="Setup attrezzature" class="card-img" loading="lazy">
 												<div class="card-body">
 													<div class="card-hover-content">
 														<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -126,7 +126,7 @@ get_header();
 										<div class="col-lg-3 col-md-3">
 											<div class="card">
 												<img src="<?php echo $immagine ? esc_url($immagine['url']) : '/wp-content/themes/lesto-theme/images/Frame 427319135.png'; ?>"
-													alt="<?php echo esc_attr($titolo); ?>" class="card-img">
+													alt="<?php echo esc_attr($titolo); ?>" class="card-img" loading="lazy">
 												<div class="card-body">
 													<div class="card-hover-content">
 														<h5 class="card-text-hover"><?php echo esc_html($titolo); ?></h5>
@@ -146,7 +146,7 @@ get_header();
 										<div class="col-lg-3 col-md-3">
 											<div class="card">
 												<img src="/wp-content/themes/lesto-theme/images/Frame 427319135.png"
-													alt="Setup attrezzature" class="card-img">
+													alt="Setup attrezzature" class="card-img" loading="lazy">
 												<div class="card-body">
 													<div class="card-hover-content">
 														<h5 class="card-text-hover">Setup attrezzature</h5>
@@ -181,7 +181,7 @@ get_header();
 						$icona_tab1 = $tab_1['icona_bottone'] ?? '';
 						$testo_tab1 = $tab_1['testo_bottone'] ?? 'Catena';
 						?>
-						<img class="icon" src="<?php echo $icona_tab1 ? esc_url($icona_tab1['url']) : '/wp-content/themes/lesto-theme/images/onde-nere.svg'; ?>" alt="icon" />
+						<img class="icon" src="<?php echo $icona_tab1 ? esc_url($icona_tab1['url']) : '/wp-content/themes/lesto-theme/images/onde-nere.svg'; ?>" alt="icon" loading="lazy" />
 						<span><?php echo esc_html($testo_tab1); ?></span>
 					</button>
 					<button class="tablinks btn btn-custom active btn-medium" data-tab="Tab2" id="btn-locale">
@@ -189,7 +189,7 @@ get_header();
 						$icona_tab2 = $tab_2['icona_bottone'] ?? '';
 						$testo_tab2 = $tab_2['testo_bottone'] ?? 'Nuovo locale';
 						?>
-						<img class="icon" src="<?php echo $icona_tab2 ? esc_url($icona_tab2['url']) : '/wp-content/themes/lesto-theme/images/onde-nere.svg'; ?>" alt="icon" />
+						<img class="icon" src="<?php echo $icona_tab2 ? esc_url($icona_tab2['url']) : '/wp-content/themes/lesto-theme/images/onde-nere.svg'; ?>" alt="icon" loading="lazy" />
 						<span><?php echo esc_html($testo_tab2); ?></span>
 					</button>
 				</div>
@@ -257,7 +257,7 @@ get_header();
 					<div class="row border-top-four-section pt-2">
 						<div class="col-md-4 d-flex justify-content-center">
 							<img src="<?php echo esc_url($immagine_url); ?>" alt="<?php echo esc_attr($titolo); ?>"
-								class="img-fluid img-four-section" />
+								class="img-fluid img-four-section" loading="lazy" />
 						</div>
 						<div class="col-12 d-block d-md-none text-mobile-wrap">
 							<div class="row">
@@ -269,7 +269,7 @@ get_header();
 									<h5 class="mb-2 m_h5"><?php echo $numero; ?></h5>
 									<a href="<?php echo esc_url(get_permalink($settore->ID)); ?>">
 										<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-											alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+											alt="Section Icon Container" class="img-fluid d-block d-md-none" loading="lazy" />
 									</a>
 								</div>
 							</div>
@@ -284,7 +284,7 @@ get_header();
 						<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
 							<a href="<?php echo esc_url(get_permalink($settore->ID)); ?>">
 								<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-									alt="Section Icon Container" class="img-fluid" />
+									alt="Section Icon Container" class="img-fluid" loading="lazy" />
 							</a>
 						</div>
 					</div>
@@ -296,7 +296,7 @@ get_header();
 				<div class="row border-top-four-section pt-2">
 					<div class="col-md-4 d-flex justify-content-center">
 						<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
-							class="img-fluid img-four-section" />
+							class="img-fluid img-four-section" loading="lazy" />
 					</div>
 					<div class="col-12 d-block d-md-none text-mobile-wrap">
 						<div class="row">
@@ -309,7 +309,7 @@ get_header();
 							<div class="col-6 d-flex flex-column align-items-end">
 								<h5 class="mb-2 m_h5">01</h5>
 								<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-									alt="Section Icon Container" class="img-fluid d-block d-md-none" />
+									alt="Section Icon Container" class="img-fluid d-block d-md-none" loading="lazy" />
 							</div>
 						</div>
 					</div>
@@ -323,7 +323,7 @@ get_header();
 					</div>
 					<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
 						<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-							alt="Section Icon Container" class="img-fluid" />
+							alt="Section Icon Container" class="img-fluid" loading="lazy" />
 					</div>
 				</div>
 				<?php
@@ -348,7 +348,7 @@ get_header();
 						for ($loop = 0; $loop < 2; $loop++) {
 							foreach ($loghi as $logo) {
 								if ($logo) {
-									echo '<li class="splide__slide"><div class="slide-container"><img src="' . esc_url($logo['url']) . '" alt="' . esc_attr($logo['alt'] ?: 'Logo Partner') . '" /></div></li>';
+									echo '<li class="splide__slide"><div class="slide-container"><img src="' . esc_url($logo['url']) . '" alt="' . esc_attr($logo['alt'] ?: 'Logo Partner') . '" loading="lazy" /></div></li>';
 								}
 							}
 						}

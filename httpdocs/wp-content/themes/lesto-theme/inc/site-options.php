@@ -204,7 +204,7 @@ function lesto_render_background_video($css_class = 'background-video') {
             
             <!-- Fallback per browser che non supportano i video -->
             <?php if ($poster_url): ?>
-            <img src="<?php echo $poster_url; ?>" alt="Video Background" class="video-fallback">
+            <img src="<?php echo $poster_url; ?>" alt="Video Background" class="video-fallback" loading="lazy">
             <?php endif; ?>
         </video>
     </div>

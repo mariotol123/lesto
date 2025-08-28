@@ -27,7 +27,7 @@ get_header();
             </div>
             <div class="col-md-8 d-flex justify-content-center align-items-center">
                 <img src="/wp-content/themes/lesto-theme/images/servizi-img.png" alt="Immagine Settori"
-                    class="img-fluid img-overflow" />
+                    class="img-fluid img-overflow" loading="lazy" />
             </div>
         </div>
     </div>
@@ -71,14 +71,14 @@ get_header();
             ?>
             <div class="buttons <?php echo $index === 0 ? 'active' : ''; ?>">
                 <button class="accordion-button btn btn-accordion btn-small d-flex justify-content-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
-                    <img class="icon" src="/wp-content/themes/lesto-theme/images/onde.svg" alt="icon" />
+                    <img class="icon" src="/wp-content/themes/lesto-theme/images/onde.svg" alt="icon" loading="lazy" />
                     <span><?php echo esc_html($servizio->post_title); ?></span>
                 </button>
                 <div class="accordion-content" style="display:<?php echo $index === 0 ? 'block' : 'none'; ?>;">
                     <h3 class="mb-3"><?php echo esc_html($servizio->post_title); ?></h3>
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($servizio->post_title); ?>" class="img-fluid" />
+                            <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($servizio->post_title); ?>" class="img-fluid" loading="lazy" />
                         </div>
                         <div class="col-md-6 d-flex flex-column align-items-start">
                             <h5 class="m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>
@@ -109,7 +109,7 @@ get_header();
                 }
             ?>
             <div class="accordion-mobile-content <?php echo $index !== 0 ? 'd-none' : ''; ?>" data-tab="<?php echo $index; ?>">
-                <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($servizio->post_title); ?>" class="img-fluid accordion-mobile-img mb-3" />
+                <img src="<?php echo esc_url($immagine); ?>" alt="<?php echo esc_attr($servizio->post_title); ?>" class="img-fluid accordion-mobile-img mb-3" loading="lazy" />
                 <div class="row">
                     <div class="col-12 d-flex flex-column align-items-start mt-3">
                         <h5 class="mb-2 m_h5"><?php echo $sottotitolo_accordion ? esc_html($sottotitolo_accordion) : 'Soluzioni su misura per la tua azienda'; ?></h5>

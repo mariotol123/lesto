@@ -55,7 +55,7 @@ class Header_Menu_Walker extends Walker_Nav_Menu {
             }
             
             // Add the icon image
-            $icon_img = '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" />';
+            $icon_img = '<img class="icon" src="' . get_template_directory_uri() . '/images/onde.svg" alt="icon" loading="lazy" />';
             
             // Build CSS classes for button
             $button_classes = 'btn btn-header-custom btn-small';

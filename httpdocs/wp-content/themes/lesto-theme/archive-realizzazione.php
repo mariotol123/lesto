@@ -111,7 +111,7 @@ get_header();
                                             <a href="<?php the_permalink(); ?>" style="text-decoration: none;">
                                                 <img src="<?php echo esc_url($item['immagine']['sizes']['large']); ?>" 
                                                      class="mosaico-img" 
-                                                     alt="<?php echo esc_attr($item['titolo']); ?>">
+                                                     alt="<?php echo esc_attr($item['titolo']); ?>" loading="lazy">
                                                 <p class="desktop-p-16"><?php echo esc_html($item['titolo']); ?></p>
                                             </a>
                                         </div>
@@ -126,7 +126,7 @@ get_header();
                                             <?php if (has_post_thumbnail()) : ?>
                                                 <?php the_post_thumbnail('large', array('class' => 'mosaico-img', 'alt' => get_the_title())); ?>
                                             <?php else : ?>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.jpg" class="mosaico-img" alt="<?php the_title(); ?>">
+                                                <img src="<?php echo get_template_directory_uri(); ?>/images/placeholder.jpg" class="mosaico-img" alt="<?php the_title(); ?>" loading="lazy">
                                             <?php endif; ?>
                                             <p class="desktop-p-16"><?php the_title(); ?></p>
                                         </a>

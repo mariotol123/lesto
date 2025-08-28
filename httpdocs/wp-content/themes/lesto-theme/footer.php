@@ -21,7 +21,7 @@
 					   <?php the_custom_logo(); ?>
 				   </div>
 			   <?php else : ?>
-				   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Footer Logo" class="footer-logo">
+				   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Footer Logo" class="footer-logo" loading="lazy">
 			   <?php endif; ?>
 		   </div>
 		   <div class="col-lg-3 col-md-6 mb-4 d-flex flex-column gap-5">
@@ -76,7 +76,7 @@
 					   <?php the_custom_logo(); ?>
 				   </div>
 			   <?php else : ?>
-				   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Footer Logo" class="footer-logo">
+				   <img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Footer Logo" class="footer-logo" loading="lazy">
 			   <?php endif; ?>
 		   </div>
 	   </div>

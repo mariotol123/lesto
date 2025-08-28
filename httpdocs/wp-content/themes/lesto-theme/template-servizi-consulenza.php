@@ -18,7 +18,7 @@ get_header();
         <div class="row">
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <img src="/wp-content/themes/lesto-theme/images/servizi-consulenza.png"
-                    alt="Immagine Servizi Consulenza" class="img-fluid img-overflow" />
+                    alt="Immagine Servizi Consulenza" class="img-fluid img-overflow" loading="lazy" />
             </div>
             <div class="col-md-6 d-flex flex-column align-items-start gap-3">
                 <h5>CONSULENZA</h5>
