@@ -248,7 +248,7 @@ get_header();
 					$descrizione = $riassunto_accordion ? $riassunto_accordion : 'A provident est maiores quod sapiente reiciendis vel doloribus aut. Hic pariatur qui quos velit sit. Illum veritatis sit omnis quisquam.';
 					
 					// Limit description to 220 characters
-					if (strlen($descrizione) > 220) {
+					if (strlen($descrizione) > 250) {
 						$descrizione = substr($descrizione, 0, 200) . '...';
 					}
 					
@@ -268,8 +268,8 @@ get_header();
 								<div class="col-6 d-flex flex-column align-items-end">
 									<h5 class="mb-2 m_h5"><?php echo $numero; ?></h5>
 									<a href="<?php echo esc_url(get_permalink($settore->ID)); ?>">
-										<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-											alt="Section Icon Container" class="img-fluid d-block d-md-none" loading="lazy" />
+										<img src="/wp-content/themes/lesto-theme/images/arrow-lesto-home.svg"
+							alt="Section Icon Container" class="img-fluid" loading="lazy" />
 									</a>
 								</div>
 							</div>
@@ -283,8 +283,8 @@ get_header();
 						</div>
 						<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
 							<a href="<?php echo esc_url(get_permalink($settore->ID)); ?>">
-								<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-									alt="Section Icon Container" class="img-fluid" loading="lazy" />
+								<img src="/wp-content/themes/lesto-theme/images/arrow-lesto-home.svg"
+							alt="Section Icon Container" class="img-fluid" loading="lazy" />
 							</a>
 						</div>
 					</div>
@@ -295,8 +295,8 @@ get_header();
 				?>
 				<div class="row border-top-four-section pt-2">
 					<div class="col-md-4 d-flex justify-content-center">
-						<img src="/wp-content/themes/lesto-theme/images/Rectangle 1.png" alt="Cucine"
-							class="img-fluid img-four-section" loading="lazy" />
+						<img src="/wp-content/themes/lesto-theme/images/arrow-lesto-home.svg"
+							alt="Section Icon Container" class="img-fluid" loading="lazy" />
 					</div>
 					<div class="col-12 d-block d-md-none text-mobile-wrap">
 						<div class="row">
@@ -308,8 +308,8 @@ get_header();
 							</div>
 							<div class="col-6 d-flex flex-column align-items-end">
 								<h5 class="mb-2 m_h5">01</h5>
-								<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
-									alt="Section Icon Container" class="img-fluid d-block d-md-none" loading="lazy" />
+								<img src="/wp-content/themes/lesto-theme/images/arrow-lesto-home.svg"
+							alt="Section Icon Container" class="img-fluid" loading="lazy" />
 							</div>
 						</div>
 					</div>
@@ -322,7 +322,7 @@ get_header();
 							sit. Illum veritatis sit omnis quisquam.</p>
 					</div>
 					<div class="col-md-2 d-flex justify-content-end align-items-center d-none d-md-flex">
-						<img src="/wp-content/themes/lesto-theme/images/Section Icon Container.png"
+						<img src="/wp-content/themes/lesto-theme/images/arrow-lesto-home.svg"
 							alt="Section Icon Container" class="img-fluid" loading="lazy" />
 					</div>
 				</div>

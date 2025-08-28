@@ -65,7 +65,7 @@
 						   </a>
 					   </div>
 					   <!-- Hamburger menu visibile solo su mobile, accanto al logo -->
-					   <img src="<?php echo get_template_directory_uri(); ?>/images/Vector (1).png" alt="Menu" class="" id="hamburger-menu" loading="lazy">
+					   <img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.svg" alt="Menu" class="" id="hamburger-menu" loading="lazy">
 				   </div>
 				   <!-- Container bottoni a destra -->
 				   <div class="col-4 col-md-7">

@@ -97,6 +97,7 @@
   --size-9rem: 9.6rem; /* 144px */
   --size-10rem: 10rem; /* 160px */
   --size-11rem: 12.333rem; /* 185px */
+  --size-150: 10rem; /* 150px */
   --size-200: 13.333rem; /* 200px */
   --size-300: 20rem; /* 300px */
   --size-350: 23.333rem; /* 350px */
@@ -609,7 +610,7 @@ p {
 
 .header-buttons-mobile {
   border: var(--size-1) solid #ffffff;
-  border-radius: var(--size-24);
+  border-radius: var(--size-18);
   padding: 0;
   box-shadow: 0 var(--size-4) var(--size-30) rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(var(--size-5));
@@ -882,17 +883,6 @@ p {
   box-shadow: 0 var(--size-4) var(--size-30) rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(var(--size-5));
   -webkit-backdrop-filter: blur(var(--size-5));
-}
-
-.header-buttons-mobile {
-  border: var(--size-1) solid #ffffff;
-  border-radius: var(--size-24);
-  padding: 0;
-  box-shadow: 0 var(--size-4) var(--size-30) rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(var(--size-5));
-  -webkit-backdrop-filter: blur(var(--size-5));
-  height: 50vh;
-  margin: 0 auto;
 }
 
 .btn-header-custom .icon {
@@ -1693,6 +1683,8 @@ section.section {
 .four-section {
   .row.aperto {
     .m_h5 + p {
+      font-size: var(--font-13);
+      font-weight: 100;
       opacity: 1;
       max-height: var(--size-200);
       transition: opacity 0.3s 0.8s,
@@ -1701,12 +1693,12 @@ section.section {
     .img-four-section {
       clip-path: inset(0 0 0 0);
       opacity: 1;
-      max-height: var(--size-200);
+      max-height: var(--size-150);
       transition: max-height 2s cubic-bezier(0.4, 0, 0.2, 1), clip-path 1s,
         opacity 0.3s;
     }
     .col-md-4 {
-      max-height: var(--size-200);
+      max-height: var(--size-150);
       transition: max-height 2.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
@@ -1726,16 +1718,18 @@ section.section {
       display: block;
       width: 100%;
       height: auto;
+      object-fit: cover;
+      object-position: center;
       transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1), clip-path 1s,
         opacity 0.3s;
-      clip-path: inset(0 0 60% 0);
-      opacity: 0.7;
+      clip-path: inset(0 0 30% 0);
+      opacity: 0.8;
     }
     .col-md-4 {
       overflow: hidden;
       display: flex;
-      align-items: flex-start;
-      max-height: var(--size-50);
+      align-items: center;
+      max-height: var(--size-60);
       transition: max-height 1s cubic-bezier(0.4, 0, 0.2, 1);
       padding-left: 0;
     }
@@ -1749,12 +1743,12 @@ section.section {
       .img-four-section {
         clip-path: inset(0 0 0 0);
         opacity: 1;
-        max-height: var(--size-200);
+        max-height: var(--size-150);
         transition: max-height 2s cubic-bezier(0.4, 0, 0.2, 1), clip-path 1s,
           opacity 0.3s;
       }
       .col-md-4 {
-        max-height: var(--size-200);
+        max-height: var(--size-150);
         transition: max-height 2.4s cubic-bezier(0.4, 0, 0.2, 1);
       }
     }
