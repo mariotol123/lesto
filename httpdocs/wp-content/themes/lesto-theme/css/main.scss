@@ -2264,6 +2264,7 @@ section.section {
 }
 
 .form-container {
+  padding-left: 4rem;
   .header-buttons {
     background: transparent !important;
     padding: 0.5rem 1.7rem;
@@ -2365,12 +2366,12 @@ label {
 
 .submit-btn {
   position: absolute;
-  bottom: var(--size-4);
-  right: var(--size-1);
+  bottom: 0;
+  right: 0;
   background: transparent;
   color: #ffffff;
   border: var(--size-1) solid #fff;
-  padding: 0.3rem 0.7rem;
+  padding: 0.4rem 1.2rem;
   border-radius: var(--size-20);
   font-weight: 500;
   cursor: pointer;

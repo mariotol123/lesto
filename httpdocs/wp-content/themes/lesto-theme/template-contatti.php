@@ -17,24 +17,24 @@ get_header();
 	<div class="container py-3">
 		<div class="row">
 			<!-- Colonna 1: -->
-			<div class="col-md-6 d-flex align-items-start gap-4 colonna-1 mt-5">
+			<div class="col-md-4 d-flex align-items-start gap-4 colonna-1 mt-5">
 				<div class="d-flex flex-column gap-4">
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
+						<img src="/wp-content/themes/lesto-theme/images/icon-contatti.svg" alt="Contatti" loading="lazy">
 						<div>
 							<h5>Ufficio progettazione e Showroom</h5>
 							<p class="desktop-p">Paragrafo 2 di esempio per i contatti.</p>
 						</div>
 					</div>
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
+						<img src="/wp-content/themes/lesto-theme/images/icon-contatti.svg" alt="Contatti" loading="lazy">
 						<div>
 							<h5>ufficio amministrativo e ricezione merci</h5>
 							<p class="desktop-p">Paragrafo tecnico di esempio.</p>
 						</div>
 					</div>
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
+						<img src="/wp-content/themes/lesto-theme/images/icon-contatti.svg" alt="Contatti" loading="lazy">
 						<div>
 							<h5>contatti</h5>
 							<p class="desktop-p">Telefono: +39 0382.935884</p>
@@ -42,14 +42,14 @@ get_header();
 						</div>
 					</div>
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
+						<img src="/wp-content/themes/lesto-theme/images/icon-contatti.svg" alt="Contatti" loading="lazy">
 						<div>
 							<h5>assistenza tecnica</h5>
 							<p class="desktop-p">Telefono: +39 335.1296432</p>
 						</div>
 					</div>
 					<div class="d-flex align-items-start gap-4">
-						<img src="/wp-content/themes/lesto-theme/images/contatti.png" alt="Contatti" loading="lazy">
+						<img src="/wp-content/themes/lesto-theme/images/icon-contatti.svg" alt="Contatti" loading="lazy">
 						<div>
 							<h5>ufficio Commerciale</h5>
 							<p class="desktop-p">Telefono: +39 335.1296433</p>
@@ -71,7 +71,7 @@ get_header();
 				</div>
 			</div>
 			<!-- Colonna 2: Form di contatto -->
-			<div class="col-md-6 form-container mt-3">
+			<div class="col-md-8 form-container mt-3">
 				<form id="contactForm" class=" d-flex flex-column p-4 header-buttons">
 					<div>
 						<h3 class="m_h3">Richiedi Un Preventivo</h3>
