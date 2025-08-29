@@ -602,7 +602,6 @@ p {
   border-radius: var(--size-18);
  background: rgba(0, 0, 0, 0.22);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(12.4px);
     -webkit-backdrop-filter: blur(12.4px);
     border: 1px solid white;
@@ -880,9 +879,6 @@ p {
   border: var(--size-1) solid #ffffff;
   border-radius: var(--size-18);
   padding: 0;
-  box-shadow: 0 var(--size-4) var(--size-30) rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(var(--size-5));
-  -webkit-backdrop-filter: blur(var(--size-5));
 }
 
 .btn-header-custom .icon {
@@ -2256,25 +2252,15 @@ section.section {
 
 // --- Nuovo stile form contatti ---
 
-.header-buttons input:focus,
-.header-buttons textarea:focus,
-.header-buttons select:focus {
-  border-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 0 var(--shadow-3) rgba(255, 255, 255, 0.1);
-}
-
 .form-container {
   padding-left: 4rem;
   .header-buttons {
     background: transparent !important;
     padding: 0.5rem 1.7rem;
+    backdrop-filter: blur(0px);
   }
 
-  .header-buttons input:focus,
-  .header-buttons textarea:focus,
-  .header-buttons select:focus {
-    color: white;
-  }
+ 
 }
 
 .field-group {
@@ -2451,8 +2437,8 @@ input[type="checkbox"] {
   .submit-btn {
     bottom: 0;
     right: 0;
-    padding: 0.6rem 0.6rem;
-    font-size: 1.2rem;
+    padding: 0.5rem 1.8rem;
+    font-size: 1.1rem;
   }
 
   button {
@@ -2478,7 +2464,7 @@ input[type="checkbox"] {
   .submit-btn {
     bottom: 0;
     right: 0;
-    padding: 0.6rem 0.6rem;
+    padding: 0.5rem 1.7rem;
     font-size: 1rem;
   }
 }
