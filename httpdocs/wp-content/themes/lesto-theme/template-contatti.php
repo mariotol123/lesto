@@ -106,7 +106,10 @@ get_header();
 								</svg>
 							</div>
 							<textarea id="messaggio" name="messaggio" class="textarea-field form-control header-buttons" required></textarea>
-							<button type="submit" id="submit" class="submit-btn">Invia</button>
+							<button type="submit" id="submit" class="submit-btn btn btn-icon-transparent btn-small d-flex justify-content-center">
+								<img class="icon" src="/wp-content/themes/lesto-theme/images/onde.svg" alt="icon" loading="lazy" />
+								<span>Invia</span>
+							</button>
 						</div>
 					</div>
 

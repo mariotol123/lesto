@@ -70,7 +70,7 @@ get_header();
                 }
             ?>
             <div class="buttons <?php echo $index === 0 ? 'active' : ''; ?>">
-                <button class="accordion-button btn btn-accordion btn-small d-flex justify-content-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
+                <button class="accordion-button btn btn-icon-transparent btn-small d-flex justify-content-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
                     <img class="icon" src="/wp-content/themes/lesto-theme/images/onde.svg" alt="icon" loading="lazy" />
                     <span><?php echo esc_html($servizio->post_title); ?></span>
                 </button>

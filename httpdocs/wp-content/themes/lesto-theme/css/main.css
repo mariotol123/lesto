@@ -12610,7 +12610,7 @@ p {
   margin: 0 auto;
 }
 
-.btn-header-custom, .btn-accordion {
+.btn-header-custom, .btn-icon-transparent {
   background-color: transparent !important;
   color: #ffffff !important;
   border: var(--size-1) solid #ffffff;
@@ -12627,7 +12627,7 @@ p {
   overflow: hidden;
   box-shadow: none !important;
 }
-.btn-header-custom .icon, .btn-accordion .icon {
+.btn-header-custom .icon, .btn-icon-transparent .icon {
   width: 1rem;
   height: 0.5rem;
   max-width: 0;
@@ -12635,37 +12635,37 @@ p {
   opacity: 0;
   transition: opacity 1s ease, max-width 1s ease-in-out;
 }
-.btn-header-custom:hover, .btn-accordion:hover, .btn-header-custom:focus, .btn-accordion:focus {
+.btn-header-custom:hover, .btn-icon-transparent:hover, .btn-header-custom:focus, .btn-icon-transparent:focus {
   gap: var(--size-8);
   border: var(--size-1) solid #ffffff !important;
 }
-.btn-header-custom:hover .icon, .btn-accordion:hover .icon, .btn-header-custom:focus .icon, .btn-accordion:focus .icon {
+.btn-header-custom:hover .icon, .btn-icon-transparent:hover .icon, .btn-header-custom:focus .icon, .btn-icon-transparent:focus .icon {
   display: inline-block;
   opacity: 1;
   max-width: var(--size-20);
 }
-.btn-header-custom.active, .active.btn-accordion, .btn-header-custom:active, .btn-accordion:active {
+.btn-header-custom.active, .active.btn-icon-transparent, .btn-header-custom:active, .btn-icon-transparent:active {
   gap: var(--size-8);
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
-.btn-header-custom.active .icon, .active.btn-accordion .icon, .btn-header-custom:active .icon, .btn-accordion:active .icon {
+.btn-header-custom.active .icon, .active.btn-icon-transparent .icon, .btn-header-custom:active .icon, .btn-icon-transparent:active .icon {
   opacity: 1;
   max-width: var(--size-20);
 }
-.current-menu-item .btn-header-custom, .current-menu-item .btn-accordion, .current_page_item .btn-header-custom, .current_page_item .btn-accordion, .current-page-ancestor .btn-header-custom, .current-page-ancestor .btn-accordion, .current-menu-ancestor .btn-header-custom, .current-menu-ancestor .btn-accordion, .current-menu-parent .btn-header-custom, .current-menu-parent .btn-accordion, .current_page_parent .btn-header-custom, .current_page_parent .btn-accordion, .btn-header-custom.current-item, .current-item.btn-accordion {
+.current-menu-item .btn-header-custom, .current-menu-item .btn-icon-transparent, .current_page_item .btn-header-custom, .current_page_item .btn-icon-transparent, .current-page-ancestor .btn-header-custom, .current-page-ancestor .btn-icon-transparent, .current-menu-ancestor .btn-header-custom, .current-menu-ancestor .btn-icon-transparent, .current-menu-parent .btn-header-custom, .current-menu-parent .btn-icon-transparent, .current_page_parent .btn-header-custom, .current_page_parent .btn-icon-transparent, .btn-header-custom.current-item, .current-item.btn-icon-transparent {
   gap: var(--size-8);
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
-.current-menu-item .btn-header-custom .icon, .current-menu-item .btn-accordion .icon, .current_page_item .btn-header-custom .icon, .current_page_item .btn-accordion .icon, .current-page-ancestor .btn-header-custom .icon, .current-page-ancestor .btn-accordion .icon, .current-menu-ancestor .btn-header-custom .icon, .current-menu-ancestor .btn-accordion .icon, .current-menu-parent .btn-header-custom .icon, .current-menu-parent .btn-accordion .icon, .current_page_parent .btn-header-custom .icon, .current_page_parent .btn-accordion .icon, .btn-header-custom.current-item .icon, .current-item.btn-accordion .icon {
+.current-menu-item .btn-header-custom .icon, .current-menu-item .btn-icon-transparent .icon, .current_page_item .btn-header-custom .icon, .current_page_item .btn-icon-transparent .icon, .current-page-ancestor .btn-header-custom .icon, .current-page-ancestor .btn-icon-transparent .icon, .current-menu-ancestor .btn-header-custom .icon, .current-menu-ancestor .btn-icon-transparent .icon, .current-menu-parent .btn-header-custom .icon, .current-menu-parent .btn-icon-transparent .icon, .current_page_parent .btn-header-custom .icon, .current_page_parent .btn-icon-transparent .icon, .btn-header-custom.current-item .icon, .current-item.btn-icon-transparent .icon {
   opacity: 1;
   max-width: var(--size-20);
 }
 
-.menu-item.current-menu-item .btn-header-custom, .menu-item.current-menu-item .btn-accordion, .menu-item.current_page_item .btn-header-custom, .menu-item.current_page_item .btn-accordion, .menu-item.current-page-ancestor .btn-header-custom, .menu-item.current-page-ancestor .btn-accordion, .menu-item.current-menu-ancestor .btn-header-custom, .menu-item.current-menu-ancestor .btn-accordion, .menu-item.current-menu-parent .btn-header-custom, .menu-item.current-menu-parent .btn-accordion, .menu-item.current_page_parent .btn-header-custom, .menu-item.current_page_parent .btn-accordion {
+.menu-item.current-menu-item .btn-header-custom, .menu-item.current-menu-item .btn-icon-transparent, .menu-item.current_page_item .btn-header-custom, .menu-item.current_page_item .btn-icon-transparent, .menu-item.current-page-ancestor .btn-header-custom, .menu-item.current-page-ancestor .btn-icon-transparent, .menu-item.current-menu-ancestor .btn-header-custom, .menu-item.current-menu-ancestor .btn-icon-transparent, .menu-item.current-menu-parent .btn-header-custom, .menu-item.current-menu-parent .btn-icon-transparent, .menu-item.current_page_parent .btn-header-custom, .menu-item.current_page_parent .btn-icon-transparent {
   gap: var(--size-8);
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
-.menu-item.current-menu-item .btn-header-custom .icon, .menu-item.current-menu-item .btn-accordion .icon, .menu-item.current_page_item .btn-header-custom .icon, .menu-item.current_page_item .btn-accordion .icon, .menu-item.current-page-ancestor .btn-header-custom .icon, .menu-item.current-page-ancestor .btn-accordion .icon, .menu-item.current-menu-ancestor .btn-header-custom .icon, .menu-item.current-menu-ancestor .btn-accordion .icon, .menu-item.current-menu-parent .btn-header-custom .icon, .menu-item.current-menu-parent .btn-accordion .icon, .menu-item.current_page_parent .btn-header-custom .icon, .menu-item.current_page_parent .btn-accordion .icon {
+.menu-item.current-menu-item .btn-header-custom .icon, .menu-item.current-menu-item .btn-icon-transparent .icon, .menu-item.current_page_item .btn-header-custom .icon, .menu-item.current_page_item .btn-icon-transparent .icon, .menu-item.current-page-ancestor .btn-header-custom .icon, .menu-item.current-page-ancestor .btn-icon-transparent .icon, .menu-item.current-menu-ancestor .btn-header-custom .icon, .menu-item.current-menu-ancestor .btn-icon-transparent .icon, .menu-item.current-menu-parent .btn-header-custom .icon, .menu-item.current-menu-parent .btn-icon-transparent .icon, .menu-item.current_page_parent .btn-header-custom .icon, .menu-item.current_page_parent .btn-icon-transparent .icon {
   opacity: 1;
   max-width: var(--size-20);
 }
@@ -12741,10 +12741,10 @@ p {
 .main-buttons .menu-item {
   position: relative;
 }
-.main-buttons .menu-item a.btn-header-custom, .main-buttons .menu-item a.btn-accordion {
+.main-buttons .menu-item a.btn-header-custom, .main-buttons .menu-item a.btn-icon-transparent {
   text-decoration: none;
 }
-.main-buttons .menu-item a.btn-header-custom:hover, .main-buttons .menu-item a.btn-accordion:hover, .main-buttons .menu-item a.btn-header-custom:focus, .main-buttons .menu-item a.btn-accordion:focus {
+.main-buttons .menu-item a.btn-header-custom:hover, .main-buttons .menu-item a.btn-icon-transparent:hover, .main-buttons .menu-item a.btn-header-custom:focus, .main-buttons .menu-item a.btn-icon-transparent:focus {
   text-decoration: none;
 }
 .main-buttons ul {
@@ -12813,7 +12813,7 @@ p {
   -webkit-backdrop-filter: blur(var(--size-5));
 }
 
-.btn-header-custom .icon, .btn-accordion .icon {
+.btn-header-custom .icon, .btn-icon-transparent .icon {
   width: 1rem;
   height: 0.5rem;
   max-width: 0;
@@ -12823,27 +12823,27 @@ p {
   transition: opacity 1s ease, max-width 1s ease-in-out;
 }
 
-.btn-header-custom:hover, .btn-accordion:hover {
+.btn-header-custom:hover, .btn-icon-transparent:hover {
   gap: var(--size-8);
   border: var(--size-1) solid #ffffff !important;
 }
 
-.btn-header-custom:hover .icon, .btn-accordion:hover .icon {
+.btn-header-custom:hover .icon, .btn-icon-transparent:hover .icon {
   display: inline-block;
   opacity: 1;
   max-width: var(--size-20);
 }
 
-.btn-header-custom.active, .active.btn-accordion,
+.btn-header-custom.active, .active.btn-icon-transparent,
 .btn-header-custom:active,
-.btn-accordion:active {
+.btn-icon-transparent:active {
   gap: var(--size-8);
   background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-.btn-header-custom.active .icon, .active.btn-accordion .icon,
+.btn-header-custom.active .icon, .active.btn-icon-transparent .icon,
 .btn-header-custom:active .icon,
-.btn-accordion:active .icon {
+.btn-icon-transparent:active .icon {
   opacity: 1;
   max-width: var(--size-20);
 }
@@ -13834,7 +13834,7 @@ section.section {
   border-radius: var(--size-18);
 }
 
-.accordion-container .btn-header-custom:hover, .accordion-container .btn-accordion:hover {
+.accordion-container .btn-header-custom:hover, .accordion-container .btn-icon-transparent:hover {
   gap: var(--size-8) !important;
 }
 .accordion-container .buttons {
@@ -14004,7 +14004,7 @@ section.section {
   .single-settore article.row .col-12.col-lg-6:last-child .entry-content {
     margin-bottom: 1rem;
   }
-  .single-settore article.row .col-12.col-lg-6:last-child .btn-header-custom, .single-settore article.row .col-12.col-lg-6:last-child .btn-accordion {
+  .single-settore article.row .col-12.col-lg-6:last-child .btn-header-custom, .single-settore article.row .col-12.col-lg-6:last-child .btn-icon-transparent {
     width: 100% !important;
     padding: 0.8rem 1rem !important;
     text-align: center;
@@ -14106,7 +14106,7 @@ section.section {
   .single-servizio article.row .col-12.col-lg-6:last-child .entry-content {
     margin-bottom: 1rem;
   }
-  .single-servizio article.row .col-12.col-lg-6:last-child .entry-content .btn-header-custom, .single-servizio article.row .col-12.col-lg-6:last-child .entry-content .btn-accordion {
+  .single-servizio article.row .col-12.col-lg-6:last-child .entry-content .btn-header-custom, .single-servizio article.row .col-12.col-lg-6:last-child .entry-content .btn-icon-transparent {
     width: 100% !important;
     padding: 0.8rem 1rem !important;
     text-align: center;
@@ -14235,7 +14235,7 @@ label {
   background: transparent;
   color: #ffffff;
   border: var(--size-1) solid #fff;
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.4rem;
   border-radius: var(--size-20);
   font-weight: 500;
   cursor: pointer;
@@ -14245,26 +14245,28 @@ label {
   text-align: center;
   left: auto;
   right: var(--size-1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
 }
-
-.submit-btn:hover {
-  background: white;
-  color: #000000;
-  box-shadow: 0 var(--shadow-6) var(--shadow-20) rgba(0, 0, 0, 0.3);
+.submit-btn .icon {
+  width: 1rem;
+  height: 0.5rem;
+  max-width: 0;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 1s ease, max-width 1s ease-in-out;
 }
-
-.submit-btn:active {
+.submit-btn .submit-btn:active {
   transform: translateY(0);
 }
-
-.checkbox-group {
+.submit-btn .checkbox-group {
   display: flex;
   align-items: flex-start;
   gap: 12px;
   margin-top: 30px;
 }
-
-input[type=checkbox] {
+.submit-btn input[type=checkbox] {
   width: 20px;
   height: 20px;
   margin: 0;
@@ -14272,21 +14274,18 @@ input[type=checkbox] {
   flex-shrink: 0;
   margin-top: 2px;
 }
-
-.checkbox-label {
+.submit-btn .checkbox-label {
   color: rgba(255, 255, 255, 0.8);
   font-size: var(--font-s-14);
   line-height: 1.5;
   margin-bottom: 0;
 }
-
-.link {
+.submit-btn .link {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: underline;
   cursor: pointer;
 }
-
-.link:hover {
+.submit-btn .link:hover {
   color: white;
 }
 

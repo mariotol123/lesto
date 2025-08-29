@@ -702,7 +702,7 @@ p {
   }
 }
 
-.btn-accordion {
+.btn-icon-transparent {
   @extend .btn-header-custom;
   // border-top: none;
   // border-bottom: none;
@@ -2371,7 +2371,7 @@ label {
   background: transparent;
   color: #ffffff;
   border: var(--size-1) solid #fff;
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.4rem;
   border-radius: var(--size-20);
   font-weight: 500;
   cursor: pointer;
@@ -2381,13 +2381,18 @@ label {
   text-align: center;
   left: auto;
   right: var(--size-1);
-}
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
 
-.submit-btn:hover {
-  background: white;
-  color: #000000;
-  box-shadow: 0 var(--shadow-6) var(--shadow-20) rgba(0, 0, 0, 0.3);
-}
+  .icon {
+    width: 1rem;
+    height: 0.5rem;
+    max-width: 0;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 1s ease, max-width 1s ease-in-out;
+  }
 
 .submit-btn:active {
   transform: translateY(0);
@@ -2424,6 +2429,7 @@ input[type="checkbox"] {
 
 .link:hover {
   color: white;
+}
 }
 
 @media (max-width: 768px) {

@@ -71,7 +71,7 @@ get_header();
                 $icona = get_field('icona', $settore->ID);
             ?>
             <div class="buttons <?php echo $index === 0 ? 'active' : ''; ?>">
-                <button class="accordion-button btn btn-accordion btn-small d-flex justify-content-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
+                <button class="accordion-button btn btn-icon-transparent btn-small d-flex justify-content-center <?php echo $index === 0 ? 'active' : ''; ?>" type="button">
                     <?php if ($icona) : ?>
                         <img class="icon" src="<?php echo esc_url($icona['url']); ?>" alt="<?php echo esc_attr($icona['alt']); ?>" loading="lazy" />
                     <?php else : ?>
